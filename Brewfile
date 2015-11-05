@@ -30,6 +30,7 @@ cask shortcat
 cask shotcut
 cask stellarium
 cask totalspaces
+cask tunnelblick
 cask ui-browser
 cask unpkg
 cask unrarx
