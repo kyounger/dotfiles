@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo -n "Enter mysql root password:"
+read -e PASS
+
+D1=$(pwd -P)
+NOW=$(date +"%Y%m%d-%H%M")
+TARFILE="wordpress$NOW.tgz"
+SQLFILE="sheersites$NOW.sql"
+mysqldump5 -u root -p$PASS sheersites > /www/wordpress/$SQLFILE
+cd /www/
+tar -czf $TARFILE wordpress
+mv $TARFILE $D1
+rm /www/wordpress/$SQLFILE
+cd $D1

@@ -1,0 +1,116 @@
+#!/opt/local/bin/python
+
+import sys, os, urllib2, MySQLdb
+from subprocess import check_output
+
+def createWpConfigDotPhp(user, password, location):
+	config = "<?php\n"
+	config += "define('DB_NAME', '" + user + "');\n"
+	config += "define('DB_USER', '" + user + "');\n"
+	config += "define('DB_PASSWORD', '" + password + "');\n"
+	config += "define('DB_HOST', ':/opt/local/var/run/mysql5/mysqld.sock');\n"
+	config += "define('DISALLOW_FILE_EDIT', true );\n"
+	config += "define('DB_CHARSET', 'utf8');\n"
+	config += "define('DB_COLLATE', '');\n"
+	config += "define ('WPLANG', '');\n"
+	config += "$table_prefix  = 'wp_';\n"	
+	f = urllib2.urlopen('https://api.wordpress.org/secret-key/1.1/salt/')
+	config += f.read()
+	f.close()
+	config += "\nif ( !defined('ABSPATH') )\n"
+	config += "\tdefine('ABSPATH', dirname(__FILE__) . '/');\n"
+	config += "require_once(ABSPATH . 'wp-settings.php');\n"
+	config += "?>\n"
+	FILE_wp_config_dot_php = open(location,'w')
+	FILE_wp_config_dot_php.write(config)
+	FILE_wp_config_dot_php.close()
+
+def createDatabase(mysql_root_pass, user, password):
+	try:
+
+		conn = MySQLdb.connect(host = "localhost", port = 3306, user = "root", passwd = mysql_root_pass)
+		cursor = conn.cursor()
+			
+		stuff = "CREATE USER '" + user + "'@'localhost' IDENTIFIED BY '" + password + "';\n"
+		cursor.execute(stuff)
+		
+		stuff = "CREATE DATABASE " + user + ";\n"
+		cursor.execute(stuff)
+		
+		stuff = "GRANT ALL PRIVILEGES ON `" + user + "` . * TO '" + user + "'@'localhost';\n"
+		cursor.execute(stuff)
+		
+		stuff = "FLUSH PRIVILEGES;"
+		cursor.execute(stuff)
+	
+	except MySQLdb.Error, e:
+		print "Error %d: %s" % (e.args[0], e.args[1])
+		sys.exit (1)
+
+#---- main program ----#
+
+if (os.geteuid() != 0):
+    print 'Not root'
+    sys.exit(1)
+
+if(len(sys.argv)!=2 and len(sys.argv)!=3):
+    print len(sys.argv)
+    print 'Not proper args. arg1=domain, (arg2=user)'
+    sys.exit(1)
+
+domain = sys.argv[1]
+
+if(len(sys.argv)==3):
+    user = sys.argv[2]
+else:
+    user = domain.replace('.','_')
+
+mysql_root_pass = 'test'
+password = 'test'
+vhost = domain
+vhostdir = vhost + '-proj/' + vhost
+destdir = "/Users/kenny/Sites/" + vhostdir + "/"
+
+os.makedirs(destdir)
+
+tagdir = check_output("curl -s http://core.svn.wordpress.org/tags/ | grep li | tail -1 | sed 's/.*\\\"\\(.*\\)\\\".*/\\1/'", shell=True).strip()
+tag = tagdir.strip('/')
+
+url = check_output("svn info /Users/kenny/source/wordpress/wordpress-current/ | grep URL", shell=True).strip()
+if(url.find(tag) == -1):
+    print check_output("svn sw http://core.svn.wordpress.org/tags/" + tagdir + " ~/source/wordpress/wordpress-current/", shell=True)
+
+print check_output("svn export --force ~/source/wordpress/wordpress-current/ " + destdir, shell=True)
+
+createWpConfigDotPhp(user, password, destdir+"wp-config.php")
+createDatabase(mysql_root_pass, user, password)
+
+check_output("chown -R kenny:staff " + destdir, shell=True)
+check_output("chmod -R a+w " + destdir, shell=True)
+filename = '/etc/hosts'
+
+hostsFileHandle = open(filename,'a')
+hostsFileHandle.write('\n127.0.0.1 ' + vhost)
+hostsFileHandle.close()
+
+vhostEntry = """
+<VirtualHost *:80>
+	ServerName YYYYYY
+	DocumentRoot "ZZZZZZ"
+	<Directory "ZZZZZZ">
+		Options Includes FollowSymLinks  
+		AllowOverride All
+		Order allow,deny
+        Allow from all
+	</Directory>
+</VirtualHost>
+""".replace("YYYYYY",vhost).replace("ZZZZZZ",destdir)
+
+
+filename = '/Users/kenny/conf/vhosts.conf'
+confFileHandle = open(filename,'a')
+confFileHandle.write(vhostEntry)
+confFileHandle.close()
+
+print check_output("/opt/local/apache2/bin/apachectl restart", shell=True)
+

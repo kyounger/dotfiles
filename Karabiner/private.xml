@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<root>
+  <appdef>
+    <appname>VMWAREVIEW</appname>
+    <equal>com.vmware.view</equal>
+  </appdef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_SHELL_mute_toggle</name>
+    <url type="shell">
+        <![CDATA[    /Users/kenny/bin/AudioSwitcherToggle    ]]>
+    </url>
+  </vkopenurldef>
+
+  <item>
+    <name>Remap CONTROL_L+CONTROL+R to context menu key (windows) for VMWARE View Client</name>
+    <identifier>private.appdef.vmwareview.add_context_menu_with_controls</identifier>
+    <only>VMWAREVIEW</only>
+    <autogen>__KeyOverlaidModifier__ KeyCode::CONTROL_R, ModifierFlag::CONTROL_L, KeyCode::CONTROL_R, ModifierFlag::CONTROL_L, KeyCode::PC_APPLICATION</autogen>
+  </item>
+  <item>
+    <name>Remap fn+OPTION_R to context menu key (windows) for VMWARE View Client</name>
+    <identifier>private.appdef.vmwareview.add_context_menu</identifier>
+    <only>VMWAREVIEW</only>
+    <autogen>__KeyToKey__ KeyCode::OPTION_R, ModifierFlag::FN, KeyCode::PC_APPLICATION</autogen>
+  </item>
+  <item>
+    <name>Remap right Option button to End for VMWARE View Client</name>
+    <identifier>private.appdef.vmwareview.end</identifier>
+    <only>VMWAREVIEW</only>
+    <autogen>__KeyToKey__ KeyCode::OPTION_R, KeyCode::END</autogen>
+  </item>
+  <item>
+    <name>Remap right Command button to Home for VMWARE View Client</name>
+    <identifier>private.appdef.vmwareview.home</identifier>
+    <only>VMWAREVIEW</only>
+    <autogen>__KeyToKey__ KeyCode::COMMAND_R, KeyCode::HOME</autogen>
+  </item>
+  <item>
+    <name>Map Fn+Control+i to [insert] for VMWARE View Client</name>
+    <identifier>private.appdef.vmwareview.insert</identifier>
+    <only>VMWAREVIEW</only>
+    <autogen>__KeyToKey__ KeyCode::I, VK_CONTROL | ModifierFlag::FN, KeyCode::PC_INSERT</autogen>
+  </item>
+  <item>
+    <name>Map Fn+f to Toggle Mute</name>
+    <identifier>private.appdef.global.mute_toggle</identifier>
+    <autogen>__KeyToKey__ KeyCode::F, ModifierFlag::FN, KeyCode::VK_OPEN_URL_SHELL_mute_toggle</autogen>
+  </item>
+</root>

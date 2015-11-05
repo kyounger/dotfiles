@@ -1,0 +1,10 @@
+#!/usr/bin/env zsh
+
+AudioSwitcher="/Users/kenny/bin/AudioSwitcher"
+current=`${AudioSwitcher} -t input -c`
+if [ "$current" = "Built-in Microphone" ]
+then
+    ${AudioSwitcher} -t input -s "Soundflower (2ch)"
+else
+    ${AudioSwitcher} -t input -s "Built-in Microphone"
+fi

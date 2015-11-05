@@ -1,0 +1,17 @@
+.DS_Store
+.svn
+.tissues
+*~
+*.sw*
+*.pyc
+*.rej
+*.orig
+
+# Some Mozilla ignores
+obj-*/
+configure
+.mozconfig*
+
+doc/tags/*
+doc/tags
+bundle/**/doc
