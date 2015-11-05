@@ -1,9 +1,0 @@
-[submodule "zsh/.zprezto"]
-	path = zsh/.zprezto
-	url = https://github.com/kyounger/prezto.git
-[submodule "git/git-remove-submodule"]
-	path = git/git-remove-submodule
-	url = https://gist.github.com/6289697.git
-[submodule "vim/.vim/neobundle"]
-	path = vim/.vim/neobundle
-	url = https://github.com/Shougo/neobundle.vim
