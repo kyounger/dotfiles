@@ -39,11 +39,11 @@ cask vmware-fusion
 cask wacom-tablet
 cask wireshark
 
-## kyounger/file
-tap kyounger/file
-brew brew-file
+## kyounger/homebrew-file
+tap kyounger/homebrew-file
 
 # Other Homebrew packages
+brew brew-file
 brew ack
 brew ffmpeg --with-faac
 brew git
@@ -53,7 +53,6 @@ brew vim --with-lua
 brew youtube-dl
 
 # App Store applications
-appstore Evernote
 appstore iMovie
 appstore Skitch
 appstore Slack
