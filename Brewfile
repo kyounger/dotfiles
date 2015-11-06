@@ -45,11 +45,28 @@ brew brew-file
 
 # Other Homebrew packages
 brew ack
+brew dcraw
+brew exiftool
 brew ffmpeg --with-faac
 brew git
 brew hub
+brew imagemagick
+brew ipmitool
+brew jq
+brew libav
 brew lua
+brew mercurial
+brew moreutils
+brew nginx
+brew nmap
+brew node
+brew python
+brew reattach-to-user-namespace
+brew sqlite
+brew ssh-copy-id
+brew tmux
 brew vim --with-lua
+brew wget
 brew youtube-dl
 
 # App Store applications
