@@ -19,3 +19,4 @@ bundle/**/doc
 .classpath
 .project
 .settings/
+target/
