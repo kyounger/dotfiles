@@ -1,1 +1,1 @@
-zprezto.symlink/runcoms/zprofile
+.zprezto/runcoms/zprofile
