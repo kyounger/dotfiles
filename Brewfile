@@ -44,9 +44,12 @@ tap kyounger/file
 brew brew-file
 
 # Other Homebrew packages
+brew ack
 brew ffmpeg --with-faac
+brew git
+brew hub
 brew lua
-brew vim
+brew vim --with-lua
 brew youtube-dl
 
 # App Store applications
