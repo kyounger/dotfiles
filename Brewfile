@@ -39,11 +39,11 @@ cask vmware-fusion
 cask wacom-tablet
 cask wireshark
 
-## kyounger/homebrew-file
-tap kyounger/homebrew-file
+## kyounger/file
+tap kyounger/file
+brew brew-file
 
 # Other Homebrew packages
-brew brew-file
 brew ack
 brew ffmpeg --with-faac
 brew git
