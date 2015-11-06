@@ -14,6 +14,8 @@ alias hl='sudo vim /etc/hosts'
 
 alias git-grep-all='git branch -a | grep -v "remotes/origin/HEAD" | tr -d \* | xargs git grep'
 
+alias mci='mvn clean install'
+
 # list files
 alias l='ls -al'
 alias lh='ls -ald .*'
