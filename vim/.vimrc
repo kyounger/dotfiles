@@ -175,6 +175,19 @@ let g:disable_all_plugins = 0
     set ffs=unix,dos,mac
     set autochdir
 
+    set ignorecase
+    set smartcase
+    set incsearch
+    set showmatch
+    set hlsearch
+    set gdefault
+
+    set scrolloff=3
+    set sidescroll=1
+    set sidescrolloff=10
+
+    set virtualedit+=block
+
 " }}}
 " Cursorline: {{{
 
@@ -289,14 +302,17 @@ let g:disable_all_plugins = 0
 
     syntax on
     set background=dark
-    let g:badwolf_html_link_underline = 0
-    colorscheme badwolf
 
-    " Reload the colorscheme whenever we write the file.
-    augroup color_badwolf_dev
-        au!
-        au BufWritePost badwolf.vim color badwolf
-    augroup END
+    if neobundle#is_installed("badwolf")
+        let g:badwolf_html_link_underline = 0
+        colorscheme badwolf
+
+        " Reload the colorscheme whenever we write the file.
+        augroup color_badwolf_dev
+            au!
+            au BufWritePost badwolf.vim color badwolf
+        augroup END
+    end
 
     " Highlight VCS conflict markers
     match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
@@ -515,6 +531,28 @@ let g:disable_all_plugins = 0
     set foldtext=MyFoldText()
 
 " }}}
+" Searching {{{
+
+    nnoremap <silent> <leader><space> :noh<cr>:call clearmatches()<cr>
+
+    if !neobundle#is_installed("vim-oblique")
+        " Use sane regexes.
+        nnoremap / /\v
+        vnoremap / /\v
+
+        " Don't move on *
+        " nnoremap * *<c-o>
+        nnoremap <silent> * :let stay_star_view = winsaveview()<cr>*:call winrestview(stay_star_view)<cr>
+
+        " Use c-\ to do c-] but open it in a new split.
+        " nnoremap <c-\> <c-w>v<c-]>zvzz
+
+        " Keep search matches in the middle of the window.
+        nnoremap n nzzzv
+        nnoremap N Nzzzv
+    end
+
+"}}}
 
 " }}}
 " Filetype-specific ------------------------------------------------------- {{{
@@ -1131,10 +1169,11 @@ let g:disable_all_plugins = 0
 
     if neobundle#is_installed("vim-oblique")
         let g:oblique#clear_highlight=0
+        let g:oblique#incsearch_highlight_all=1
     end
 
 " }}}
-"
+
 " }}}
 " Environments (GUI/Console) ---------------------------------------------- {{{
 
