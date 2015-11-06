@@ -2,7 +2,7 @@
 <root>
   <appdef>
     <appname>VMWAREVIEW</appname>
-    <equal>com.vmware.view</equal>
+    <equal>com.vmware.horizon</equal>
   </appdef>
   <vkopenurldef>
     <name>KeyCode::VK_OPEN_URL_SHELL_mute_toggle</name>
