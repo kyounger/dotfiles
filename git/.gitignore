@@ -20,3 +20,5 @@ bundle/**/doc
 .project
 .settings/
 target/
+
+rebel.xml
