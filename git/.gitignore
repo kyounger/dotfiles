@@ -15,3 +15,7 @@ configure
 doc/tags/*
 doc/tags
 bundle/**/doc
+
+.classpath
+.project
+.settings/
