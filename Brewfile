@@ -4,6 +4,7 @@
 ## caskroom/cask
 tap caskroom/cask
 brew brew-cask
+cask adobe-creative-cloud
 cask alfred
 cask android-file-transfer
 cask appcleaner
