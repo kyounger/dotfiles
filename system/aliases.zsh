@@ -13,6 +13,7 @@ alias hf='sudo vim /etc/hosts'
 alias hl='sudo vim /etc/hosts'
 
 alias git-grep-all='git branch -a | grep -v "remotes/origin/HEAD" | tr -d \* | xargs git grep'
+alias glb='git log --topo-order --branches --graph --pretty=format:"${_git_log_oneline_format}"'
 
 alias mci='mvn clean install'
 
