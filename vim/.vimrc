@@ -280,7 +280,7 @@ let g:disable_all_plugins = 0
     set tabstop=8
     set shiftwidth=4
     set softtabstop=4
-    set expandtab
+    set noexpandtab
     set nowrap
     set textwidth=80
     set formatoptions=qrn1
