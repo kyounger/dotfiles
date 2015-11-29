@@ -52,7 +52,7 @@ function ta() {
     # then attache with `TMPDIR=$$ tmux attach`
 
     unset TMPDIR
-    if [[ `tmux list-sessions 2>&1 | grep "^failed to connect to server" -c` -eq 0 ]];
+    if [[ `tmux list-sessions 2>&1 | grep "^no server running on" -c` -eq 0 ]];
     then
         tmux attach 
     else
