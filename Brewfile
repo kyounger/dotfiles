@@ -48,26 +48,41 @@ brew brew-file
 brew ack
 brew dcraw
 brew exiftool
+brew faac
 brew ffmpeg --with-faac
+brew freetype
 brew git
 brew hub
 brew imagemagick
 brew ipmitool
+brew jpeg
 brew jq
+brew lame
 brew libav
+brew libpng
+brew libtiff
+brew libtool
+brew libvo-aacenc
 brew lua
 brew mercurial
 brew moreutils
 brew nginx
 brew nmap
 brew node
+brew openssl
+brew pkg-config
 brew python
 brew reattach-to-user-namespace
 brew sqlite
 brew ssh-copy-id
+brew texi2html
 brew tmux
 brew vim --with-lua
 brew wget
+brew x264
+brew xvid
+brew xz
+brew yasm
 brew youtube-dl
 
 # App Store applications
