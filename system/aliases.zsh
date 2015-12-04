@@ -17,6 +17,7 @@ alias glb='git log --topo-order --branches --graph --pretty=format:"${_git_log_o
 alias gd='git diff'
 alias gdw='git diff -w'
 alias gdc='git diff --color-words'
+alias gcam='git commit -am'
 
 alias mci='mvn clean install'
 
