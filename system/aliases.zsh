@@ -18,6 +18,7 @@ alias gd='git diff'
 alias gdw='git diff -w'
 alias gdc='git diff --color-words'
 alias gcam='git commit -am'
+alias gpa='git pull --all'
 
 alias mci='mvn clean install'
 
@@ -54,7 +55,7 @@ function ta() {
     # `echo /var/folders/**/*/-Tmp-(U/)`
     # then attache with `TMPDIR=$$ tmux attach`
 
-    unset TMPDIR
+    # unset TMPDIR
     if [[ `tmux list-sessions 2>&1 | grep "^no server running on" -c` -eq 0 ]];
     then
         tmux attach 
