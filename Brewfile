@@ -46,6 +46,7 @@ brew brew-file
 
 # Other Homebrew packages
 brew ack
+brew android-sdk
 brew dcraw
 brew exiftool
 brew faac
@@ -59,6 +60,7 @@ brew jpeg
 brew jq
 brew lame
 brew libav
+brew libevent
 brew libpng
 brew libtiff
 brew libtool
