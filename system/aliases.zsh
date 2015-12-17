@@ -19,6 +19,7 @@ alias gdw='git diff -w'
 alias gdc='git diff --color-words'
 alias gcam='git commit -am'
 alias gpa='git pull --all'
+alias gpf='echo force push should be typed out fully :\)'
 
 alias mci='mvn clean install'
 
