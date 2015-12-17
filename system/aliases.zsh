@@ -3,6 +3,8 @@ export CLICOLOR=1
 #edit main boxen configs
 alias edit-boxen="vim /opt/boxen/repo/modules/people/manifests/kyounger.pp /Users/kenny/src/our-boxen/modules/people/manifests/kyounger/*.pp /opt/boxen/repo/Puppetfile"
 
+alias vi='vim'
+
 # open in...
 alias pre='open -a Preview'
 # alias mvim='mvim --remote-tab-silent'
