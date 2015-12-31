@@ -78,6 +78,7 @@ brew reattach-to-user-namespace
 brew sqlite
 brew ssh-copy-id
 brew texi2html
+brew tig
 brew tmux
 brew vim --with-lua
 brew wget
