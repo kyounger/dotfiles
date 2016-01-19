@@ -20,6 +20,7 @@ cask google-drive
 cask handbrake
 cask hugin
 cask iterm2
+cask jollysfastvnc
 cask kaleidoscope
 cask karabiner
 cask kodi
