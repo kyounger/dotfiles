@@ -22,6 +22,7 @@ alias gdc='git diff --color-words'
 alias gcam='git commit -am'
 alias gpa='git pull --all'
 alias gpf='echo force push should be typed out fully :\)'
+alias gmmx='git merge $1 -Xignore-all-space'
 
 alias mci='mvn clean install'
 
