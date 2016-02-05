@@ -23,6 +23,8 @@ alias gcam='git commit -am'
 alias gpa='git pull --all'
 alias gpf='echo force push should be typed out fully :\)'
 alias gmmx='git merge $1 -Xignore-all-space'
+alias vp='vim pom.xml'
+alias hp='head -20 pom.xml'
 
 alias mci='mvn clean install'
 
