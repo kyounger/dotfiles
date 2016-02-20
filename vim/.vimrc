@@ -86,6 +86,9 @@ let g:disable_all_plugins = 0
             " NeoBundle 'AndrewRadev/linediff.vim', { 'directory': 'linediff.vim' }
             " NeoBundle 'wesQ3/vim-windowswap', { 'directory': 'windowswap' }
 
+	    "Hex editing
+	    NeoBundle 'fidian/hexmode'
+
             "Insert mode plugin. Helps with pairs of () [] {}
             " NeoBundle 'kana/vim-smartinput', { 'directory': 'smartinput' }
 

@@ -43,6 +43,7 @@ cask wireshark
 ## kyounger/file
 tap kyounger/file
 brew brew-file
+cask hugin
 
 # Other Homebrew packages
 brew ack

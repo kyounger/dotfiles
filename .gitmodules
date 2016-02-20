@@ -4,3 +4,6 @@
 [submodule "zsh/.zprezto"]
 	path = zsh/.zprezto
 	url = https://github.com/kyounger/prezto
+[submodule "mathiasbynens-dotfiles"]
+	path = mathiasbynens-dotfiles
+	url = https://github.com/kyounger/mathiasbynens-dotfiles
