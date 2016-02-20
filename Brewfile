@@ -29,7 +29,6 @@ cask mysqlworkbench
 cask sequel-pro
 cask shortcat
 cask shotcut
-cask stellarium
 cask totalspaces
 cask tunnelblick
 cask ui-browser
