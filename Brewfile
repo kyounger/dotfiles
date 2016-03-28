@@ -39,10 +39,14 @@ cask vmware-fusion
 cask wacom-tablet
 cask wireshark
 
+## homebrew/dupes
+tap homebrew/dupes
+brew rsync
+cask hugin
+
 ## kyounger/file
 tap kyounger/file
 brew brew-file
-cask hugin
 
 # Other Homebrew packages
 brew ack
@@ -55,6 +59,7 @@ brew freetype
 brew git
 brew hub
 brew imagemagick
+brew iperf
 brew ipmitool
 brew jpeg
 brew jq
