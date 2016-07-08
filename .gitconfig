@@ -1,0 +1,37 @@
+[user]
+	name = Kenny Younger
+	email = kyounger@gmail.com
+
+[merge]
+	tool = Kaleidoscope
+
+[mergetool "splice"]
+    cmd = "mvim -f $BASE $LOCAL $REMOTE $MERGED -c 'SpliceInit'"
+    trustExitCode = true
+
+[core]
+	excludesfile = /Users/kenny/.gitignore
+[color]
+	ui = 1
+
+[branch]
+        autosetuprebase = always
+        autosetupmerge = always
+[diff]
+	tool = Kaleidoscope
+[difftool]
+	prompt = false
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
+[mergetool]
+	prompt = false
+[hub]
+        protocol = https
+[push]
+	default = matching
+	followTags = true
+[pull]
+        rebase = true
+[credential]
+	helper = osxkeychain
