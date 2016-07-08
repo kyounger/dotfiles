@@ -146,9 +146,15 @@ function mygrants() {
 
 # snag an mp3 from youtube and title it properly
 function ytmp3() {
-    #youtube-dl -kvt --extract-audio --audio-quality 160k --audio-format mp3 $1
     youtube-dl --keep-video --output '%(title)s.%(ext)s' --verbose --format bestaudio $1
 }
+function ytmp3-old() {
+    youtube-dl -kvt --extract-audio --audio-quality 160k --audio-format mp3 $1
+}
+function webm-to-mp3() {
+    ffmpeg -i "$1" -vn -ab 160k -ar 44100 -y "$1.mp3"
+}
+
 
 # Remove the hosts that I don't want to keep around - in this case, only keep the first host.
 alias hosts="head -2 ~/.ssh/known_hosts | tail -1 > ~/.ssh/known_hosts"
