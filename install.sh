@@ -6,6 +6,9 @@ ln -fs .dotfiles/bin
 #rm -f .gitignore
 ln -fs .dotfiles/git/.gitignore
 
+#rm -f .gitconfig
+ln -fs .dotfiles/git/.gitconfig
+
 #rm -f .jshintrc
 ln -fs .dotfiles/jshint/.jshintrc
 
