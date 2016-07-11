@@ -50,7 +50,6 @@ brew brew-file
 
 # Other Homebrew packages
 brew ack
-brew android-sdk
 brew dcraw
 brew exiftool
 brew faac
