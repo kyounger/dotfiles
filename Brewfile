@@ -16,7 +16,6 @@ cask firefox
 cask flux
 cask google-chrome
 cask google-drive
-cask handbrake
 cask hugin
 cask iterm2
 cask jollysfastvnc
