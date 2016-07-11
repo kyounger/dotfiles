@@ -492,6 +492,9 @@ let g:disable_all_plugins = 0
         set clipboard=unnamed
     endif
 
+    "I hate typing SNAPSHOT
+    nnoremap ,,s i-SNAPSHOT<esc>
+
 
 " }}}
 " Folding: {{{
