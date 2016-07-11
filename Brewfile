@@ -34,7 +34,7 @@ cask vlc
 cask vmware-fusion
 cask wireshark
 cask hugin
-cask adium-beta
+cask adium
 
 tap homebrew/dupes
 brew rsync
@@ -89,8 +89,6 @@ brew xz
 brew yasm
 brew youtube-dl
 
-# Cask applications
-cask wacom-tablet
 
 # App Store applications
 appstore iMovie
