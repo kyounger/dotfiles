@@ -30,7 +30,6 @@ cask shotcut
 cask tunnelblick
 cask ui-browser
 cask unpkg
-cask unrarx
 cask vlc
 cask vmware-fusion
 cask wireshark
