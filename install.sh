@@ -49,4 +49,4 @@ ln -fs .dotfiles/zsh/.zshenv
 ln -fs .dotfiles/zsh/.zshrc
 
 #run .osx defaults
-~/mathiasbynens-dotfiles/.osx
+~/.dotfiles/mathiasbynens-dotfiles/.osx
