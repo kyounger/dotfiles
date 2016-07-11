@@ -35,6 +35,7 @@ cask vlc
 cask vmware-fusion
 cask wireshark
 cask hugin
+cask adium-beta
 
 tap homebrew/dupes
 brew rsync
