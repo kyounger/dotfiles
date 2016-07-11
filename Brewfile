@@ -1,7 +1,6 @@
 
 # tap repositories and their packages
 
-## caskroom/cask
 tap caskroom/cask
 cask adobe-creative-cloud
 cask alfred
@@ -34,15 +33,15 @@ cask unpkg
 cask unrarx
 cask vlc
 cask vmware-fusion
-cask wacom-tablet
 cask wireshark
-
-## homebrew/dupes
-tap homebrew/dupes
-brew rsync
 cask hugin
 
-## kyounger/file
+tap homebrew/dupes
+brew rsync
+
+tap homebrew/versions
+brew node4-lts
+
 tap kyounger/file
 brew brew-file
 
@@ -68,11 +67,11 @@ brew libtiff
 brew libtool
 brew libvo-aacenc
 brew lua
+brew maven
 brew mercurial
 brew moreutils
 brew nginx
 brew nmap
-brew node
 brew openssl
 brew pkg-config
 brew python
@@ -89,6 +88,9 @@ brew xvid
 brew xz
 brew yasm
 brew youtube-dl
+
+# Cask applications
+cask wacom-tablet
 
 # App Store applications
 appstore iMovie
