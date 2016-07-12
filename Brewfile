@@ -2,6 +2,7 @@
 # tap repositories and their packages
 
 tap caskroom/cask
+cask adium
 cask adobe-creative-cloud
 cask alfred
 cask android-file-transfer
@@ -33,19 +34,9 @@ cask unpkg
 cask vlc
 cask vmware-fusion
 cask wireshark
-cask hugin
-cask adium
+cask sqlworkbenchj
 
-tap homebrew/dupes
-brew rsync
-
-tap homebrew/versions
-brew node4-lts
-
-tap kyounger/file
-brew brew-file
-
-# Other Homebrew packages
+tap homebrew/core
 brew ack
 brew dcraw
 brew exiftool
@@ -89,10 +80,24 @@ brew xz
 brew yasm
 brew youtube-dl
 
+tap homebrew/dupes
+brew rsync
+
+tap homebrew/versions
+brew node4-lts
+
+tap kyounger/file
+brew brew-file
+
+tap argon/mas
+brew mas
+
 
 # App Store applications
-appstore iMovie
-appstore Skitch
-appstore Slack
-appstore Textual
-appstore Xcode
+appstore 682658836 GarageBand
+appstore 409183694 Keynote
+appstore 409203825 Numbers
+appstore 409201541 Pages
+appstore 803453959 Slack
+appstore 497799835 Xcode
+appstore 408981434 iMovie
