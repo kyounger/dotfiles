@@ -3,7 +3,3 @@ vim/.vim/bundle
 bin/mute_mic.scpt
 bin/unmute_mic.scpt
 vim/.vim/tmp
-doc/tags
-.classpath
-.project
-.settings/
