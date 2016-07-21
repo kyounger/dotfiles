@@ -38,20 +38,20 @@ let g:disable_all_plugins = 0
                 NeoBundle 'tpope/vim-repeat', { 'directory': 'repeat' }
                 NeoBundle 'tpope/vim-unimpaired', { 'directory': 'unimpaired' } "Convenience mappings
                 NeoBundle 'tpope/vim-fugitive', { 'directory': 'fugitive' }
-                NeoBundle 'terryma/vim-expand-region', { 'directory': 'expand-region' }
-                NeoBundle 'junegunn/vim-pseudocl' "Replaces command-line
-                NeoBundle 'junegunn/vim-oblique' "Make searching usable
+                NeoBundle 'terryma/vim-expand-region', { 'directory': 'expand-region' } "mapped to +
+		NeoBundle 'junegunn/vim-pseudocl' "Replaces command-line, required by vim-oblique
+                NeoBundle 'junegunn/vim-oblique' "Make searching usable, requires vim-pseudocl
                 NeoBundle 'junegunn/vim-peekaboo'
                 NeoBundle 'Lokaltog/vim-powerline', { 'directory': 'vim-powerline' }
+		NeoBundle 'maxbrunsfeld/vim-yankstack'
 
             "ColorSchemes
             NeoBundle 'sjl/badwolf', { 'directory': 'badwolf' }
             NeoBundle 'altercation/vim-colors-solarized', { 'directory': 'colors-solarized' }
 
             "Utilities
-            NeoBundle 'sjl/AnsiEsc.vim', { 'directory': 'AnsiEsc.vim' }
-            NeoBundle 'sjl/vitality.vim', { 'directory': 'vitality.vim' }
-
+            NeoBundle 'sjl/AnsiEsc.vim', { 'directory': 'AnsiEsc.vim' } "esc sequences look pretty
+            NeoBundle 'sjl/vitality.vim', { 'directory': 'vitality.vim' } "iterm2 and tmux helper
 
             "HTML, xml and other codegen
             " NeoBundle 'tristen/vim-sparkup', { 'directory': 'sparkup' }
@@ -495,7 +495,6 @@ let g:disable_all_plugins = 0
     "I hate typing SNAPSHOT
     nnoremap ,,s i-SNAPSHOT<esc>
 
-
 " }}}
 " Folding: {{{
     set foldlevelstart=0
@@ -757,7 +756,7 @@ let g:disable_all_plugins = 0
         au FileType html,jinja,htmldjango nnoremap <buffer> <localleader>f Vatzf
 
         " Use <localleader>t to fold the current templatetag.
-        au FileType html,jinja,htmldjango nmap <buffer> <localleader>t viikojozf
+        au FileType html,jinja,htmldjango noremap <buffer> <localleader>t viikojozf
 
         " Indent tag
         au FileType html,jinja,htmldjango nnoremap <buffer> <localleader>= Vat=
@@ -865,16 +864,6 @@ let g:disable_all_plugins = 0
     augroup END
 
 " }}}
-" OrgMode {{{
-
-    augroup ft_org
-        au!
-
-        au Filetype org nmap <buffer> Q vahjgq
-        au Filetype org setlocal nolist
-    augroup END
-
-" }}}
 " Pentadactyl {{{
 
     augroup ft_pentadactyl
@@ -976,8 +965,8 @@ let g:disable_all_plugins = 0
 
 " Commentary {{{
     if neobundle#is_installed("vim-commentary")
-        nmap <leader>c <Plug>CommentaryLine
-        xmap <leader>c <Plug>Commentary
+        nnoremap <leader>c <Plug>CommentaryLine
+        xnoremap <leader>c <Plug>Commentary
 
         augroup plugin_commentary
             au!
