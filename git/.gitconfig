@@ -10,7 +10,7 @@
     trustExitCode = true
 
 [core]
-	excludesfile = /Users/kenny/.gitignore
+	excludesfile = ~/.gitignore
 [color]
 	ui = 1
 
