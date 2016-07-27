@@ -33,7 +33,7 @@ let g:disable_all_plugins = 0
                 \     'unix' : 'gmake',
                 \    },
                 \ }
-                NeoBundle 'tpope/vim-surround', { 'directory': 'surround' }
+                " NeoBundle 'tpope/vim-surround', { 'directory': 'surround' }
                 NeoBundle 'tpope/vim-commentary', { 'directory': 'commentary' }
                 NeoBundle 'tpope/vim-repeat', { 'directory': 'repeat' }
                 NeoBundle 'tpope/vim-unimpaired', { 'directory': 'unimpaired' } "Convenience mappings
@@ -965,9 +965,6 @@ let g:disable_all_plugins = 0
 
 " Commentary {{{
     if neobundle#is_installed("vim-commentary")
-        nnoremap <leader>c <Plug>CommentaryLine
-        xnoremap <leader>c <Plug>Commentary
-
         augroup plugin_commentary
             au!
             au FileType htmldjango setlocal commentstring={#\ %s\ #}
@@ -1167,6 +1164,10 @@ let g:disable_all_plugins = 0
         let g:oblique#incsearch_highlight_all=1
     end
 
+" }}}
+" Yankstack {{{
+    nmap π <Plug>yankstack_substitute_older_paste
+    nmap ∏ <Plug>yankstack_substitute_newer_paste
 " }}}
 
 " }}}

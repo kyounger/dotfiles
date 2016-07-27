@@ -29,7 +29,7 @@
 [hub]
         protocol = https
 [push]
-	default = matching
+	default = current
 	followTags = true
 [pull]
         rebase = true
