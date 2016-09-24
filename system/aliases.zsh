@@ -50,6 +50,9 @@ alias secureemptytrash='srm -rs /Users/kenny/.Trash/*'
 alias rmdotsvn='find . -name ".svn" -type d -exec rm -rf {} \;'
 alias linecount="sed '/^\s*$/d' | wc -l"
 
+alias rsync-tiny-to-manhattan='rsync -a --delete-after --info=progress2 /Volumes/TINY/LR_TINY_IMPORT/ /Volumes/manhattan/LR_TINY_BACKUP'
+alias rsync-manhattan-to-boon='rsync -a --delete-after --info=progress2 /Volumes/manhattan/ boon::boon-manhattan'
+
 # diff two directories
 # diff <(cd dir1 && find . | sort) <(cd dir2 && find . | sort)
 

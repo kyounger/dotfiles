@@ -1,103 +1,94 @@
-
-# tap repositories and their packages
-
-tap caskroom/cask
-cask adium
-cask adobe-creative-cloud
-cask alfred
-cask android-file-transfer
-cask appcleaner
-cask balsamiq-mockups
-cask bettertouchtool
-cask carbon-copy-cloner
-cask cyberduck
-cask dropbox
-cask firefox
-cask flux
-cask google-chrome
-cask google-drive
-cask hugin
-cask iterm2
-cask jollysfastvnc
-cask kaleidoscope
-cask karabiner
-cask kodi
-cask macdown
-cask macvim
-cask mysqlworkbench
-cask sequel-pro
-cask shortcat
-cask shotcut
-cask tunnelblick
-cask ui-browser
-cask unpkg
-cask vlc
-cask vmware-fusion
-cask wireshark
-cask sqlworkbenchj
-
-tap homebrew/core
-brew ack
-brew dcraw
-brew exiftool
-brew faac
-brew ffmpeg --with-faac
-brew freetype
-brew git
-brew hub
-brew imagemagick
-brew iperf
-brew ipmitool
-brew jpeg
-brew jq
-brew lame
-brew libav
-brew libevent
-brew libpng
-brew libtiff
-brew libtool
-brew libvo-aacenc
-brew lua
-brew maven
-brew mercurial
-brew moreutils
-brew nginx
-brew nmap
-brew openssl
-brew pkg-config
-brew python
-brew reattach-to-user-namespace
-brew sqlite
-brew ssh-copy-id
-brew texi2html
-brew tig
-brew tmux
-brew vim --with-lua
-brew wget
-brew x264
-brew xvid
-brew xz
-brew yasm
-brew youtube-dl
-
-tap homebrew/dupes
-brew rsync
-
-tap homebrew/versions
-brew node4-lts
-
 tap kyounger/file
-brew brew-file
-
+tap homebrew/versions
+tap homebrew/dupes
+tap homebrew/core
+tap caskroom/cask
 tap argon/mas
+cask wireshark
+cask vmware-fusion
+cask vlc
+cask unpkg
+cask ui-browser
+cask tunnelblick
+cask sqlworkbenchj
+cask shotcut
+cask shortcat
+cask sequel-pro
+cask mysqlworkbench
+cask macvim
+cask macdown
+cask kodi
+cask karabiner
+cask kaleidoscope
+cask jollysfastvnc
+cask iterm2
+cask hugin
+cask google-drive
+cask google-chrome
+cask flux
+cask firefox
+cask dropbox
+cask cyberduck
+cask carbon-copy-cloner
+cask bettertouchtool
+cask balsamiq-mockups
+cask appcleaner
+cask android-file-transfer
+cask alfred
+cask adobe-creative-cloud
+cask adium
+brew youtube-dl
+brew yasm
+brew xz
+brew xvid
+brew x264
+brew wget
+brew vim --with-lua
+brew tmux
+brew tig
+brew texi2html
+brew ssh-copy-id
+brew sqlite
+brew rsync
+brew reattach-to-user-namespace
+brew python
+brew pkg-config
+brew openssl
+brew node4-lts
+brew nmap
+brew nginx
+brew netperf
+brew moreutils
+brew mercurial
+brew maven
 brew mas
-
-
-# App Store applications
+brew lua
+brew libvo-aacenc
+brew libtool
+brew libtiff
+brew libpng
+brew libevent
+brew libav
+brew lame
+brew jq
+brew jpeg
+brew ipmitool
+brew iperf
+brew imagemagick
+brew hub
+brew git
+brew freetype
+brew ffmpeg --with-faac
+brew faac
+brew exiftool
+brew dcraw
+brew brew-file
+brew apktool
+brew ack
+appstore 803453959 Slack
 appstore 682658836 GarageBand
-appstore 409183694 Keynote
+appstore 497799835 Xcode
 appstore 409203825 Numbers
 appstore 409201541 Pages
-appstore 803453959 Slack
-appstore 497799835 Xcode
+appstore 409183694 Keynote
 appstore 408981434 iMovie
