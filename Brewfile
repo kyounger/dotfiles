@@ -52,6 +52,7 @@ brew ssh-copy-id
 brew sqlite
 brew rsync
 brew reattach-to-user-namespace
+brew readline
 brew python
 brew pkg-config
 brew pcre
@@ -82,6 +83,8 @@ brew iperf
 brew imagemagick
 brew hub
 brew git
+brew gettext
+brew gdbm
 brew freetype
 brew ffmpeg --with-faac
 brew fasd
@@ -92,10 +95,3 @@ brew brew-file
 brew apktool
 brew activemq
 brew ack
-appstore 803453959 Slack
-appstore 682658836 GarageBand
-appstore 497799835 Xcode
-appstore 409203825 Numbers
-appstore 409201541 Pages
-appstore 409183694 Keynote
-appstore 408981434 iMovie
