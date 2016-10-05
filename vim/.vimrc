@@ -210,6 +210,12 @@ let g:disable_all_plugins = 0
         au InsertLeave * :set listchars+=trail:⌴
     augroup END
 
+    fun! TrimWhitespace()
+	let l:save_cursor = getpos('.')
+	%s/\s\+$//e
+	call setpos('.', l:save_cursor)
+    endfun
+
 " }}}
 " Wildmenu completion: {{{
 

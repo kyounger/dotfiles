@@ -2,6 +2,7 @@ tap kyounger/file
 tap homebrew/versions
 tap homebrew/dupes
 tap homebrew/core
+tap caskroom/versions
 tap caskroom/cask
 tap argon/mas
 cask wireshark
@@ -53,6 +54,7 @@ brew rsync
 brew reattach-to-user-namespace
 brew python
 brew pkg-config
+brew pcre
 brew openssl
 brew node4-lts
 brew nmap
@@ -60,9 +62,11 @@ brew nginx
 brew netperf
 brew moreutils
 brew mercurial
+brew maven32
 brew maven
 brew mas
 brew lua
+brew little-cms2
 brew libvo-aacenc
 brew libtool
 brew libtiff
@@ -72,6 +76,7 @@ brew libav
 brew lame
 brew jq
 brew jpeg
+brew jasper
 brew ipmitool
 brew iperf
 brew imagemagick
@@ -79,11 +84,13 @@ brew hub
 brew git
 brew freetype
 brew ffmpeg --with-faac
+brew fasd
 brew faac
 brew exiftool
 brew dcraw
 brew brew-file
 brew apktool
+brew activemq
 brew ack
 appstore 803453959 Slack
 appstore 682658836 GarageBand

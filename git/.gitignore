@@ -6,6 +6,7 @@
 *.pyc
 *.rej
 *.orig
+*.iml
 
 # Some Mozilla ignores
 obj-*/
@@ -22,3 +23,5 @@ bundle/**/doc
 target/
 
 rebel.xml
+
+.idea

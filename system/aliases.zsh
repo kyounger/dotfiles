@@ -24,10 +24,22 @@ alias gpa='git pull --all'
 alias grv='git remote -v'
 alias gpf='echo force push should be typed out fully :\)'
 alias gmmx='git merge $1 -Xignore-all-space'
+alias gbv='git branch -vv'
+alias gri5='git rebase -i HEAD~5'
+alias gri8='git rebase -i HEAD~8'
 alias vp='vim pom.xml'
 alias hp='head -20 pom.xml'
 
+
+function clonefhlb() { 
+    git clone "https://git.fhlbdm.com/$1/$2.git"
+    cd $2
+}
+
+
 alias mci='mvn clean install'
+
+#function gri() { git rebase -i HEAD\~$1 }
 
 # list files
 alias l='ls -al'
@@ -108,6 +120,7 @@ function extract () {
 }
 
 function mkv2mp4() { ffmpeg -i $1 -vcodec copy -acodec copy -absf aac_adtstoasc $1.mp4 }
+
 
 # nginx
 alias nginx_start='sudo nginx'
