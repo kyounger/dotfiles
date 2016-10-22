@@ -75,7 +75,7 @@ let g:disable_all_plugins = 0
             " NeoBundle 'evanmiller/nginx-vim-syntax', { 'directory': 'nginx-vim-syntax' }
             " NeoBundle 'rodjek/vim-puppet', { 'directory': 'puppet' }
             " NeoBundle 'darfink/vim-plist'
-            " NeoBundle 'PProvost/vim-ps1'
+            NeoBundle 'PProvost/vim-ps1'
             " NeoBundle 'tpope/vim-markdown', { 'directory': 'markdown' }
             " NeoBundle 'vim-scripts/phpfolding.vim', { 'directory': 'phpfolding.vim' }
             " NeoBundle 'scrooloose/syntastic', { 'directory': 'syntastic' }
@@ -286,7 +286,7 @@ let g:disable_all_plugins = 0
 " }}}
 " Tabs, Spaces, Wrapping: {{{
 
-    set tabstop=8
+    set tabstop=4
     set shiftwidth=4
     set softtabstop=4
     set noexpandtab

@@ -29,11 +29,19 @@ alias gri5='git rebase -i HEAD~5'
 alias gri8='git rebase -i HEAD~8'
 alias vp='vim pom.xml'
 alias hp='head -20 pom.xml'
+alias ga='git add *; git commit --amend --no-edit'
 
 
 function clonefhlb() { 
     git clone "https://git.fhlbdm.com/$1/$2.git"
     cd $2
+}
+
+function jhome () {
+  export JAVA_HOME=`/usr/libexec/java_home $@`
+  echo "JAVA_HOME:" $JAVA_HOME
+  echo "java -version:"
+  java -version
 }
 
 
