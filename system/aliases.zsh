@@ -29,7 +29,7 @@ alias gri5='git rebase -i HEAD~5'
 alias gri8='git rebase -i HEAD~8'
 alias vp='vim pom.xml'
 alias hp='head -20 pom.xml'
-alias ga='git add *; git commit --amend --no-edit'
+alias gcane='git add *; git commit --amend --no-edit'
 
 
 function clonefhlb() { 
@@ -43,6 +43,7 @@ function jhome () {
   echo "java -version:"
   java -version
 }
+
 
 
 alias mci='mvn clean install'

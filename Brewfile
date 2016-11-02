@@ -90,6 +90,7 @@ brew ffmpeg --with-faac
 brew fasd
 brew faac
 brew exiftool
+brew docker
 brew dcraw
 brew brew-file
 brew apktool
