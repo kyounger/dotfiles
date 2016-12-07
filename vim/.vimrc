@@ -505,7 +505,7 @@ let g:disable_all_plugins = 0
 
 " }}}
 " Folding: {{{
-    set foldlevelstart=0
+    set foldlevelstart=20
 
     " Space to toggle folds.
     nnoremap <Space> za
