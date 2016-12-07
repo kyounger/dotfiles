@@ -38,12 +38,13 @@ let g:disable_all_plugins = 0
                 NeoBundle 'tpope/vim-repeat', { 'directory': 'repeat' }
                 NeoBundle 'tpope/vim-unimpaired', { 'directory': 'unimpaired' } "Convenience mappings
                 NeoBundle 'tpope/vim-fugitive', { 'directory': 'fugitive' }
+                NeoBundle 'airblade/vim-gitgutter', {'directory': 'gitgutter'}
                 NeoBundle 'terryma/vim-expand-region', { 'directory': 'expand-region' } "mapped to +
-		NeoBundle 'junegunn/vim-pseudocl' "Replaces command-line, required by vim-oblique
+                NeoBundle 'junegunn/vim-pseudocl' "Replaces command-line, required by vim-oblique
                 NeoBundle 'junegunn/vim-oblique' "Make searching usable, requires vim-pseudocl
                 NeoBundle 'junegunn/vim-peekaboo'
                 NeoBundle 'Lokaltog/vim-powerline', { 'directory': 'vim-powerline' }
-		NeoBundle 'maxbrunsfeld/vim-yankstack'
+                NeoBundle 'maxbrunsfeld/vim-yankstack'
 
             "ColorSchemes
             NeoBundle 'sjl/badwolf', { 'directory': 'badwolf' }
@@ -500,6 +501,7 @@ let g:disable_all_plugins = 0
 
     "I hate typing SNAPSHOT
     nnoremap ,,s i-SNAPSHOT<esc>
+
 
 " }}}
 " Folding: {{{
@@ -978,6 +980,15 @@ let g:disable_all_plugins = 0
             au FileType puppet setlocal commentstring=#\ %s
             au FileType fish setlocal commentstring=#\ %s
         augroup END
+    end
+
+" }}}
+" GitGutter {{{
+
+    if neobundle#is_installed("vim-gitgutter")
+        nnoremap <F2> :GitGutterToggle<cr>
+		nmap <Leader>hn <Plug>GitGutterNextHunk
+		nmap <Leader>hp <Plug>GitGutterPrevHunk
     end
 
 " }}}

@@ -38,7 +38,7 @@ function clonefhlb() {
 }
 
 function jhome () {
-  export JAVA_HOME=`/usr/libexec/java_home $@`
+  export JAVA_HOME=`/usr/libexec/java_home -v $@`
   echo "JAVA_HOME:" $JAVA_HOME
   echo "java -version:"
   java -version
@@ -211,9 +211,6 @@ function mlregex() {
 
     # return $final
 }
-
-# base64 a file and copy to clipboard
-function base64 () { openssl base64 < "$1" | tr -d '\n' | pbcopy }
 
 # change directory to whatever the most recently focused finder window is
 function cdf () {
