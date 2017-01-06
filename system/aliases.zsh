@@ -89,7 +89,7 @@ function ta() {
     # unset TMPDIR
     if [[ `tmux list-sessions 2>&1 | grep "^no server running on" -c` -eq 0 ]];
     then
-        tmux attach 
+        tmux attach -d
     else
         tmux new-session
     fi
