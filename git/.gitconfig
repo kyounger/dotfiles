@@ -11,6 +11,7 @@
 
 [core]
 	excludesfile = ~/.gitignore
+	hooksPath = /Users/kyounger/.dotfiles/git/git-global-hooks
 [color]
 	ui = 1
 
@@ -37,3 +38,5 @@
 	helper = osxkeychain
 [url "https://"]
 	insteadOf = git://
+[init]
+	templatedir = ~/.dotfiles/git/git-templates

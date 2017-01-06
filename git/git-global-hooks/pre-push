@@ -1,0 +1,8 @@
+#!/bin/sh
+
+branch_blocked=local
+
+if grep -q "$branch_blocked"; then
+	echo "Branch '$branch_blocked' is blocked by yourself." >&2
+	exit 1
+fi
