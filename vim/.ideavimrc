@@ -1,0 +1,127 @@
+set clipboard+=unnamed
+set history=1000
+set gdefault
+set hlsearch
+set ignorecase
+set incsearch
+set relativenumber
+set number
+set scroll=38
+set scrolljump=1
+set scrolloff=10
+set sidescroll=2
+set sidescrolloff=2
+set selection=inclusive
+set showmode
+set smartcase
+set timeout
+set timeoutlen=500
+set ttimeoutlen=1
+set undolevels=10000
+set wrapscan
+set visualbell
+
+let mapleader = ","
+
+" Wrap toggling with <leader>w
+" command! -nargs=* Wrap set wrap linebreak nolist
+nnoremap <leader>w :set nowrap! nolinebreak! nolist<cr>
+
+" Keep the cursor in place while joining lines
+nnoremap J mzJ`z
+
+" Split line (sister to [J]oin lines)
+" The normal use of S is covered by cc, so don't worry about shadowing it.
+nnoremap S i<cr><esc>^mwgk:silent! s/\v +$//<cr>:noh<cr>`w
+
+" Made D behave
+nnoremap D d$
+
+" Remaps control-backspace to delete entire word in insert mode
+inoremap <C-BS> <Esc>dbxa
+
+" Fast saving
+nnoremap <leader>s :w!<cr>
+
+" Emacs bindings in command line mode
+cnoremap <c-a> <home>
+cnoremap <c-e> <end>
+
+"BEAST MODE. Allow . and @@ to execute once for each line of a visual selection
+vnoremap . :normal .<CR>
+vnoremap @@ :normal @@
+
+" Drag Lines: broken for now if folding is enabled
+" Alt-j & Alt-k to drag lines in any mode
+noremap ˚ :m-2<CR>
+noremap ∆ :m+<CR>
+inoremap ∆ <Esc>:m+<CR>
+inoremap ˚ <Esc>:m-2<CR>
+vnoremap ∆ :m'>+<CR>gv
+vnoremap ˚ :m-2<CR>gv
+
+" Select entire buffer
+nnoremap vaa ggvGg_
+nnoremap Vaa ggVG
+
+" Select (charwise) the contents of the current line, excluding indentation.
+" Great for pasting Python lines into REPLs.
+nnoremap vv ^vg_
+
+" Fix linewise visual selection of various text objects
+nnoremap VV V
+
+" Visually select the text that was last edited/pasted
+noremap gV `[v`]
+
+" Reselect visual block after indent/outdent
+vnoremap < <gv
+vnoremap > >gv
+"
+" mash keys; exit insert fast.
+inoremap jj <ESC>
+inoremap kk <ESC>
+inoremap jk <ESC>
+inoremap kj <ESC>
+
+" It's 2014.
+noremap j gj
+noremap k gk
+noremap gj j
+noremap gk k
+
+" Same when jumping around
+nnoremap g; g;zz
+nnoremap g, g,zz
+nnoremap <c-o> <c-o>zz
+
+" Easier to type, and I never use the default behavior.
+noremap H ^
+noremap L $
+vnoremap L g_
+
+" Heresy
+inoremap <c-a> <esc>I
+inoremap <c-e> <esc>A
+
+" gi already moves to 'last place you exited insert mode', so we'll map gI to
+" something similar: move to last change
+nnoremap gI `.
+
+" clearly
+au InsertLeave * set nopaste
+
+"I hate typing SNAPSHOT
+nnoremap ,,s i-SNAPSHOT<esc>
+
+"use ctrl-; to insert a semi-colon at the EOL and jump back to normal mode
+inoremap <C-;> <ESC>A;<ESC>
+
+"use ctrl-. to insert a . at the EOL and stay in insert mode
+inoremap <C-.> <ESC>A.
+
+nnoremap <silent> <leader><space> :noh<cr>
+
+" Clean trailing whitespace
+nnoremap <leader><leader>w mz:%s/\s\+$//<cr>:let @/=''<cr>`z
+

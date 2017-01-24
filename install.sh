@@ -27,6 +27,9 @@ ln -fs .dotfiles/vim/.vimrc
 #rm -f .vim
 ln -fs .dotfiles/vim/.vim
 
+#rm -f .vim
+ln -fs .dotfiles/vim/.ideavimrc
+
 #rm -f .zlogin
 ln -fs .dotfiles/zsh/.zlogin
 
@@ -50,3 +53,4 @@ ln -fs .dotfiles/zsh/.zshrc
 
 #run .osx defaults
 ~/.dotfiles/mathiasbynens-dotfiles/.osx
+

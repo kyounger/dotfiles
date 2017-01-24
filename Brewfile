@@ -55,6 +55,7 @@ brew reattach-to-user-namespace
 brew readline
 brew python
 brew pkg-config
+brew pdftohtml
 brew pcre
 brew openssl
 brew node4-lts

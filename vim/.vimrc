@@ -292,7 +292,7 @@ let g:disable_all_plugins = 0
     set softtabstop=4
     set noexpandtab
     set nowrap
-    set textwidth=80
+    " set textwidth=80
     set formatoptions=qrn1
     set colorcolumn=+1
 
