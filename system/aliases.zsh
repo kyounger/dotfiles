@@ -51,7 +51,8 @@ alias mci='mvn clean install'
 #function gri() { git rebase -i HEAD\~$1 }
 
 # list files
-alias l='ls -al'
+# alias l='ls -al'
+alias l='/usr/local/bin/gls -al --group-directories-first --color=always'
 alias lh='ls -ald .*'
 alias lsd3='du -sk * | sort -nr | head -3'
 

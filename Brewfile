@@ -93,6 +93,7 @@ brew faac
 brew exiftool
 brew docker
 brew dcraw
+brew coreutils
 brew brew-file
 brew apktool
 brew activemq
