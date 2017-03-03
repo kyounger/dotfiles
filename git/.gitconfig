@@ -40,3 +40,5 @@
 	insteadOf = git://
 [init]
 	templatedir = ~/.dotfiles/git/git-templates
+[fetch]
+	prune = true

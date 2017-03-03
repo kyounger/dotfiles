@@ -5,6 +5,7 @@ tap homebrew/core
 tap caskroom/versions
 tap caskroom/cask
 tap argon/mas
+cask yakyak
 cask wireshark
 cask vmware-fusion
 cask vlc
@@ -83,6 +84,7 @@ brew ipmitool
 brew iperf
 brew imagemagick
 brew hub
+brew groovysdk
 brew git
 brew gettext
 brew gdbm

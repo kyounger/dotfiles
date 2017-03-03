@@ -30,6 +30,7 @@ alias gri8='git rebase -i HEAD~8'
 alias vp='vim pom.xml'
 alias hp='head -20 pom.xml'
 alias gcane='git add *; git commit --amend --no-edit'
+alias gaa='git add *'
 
 
 function clonefhlb() { 

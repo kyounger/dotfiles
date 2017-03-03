@@ -332,6 +332,7 @@ let g:disable_all_plugins = 0
 
     noremap  <F1> <nop>
     inoremap <F1> <nop>
+    nnoremap Q <nop>
 
 " }}}
 " Editing: {{{
