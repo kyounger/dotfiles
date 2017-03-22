@@ -62,7 +62,7 @@ let g:disable_all_plugins = 0
             " NeoBundle 'sukima/xmledit', { 'directory': 'xmledit' }
 
             "Javascript stuff:
-            " NeoBundle 'maksimr/vim-jsbeautify'
+            NeoBundle 'maksimr/vim-jsbeautify'
             " NeoBundle 'beautify-web/js-beautify'
             " NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
             " NeoBundle 'pangloss/vim-javascript', { 'directory': 'javascript' }
