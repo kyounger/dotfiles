@@ -486,13 +486,13 @@
 	<key>HotKeyTogglesWindow</key>
 	<false/>
 	<key>Hotkey</key>
-	<false/>
+	<true/>
 	<key>HotkeyChar</key>
-	<integer>0</integer>
+	<integer>27</integer>
 	<key>HotkeyCode</key>
-	<integer>0</integer>
+	<integer>53</integer>
 	<key>HotkeyModifiers</key>
-	<integer>0</integer>
+	<integer>1048840</integer>
 	<key>IRMemory</key>
 	<integer>4</integer>
 	<key>JobName</key>
@@ -544,11 +544,11 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>650 607 620 392 0 0 1920 1200 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>269 122 796 473 0 0 1920 1177 </string>
+	<string>154 102 796 473 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1920 0 1920 1200 1920 0 1920 1200 </string>
+	<string>0 0 1440 900 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>1920 748 585 452 1920 0 1920 1200 </string>
+	<string>2019 730 585 452 1920 0 1920 1200 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -2009,7 +2009,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>3EDEDC3D-D384-4870-9C51-26200EA14498</string>
 	<key>NoSyncLastTipTime</key>
-	<real>495207254.40881902</real>
+	<real>498408547.545268</real>
 	<key>NoSyncPermissionToShowTip</key>
 	<true/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
@@ -2046,6 +2046,24 @@
 		<string>0022</string>
 		<string>0023</string>
 		<string>0024</string>
+		<string>0025</string>
+		<string>0026</string>
+		<string>0027</string>
+		<string>0028</string>
+		<string>0029</string>
+		<string>0030</string>
+		<string>0031</string>
+		<string>0032</string>
+		<string>0033</string>
+		<string>0034</string>
+		<string>0035</string>
+		<string>0036</string>
+		<string>0037</string>
+		<string>0038</string>
+		<string>0039</string>
+		<string>0040</string>
+		<string>0041</string>
+		<string>0042</string>
 	</array>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
@@ -2091,7 +2109,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-09-10T01:05:38Z</date>
+	<date>2016-10-17T14:49:07Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -2133,6 +2151,6 @@
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>iTerm Version</key>
-	<string>3.0.8</string>
+	<string>3.0.10</string>
 </dict>
 </plist>
