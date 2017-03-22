@@ -42,8 +42,23 @@
     <autogen>__KeyToKey__ KeyCode::I, VK_CONTROL | ModifierFlag::FN, KeyCode::PC_INSERT</autogen>
   </item>
   <item>
-    <name>Map Fn+f to Toggle Mute</name>
+    <name>Map Fn+s to Toggle Mute</name>
     <identifier>private.appdef.global.mute_toggle</identifier>
-    <autogen>__KeyToKey__ KeyCode::F, ModifierFlag::FN, KeyCode::VK_OPEN_URL_SHELL_mute_toggle</autogen>
+    <autogen>__KeyToKey__ KeyCode::S, ModifierFlag::FN, KeyCode::VK_CONSUMERKEY_VOLUME_MUTE</autogen>
+  </item>
+  <item>
+    <name>Map Fn+a to Play/Pause</name>
+    <identifier>private.appdef.global.playpause</identifier>
+    <autogen>__KeyToKey__ KeyCode::A, ModifierFlag::FN, KeyCode::VK_CONSUMERKEY_MUSIC_PLAY</autogen>
+  </item>
+  <item>
+    <name>Map Fn+z to Volume Down</name>
+    <identifier>private.appdef.global.volumedown</identifier>
+    <autogen>__KeyToKey__ KeyCode::Z, ModifierFlag::FN, KeyCode::VK_CONSUMERKEY_VOLUME_DOWN</autogen>
+  </item>
+  <item>
+    <name>Map Fn+x to Volume Up</name>
+    <identifier>private.appdef.global.volumeup</identifier>
+    <autogen>__KeyToKey__ KeyCode::X, ModifierFlag::FN, KeyCode::VK_CONSUMERKEY_VOLUME_UP</autogen>
   </item>
 </root>
