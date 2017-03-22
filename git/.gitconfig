@@ -19,7 +19,7 @@
         autosetuprebase = always
         autosetupmerge = always
 [diff]
-	tool = Kaleidoscope
+	indentHeuristic = true
 [difftool]
 	prompt = false
 [mergetool "Kaleidoscope"]

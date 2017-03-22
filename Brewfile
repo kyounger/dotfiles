@@ -49,6 +49,7 @@ brew x264
 brew wget
 brew wakeonlan
 brew vim --with-lua
+brew tree
 brew tmux
 brew tig
 brew texi2html
@@ -99,6 +100,7 @@ brew ffmpeg --with-faac
 brew fasd
 brew faac
 brew exiftool
+brew dos2unix
 brew docker
 brew dcraw
 brew coreutils

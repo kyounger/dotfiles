@@ -31,6 +31,8 @@ alias vp='vim pom.xml'
 alias hp='head -20 pom.xml'
 alias gcane='git add *; git commit --amend --no-edit'
 alias gaa='git add *'
+alias gcpa='git cherry-pick --abort'
+alias grmh='git reset --mixed HEAD\^'
 
 
 function clonefhlb() { 
