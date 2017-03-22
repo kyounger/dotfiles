@@ -1,3 +1,4 @@
+tap neovim/neovim
 tap kyounger/file
 tap homebrew/versions
 tap homebrew/dupes
@@ -16,6 +17,7 @@ cask sqlworkbenchj
 cask shotcut
 cask shortcat
 cask sequel-pro
+cask openemu
 cask mysqlworkbench
 cask macvim
 cask macdown
@@ -45,12 +47,14 @@ brew xz
 brew xvid
 brew x264
 brew wget
+brew wakeonlan
 brew vim --with-lua
 brew tmux
 brew tig
 brew texi2html
 brew ssh-copy-id
 brew sqlite
+brew sox
 brew rsync
 brew reattach-to-user-namespace
 brew readline
@@ -63,11 +67,13 @@ brew node4-lts
 brew nmap
 brew nginx
 brew netperf
+brew neovim
 brew moreutils
 brew mercurial
 brew maven32
 brew maven
 brew mas
+brew mad
 brew lua
 brew little-cms2
 brew libvo-aacenc
