@@ -15,9 +15,13 @@ alias hf='sudo vim /etc/hosts'
 alias hl='sudo vim /etc/hosts'
 
 alias git-grep-all='git branch -a | grep -v "remotes/origin/HEAD" | tr -d \* | xargs git grep'
-alias glg='git log --graph --abbrev-commit --decorate --format=format:"%C(green)%h%C(reset) - %C(blue)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(red)%d%C(reset)" --all'
-alias glb='git log --graph --abbrev-commit --decorate --format=format:"%C(green)%h%C(reset) - %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(red)%d%C(reset)" --all'
+
+alias glg='git log --graph --abbrev-commit --decorate --format=format:"%C(green)%h%C(reset) - %C(blue)(%ar)%C(reset) %C(white)%s%C(reset) %C(red)%d%C(reset)" --all'
+alias glb='git log --graph --abbrev-commit --decorate --format=format:"%C(green)%h%C(reset) - %C(white)%s%C(reset) %C(reset)%C(red)%d%C(reset)" --all'
+alias glgu='git log --graph --abbrev-commit --decorate --format=format:"%C(green)%h%C(reset) - %C(blue)(%ar)%C(reset) %C(white)%s%C(reset) %C(reset)%C(red)%d%C(reset) %C(reset)%C(yellow)<%an>" --all'
+alias glbu='git log --graph --abbrev-commit --decorate --format=format:"%C(green)%h%C(reset) - %C(white)%s%C(reset) %C(reset)%C(red)%d%C(reset) %C(reset)%C(yellow)<%an>" --all'
 alias glh='git log --abbrev-commit --decorate --format=format:"%C(green)%h%C(reset) - %C(white)%s%C(reset) %C(reset)%C(red)%d %C(reset)%C(magenta)(%cr) %C(reset)%C(yellow)<%an>"'
+
 alias gd='git diff'
 alias gdw='git diff -w'
 alias gdc='git diff --color-words'
