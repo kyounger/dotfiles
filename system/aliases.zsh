@@ -18,9 +18,11 @@ alias git-grep-all='git branch -a | grep -v "remotes/origin/HEAD" | tr -d \* | x
 
 alias glg='git log --graph --abbrev-commit --decorate --format=format:"%C(green)%h%C(reset) - %C(blue)(%ar)%C(reset) %C(white)%s%C(reset) %C(red)%d%C(reset)" --all'
 alias glb='git log --graph --abbrev-commit --decorate --format=format:"%C(green)%h%C(reset) - %C(white)%s%C(reset) %C(reset)%C(red)%d%C(reset)" --all'
+alias glbo='git log --graph --abbrev-commit --decorate --format=format:"%C(green)%h%C(reset) - %C(white)%s%C(reset) %C(reset)%C(red)%d%C(reset)" --branches=\*'
 alias glgu='git log --graph --abbrev-commit --decorate --format=format:"%C(green)%h%C(reset) - %C(blue)(%ar)%C(reset) %C(white)%s%C(reset) %C(reset)%C(red)%d%C(reset) %C(reset)%C(yellow)<%an>" --all'
 alias glbu='git log --graph --abbrev-commit --decorate --format=format:"%C(green)%h%C(reset) - %C(white)%s%C(reset) %C(reset)%C(red)%d%C(reset) %C(reset)%C(yellow)<%an>" --all'
 alias glh='git log --abbrev-commit --decorate --format=format:"%C(green)%h%C(reset) - %C(white)%s%C(reset) %C(reset)%C(red)%d %C(reset)%C(magenta)(%cr) %C(reset)%C(yellow)<%an>"'
+alias grho='read -q "REPLY?Are you sure you want to hard reset to the origin? "; if [ "y" = "$REPLY" ]; then echo; git reset --hard `git for-each-ref --format="%(upstream:short)" $(git symbolic-ref -q HEAD)`; fi'
 
 alias gd='git diff'
 alias gdw='git diff -w'

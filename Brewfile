@@ -22,6 +22,7 @@ cask mysqlworkbench
 cask macvim
 cask macdown
 cask kodi
+cask karabiner-elements
 cask karabiner
 cask kaleidoscope
 cask jollysfastvnc

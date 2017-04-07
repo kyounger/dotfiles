@@ -450,7 +450,6 @@ let g:disable_all_plugins = 0
 
     "Matching
     runtime macros/matchit.vim
-    map <tab> %
 " }}}
 " Misc: {{{
     nnoremap <F3> :e $MYVIMRC<cr>
