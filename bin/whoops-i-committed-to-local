@@ -1,0 +1,10 @@
+#!/usr/bin/env zsh
+set -e
+
+git checkout master;
+git cherry-pick local;
+git push;
+git checkout local;
+git reset --hard HEAD\^;
+git rebase master;
+
