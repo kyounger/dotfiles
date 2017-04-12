@@ -25,7 +25,7 @@ alias glh='git log --abbrev-commit --decorate --format=format:"%C(green)%h%C(res
 alias grho='read -q "REPLY?Are you sure you want to hard reset to the origin? "; if [ "y" = "$REPLY" ]; then echo; git reset --hard `git for-each-ref --format="%(upstream:short)" $(git symbolic-ref -q HEAD)`; fi'
 
 alias gd='git diff'
-alias gdw='git diff -w'
+alias gdw='git diff -w --color | diff-so-fancy'
 alias gdc='git diff --color-words'
 alias gcam='git commit -am'
 alias gpa='git pull --all'

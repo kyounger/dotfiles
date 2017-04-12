@@ -42,3 +42,10 @@
 	templatedir = ~/.dotfiles/git/git-templates
 [fetch]
 	prune = true
+[alias]
+	add-no-white=!sh -c 'git diff -U0 -w --no-color "$@" | git apply --cached --ignore-whitespace --unidiff-zero -'
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22

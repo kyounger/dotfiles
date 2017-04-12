@@ -103,6 +103,7 @@ brew faac
 brew exiftool
 brew dos2unix
 brew docker
+brew diff-so-fancy
 brew dcraw
 brew coreutils
 brew brew-file
