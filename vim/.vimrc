@@ -499,6 +499,10 @@ let g:disable_all_plugins = 0
         set clipboard=unnamed
     endif
 
+	" paste with most recent yank
+	noremap <leader>p "0p
+	noremap <leader>P "0P
+
     "I hate typing SNAPSHOT
     nnoremap ,,s i-SNAPSHOT<esc>
 
