@@ -1,9 +1,16 @@
 export CLICOLOR=1
 
+alias macmounter-tail-logs='tail -f ~/Library/Application\ Support/macmounter/macmounter.log'
+alias macmounter-vim-logs='vim ~/Library/Application\ Support/macmounter/macmounter.log'
+alias macmounter-reload='macmounter.py --reload'
+
 #edit main boxen configs
 alias edit-boxen="vim /opt/boxen/repo/modules/people/manifests/kyounger.pp /Users/kenny/src/our-boxen/modules/people/manifests/kyounger/*.pp /opt/boxen/repo/Puppetfile"
 
 alias vi='vim'
+
+#clear ~/temp dir and cd to it
+alias temp='rm -rf ~/temp; mkdir ~/temp; cd ~/temp'
 
 # open in...
 alias pre='open -a Preview'
