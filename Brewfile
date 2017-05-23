@@ -18,7 +18,6 @@ brew apktool
 brew coreutils
 brew dcraw
 brew diff-so-fancy
-brew docker
 brew dos2unix
 brew exiftool
 brew faac
@@ -28,6 +27,7 @@ brew freetype
 brew gdbm
 brew gettext
 brew git
+brew gnu-sed
 brew groovysdk
 brew hub
 brew imagemagick
@@ -56,6 +56,7 @@ brew nmap
 brew openssl
 brew pcre
 brew pdftohtml
+brew phantomjs
 brew pkg-config
 brew python
 brew readline
