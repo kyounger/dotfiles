@@ -117,6 +117,7 @@ brew rsync
 brew sox
 brew sqlite
 brew ssh-copy-id
+brew tcping
 brew testssl
 brew texi2html
 brew tig
