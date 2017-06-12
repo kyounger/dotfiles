@@ -16,8 +16,7 @@ cask carbon-copy-cloner
 cask charles
 cask cyberduck
 cask dropbox
-cask firefox
-cask flux
+cask firefox cask flux
 cask google-chrome
 cask hugin
 cask iterm2
@@ -113,6 +112,7 @@ brew pkg-config
 brew python
 brew readline
 brew reattach-to-user-namespace
+brew redis
 brew rsync
 brew sox
 brew sqlite
@@ -142,6 +142,9 @@ tap kyounger/file
 brew brew-file
 
 tap neovim/neovim
+
+# Other Homebrew packages
+brew neovim
 
 # Cask applications
 cask google-drive
