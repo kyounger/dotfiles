@@ -84,6 +84,7 @@ brew lame
 brew libav
 brew libevent
 brew libpng
+brew libsass
 brew libtermkey
 brew libtiff
 brew libtool
@@ -94,7 +95,6 @@ brew little-cms2
 brew lua
 brew mad
 brew maven
-brew maven@3.2
 brew mercurial
 brew moreutils
 brew msgpack
