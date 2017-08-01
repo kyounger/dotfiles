@@ -1,9 +1,3 @@
-
-# tap repositories and their packages
-
-tap argon/mas
-brew mas
-
 tap caskroom/cask
 cask adium
 cask adobe-creative-cloud
@@ -19,6 +13,7 @@ cask dropbox
 cask firefox
 cask flux
 cask google-chrome
+cask google-drive
 cask hugin
 cask iterm2
 cask jollysfastvnc
@@ -44,12 +39,11 @@ cask unpkg
 cask unrarx
 cask vlc
 cask vmware-fusion
+cask wacom-tablet
 cask wireshark
 cask yakyak
 
-tap caskroom/versions
 
-tap homebrew/core
 brew ack
 brew activemq
 brew apktool
@@ -134,20 +128,11 @@ brew xz
 brew yasm
 brew youtube-dl
 
-tap homebrew/dupes
-
-tap homebrew/versions
-
 tap kyounger/file
 brew brew-file
 
-tap neovim/neovim
-
-# Cask applications
-cask google-drive
-cask wacom-tablet
-
 # App Store applications
+brew mas
 appstore 408981434 iMovie (10.1.6)
 appstore 1018109117 Install OS X El Capitan (1.7.41)
 appstore 595565459 IP Camera Viewer 2 (1.0)
