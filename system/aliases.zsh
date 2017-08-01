@@ -91,6 +91,7 @@ alias rmdotsvn='find . -name ".svn" -type d -exec rm -rf {} \;'
 alias linecount="sed '/^\s*$/d' | wc -l"
 
 alias rsync-tiny-to-manhattan='rsync -a --delete-after --info=progress2 /Volumes/TINY/LR_TINY_IMPORT/ /Volumes/manhattan/LR_TINY_BACKUP'
+alias rsync-lrimport-to-manhattan='rsync -a --delete-after --info=progress2 /Users/kenny/Pictures/LR_IMPORT/ /Volumes/manhattan/LR_IMPORT_BACKUP'
 alias rsync-manhattan-to-boon='rsync -a --delete-after --info=progress2 /Volumes/manhattan/ boon::boon-manhattan'
 
 # diff two directories

@@ -19,7 +19,6 @@ cask dropbox
 cask firefox
 cask flux
 cask google-chrome
-cask google-drive
 cask hugin
 cask iterm2
 cask jollysfastvnc
@@ -69,6 +68,7 @@ brew gettext
 brew git
 brew gnu-sed
 brew groovysdk
+brew hashcat
 brew hub
 brew icu4c
 brew imagemagick
@@ -96,6 +96,7 @@ brew maven@3.2
 brew mercurial
 brew moreutils
 brew msgpack
+brew neovim
 brew netperf
 brew nginx
 brew nmap
@@ -139,7 +140,6 @@ tap kyounger/file
 brew brew-file
 
 tap neovim/neovim
-brew neovim
 
 # Cask applications
 cask wacom-tablet

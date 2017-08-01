@@ -6,6 +6,7 @@ setopt +o nomatch
 items=(
 	data-explorer
 	metadatawrangler
+	megapixel-sort
 	metadata-viewer
 	flickr
 	workflow-delete-options

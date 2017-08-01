@@ -51,6 +51,9 @@ ln -fs .dotfiles/zsh/.zshenv
 #rm -f .zshrc
 ln -fs .dotfiles/zsh/.zshrc
 
+mkdir -p .brewfile
+ln -fs .dotfiles/Brewfile ~/.brewfile/Brewfile
+
 #run .osx defaults
 ~/.dotfiles/mathiasbynens-dotfiles/.osx
 
