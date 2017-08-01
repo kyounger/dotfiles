@@ -39,8 +39,6 @@
 	helper = osxkeychain
 [url "https://"]
 	insteadOf = git://
-[init]
-	templatedir = ~/.dotfiles/git/git-templates
 [fetch]
 	prune = true
 [alias]
