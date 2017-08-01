@@ -131,6 +131,12 @@ brew youtube-dl
 tap kyounger/file
 brew brew-file
 
+tap neovim/neovim
+
+# Cask applications
+cask google-drive
+cask wacom-intuos-tablet
+
 # App Store applications
 brew mas
 appstore 408981434 iMovie (10.1.6)
