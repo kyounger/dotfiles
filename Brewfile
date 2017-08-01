@@ -30,6 +30,9 @@ cask macdown
 cask macvim
 cask mysqlworkbench
 cask openemu
+cask powershell
+cask puppet-agent
+cask quicklook-csv
 cask sequel-pro
 cask shortcat
 cask shotcut
@@ -100,8 +103,6 @@ brew neovim
 brew netperf
 brew nginx
 brew nmap
-brew node
-brew node@4
 brew oniguruma
 brew openssl
 brew openssl@1.1
@@ -142,6 +143,7 @@ brew brew-file
 tap neovim/neovim
 
 # Cask applications
+cask google-drive
 cask wacom-tablet
 
 # App Store applications

@@ -33,6 +33,7 @@ alias grho='read -q "REPLY?Are you sure you want to hard reset to the origin? ";
 
 alias gd='git diff'
 alias gdw='git diff -w'
+alias gdws='git diff -w --staged'
 alias gdc='git diff --color-words'
 alias gcam='git commit -am'
 alias gpa='git pull --all'

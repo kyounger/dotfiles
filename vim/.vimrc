@@ -290,11 +290,12 @@ let g:disable_all_plugins = 0
     set tabstop=4
     set shiftwidth=4
     set softtabstop=4
-    set noexpandtab
+    set expandtab
     set nowrap
     " set textwidth=80
     set formatoptions=qrn1
     set colorcolumn=+1
+    inoremap <S-Tab> <C-d>
 
     " Wrap toggling with <leader>w
     " command! -nargs=* Wrap set wrap linebreak nolist
@@ -499,9 +500,9 @@ let g:disable_all_plugins = 0
         set clipboard=unnamed
     endif
 
-	" paste with most recent yank
-	noremap <leader>p "0p
-	noremap <leader>P "0P
+    " paste with most recent yank
+    noremap <leader>p "0p
+    noremap <leader>P "0P
 
     "I hate typing SNAPSHOT
     nnoremap ,,s i-SNAPSHOT<esc>
