@@ -16,7 +16,8 @@ cask carbon-copy-cloner
 cask charles
 cask cyberduck
 cask dropbox
-cask firefox cask flux
+cask firefox
+cask flux
 cask google-chrome
 cask hugin
 cask iterm2
@@ -29,7 +30,6 @@ cask macdown
 cask macvim
 cask mysqlworkbench
 cask openemu
-cask powershell
 cask puppet-agent
 cask quicklook-csv
 cask sequel-pro
@@ -143,17 +143,14 @@ brew brew-file
 
 tap neovim/neovim
 
-# Other Homebrew packages
-brew neovim
-
 # Cask applications
 cask google-drive
 cask wacom-tablet
 
 # App Store applications
-appstore 595565459 IP Camera Viewer 2 (1.0)
+appstore 408981434 iMovie (10.1.6)
 appstore 1018109117 Install OS X El Capitan (1.7.41)
+appstore 595565459 IP Camera Viewer 2 (1.0)
 appstore 425955336 Skitch (2.8)
-appstore 803453959 Slack (2.6.0)
+appstore 803453959 Slack (2.6.2)
 appstore 896450579 Textual (6.0.10)
-appstore 408981434 iMovie (10.1.5)
