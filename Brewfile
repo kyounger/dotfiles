@@ -6,36 +6,28 @@ brew mas
 
 tap caskroom/cask
 cask adium
-cask adobe-creative-cloud
 cask alfred
 cask android-file-transfer
 cask appcleaner
 cask balsamiq-mockups
 cask bettertouchtool
-cask carbon-copy-cloner
 cask charles
 cask cyberduck
-cask dropbox
 cask firefox
 cask flux
 cask google-chrome
-cask hugin
 cask iterm2
 cask jollysfastvnc
 cask kaleidoscope
 cask karabiner-elements
 cask karabiner
-cask kodi
 cask macdown
 cask macvim
-cask openemu
 cask puppet-agent
 cask quicklook-csv
 cask sequel-pro
 cask shortcat
-cask shotcut
 cask sqlworkbenchj
-cask stellarium
 cask totalspaces
 cask tunnelblick
 cask ui-browser
@@ -91,7 +83,6 @@ brew moreutils
 brew libpng
 brew xvid
 brew tig
-brew youtube-dl
 brew fasd
 brew utf8proc
 brew texi2html
@@ -137,9 +128,9 @@ tap kyounger/file
 brew brew-file
 
 # App Store applications
-appstore 408981434 iMovie (10.1.6)
-appstore 1018109117 Install OS X El Capitan (1.7.41)
-appstore 595565459 IP Camera Viewer 2 (1.0)
 appstore 425955336 Skitch (2.8)
 appstore 803453959 Slack (2.6.2)
-appstore 896450579 Textual (6.0.10)
+appstore 497799835 Xcode (8.2.1)
+
+# Additional files
+file ./Local.Brewfile
