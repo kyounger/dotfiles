@@ -1,4 +1,4 @@
-echo Home is: $HOME
+echo env HOME is: $HOME
 
 cd $HOME
 
