@@ -15,5 +15,7 @@ cask shotcut
 cask stellarium
 
 # App Store applications
+appstore 425955336 Skitch (2.8)
 appstore 408981434 iMovie (10.1.6)
 appstore 595565459 IP Camera Viewer 2 (1.0)
+appstore 497799835 Xcode (8.2.1)
