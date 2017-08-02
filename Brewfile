@@ -28,7 +28,6 @@ cask karabiner
 cask kodi
 cask macdown
 cask macvim
-cask mysqlworkbench
 cask openemu
 cask puppet-agent
 cask quicklook-csv
