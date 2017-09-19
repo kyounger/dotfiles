@@ -41,6 +41,8 @@ cask yakyak
 tap caskroom/drivers
 cask wacom-intuos-tablet
 
+tap caskroom/versions
+
 tap homebrew/core
 brew jpeg
 brew ssh-copy-id

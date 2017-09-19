@@ -50,6 +50,7 @@ alias gaa='git add *'
 alias gcpa='git cherry-pick --abort'
 alias grmh='git reset --mixed HEAD\^'
 
+alias redis-start='redis-server /usr/local/etc/redis.conf'
 
 function clonefhlb() { 
     git clone "https://git.fhlbdm.com/$1/$2.git"

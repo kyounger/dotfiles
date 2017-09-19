@@ -30,9 +30,9 @@ nnoremap <leader>w :set nowrap! nolinebreak! nolist<cr>
 " Keep the cursor in place while joining lines
 nnoremap J mzJ`z
 
-" Split line (sister to [J]oin lines)
-" The normal use of S is covered by cc, so don't worry about shadowing it.
-nnoremap S i<cr><esc>^mwgk:silent! s/\v +$//<cr>:noh<cr>`w
+" these don't currently work
+nnoremap <silent> <S-space> :action GuiDesigner.ShrinkSelection<cr>
+nnoremap <silent> <space> :action GuiDesigner.ExpandSelection<cr>
 
 " Made D behave
 nnoremap D d$
@@ -114,11 +114,17 @@ au InsertLeave * set nopaste
 "I hate typing SNAPSHOT
 nnoremap ,,s i-SNAPSHOT<esc>
 
-"use ctrl-; to insert a semi-colon at the EOL and jump back to normal mode
+"use ctrl and certain chars to insert that char at the EOL and jump back to normal mode
 inoremap <C-;> <ESC>A;<ESC>
+inoremap <C-,> <ESC>A,<ESC>
 
 "use ctrl-. to insert a . at the EOL and stay in insert mode
 inoremap <C-.> <ESC>A.
+
+" swap case of char in insert mode
+inoremap <C-`> <ESC>l~hi
+
+
 
 nnoremap <silent> <leader><space> :noh<cr>
 
