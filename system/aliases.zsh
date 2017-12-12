@@ -31,6 +31,9 @@ alias glbu='git log --graph --abbrev-commit --decorate --format=format:"%C(green
 alias glh='git log --abbrev-commit --decorate --format=format:"%C(green)%h%C(reset) - %C(white)%s%C(reset) %C(reset)%C(red)%d %C(reset)%C(magenta)(%cr) %C(reset)%C(yellow)<%an>"'
 alias grho='read -q "REPLY?Are you sure you want to hard reset to the origin? "; if [ "y" = "$REPLY" ]; then echo; git reset --hard `git for-each-ref --format="%(upstream:short)" $(git symbolic-ref -q HEAD)`; fi'
 
+alias gcm='git commit --message'
+alias gcam='git commit --all --message'
+alias gco='git checkout'
 alias gd='git diff'
 alias gdw='git diff -w'
 alias gdws='git diff -w --staged'
@@ -48,7 +51,16 @@ alias hp='head -20 pom.xml'
 alias gcane='git add *; git commit --amend --no-edit'
 alias gaa='git add *'
 alias gcpa='git cherry-pick --abort'
+alias gcpc='git cherry-pick --continue'
 alias grmh='git reset --mixed HEAD\^'
+
+alias gs='git stash'
+alias gsp='git stash pop'
+alias gsl='git stash list'
+alias gp='git push'
+alias gpc='git push --set-upstream origin "$(git-branch-current 2> /dev/null)"'
+alias gbm='git branch --move'
+
 
 alias redis-start='redis-server /usr/local/etc/redis.conf'
 
@@ -64,6 +76,7 @@ function jhome () {
   java -version
 }
 
+alias tidal-client='~/Applications/TES\ Java\ Client/tesclient.sh &'
 
 
 alias mci='mvn clean install'
@@ -75,6 +88,40 @@ alias mci='mvn clean install'
 alias l='/usr/local/bin/gls -al --group-directories-first --color=always'
 alias lh='ls -ald .*'
 alias lsd3='du -sk * | sort -nr | head -3'
+
+# ls
+if is-callable 'dircolors'; then
+  # GNU Core Utilities
+  alias ls='ls --group-directories-first'
+
+  if zstyle -t ':prezto:module:utility:ls' color; then
+    if [[ -s "$HOME/.dir_colors" ]]; then
+      eval "$(dircolors --sh "$HOME/.dir_colors")"
+    else
+      eval "$(dircolors --sh)"
+    fi
+
+    alias ls="${aliases[ls]:-ls} --color=auto"
+  else
+    alias ls="${aliases[ls]:-ls} -F"
+  fi
+else
+  # BSD Core Utilities
+  if zstyle -t ':prezto:module:utility:ls' color; then
+    # Define colors for BSD ls.
+    export LSCOLORS='exfxcxdxbxGxDxabagacad'
+    export LSCOLORS='DxfxcxdxbxGxDxabagacad'
+
+
+    # Define colors for the completion system.
+    export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=36;01:cd=33;01:su=31;40;07:sg=36;40;07:tw=32;40;07:ow=33;40;07:'
+    export LS_COLORS='di=93:ln=35:so=32:pi=33:ex=31:bd=36;01:cd=33;01:su=31;40;07:sg=36;40;07:tw=32;40;07:ow=33;40;07:'
+
+    alias ls="${aliases[ls]:-ls} -G"
+  else
+    alias ls="${aliases[ls]:-ls} -F"
+  fi
+fi
 
 # change dir (or make and change)
 alias u='cd ..'

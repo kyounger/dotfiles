@@ -18,10 +18,10 @@ source $ZPLUG_HOME/init.zsh
 
 zplug "kyounger/prezto", use:"modules/editor/init.zsh"
 zplug "kyounger/prezto", use:"modules/history/init.zsh"
-zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-history-substring-search"
 zplug "rimraf/k"
 zplug "lukechilds/zsh-nvm"
+zplug "zsh-users/zsh-syntax-highlighting"
 
 # zplug "zsh-users/zsh-completions"
 zplug "kyounger/prezto", use:"modules/completion/init.zsh"
@@ -39,6 +39,8 @@ if ! zplug check --verbose; then
         echo
     fi
 fi
+
+
 
 zplug load
 
@@ -65,10 +67,43 @@ if [[ -a ~/.localrc ]]; then
     source ~/.localrc
 fi
 
-source ~/.dotfiles/system/aliases.zsh
-
 setopt IGNORE_EOF
+setopt CORRECT
 
+# Disable correction.
+alias ack='nocorrect ack'
+alias cd='nocorrect cd'
+alias cp='nocorrect cp'
+alias ebuild='nocorrect ebuild'
+alias gcc='nocorrect gcc'
+alias gist='nocorrect gist'
+alias grep='nocorrect grep'
+alias heroku='nocorrect heroku'
+alias ln='nocorrect ln'
+alias man='nocorrect man'
+alias mkdir='nocorrect mkdir'
+alias mv='nocorrect mv'
+alias mysql='nocorrect mysql'
+alias rm='nocorrect rm'
+
+# Disable globbing.
+alias bower='noglob bower'
+alias fc='noglob fc'
+alias find='noglob find'
+alias ftp='noglob ftp'
+alias history='noglob history'
+alias locate='noglob locate'
+alias rake='noglob rake'
+alias rsync='noglob rsync'
+alias scp='noglob scp'
+alias sftp='noglob sftp'
+
+
+#####################################################################
+# source aliases
+#####################################################################
+
+source ~/.dotfiles/system/aliases.zsh
 
 #####################################################################
 # history options
@@ -83,11 +118,8 @@ setopt EXTENDED_HISTORY          # Write the history file in the ':start:elapsed
 setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
 setopt SHARE_HISTORY             # Share history between all sessions.
 setopt HIST_EXPIRE_DUPS_FIRST    # Expire a duplicate event first when trimming history.
-setopt HIST_IGNORE_DUPS          # Do not record an event that was just recorded again.
-setopt HIST_IGNORE_ALL_DUPS      # Delete an old recorded event if a new event is a duplicate.
 setopt HIST_FIND_NO_DUPS         # Do not display a previously found event.
 setopt HIST_IGNORE_SPACE         # Do not record an event starting with a space.
-setopt HIST_SAVE_NO_DUPS         # Do not write a duplicate event to the history file.
 setopt HIST_VERIFY               # Do not execute immediately upon history expansion.
 setopt HIST_BEEP                 # Beep when accessing non-existent history.
 
