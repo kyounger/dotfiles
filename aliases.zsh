@@ -218,7 +218,7 @@ function mygrants() {
 
 # snag an mp3 from youtube and title it properly
 function ytmp3() {
-    youtube-dl --keep-video --output '%(title)s.%(ext)s' --verbose --format bestaudio $1
+    youtube-dl --keep-video --output '%(title)s.%(ext)s' --verbose --format bestaudio --extract-audio --audio-quality 160K --audio-format mp3 --metadata-from-title "%(artist)s - %(title)s" $1
 }
 function ytmp3-old() {
     youtube-dl -kvt --extract-audio --audio-quality 160k --audio-format mp3 $1
