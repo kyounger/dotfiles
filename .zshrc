@@ -20,7 +20,10 @@ zplug "kyounger/prezto", use:"modules/editor/init.zsh"
 zplug "kyounger/prezto", use:"modules/history/init.zsh"
 zplug "zsh-users/zsh-history-substring-search"
 zplug "rimraf/k"
+
+export NVM_LAZY_LOAD=true
 zplug "lukechilds/zsh-nvm"
+
 zplug "zsh-users/zsh-syntax-highlighting"
 
 # zplug "zsh-users/zsh-completions"
@@ -122,6 +125,9 @@ setopt HIST_FIND_NO_DUPS         # Do not display a previously found event.
 setopt HIST_IGNORE_SPACE         # Do not record an event starting with a space.
 setopt HIST_VERIFY               # Do not execute immediately upon history expansion.
 setopt HIST_BEEP                 # Beep when accessing non-existent history.
+
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 
 #####################################################################
 # directory options
