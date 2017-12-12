@@ -144,6 +144,10 @@ setopt MULTIOS              # Write to multiple descriptors.
 setopt EXTENDED_GLOB        # Use extended globbing syntax.
 unsetopt CLOBBER            # Do not overwrite existing files with > and >>.
 
+#override prezto completion module on this setting
+zstyle ':completion:*:*:cd:*' tag-order local-directories directory-stack
+
+
 #####################################################################
 # brew file wrapper
 #####################################################################

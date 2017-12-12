@@ -32,31 +32,16 @@ ln -fs $HOME/.dotfiles/vim/.vim
 #rm -f .vim
 ln -fs $HOME/.dotfiles/vim/.ideavimrc
 
-#rm -f .zlogin
-ln -fs $HOME/.dotfiles/zsh/.zlogin
-
-#rm -f .zlogout
-ln -fs $HOME/.dotfiles/zsh/.zlogout
-
-#rm -f .zprezto
-ln -fs $HOME/.dotfiles/zsh/.zprezto
-
-#rm -f .zpreztorc
-ln -fs $HOME/.dotfiles/zsh/.zpreztorc
-
-#rm -f .zprofile
-ln -fs $HOME/.dotfiles/zsh/.zprofile
-
 #rm -f .zshenv
-ln -fs $HOME/.dotfiles/zsh/.zshenv
+# ln -fs $HOME/.dotfiles/.zshenv
 
 #rm -f .zshrc
-ln -fs $HOME/.dotfiles/zsh/.zshrc
+ln -fs $HOME/.dotfiles/.zshrc
 
 mkdir -p $HOME/.brewfile
-ln -fs $HOME/.dotfiles/Brewfile $HOME/.brewfile/Brewfile
-ln -fs $HOME/.dotfiles/Brewfile.work $HOME/.brewfile/Brewfile.work
-ln -fs $HOME/.dotfiles/Brewfile.home $HOME/.brewfile/Brewfile.home
+ln -fs $HOME/.dotfiles/Brewfile $HOME/.config/brewfile/Brewfile
+ln -fs $HOME/.dotfiles/Brewfile.work $HOME/.config/brewfile/Brewfile.work
+ln -fs $HOME/.dotfiles/Brewfile.home $HOME/.config/brewfile/Brewfile.home
 
 #run .osx defaults
 $HOME/.dotfiles/mathiasbynens-dotfiles/.osx
