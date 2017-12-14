@@ -31,8 +31,7 @@ zplug "kyounger/prezto", use:"modules/completion/init.zsh"
 
 zplug "modules/helper", from:prezto
 zplug "modules/prompt", from:prezto
-zstyle ':prezto:module:prompt' theme 'sorin'
-
+zstyle ':prezto:module:prompt' theme 'sorin' 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
@@ -101,6 +100,9 @@ alias rsync='noglob rsync'
 alias scp='noglob scp'
 alias sftp='noglob sftp'
 
+autoload -Uz bracketed-paste-url-magic && zle -N bracketed-paste bracketed-paste-url-magic
+
+bindkey -v #duh
 
 #####################################################################
 # source aliases
