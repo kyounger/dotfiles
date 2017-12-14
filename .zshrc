@@ -20,6 +20,7 @@ zplug "kyounger/prezto", use:"modules/editor/init.zsh"
 zplug "kyounger/prezto", use:"modules/history/init.zsh"
 zplug "zsh-users/zsh-history-substring-search"
 zplug "rimraf/k"
+zplug "arzzen/calc.plugin.zsh"
 
 export NVM_LAZY_LOAD=true
 zplug "lukechilds/zsh-nvm"
@@ -41,8 +42,6 @@ if ! zplug check --verbose; then
         echo
     fi
 fi
-
-
 
 zplug load
 
@@ -104,11 +103,14 @@ autoload -Uz bracketed-paste-url-magic && zle -N bracketed-paste bracketed-paste
 
 bindkey -v #duh
 
+# improved less option
+export LESS='--tabs=4 --no-init --LONG-PROMPT --ignore-case --quit-if-one-screen --RAW-CONTROL-CHARS'
+
 #####################################################################
 # source aliases
 #####################################################################
 
-source ~/.dotfiles/system/aliases.zsh
+source ~/.dotfiles/aliases.zsh
 
 #####################################################################
 # history options

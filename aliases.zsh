@@ -4,18 +4,13 @@ alias macmounter-tail-logs='tail -f ~/Library/Application\ Support/macmounter/ma
 alias macmounter-vim-logs='vim ~/Library/Application\ Support/macmounter/macmounter.log'
 alias macmounter-reload='macmounter.py --reload'
 
-#edit main boxen configs
-alias edit-boxen="vim /opt/boxen/repo/modules/people/manifests/kyounger.pp /Users/kenny/src/our-boxen/modules/people/manifests/kyounger/*.pp /opt/boxen/repo/Puppetfile"
-
 alias vi='vim'
+alias vp='vim pom.xml'
+
+alias hp='head -20 pom.xml'
 
 #clear ~/temp dir and cd to it
 alias temp='rm -rf ~/temp; mkdir ~/temp; cd ~/temp'
-
-# open in...
-alias pre='open -a Preview'
-# alias mvim='mvim --remote-tab-silent'
-alias firefox='/Applications/Firefox.app/Contents/MacOS/firefox-bin -profilemanager'
 
 # never can remember if it's hf or hl, so use both
 alias hf='sudo vim /etc/hosts'
@@ -29,27 +24,39 @@ alias glbo='git log --graph --abbrev-commit --decorate --format=format:"%C(green
 alias glgu='git log --graph --abbrev-commit --decorate --format=format:"%C(green)%h%C(reset) - %C(blue)(%ar)%C(reset) %C(white)%s%C(reset) %C(reset)%C(red)%d%C(reset) %C(reset)%C(yellow)<%an>" --all'
 alias glbu='git log --graph --abbrev-commit --decorate --format=format:"%C(green)%h%C(reset) - %C(white)%s%C(reset) %C(reset)%C(red)%d%C(reset) %C(reset)%C(yellow)<%an>" --all'
 alias glh='git log --abbrev-commit --decorate --format=format:"%C(green)%h%C(reset) - %C(white)%s%C(reset) %C(reset)%C(red)%d %C(reset)%C(magenta)(%cr) %C(reset)%C(yellow)<%an>"'
-alias grho='read -q "REPLY?Are you sure you want to hard reset to the origin? "; if [ "y" = "$REPLY" ]; then echo; git reset --hard `git for-each-ref --format="%(upstream:short)" $(git symbolic-ref -q HEAD)`; fi'
 
-alias gcm='git commit --message'
-alias gcam='git commit --all --message'
-alias gco='git checkout'
 alias gd='git diff'
 alias gdw='git diff -w'
 alias gdws='git diff -w --staged'
 alias gdc='git diff --color-words'
-alias gcam='git commit -am'
-alias gpa='git pull --all'
-alias grv='git remote -v'
-alias gpf='echo force push should be typed out fully :\)'
-alias gmmx='git merge $1 -Xignore-all-space'
-alias gbv='git branch -vv'
-alias gri5='git rebase -i HEAD~5'
-alias gri8='git rebase -i HEAD~8'
-alias vp='vim pom.xml'
-alias hp='head -20 pom.xml'
+
 alias gcane='git add *; git commit --amend --no-edit'
 alias gaa='git add *'
+alias gcm='git commit --message'
+alias gcam='git commit --all --message'
+alias gco='git checkout'
+alias gcam='git commit -am'
+
+alias grho='read -q "REPLY?Are you sure you want to hard reset to the origin? "; if [ "y" = "$REPLY" ]; then echo; git reset --hard `git for-each-ref --format="%(upstream:short)" $(git symbolic-ref -q HEAD)`; fi'
+
+alias gbv='git branch -vv'
+alias gbm='git branch --move'
+alias grv='git remote -v'
+
+alias gpa='git pull --all'
+alias gp='git push'
+alias gpc='git push --set-upstream origin "$(git-branch-current 2> /dev/null)"'
+alias gpf='echo force push should be typed out fully :\)'
+
+alias gmmx='git merge $1 -Xignore-all-space'
+
+alias gra='git rebase --abort'
+alias grc='git rebase --continue'
+alias gri='git rebase --interactive'
+alias gri5='git rebase -i HEAD~5'
+alias gri8='git rebase -i HEAD~8'
+
+alias gcp='git cherry-pick'
 alias gcpa='git cherry-pick --abort'
 alias gcpc='git cherry-pick --continue'
 alias grmh='git reset --mixed HEAD\^'
@@ -57,10 +64,9 @@ alias grmh='git reset --mixed HEAD\^'
 alias gs='git stash'
 alias gsp='git stash pop'
 alias gsl='git stash list'
-alias gp='git push'
-alias gpc='git push --set-upstream origin "$(git-branch-current 2> /dev/null)"'
-alias gbm='git branch --move'
 
+alias gst='git status'
+alias grep='grep --color=auto --exclude=\.svn'
 
 alias redis-start='redis-server /usr/local/etc/redis.conf'
 
@@ -133,8 +139,6 @@ function mkcd () { mkdir -p "$@" && cd "$@"; }
 alias ttop='top -U $USER'
 alias cwd="pwd | tr -d '\n' | pbcopy"
 alias wgetssl='wget --no-check-certificate'
-alias gst='git status'
-alias grep='grep --color=auto --exclude=\.svn'
 alias secureemptytrash='srm -rs /Users/kenny/.Trash/*'
 alias rmdotsvn='find . -name ".svn" -type d -exec rm -rf {} \;'
 alias linecount="sed '/^\s*$/d' | wc -l"
