@@ -30,9 +30,8 @@ zplug "zsh-users/zsh-syntax-highlighting"
 # zplug "zsh-users/zsh-completions"
 zplug "kyounger/prezto", use:"modules/completion/init.zsh"
 
-zplug "modules/helper", from:prezto
-zplug "modules/prompt", from:prezto
-zstyle ':prezto:module:prompt' theme 'sorin' 
+zplug "geometry-zsh/geometry"
+
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
