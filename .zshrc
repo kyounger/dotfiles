@@ -30,6 +30,7 @@ zplug "zsh-users/zsh-syntax-highlighting"
 # zplug "zsh-users/zsh-completions"
 zplug "kyounger/prezto", use:"modules/completion/init.zsh"
 
+zplug "modules/helper", from:prezto
 zplug "geometry-zsh/geometry"
 
 # Install plugins if there are plugins that have not been installed
