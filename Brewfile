@@ -28,7 +28,6 @@ cask quicklook-csv
 cask sequel-pro
 cask shortcat
 cask sqlworkbenchj
-cask totalspaces
 cask tunnelblick
 cask ui-browser
 cask unpkg
@@ -132,6 +131,9 @@ brew zplug
 
 tap kyounger/file
 brew brew-file
+
+# Cask applications
+cask totalspaces
 
 # App Store applications
 appstore 803453959 Slack (2.6.2)
