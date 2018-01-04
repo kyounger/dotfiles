@@ -138,7 +138,7 @@ brew xz
 brew yasm
 brew zplug
 
-tap kyounger/file
+tap rcmdnk/file
 brew brew-file
 
 # Cask applications
