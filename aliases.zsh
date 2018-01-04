@@ -41,6 +41,8 @@ alias grho='read -q "REPLY?Are you sure you want to hard reset to the origin? ";
 
 alias gbv='git branch -vv'
 alias gbm='git branch --move'
+alias gbx='git branch --delete'
+alias gbX='git branch --delete --force'
 alias grv='git remote -v'
 
 alias gpa='git pull --all'
