@@ -2,6 +2,8 @@ echo env HOME is: $HOME
 
 cd $HOME
 
+brew install zplug
+
 #rm -f bin
 ln -fs $HOME/.dotfiles/bin
 
@@ -38,7 +40,7 @@ ln -fs $HOME/.dotfiles/vim/.ideavimrc
 #rm -f .zshrc
 ln -fs $HOME/.dotfiles/.zshrc
 
-mkdir -p $HOME/.brewfile
+mkdir -p $HOME/.config/brewfile
 ln -fs $HOME/.dotfiles/Brewfile $HOME/.config/brewfile/Brewfile
 ln -fs $HOME/.dotfiles/Brewfile.work $HOME/.config/brewfile/Brewfile.work
 ln -fs $HOME/.dotfiles/Brewfile.home $HOME/.config/brewfile/Brewfile.home
