@@ -1,10 +1,7 @@
 
 # tap repositories and their packages
 
-# Other Homebrew packages
-brew youtube-dl
-
-# Cask applications
+tap caskroom/cask
 cask adobe-creative-cloud
 cask carbon-copy-cloner
 cask dropbox
@@ -14,8 +11,5 @@ cask openemu
 cask shotcut
 cask stellarium
 
-# App Store applications
-appstore 425955336 Skitch (2.8)
-appstore 408981434 iMovie (10.1.6)
-appstore 595565459 IP Camera Viewer 2 (1.0)
-appstore 497799835 Xcode (8.2.1)
+# Other Homebrew packages
+brew youtube-dl

@@ -1,48 +1,6 @@
 
 # tap repositories and their packages
 
-tap argon/mas
-brew mas
-
-tap caskroom/cask
-cask adium
-cask alfred
-cask android-file-transfer
-cask android-platform-tools
-cask appcleaner
-cask balsamiq-mockups
-cask bettertouchtool
-cask charles
-cask cyberduck
-cask firefox
-cask flux
-cask google-chrome
-cask iterm2
-cask jollysfastvnc
-cask kaleidoscope
-cask karabiner-elements
-cask karabiner
-cask macdown
-cask macvim
-cask puppet-agent
-cask quicklook-csv
-cask sequel-pro
-cask shortcat
-cask sqlworkbenchj
-cask tunnelblick
-cask ui-browser
-cask unpkg
-cask unrarx
-cask vlc
-cask vmware-fusion
-cask wireshark
-cask yakyak
-
-tap caskroom/drivers
-cask wacom-intuos-tablet
-
-tap caskroom/versions
-
 tap homebrew/core
 brew ack
 brew activemq
@@ -98,6 +56,7 @@ brew libvterm
 brew little-cms2
 brew lua
 brew mad
+brew mas
 brew maven
 brew mercurial
 brew moreutils
@@ -138,6 +97,48 @@ brew xz
 brew yasm
 brew zplug
 
+tap caskroom/cask
+cask adium
+cask alfred
+cask android-file-transfer
+cask android-platform-tools
+cask appcleaner
+cask balsamiq-mockups
+cask bettertouchtool
+cask charles
+cask cyberduck
+cask firefox
+cask flux
+cask google-chrome
+cask hugin
+cask iterm2
+cask jollysfastvnc
+cask kaleidoscope
+cask karabiner-elements
+cask karabiner
+cask macdown
+cask macvim
+cask puppet-agent
+cask quicklook-csv
+cask sequel-pro
+cask shortcat
+cask sqlworkbenchj
+cask tunnelblick
+cask ui-browser
+cask unpkg
+cask unrarx
+cask vlc
+cask vmware-fusion
+cask wireshark
+cask yakyak
+
+tap caskroom/drivers
+cask wacom-intuos-tablet
+
+tap caskroom/versions
+
+tap argon/mas
+
 tap rcmdnk/file
 brew brew-file
 
@@ -145,4 +146,4 @@ brew brew-file
 cask totalspaces
 
 # Additional files
-file ./Brewfile.${MACHINE_CONFIG_TYPE}
+file ./Brewfile.local

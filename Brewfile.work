@@ -3,7 +3,3 @@
 
 tap caskroom/versions
 cask java6
-
-# App Store applications
-appstore 715768417 Microsoft Remote Desktop (8.0.27312)
-appstore 497799835 Xcode (8.3.3)

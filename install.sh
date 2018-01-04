@@ -1,3 +1,18 @@
+if [ -z ${MACHINE_CONFIG_TYPE+x} ]; then 
+    if [[ ! -a /etc/zshenv ]]; then
+        sudo sh -c "touch /etc/zshenv"
+    fi
+    sudo sh -c "echo '#ensure this is set properly for this machine' >> /etc/zshenv"
+    sudo sh -c "echo 'export MACHINE_CONFIG_TYPE=home' >> /etc/zshenv"
+    sudo vim /etc/zshenv
+    exit 1; 
+else
+    echo "MACHINE_CONFIG_TYPE=$MACHINE_CONFIG_TYPE";
+fi
+
+source /etc/zshenv
+
+
 echo env HOME is: $HOME
 
 cd $HOME
@@ -42,12 +57,7 @@ ln -fs $HOME/.dotfiles/.zshrc
 
 mkdir -p $HOME/.config/brewfile
 ln -fs $HOME/.dotfiles/Brewfile $HOME/.config/brewfile/Brewfile
-ln -fs $HOME/.dotfiles/Brewfile.work $HOME/.config/brewfile/Brewfile.work
-ln -fs $HOME/.dotfiles/Brewfile.home $HOME/.config/brewfile/Brewfile.home
+ln -fs $HOME/.dotfiles/Brewfile.$MACHINE_CONFIG_TYPE $HOME/.config/brewfile/Brewfile.local
 
-#run .osx defaults
-$HOME/.dotfiles/mathiasbynens-dotfiles/.osx
 
-sudo sh -c "echo '#ensure this is set properly for this machine' > /etc/zshenv"
-sudo sh -c "echo 'export MACHINE_CONFIG_TYPE=home' >> /etc/zshenv"
-sudo vim /etc/zshenv
+echo "You may want to re-run defaults: $HOME/.dotfiles/mathiasbynens-dotfiles/.macos"
