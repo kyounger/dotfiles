@@ -59,6 +59,7 @@ brew dos2unix
 brew exiftool
 brew faac
 brew fasd
+brew fdk-aac
 brew fdupes
 brew ffmpeg
 brew freetype
@@ -81,13 +82,18 @@ brew jq
 brew lame
 brew libav
 brew libevent
+brew libidn2
+brew libogg
 brew libpng
 brew libsass
 brew libtermkey
 brew libtiff
 brew libtool
+brew libunistring
 brew libuv
 brew libvo-aacenc
+brew libvorbis
+brew libvpx
 brew libvterm
 brew little-cms2
 brew lua
@@ -102,6 +108,7 @@ brew nmap
 brew oniguruma
 brew openssl
 brew openssl@1.1
+brew opus
 brew pcre
 brew pdftohtml
 brew phantomjs
@@ -136,9 +143,6 @@ brew brew-file
 
 # Cask applications
 cask totalspaces
-
-# App Store applications
-appstore 803453959 Slack (2.6.2)
 
 # Additional files
 file ./Brewfile.${MACHINE_CONFIG_TYPE}
