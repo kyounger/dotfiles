@@ -8,6 +8,7 @@ tap caskroom/cask
 cask adium
 cask alfred
 cask android-file-transfer
+cask android-platform-tools
 cask appcleaner
 cask balsamiq-mockups
 cask bettertouchtool
@@ -58,6 +59,7 @@ brew dos2unix
 brew exiftool
 brew faac
 brew fasd
+brew fdupes
 brew ffmpeg
 brew freetype
 brew gdbm
