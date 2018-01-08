@@ -9,6 +9,7 @@ brew autoconf
 brew automake
 brew cmake
 brew coreutils
+brew csvkit
 brew dcraw
 brew diff-so-fancy
 brew dlite
@@ -73,6 +74,7 @@ brew pdftohtml
 brew phantomjs
 brew pkg-config
 brew python
+brew python3
 brew readline
 brew reattach-to-user-namespace
 brew redis
