@@ -111,6 +111,8 @@ alias uu='cd ..; cd ..'
 alias uuu='cd ..; cd ..; cd ..'
 function mkcd () { mkdir -p "$@" && cd "$@"; }
 
+function d64() { echo $1 | base64 -D }
+
 # other misc
 alias ttop='top -U $USER'
 alias cwd="pwd | tr -d '\n' | pbcopy"
