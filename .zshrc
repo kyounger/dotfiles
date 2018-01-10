@@ -106,6 +106,9 @@ bindkey -v #duh
 # improved less option
 export LESS='--tabs=4 --no-init --LONG-PROMPT --ignore-case --quit-if-one-screen --RAW-CONTROL-CHARS'
 
+# geometry prompt options
+export GEOMETRY_PROMPT_PREFIX=
+
 #####################################################################
 # source aliases
 #####################################################################
