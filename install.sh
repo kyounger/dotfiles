@@ -55,6 +55,9 @@ ln -fs $HOME/.dotfiles/vim/.ideavimrc
 #rm -f .zshrc
 ln -fs $HOME/.dotfiles/.zshrc
 
+#rm -f .zshenv
+ln -fs $HOME/.dotfiles/.zshenv
+
 mkdir -p $HOME/.config/brewfile
 ln -fs $HOME/.dotfiles/Brewfile $HOME/.config/brewfile/Brewfile
 ln -fs $HOME/.dotfiles/Brewfile.$MACHINE_CONFIG_TYPE $HOME/.config/brewfile/Brewfile.local

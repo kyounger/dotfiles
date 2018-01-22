@@ -64,10 +64,6 @@ path=(
   $path
 )
 
-if [[ -a ~/.localrc ]]; then
-    source ~/.localrc
-fi
-
 setopt IGNORE_EOF
 setopt CORRECT
 
