@@ -68,7 +68,7 @@ alias gsp='git stash pop'
 alias gsl='git stash list'
 
 alias gst='git status'
-alias grep='grep --color=auto --exclude=\.svn'
+alias grep='grep --color=auto'
 
 alias redis-start='redis-server /usr/local/etc/redis.conf'
 
