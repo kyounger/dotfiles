@@ -57,11 +57,17 @@ alias grc='git rebase --continue'
 alias gri='git rebase --interactive'
 alias gri5='git rebase -i HEAD~5'
 alias gri8='git rebase -i HEAD~8'
+alias grim='git rebase -i master'
 
 alias gcp='git cherry-pick'
 alias gcpa='git cherry-pick --abort'
 alias gcpc='git cherry-pick --continue'
 alias grmh='git reset --mixed HEAD\^'
+
+alias gC='git clean -dfx -e .idea/ -e *.iml'
+
+alias gsh='git show'
+alias gshns='git show --name-status'
 
 alias gs='git stash'
 alias gsp='git stash pop'
