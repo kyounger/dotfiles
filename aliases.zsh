@@ -25,9 +25,9 @@ alias glgu='git log --graph --abbrev-commit --decorate --format=format:"%C(green
 alias glbu='git log --graph --abbrev-commit --decorate --format=format:"%C(green)%h%C(reset) - %C(white)%s%C(reset) %C(reset)%C(red)%d%C(reset) %C(reset)%C(yellow)<%an>" --all'
 alias glh='git log --abbrev-commit --decorate --format=format:"%C(green)%h%C(reset) - %C(white)%s%C(reset) %C(reset)%C(red)%d %C(reset)%C(magenta)(%cr) %C(reset)%C(yellow)<%an>"'
 
-alias gd='git diff --word-diff-color'
-alias gdw='git diff --ignore-all-space --word-diff=color'
-alias gdws='git diff --ignore-all-space --staged --word-diff=color'
+alias gd='git diff --word-diff-color --word-diff-regex="[^[:space:],]+|[,]+"'
+alias gdw='git diff --ignore-all-space --word-diff=color --word-diff-regex="[^[:space:],]+|[,]+"'
+alias gdws='git diff --ignore-all-space --staged --word-diff=color --word-diff-regex="[^[:space:],]+|[,]+"'
 
 alias gcane='git add *; git commit --amend --no-edit'
 alias gaa='git add *'
@@ -65,7 +65,7 @@ alias grmh='git reset --mixed HEAD\^'
 
 alias gC='git clean -dfx -e .idea/ -e *.iml'
 
-alias gsh='git show --word-diff=color'
+alias gsh='git show --word-diff=color --word-diff-regex="[^[:space:],]+|[,]+"'
 alias gshns='git show --name-status'
 
 alias gs='git stash'
