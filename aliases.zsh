@@ -26,8 +26,8 @@ alias glbu='git log --graph --abbrev-commit --decorate --format=format:"%C(green
 alias glh='git log --abbrev-commit --decorate --format=format:"%C(green)%h%C(reset) - %C(white)%s%C(reset) %C(reset)%C(red)%d %C(reset)%C(magenta)(%cr) %C(reset)%C(yellow)<%an>"'
 
 alias gd='git diff --word-diff-color --word-diff-regex="[^[:space:],]+|[,]+"'
-alias gdw='git diff --ignore-all-space --word-diff=color --word-diff-regex="[^[:space:],]+|[,]+"'
-alias gdws='git diff --ignore-all-space --staged --word-diff=color --word-diff-regex="[^[:space:],]+|[,]+"'
+alias gdw='git diff --ignore-all-space --word-diff=color --word-diff-regex="[^[:space:],=]+|[,=]+"'
+alias gdws='git diff --ignore-all-space --staged --word-diff=color --word-diff-regex="[^[:space:],=]+|[,=]+"'
 
 alias gcane='git add *; git commit --amend --no-edit'
 alias gaa='git add *'
@@ -37,7 +37,9 @@ alias gco='git checkout'
 alias gcam='git commit -am'
 
 alias grho='read -q "REPLY?Are you sure you want to hard reset to the origin? "; if [ "y" = "$REPLY" ]; then echo; git reset --hard `git for-each-ref --format="%(upstream:short)" $(git symbolic-ref -q HEAD)`; fi'
+alias grmh='git reset --mixed HEAD\^'
 
+alias gbuu='git branch --unset-upstream'
 alias gbv='git branch -vv'
 alias gbm='git branch --move'
 alias gbx='git branch --delete'
@@ -61,7 +63,6 @@ alias grim='git rebase -i master'
 alias gcp='git cherry-pick'
 alias gcpa='git cherry-pick --abort'
 alias gcpc='git cherry-pick --continue'
-alias grmh='git reset --mixed HEAD\^'
 
 alias gC='git clean -dfx -e .idea/ -e *.iml'
 
