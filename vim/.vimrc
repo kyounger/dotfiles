@@ -79,7 +79,9 @@ let g:disable_all_plugins = 0
             " NeoBundle 'rodjek/vim-puppet', { 'directory': 'puppet' }
             " NeoBundle 'darfink/vim-plist'
             NeoBundle 'PProvost/vim-ps1'
+            NeoBundle 'godlygeek/tabular'
             NeoBundle 'plasticboy/vim-markdown'
+
             " NeoBundle 'vim-scripts/phpfolding.vim', { 'directory': 'phpfolding.vim' }
             " NeoBundle 'scrooloose/syntastic', { 'directory': 'syntastic' }
             " NeoBundle 'vim-scripts/taglist.vim', { 'directory': 'taglist.vim' }
@@ -839,13 +841,6 @@ let g:disable_all_plugins = 0
     augroup END
 
 " }}}
-" Markdown {{{
-
-    " if neobundle#is_installed("vim-markdown")
-        let g:vim_markdown_emphasis_multiline = 0
-    " end
-
-" }}}
 " Mercurial {{{
 
     augroup ft_mercurial
@@ -1030,6 +1025,15 @@ let g:disable_all_plugins = 0
     if neobundle#is_installed("linediff.vim")
         vnoremap <leader>l :Linediff<cr>
         nnoremap <leader>L :LinediffReset<cr>
+    end
+
+" }}}
+" Markdown {{{
+
+    if neobundle#is_installed("vim-markdown")
+        let g:vim_markdown_emphasis_multiline = 0
+        let g:vim_markdown_no_default_key_mappings = 1
+        let g:vim_markdown_folding_style_pythonic = 1
     end
 
 " }}}
