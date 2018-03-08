@@ -94,6 +94,7 @@ alias tidal-client='~/Applications/TES\ Java\ Client/tesclient.sh &'
 
 
 alias mci='mvn clean install'
+alias mcp='mvn clean package'
 
 #function gri() { git rebase -i HEAD\~$1 }
 
@@ -115,6 +116,7 @@ export LS_COLORS='di=93:ln=35:so=32:pi=33:ex=31:bd=36;01:cd=33;01:su=31;40;07:sg
 alias u='cd ..'
 alias uu='cd ..; cd ..'
 alias uuu='cd ..; cd ..; cd ..'
+alias ul='cd ..; l'
 function mkcd () { mkdir -p "$@" && cd "$@"; }
 
 function d64() { echo $1 | base64 -D }
