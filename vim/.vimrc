@@ -53,6 +53,8 @@ let g:disable_all_plugins = 0
             "Utilities
             NeoBundle 'sjl/AnsiEsc.vim', { 'directory': 'AnsiEsc.vim' } "esc sequences look pretty
             NeoBundle 'sjl/vitality.vim', { 'directory': 'vitality.vim' } "iterm2 and tmux helper
+            NeoBundle 'tpope/vim-scriptease'
+
 
             "HTML, xml and other codegen
             " NeoBundle 'tristen/vim-sparkup', { 'directory': 'sparkup' }
@@ -77,7 +79,7 @@ let g:disable_all_plugins = 0
             " NeoBundle 'rodjek/vim-puppet', { 'directory': 'puppet' }
             " NeoBundle 'darfink/vim-plist'
             NeoBundle 'PProvost/vim-ps1'
-            " NeoBundle 'tpope/vim-markdown', { 'directory': 'markdown' }
+            NeoBundle 'plasticboy/vim-markdown'
             " NeoBundle 'vim-scripts/phpfolding.vim', { 'directory': 'phpfolding.vim' }
             " NeoBundle 'scrooloose/syntastic', { 'directory': 'syntastic' }
             " NeoBundle 'vim-scripts/taglist.vim', { 'directory': 'taglist.vim' }
@@ -548,6 +550,14 @@ let g:disable_all_plugins = 0
     endfunction " }}}
     set foldtext=MyFoldText()
 
+    function! BetterIndentFolding()
+        setlocal foldmethod=expr
+        setlocal foldexpr=(getline(v:lnum)=~'^$')?-1:((indent(v:lnum)<indent(v:lnum+1))?('>'.indent(v:lnum+1)):indent(v:lnum))
+        set foldtext=getline(v:foldstart)
+        set fillchars=fold:\ "(there's a space after that \)
+        highlight Folded ctermfg=DarkGreen ctermbg=Black
+    endfunction
+
 " }}}
 " Searching {{{
 
@@ -831,16 +841,9 @@ let g:disable_all_plugins = 0
 " }}}
 " Markdown {{{
 
-    augroup ft_markdown
-        au!
-
-        au BufNewFile,BufRead *.m*down setlocal filetype=markdown
-
-        " Use <localleader>1/2/3 to add headings.
-        au Filetype markdown nnoremap <buffer> <localleader>1 yypVr=:redraw<cr>
-        au Filetype markdown nnoremap <buffer> <localleader>2 yypVr-:redraw<cr>
-        au Filetype markdown nnoremap <buffer> <localleader>3 mzI###<space>`zllll <ESC>
-    augroup END
+    " if neobundle#is_installed("vim-markdown")
+        let g:vim_markdown_emphasis_multiline = 0
+    " end
 
 " }}}
 " Mercurial {{{
