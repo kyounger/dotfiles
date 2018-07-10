@@ -26,7 +26,8 @@ alias glbu='git log --graph --abbrev-commit --decorate --format=format:"%C(green
 alias glh='git log --abbrev-commit --decorate --format=format:"%C(green)%h%C(reset) - %C(white)%s%C(reset) %C(reset)%C(red)%d %C(reset)%C(magenta)(%cr) %C(reset)%C(yellow)<%an>"'
 
 alias gd='git diff --word-diff-color --word-diff-regex="[^[:space:],]+|[,]+"'
-alias gdw='git diff --ignore-all-space --word-diff=color --word-diff-regex="[^[:space:],=]+|[,=]+"'
+alias gdw='git diff --word-diff=color --word-diff-regex="[^[:space:],()=]+|[(),=]+"'
+alias gdwi='git diff --ignore-all-space --word-diff=color --word-diff-regex="[^[:space:],()=]+|[(),=]+"'
 alias gdws='git diff --ignore-all-space --staged --word-diff=color --word-diff-regex="[^[:space:],=]+|[,=]+"'
 
 alias gcane='git add *; git commit --amend --no-edit'
@@ -74,7 +75,7 @@ alias gsp='git stash pop'
 alias gsl='git stash list'
 
 alias gst='git status'
-alias grep='grep --color=auto'
+alias grep='grep --color=auto --exclude-dir=".git"'
 
 alias redis-start='redis-server /usr/local/etc/redis.conf'
 
@@ -213,6 +214,8 @@ alias mysql_restart='mysql_stop; mysql_start'
 
 # apache
 alias restart_apache='sudo /opt/local/apache2/bin/apachectl restart'
+
+alias karabiner='/Library/Application\ Support/org.pqrs/Karabiner-Elements/bin/karabiner_cli'
 
 
 # remove duplicates from Finder's 'Open With...' context menu.
