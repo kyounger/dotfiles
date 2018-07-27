@@ -113,25 +113,20 @@ cask firefox
 cask flux
 cask google-chrome
 cask iterm2
-cask jollysfastvnc
 cask kaleidoscope
 cask karabiner-elements
-cask karabiner
 cask macdown
 cask macvim
-cask puppet-agent
 cask quicklook-csv
 cask sequel-pro
 cask shortcat
 cask sqlworkbenchj
-cask tunnelblick
 cask ui-browser
 cask unpkg
 cask unrarx
 cask vlc
 cask vmware-fusion
 cask wireshark
-cask yakyak
 
 tap caskroom/drivers
 cask wacom-intuos-tablet
@@ -140,7 +135,7 @@ tap caskroom/versions
 
 tap argon/mas
 
-tap rcmdnk/file
+tap kyounger/file
 brew brew-file
 
 # Cask applications

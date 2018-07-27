@@ -5,8 +5,6 @@ tap caskroom/cask
 cask adobe-creative-cloud
 cask carbon-copy-cloner
 cask dropbox
-cask electrum
-cask kodi
 cask openemu
 cask shotcut
 cask stellarium
