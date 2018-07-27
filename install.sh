@@ -22,8 +22,7 @@ brew install zplug
 #rm -f bin
 ln -fs $HOME/.dotfiles/bin
 
-#rm -f .gitignore
-ln -fs $HOME/.dotfiles/git/.gitignore_global $HOME/.config/git/.gitignore_global
+ln -fs $HOME/.dotfiles/config $HOME/.config
 
 #rm -f .gitconfig
 ln -fs $HOME/.dotfiles/git/.gitconfig
@@ -57,10 +56,5 @@ ln -fs $HOME/.dotfiles/.zshrc
 
 #rm -f .zshenv
 ln -fs $HOME/.dotfiles/.zshenv
-
-mkdir -p $HOME/.config/brewfile
-ln -fs $HOME/.dotfiles/Brewfile $HOME/.config/brewfile/Brewfile
-ln -fs $HOME/.dotfiles/Brewfile.$MACHINE_CONFIG_TYPE $HOME/.config/brewfile/Brewfile.local
-
 
 echo "You may want to re-run defaults: $HOME/.dotfiles/mathiasbynens-dotfiles/.macos"
