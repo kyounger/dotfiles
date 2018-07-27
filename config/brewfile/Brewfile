@@ -143,4 +143,4 @@ cask wacom-intuos-tablet
 cask wireshark
 
 # Additional files
-file ./${MACHINE_CONFIG_TYPE}.Brewfile
+file ./Brewfile.${MACHINE_CONFIG_TYPE}

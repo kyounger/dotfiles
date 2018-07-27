@@ -23,7 +23,10 @@ brew install zplug
 ln -fs $HOME/.dotfiles/bin
 
 ln -fs $HOME/.dotfiles/config $HOME/.config
-ln -fs $HOME/.config/Brewfile.$MACHINE_CONFIG_TYPE $HOME/.config/Brewfile.local
+
+cd $HOME/.config/
+ln -fs brewfile/Brewfile.$MACHINE_CONFIG_TYPE brewfile/Brewfile.local
+cd $HOME
 
 #rm -f .gitconfig
 ln -fs $HOME/.dotfiles/git/.gitconfig
