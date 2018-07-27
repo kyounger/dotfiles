@@ -112,6 +112,7 @@ cask cyberduck
 cask firefox
 cask flux
 cask google-chrome
+cask intellij-idea
 cask iterm2
 cask kaleidoscope
 cask karabiner-elements
@@ -136,9 +137,6 @@ tap argon/mas
 
 tap kyounger/file
 brew brew-file
-
-# Cask applications
-cask totalspaces
 
 # Additional files
 file ./Brewfile.local
