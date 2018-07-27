@@ -10,7 +10,7 @@
     trustExitCode = true
 
 [core]
-	excludesfile = ~/.gitignore
+	excludesfile = /Users/kyounger/.config/git/.gitignore_global
 	hooksPath = /Users/kyounger/.dotfiles/git/git-global-hooks
 	pager = diff-so-fancy | less --tabs=4 -RFX
 [color]

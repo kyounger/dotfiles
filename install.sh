@@ -23,7 +23,7 @@ brew install zplug
 ln -fs $HOME/.dotfiles/bin
 
 #rm -f .gitignore
-ln -fs $HOME/.dotfiles/git/.gitignore
+ln -fs $HOME/.dotfiles/git/.gitignore_global $HOME/.config/git/.gitignore_global
 
 #rm -f .gitconfig
 ln -fs $HOME/.dotfiles/git/.gitconfig
