@@ -22,7 +22,7 @@ brew install zplug
 #rm -f bin
 ln -fs $HOME/.dotfiles/bin
 
-ln -fs $HOME/.dotfiles/config $HOME/.config
+ln -fs $HOME/.dotfiles/.config
 
 cd $HOME/.config/brewfile/
 ln -fs Brewfile.$MACHINE_CONFIG_TYPE Brewfile.local
