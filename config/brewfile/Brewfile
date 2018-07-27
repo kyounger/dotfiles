@@ -13,7 +13,6 @@ brew csvkit
 brew dcraw
 brew diff-so-fancy
 brew dlite
-brew docker
 brew dos2unix
 brew exiftool
 brew faac
@@ -74,7 +73,6 @@ brew pdftohtml
 brew phantomjs
 brew pkg-config
 brew python
-brew python3
 brew readline
 brew reattach-to-user-namespace
 brew redis
@@ -99,7 +97,21 @@ brew xz
 brew yasm
 brew zplug
 
+tap argon/mas
+
 tap caskroom/cask
+
+tap caskroom/drivers
+
+tap caskroom/versions
+
+tap kyounger/file
+brew brew-file
+
+# Other Homebrew packages
+brew python3
+
+# Other Cask applications
 cask adium
 cask alfred
 cask android-file-transfer
@@ -114,6 +126,7 @@ cask flux
 cask google-chrome
 cask intellij-idea
 cask iterm2
+cask java
 cask kaleidoscope
 cask karabiner-elements
 cask macdown
@@ -126,17 +139,8 @@ cask ui-browser
 cask unpkg
 cask vlc
 cask vmware-fusion
-cask wireshark
-
-tap caskroom/drivers
 cask wacom-intuos-tablet
-
-tap caskroom/versions
-
-tap argon/mas
-
-tap kyounger/file
-brew brew-file
+cask wireshark
 
 # Additional files
 file ./Brewfile.local
