@@ -24,8 +24,8 @@ ln -fs $HOME/.dotfiles/bin
 
 ln -fs $HOME/.dotfiles/config $HOME/.config
 
-cd $HOME/.config/
-ln -fs brewfile/Brewfile.$MACHINE_CONFIG_TYPE brewfile/Brewfile.local
+cd $HOME/.config/brewfile/
+ln -fs Brewfile.$MACHINE_CONFIG_TYPE Brewfile.local
 cd $HOME
 
 #rm -f .gitconfig
