@@ -2,6 +2,11 @@
 # tap repositories and their packages
 
 tap caskroom/cask
+
+# Other Homebrew packages
+brew youtube-dl
+
+# Other Cask applications
 cask adobe-creative-cloud
 cask carbon-copy-cloner
 cask dropbox
@@ -9,6 +14,3 @@ cask openemu
 cask shotcut
 cask stellarium
 cask visual-studio-code
-
-# Other Homebrew packages
-brew youtube-dl

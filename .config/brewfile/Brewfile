@@ -12,7 +12,6 @@ brew coreutils
 brew csvkit
 brew dcraw
 brew diff-so-fancy
-brew dlite
 brew dos2unix
 brew exiftool
 brew faac
@@ -55,12 +54,14 @@ brew libvpx
 brew libvterm
 brew little-cms2
 brew lua
+brew luajit
 brew mad
 brew mas
 brew maven
 brew mercurial
 brew moreutils
 brew msgpack
+brew neovim
 brew netperf
 brew nginx
 brew nmap
