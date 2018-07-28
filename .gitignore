@@ -4,3 +4,6 @@ vim/.vim/bundle
 bin/mute_mic.scpt
 bin/unmute_mic.scpt
 vim/.vim/tmp
+BetterTouchTool/BetterTouchToolApplicationSupport/*.oldVersionBackup*
+BetterTouchTool/BetterTouchToolApplicationSupport/Logs/
+BetterTouchTool/BetterTouchToolApplicationSupport/bettertouchtool.bttlicense
