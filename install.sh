@@ -18,6 +18,7 @@ echo env HOME is: $HOME
 cd $HOME
 
 brew install zplug
+brew install kyounger/file/brew-file
 
 #rm -f bin
 ln -fs $HOME/.dotfiles/bin
@@ -62,3 +63,4 @@ ln -fs $HOME/.dotfiles/.zshrc
 ln -fs $HOME/.dotfiles/.zshenv
 
 echo "You may want to re-run defaults: $HOME/.dotfiles/mathiasbynens-dotfiles/.macos"
+echo "Also, run brew file install"
