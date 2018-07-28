@@ -10,6 +10,7 @@ brew youtube-dl
 cask adobe-creative-cloud
 cask carbon-copy-cloner
 cask dropbox
+cask etcher
 cask openemu
 cask shotcut
 cask stellarium

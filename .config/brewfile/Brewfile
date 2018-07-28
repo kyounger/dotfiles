@@ -136,6 +136,7 @@ cask macvim
 cask quicklook-csv
 cask sequel-pro
 cask shortcat
+cask slack
 cask sqlworkbenchj
 cask ui-browser
 cask unpkg
