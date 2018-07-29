@@ -12,6 +12,8 @@ alias hp='head -20 pom.xml'
 #clear ~/temp dir and cd to it
 alias temp='rm -rf ~/temp; mkdir ~/temp; cd ~/temp'
 
+alias kc='kubectl'
+
 # never can remember if it's hf or hl, so use both
 alias hf='sudo vim /etc/hosts'
 alias hl='sudo vim /etc/hosts'

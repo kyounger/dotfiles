@@ -36,6 +36,8 @@ brew jasper
 brew jemalloc
 brew jpeg
 brew jq
+brew kompose
+brew kubernetes-helm
 brew lame
 brew libav
 brew libevent
@@ -110,6 +112,7 @@ tap kyounger/file
 brew brew-file
 
 # Other Homebrew packages
+brew kubectl
 brew python3
 
 # Other Cask applications
