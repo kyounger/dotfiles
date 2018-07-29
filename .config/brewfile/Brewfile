@@ -137,6 +137,7 @@ cask karabiner-elements
 cask macdown
 cask macvim
 cask quicklook-csv
+cask rocket
 cask sequel-pro
 cask shortcat
 cask slack
