@@ -160,6 +160,7 @@ export HOMEBREW_BREWFILE_APPSTORE=0
 if [[ "$(uname)" == "Darwin" ]]; then
     if [ -f $(brew --prefix)/etc/brew-wrap ]; then
         source $(brew --prefix)/etc/brew-wrap
+        eval "$(jenv init -)"
     fi
 fi
 

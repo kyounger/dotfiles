@@ -1,0 +1,6 @@
+*
+
+!.gitignore
+!BetterTouchToolApplicationSupport/btt_data_store.v3
+!BetterTouchToolApplicationSupport/btt_data_store.v3-shm
+!BetterTouchToolApplicationSupport/btt_data_store.v3-wal

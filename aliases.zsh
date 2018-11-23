@@ -13,6 +13,10 @@ alias hp='head -20 pom.xml'
 alias temp='rm -rf ~/temp; mkdir ~/temp; cd ~/temp'
 
 alias kc='kubectl'
+alias capture-sound='ffmpeg -f avfoundation -i ":0" audiocapture`date +%s`.mp3'
+alias record-sound='capture-sound'
+alias sound-record='capture-sound'
+
 
 # never can remember if it's hf or hl, so use both
 alias hf='sudo vim /etc/hosts'

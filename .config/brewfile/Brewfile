@@ -22,6 +22,7 @@ brew ffmpeg
 brew freetype
 brew gdbm
 brew gettext
+brew gifify
 brew git
 brew gnu-sed
 brew go
@@ -34,6 +35,7 @@ brew iperf
 brew ipmitool
 brew jasper
 brew jemalloc
+brew jenv
 brew jpeg
 brew jq
 brew kompose
@@ -68,24 +70,27 @@ brew netperf
 brew nginx
 brew nmap
 brew oniguruma
+brew openjpeg
 brew openssl
 brew openssl@1.1
 brew opus
 brew pcre
 brew pdftohtml
-brew phantomjs
 brew pkg-config
 brew python
 brew readline
 brew reattach-to-user-namespace
 brew redis
 brew rsync
+brew sdl2
+brew snappy
 brew sox
 brew sqlite
 brew ssh-copy-id
 brew tcping
 brew testssl
 brew texi2html
+brew theora
 brew tig
 brew tmux
 brew tree
@@ -93,8 +98,10 @@ brew unibilium
 brew utf8proc
 brew vim --with-lua
 brew wakeonlan
+brew webp
 brew wget
 brew x264
+brew x265
 brew xvid
 brew xz
 brew yasm
@@ -113,6 +120,7 @@ brew brew-file
 
 # Other Homebrew packages
 brew kubectl
+brew phantomjs
 brew python3
 
 # Other Cask applications
@@ -132,8 +140,10 @@ cask google-chrome
 cask intellij-idea
 cask iterm2
 cask java
+cask java8
 cask kaleidoscope
 cask karabiner-elements
+cask kode54-cog
 cask macdown
 cask macvim
 cask quicklook-csv
