@@ -48,3 +48,5 @@
 	oldHighlight = red bold 52
 	newNormal = green bold
 	newHighlight = green bold 22
+[credential "https://source.developers.google.com"]
+	helper = gcloud.sh

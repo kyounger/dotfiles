@@ -54,6 +54,7 @@ let g:disable_all_plugins = 0
             NeoBundle 'sjl/AnsiEsc.vim', { 'directory': 'AnsiEsc.vim' } "esc sequences look pretty
             NeoBundle 'sjl/vitality.vim', { 'directory': 'vitality.vim' } "iterm2 and tmux helper
             NeoBundle 'tpope/vim-scriptease'
+            NeoBundle 'mrk21/yaml-vim'
 
 
             "HTML, xml and other codegen

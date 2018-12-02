@@ -21,6 +21,8 @@ zplug "kyounger/prezto", use:"modules/history/init.zsh"
 zplug "zsh-users/zsh-history-substring-search"
 zplug "rimraf/k"
 zplug "arzzen/calc.plugin.zsh"
+zplug "docker/cli", use:contrib/completion/zsh
+zplug "docker/compose", use:contrib/completion/zsh
 
 export NVM_LAZY_LOAD=true
 zplug "lukechilds/zsh-nvm"
@@ -131,6 +133,8 @@ setopt HIST_BEEP                 # Beep when accessing non-existent history.
 
 bindkey '^[OA' history-substring-search-up
 bindkey '^[OB' history-substring-search-down
+autoload edit-command-line; zle -N edit-command-line
+bindkey -M vicmd "^v" edit-command-line
 
 #####################################################################
 # directory options
@@ -164,6 +168,13 @@ if [[ "$(uname)" == "Darwin" ]]; then
 
     export JENV_ROOT=/usr/local/opt/jenv
     if which jenv > /dev/null; then eval "$(jenv init -)"; fi
+
+    source $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
+    source $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+
+    if [ $commands[helm] ]; then
+        source <(helm completion zsh)
+    fi
 fi
 
 #####################################################################
