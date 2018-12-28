@@ -1,6 +1,3 @@
 [submodule "vim/.vim/neobundle"]
 	path = vim/.vim/neobundle
 	url = https://github.com/Shougo/neobundle.vim
-[submodule "mathiasbynens-dotfiles"]
-	path = mathiasbynens-dotfiles
-	url = https://github.com/kyounger/mathiasbynens-dotfiles
