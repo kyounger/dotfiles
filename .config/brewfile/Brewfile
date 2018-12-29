@@ -116,12 +116,12 @@ tap caskroom/drivers
 tap caskroom/versions
 
 tap jenkins-x/jx
-brew jx
 
 tap kyounger/file
 brew brew-file
 
 # Other Homebrew packages
+brew jx
 brew kubectl
 brew phantomjs
 brew python3
