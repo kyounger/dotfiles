@@ -160,7 +160,6 @@ cask ui-browser
 cask unpkg
 cask vlc
 cask vmware-fusion
-cask wacom-intuos-tablet
 cask wireshark
 
 # Additional files
