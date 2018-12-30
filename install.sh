@@ -20,7 +20,6 @@ cd $HOME
 brew install zplug
 brew install kyounger/file/brew-file
 
-#rm -f bin
 ln -fs $HOME/.dotfiles/bin
 
 ln -fs $HOME/.dotfiles/.config
@@ -29,39 +28,26 @@ cd $HOME/.config/brewfile/
 ln -fs Brewfile.$MACHINE_CONFIG_TYPE Brewfile.local
 cd $HOME
 
-#rm -f .gitconfig
 ln -fs $HOME/.dotfiles/git/.gitconfig
 
-#rm -f .jshintrc
 ln -fs $HOME/.dotfiles/jshint/.jshintrc
 
 ln -fs $HOME/.dotfiles/.btt_autoload_preset.json
 
-#rm -f .sqliterc
 ln -fs $HOME/.dotfiles/sqlite/.sqliterc
 
-#rm -f .tmux.conf
 ln -fs $HOME/.dotfiles/tmux/.tmux.conf
 
-#rm -f .gvimrc
 ln -fs $HOME/.dotfiles/vim/.gvimrc
 
-#rm -f .vimrc
 ln -fs $HOME/.dotfiles/vim/.vimrc
 
-#rm -f .vim
 ln -fs $HOME/.dotfiles/vim/.vim
 
-#rm -f .vim
 ln -fs $HOME/.dotfiles/vim/.ideavimrc
 
-#rm -f .zshenv
-# ln -fs $HOME/.dotfiles/.zshenv
-
-#rm -f .zshrc
 ln -fs $HOME/.dotfiles/.zshrc
 
-#rm -f .zshenv
 ln -fs $HOME/.dotfiles/.zshenv
 
 echo "You may want to re-run defaults: $HOME/.dotfiles/mathiasbynens-dotfiles/.macos"
