@@ -35,6 +35,8 @@ ln -fs $HOME/.dotfiles/git/.gitconfig
 #rm -f .jshintrc
 ln -fs $HOME/.dotfiles/jshint/.jshintrc
 
+ln -fs $HOME/.dotfiles/.btt_autoload_preset.json
+
 #rm -f .sqliterc
 ln -fs $HOME/.dotfiles/sqlite/.sqliterc
 
