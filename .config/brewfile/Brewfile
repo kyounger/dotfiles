@@ -135,8 +135,11 @@ cask appcleaner
 cask balsamiq-mockups
 cask bartender
 cask bettertouchtool
+cask carbon-copy-cloner
 cask charles
 cask cyberduck
+cask docker
+cask dropbox
 cask firefox
 cask flux
 cask google-chrome
@@ -158,6 +161,7 @@ cask slack
 cask sqlworkbenchj
 cask ui-browser
 cask unpkg
+cask visual-studio-code
 cask vlc
 cask vmware-fusion
 cask wireshark

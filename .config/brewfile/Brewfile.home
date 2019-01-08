@@ -8,10 +8,7 @@ brew youtube-dl
 
 # Other Cask applications
 cask adobe-creative-cloud
-cask carbon-copy-cloner
-cask dropbox
 cask etcher
 cask openemu
 cask shotcut
 cask stellarium
-cask visual-studio-code
