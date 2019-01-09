@@ -4,6 +4,7 @@
 tap homebrew/core
 brew ack
 brew activemq
+brew adns
 brew apktool
 brew autoconf
 brew automake
@@ -24,7 +25,9 @@ brew gdbm
 brew gettext
 brew gifify
 brew git
+brew gmp
 brew gnu-sed
+brew gnutls
 brew go
 brew groovysdk
 brew hashcat
@@ -41,16 +44,23 @@ brew jq
 brew kompose
 brew kubernetes-helm
 brew lame
+brew libassuan
 brew libav
 brew libevent
+brew libffi
+brew libgcrypt
+brew libgpg-error
 brew libidn2
+brew libksba
 brew libogg
 brew libpng
 brew libsass
+brew libtasn1
 brew libtermkey
 brew libtiff
 brew libtool
 brew libunistring
+brew libusb
 brew libuv
 brew libvo-aacenc
 brew libvorbis
@@ -67,15 +77,19 @@ brew moreutils
 brew msgpack
 brew neovim
 brew netperf
+brew nettle
 brew nginx
 brew nmap
+brew npth
 brew oniguruma
 brew openjpeg
 brew openssl
 brew openssl@1.1
 brew opus
+brew p11-kit
 brew pcre
 brew pdftohtml
+brew pinentry
 brew pkg-config
 brew python
 brew readline
@@ -122,6 +136,7 @@ tap kyounger/file
 brew brew-file
 
 # Other Homebrew packages
+brew gpg
 brew kubectl
 brew phantomjs
 brew python3
