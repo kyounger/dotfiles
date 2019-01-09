@@ -110,7 +110,7 @@ brew tmux
 brew tree
 brew unibilium
 brew utf8proc
-brew vim --with-lua
+brew vim
 brew wakeonlan
 brew webp
 brew wget
