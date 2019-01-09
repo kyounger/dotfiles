@@ -1,4 +1,5 @@
 .config/brewfile/Brewfile.local
+.config/gcloud
 vim/.vim/.netrwhist
 vim/.vim/bundle
 bin/mute_mic.scpt
