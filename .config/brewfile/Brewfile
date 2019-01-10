@@ -8,6 +8,7 @@ brew adns
 brew apktool
 brew autoconf
 brew automake
+brew awscli
 brew cmake
 brew coreutils
 brew csvkit
@@ -90,6 +91,7 @@ brew p11-kit
 brew pcre
 brew pdftohtml
 brew pinentry
+brew pinentry-mac
 brew pkg-config
 brew python
 brew readline
@@ -165,6 +167,7 @@ cask java
 cask java8
 cask kaleidoscope
 cask karabiner-elements
+cask keepingyouawake
 cask kode54-cog
 cask macdown
 cask macvim

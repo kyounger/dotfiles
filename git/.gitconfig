@@ -1,6 +1,7 @@
 [user]
 	name = Kenny Younger
 	email = kyounger@gmail.com
+	signingkey = 78F655479034FC9A
 
 [merge]
 	tool = Kaleidoscope
@@ -50,3 +51,5 @@
 	newHighlight = green bold 22
 [credential "https://source.developers.google.com"]
 	helper = gcloud.sh
+[commit]
+	gpgsign = true
