@@ -8,6 +8,7 @@ brew adns
 brew apktool
 brew autoconf
 brew automake
+brew aws-shell
 brew awscli
 brew cmake
 brew coreutils
