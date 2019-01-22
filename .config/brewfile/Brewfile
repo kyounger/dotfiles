@@ -150,6 +150,7 @@ cask alfred
 cask android-file-transfer
 cask android-platform-tools
 cask appcleaner
+cask aws-vault
 cask balsamiq-mockups
 cask bartender
 cask bettertouchtool
