@@ -44,6 +44,7 @@ brew jenv
 brew jpeg
 brew jq
 brew kompose
+brew kubernetes-cli
 brew kubernetes-helm
 brew lame
 brew libassuan
@@ -137,6 +138,10 @@ brew jx
 
 tap kyounger/file
 brew brew-file
+
+tap weaveworks/tap
+brew eksctl
+brew eksctl-aws-iam-authenticator
 
 # Other Homebrew packages
 brew gpg
