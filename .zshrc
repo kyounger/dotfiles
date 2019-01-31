@@ -16,8 +16,8 @@ fi
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
-zplug "kyounger/prezto", use:"modules/editor/init.zsh"
-zplug "kyounger/prezto", use:"modules/history/init.zsh"
+zplug "sorin-ionescu/prezto", use:"modules/editor/init.zsh"
+zplug "sorin-ionescu/prezto", use:"modules/history/init.zsh"
 zplug "zsh-users/zsh-history-substring-search"
 zplug "rimraf/k"
 zplug "arzzen/calc.plugin.zsh"
@@ -29,8 +29,7 @@ zplug "lukechilds/zsh-nvm"
 
 zplug "zsh-users/zsh-syntax-highlighting"
 
-# zplug "zsh-users/zsh-completions"
-zplug "kyounger/prezto", use:"modules/completion/init.zsh"
+zplug "sorin-ionescu/prezto", use:"modules/completion/init.zsh"
 
 zplug "modules/helper", from:prezto
 zplug "geometry-zsh/geometry"
