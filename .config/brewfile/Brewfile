@@ -178,6 +178,7 @@ cask keepingyouawake
 cask kode54-cog
 cask macdown
 cask macvim
+cask qlmarkdown
 cask quicklook-csv
 cask rocket
 cask sequel-pro
