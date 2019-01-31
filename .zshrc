@@ -172,9 +172,10 @@ if [[ "$(uname)" == "Darwin" ]]; then
     source $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
     source $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
 
-    if [ $commands[helm] ]; then
-        source <(helm completion zsh)
+    if type brew &>/dev/null; then
+        FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
     fi
+
 fi
 
 #####################################################################
