@@ -108,21 +108,27 @@ export GEOMETRY_PROMPT_PREFIX=
 # vim-mode stuff
 #####################################################################
 bindkey -v #duh
+bindkey -M vicmd "^v" edit-command-line
 export KEYTIMEOUT=1
 
-zle-keymap-select () {
-    if [ "$TERM" = "xterm-256color" ]; then
-        if [ $KEYMAP = vicmd ]; then
-            # the command mode for vi
-            echo -ne "\e[2 q"
-        else
-            # the insert mode for vi
-            echo -ne "\e[4 q"
-        fi
+# Change cursor shape for different vi modes.
+function zle-keymap-select {
+    if [[ ${KEYMAP} == vicmd ]] || [[ $1 = 'block' ]]; then
+        echo -ne '\e[1 q'
+    elif [[ ${KEYMAP} == main ]] ||
+        [[ ${KEYMAP} == viins ]] ||
+        [[ ${KEYMAP} = '' ]] ||
+        [[ $1 = 'beam' ]]; then
+        echo -ne '\e[5 q'
     fi
 }
+zle -N zle-keymap-select
 
-bindkey -M vicmd "^v" edit-command-line
+# Use beam shape cursor for each new prompt.
+_fix_cursor() {
+   echo -ne '\e[5 q'
+}
+precmd_functions+=(_fix_cursor)
 
 #####################################################################
 # source aliases
