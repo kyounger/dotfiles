@@ -130,6 +130,15 @@ _fix_cursor() {
 }
 precmd_functions+=(_fix_cursor)
 
+#save me some keystrokes for typing this monstrosity
+add-kubectl-all-namespaces-but-kube-system() {
+    BUFFER+="--all-namespaces --field-selector=metadata.namespace!=kube-system"
+    # zle accept-line
+}
+zle -N add-kubectl-all-namespaces-but-kube-system
+bindkey -M viins "^n" add-kubectl-all-namespaces-but-kube-system
+
+
 #####################################################################
 # source aliases
 #####################################################################
