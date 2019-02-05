@@ -98,13 +98,31 @@ alias sftp='noglob sftp'
 
 autoload -Uz bracketed-paste-url-magic && zle -N bracketed-paste bracketed-paste-url-magic
 
-bindkey -v #duh
-
 # improved less option
 export LESS='--tabs=4 --no-init --LONG-PROMPT --ignore-case --quit-if-one-screen --RAW-CONTROL-CHARS'
 
 # geometry prompt options
 export GEOMETRY_PROMPT_PREFIX=
+
+#####################################################################
+# vim-mode stuff
+#####################################################################
+bindkey -v #duh
+export KEYTIMEOUT=1
+
+zle-keymap-select () {
+    if [ "$TERM" = "xterm-256color" ]; then
+        if [ $KEYMAP = vicmd ]; then
+            # the command mode for vi
+            echo -ne "\e[2 q"
+        else
+            # the insert mode for vi
+            echo -ne "\e[4 q"
+        fi
+    fi
+}
+
+bindkey -M vicmd "^v" edit-command-line
 
 #####################################################################
 # source aliases
@@ -133,7 +151,6 @@ setopt HIST_BEEP                 # Beep when accessing non-existent history.
 bindkey '^[OA' history-substring-search-up
 bindkey '^[OB' history-substring-search-down
 autoload edit-command-line; zle -N edit-command-line
-bindkey -M vicmd "^v" edit-command-line
 
 #####################################################################
 # directory options
@@ -152,7 +169,6 @@ unsetopt CLOBBER            # Do not overwrite existing files with > and >>.
 
 #override prezto completion module on this setting
 zstyle ':completion:*:*:cd:*' tag-order local-directories directory-stack
-
 
 #####################################################################
 # brew file wrapper

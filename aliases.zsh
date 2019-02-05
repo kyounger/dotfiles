@@ -13,7 +13,11 @@ alias hp='head -20 pom.xml'
 alias temp='rm -rf ~/temp; mkdir ~/temp; cd ~/temp'
 
 alias kc='kubectl'
-alias kcga='kubectl get all'
+alias kcga='kubectl get all --all-namespaces'
+alias kcd='kubectl describe'
+alias kcl='kubectl logs'
+export AN=("--all-namespaces" "--field-selector=metadata.namespace!=kube-system")
+
 alias gc='gcloud'
 alias gccc='gcloud container clusters'
 alias capture-sound='ffmpeg -f avfoundation -i ":0" audiocapture`date +%s`.mp3'
