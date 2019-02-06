@@ -45,6 +45,7 @@ let g:disable_all_plugins = 0
                 NeoBundle 'junegunn/vim-peekaboo'
                 NeoBundle 'Lokaltog/vim-powerline', { 'directory': 'vim-powerline' }
                 NeoBundle 'maxbrunsfeld/vim-yankstack'
+                NeoBundle 'tmux-plugins/vim-tmux-focus-events'
 
             "ColorSchemes
             NeoBundle 'sjl/badwolf', { 'directory': 'badwolf' }
@@ -310,7 +311,7 @@ let g:disable_all_plugins = 0
     " set autoindent
     " set smartindent
     if v:version > 704 || v:version == 704 && has("patch338")
-    set breakindent
+        set breakindent
     endif
 
 " }}}
@@ -1202,7 +1203,7 @@ let g:disable_all_plugins = 0
 
 " }}}
 " Environments (GUI/Console) ---------------------------------------------- {{{
-
+"
     if has('gui_running')
         " GUI Vim
 
@@ -1219,10 +1220,6 @@ let g:disable_all_plugins = 0
         " TODO: get spellcheck working
         " highlight SpellBad term=underline gui=undercurl guisp=Orange
         "
-
-        "deal with oddities with ZSH cursor
-        " autocmd VimEnter * silent exec "! echo -ne '\e[1 q'"
-        " autocmd VimLeave * silent exec "! echo -ne '\e[5 q'"
 
         " Different cursors for different modes.
         set guicursor=n-c:block-Cursor-blinkon0
@@ -1264,6 +1261,18 @@ let g:disable_all_plugins = 0
 
         " Mouse support
         set mouse=a
+
+        "deal with oddities with tmux cursor
+        function! HandleCursor()
+            if mode() == 'i'
+                silent exec "! echo -ne '\e[5 q'"
+            else
+                silent exec "! echo -ne '\e[2 q'"
+            endif
+        endfunction
+
+        autocmd  FocusGained  * silent! call HandleCursor()
+
     endif
 
 
