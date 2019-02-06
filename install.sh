@@ -32,8 +32,6 @@ ln -fs $HOME/.dotfiles/git/.gitconfig
 
 ln -fs $HOME/.dotfiles/jshint/.jshintrc
 
-ln -fs $HOME/.dotfiles/.btt_autoload_preset.json
-
 ln -fs $HOME/.dotfiles/sqlite/.sqliterc
 
 ln -fs $HOME/.dotfiles/tmux/.tmux.conf
