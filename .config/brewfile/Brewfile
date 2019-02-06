@@ -123,6 +123,7 @@ brew x265
 brew xvid
 brew xz
 brew yasm
+brew yq
 brew zplug
 
 tap argon/mas
