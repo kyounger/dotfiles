@@ -1220,6 +1220,10 @@ let g:disable_all_plugins = 0
         " highlight SpellBad term=underline gui=undercurl guisp=Orange
         "
 
+        "deal with oddities with ZSH cursor
+        " autocmd VimEnter * silent exec "! echo -ne '\e[1 q'"
+        " autocmd VimLeave * silent exec "! echo -ne '\e[5 q'"
+
         " Different cursors for different modes.
         set guicursor=n-c:block-Cursor-blinkon0
         set guicursor+=v:block-vCursor-blinkon0
