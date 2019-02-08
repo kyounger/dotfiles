@@ -23,6 +23,7 @@ zplug "rimraf/k"
 zplug "arzzen/calc.plugin.zsh"
 zplug "docker/cli", use:contrib/completion/zsh
 zplug "docker/compose", use:contrib/completion/zsh
+zplug "popstas/zsh-command-time"
 
 export NVM_LAZY_LOAD=true
 zplug "lukechilds/zsh-nvm"
@@ -225,3 +226,9 @@ fi
 # add-zsh-hook chpwd load-nvmrc
 # load-nvmrc
 
+#####################################################################
+# TODO:
+#####################################################################
+#
+# https://github.com/bhilburn/powerlevel9k
+#
