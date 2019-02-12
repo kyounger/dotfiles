@@ -28,8 +28,6 @@ cd $HOME/.config/brewfile/
 ln -fs Brewfile.$MACHINE_CONFIG_TYPE Brewfile.local
 cd $HOME
 
-ln -fs $HOME/.dotfiles/git/.gitconfig
-
 ln -fs $HOME/.dotfiles/jshint/.jshintrc
 
 ln -fs $HOME/.dotfiles/sqlite/.sqliterc
@@ -44,9 +42,7 @@ ln -fs $HOME/.dotfiles/vim/.vim
 
 ln -fs $HOME/.dotfiles/vim/.ideavimrc
 
-ln -fs $HOME/.dotfiles/.zshrc
-
-ln -fs $HOME/.dotfiles/.zshenv
+ln -fs $HOME/.dotfiles/.config/zsh/.zshenv
 
 echo "You may want to re-run defaults: $HOME/.dotfiles/mathiasbynens-dotfiles/.macos"
 echo "Also, run brew file install"

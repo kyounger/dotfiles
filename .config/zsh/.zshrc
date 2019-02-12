@@ -201,7 +201,7 @@ fi
 #####################################################################
 
 # place this after nvm initialization!
- autoload -U add-zsh-hook
+ # autoload -U add-zsh-hook
 # load-nvmrc() {
 #   if [[ -f .nvmrc && -r .nvmrc ]]; then
 #     nvm use

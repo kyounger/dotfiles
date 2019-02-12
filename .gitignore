@@ -9,3 +9,4 @@ BetterTouchTool/BetterTouchToolApplicationSupport/*.oldVersionBackup*
 BetterTouchTool/BetterTouchToolApplicationSupport/Logs/
 BetterTouchTool/BetterTouchToolApplicationSupport/bettertouchtool.bttlicense
 .config/configstore/update-notifier-npm.json
+.config/zsh/.zhistory
