@@ -18,11 +18,12 @@ brew diff-so-fancy
 brew dos2unix
 brew exiftool
 brew faac
-brew fasd
+brew fd
 brew fdk-aac
 brew fdupes
 brew ffmpeg
 brew freetype
+brew fzf
 brew gdbm
 brew gettext
 brew gifify

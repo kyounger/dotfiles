@@ -1,38 +1,32 @@
-#####################################################################
-# init
-#####################################################################
-
 # zmodload zsh/zprof
-
-if [ ! -f ~/.zshrc.zwc -o ~/.zshrc -nt ~/.zshrc.zwc ]; then
-    zcompile ~/.zshrc
-fi
-
 
 #####################################################################
 # zplug
 #####################################################################
 
+# because homebrew
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
+# just plain useful and not very intrusive
+# zplug "djui/alias-tips"
+zplug "popstas/zsh-command-time"
+
+zplug "sorin-ionescu/prezto", use:"modules/helper/init.zsh"
 zplug "sorin-ionescu/prezto", use:"modules/editor/init.zsh"
 zplug "sorin-ionescu/prezto", use:"modules/history/init.zsh"
 zplug "zsh-users/zsh-history-substring-search"
-zplug "rimraf/k"
-zplug "arzzen/calc.plugin.zsh"
-zplug "docker/cli", use:contrib/completion/zsh
-zplug "docker/compose", use:contrib/completion/zsh
-zplug "popstas/zsh-command-time"
 
 export NVM_LAZY_LOAD=true
 zplug "lukechilds/zsh-nvm"
 
-zplug "zsh-users/zsh-syntax-highlighting"
+# completion and highlighting stuff
+zplug "kyounger/prezto", use:"modules/completion/init.zsh"
+zplug "docker/cli", use:contrib/completion/zsh
+zplug "docker/compose", use:contrib/completion/zsh
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
-zplug "sorin-ionescu/prezto", use:"modules/completion/init.zsh"
-
-zplug "modules/helper", from:prezto
+# the theme I use
 zplug "geometry-zsh/geometry"
 
 # Install plugins if there are plugins that have not been installed
@@ -46,7 +40,6 @@ if ! zplug check --verbose; then
 fi
 
 zplug load
-
 
 #####################################################################
 # environment
@@ -131,14 +124,12 @@ _fix_cursor() {
 }
 precmd_functions+=(_fix_cursor)
 
-#save me some keystrokes for typing this monstrosity
+# use Ctrl+n to save me some keystrokes for typing this monstrosity
 add-kubectl-all-namespaces-but-kube-system() {
     BUFFER+="--all-namespaces --field-selector=metadata.namespace!=kube-system"
-    # zle accept-line
 }
 zle -N add-kubectl-all-namespaces-but-kube-system
 bindkey -M viins "^n" add-kubectl-all-namespaces-but-kube-system
-
 
 #####################################################################
 # source aliases
@@ -203,10 +194,6 @@ if [[ "$(uname)" == "Darwin" ]]; then
     source $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
     source $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
 
-    if type brew &>/dev/null; then
-        FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
-    fi
-
 fi
 
 #####################################################################
@@ -232,3 +219,6 @@ fi
 #
 # https://github.com/bhilburn/powerlevel9k
 #
+export FZF_DEFAULT_COMMAND='fd --type file --follow --hidden --exclude .git'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+

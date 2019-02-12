@@ -4,9 +4,7 @@ alias macmounter-tail-logs='tail -f ~/Library/Application\ Support/macmounter/ma
 alias macmounter-vim-logs='vim ~/Library/Application\ Support/macmounter/macmounter.log'
 alias macmounter-reload='macmounter.py --reload'
 
-alias vi='vim'
 alias vp='vim pom.xml'
-
 alias hp='head -20 pom.xml'
 
 #clear ~/temp dir and cd to it
