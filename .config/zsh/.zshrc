@@ -36,6 +36,7 @@
     zplug "andrewferrier/fzf-z"
 
 # the theme I use
+    export GEOMETRY_PROMPT_PREFIX=
     zplug "geometry-zsh/geometry"
 
 # nvm
@@ -111,8 +112,6 @@ autoload -Uz bracketed-paste-url-magic && zle -N bracketed-paste bracketed-paste
 # improved less option
 export LESS='--tabs=4 --no-init --LONG-PROMPT --ignore-case --quit-if-one-screen --RAW-CONTROL-CHARS'
 
-# geometry prompt options
-export GEOMETRY_PROMPT_PREFIX=
 
 #####################################################################
 # vim-mode stuff
