@@ -44,7 +44,7 @@
     zplug "lukechilds/zsh-nvm"
 
 # my aliases
-    zplug "~/.dotfiles/", from:local, use:"aliases.zsh"
+    zplug "~/.dotfiles/zsh/", from:local, use:"aliases.zsh", defer:1
 
 # Install plugins if there are plugins that have not been installed
     if ! zplug check --verbose; then
@@ -145,10 +145,6 @@ add-kubectl-all-namespaces-but-kube-system() {
 }
 zle -N add-kubectl-all-namespaces-but-kube-system
 bindkey -M viins "^n" add-kubectl-all-namespaces-but-kube-system
-
-#####################################################################
-# source aliases
-#####################################################################
 
 
 #####################################################################
