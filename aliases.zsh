@@ -48,6 +48,8 @@ alias gcam='git commit --all --message'
 alias gco='git checkout'
 alias gcam='git commit -am'
 
+
+
 alias grho='read -q "REPLY?Are you sure you want to hard reset to the origin? "; if [ "y" = "$REPLY" ]; then echo; git reset --hard `git for-each-ref --format="%(upstream:short)" $(git symbolic-ref -q HEAD)`; fi'
 alias grmh='git reset --mixed HEAD\^'
 

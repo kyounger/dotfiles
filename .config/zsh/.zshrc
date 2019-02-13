@@ -5,39 +5,55 @@
 #####################################################################
 
 # because homebrew
-export ZPLUG_HOME=/usr/local/opt/zplug
-source $ZPLUG_HOME/init.zsh
+    export ZPLUG_HOME=/usr/local/opt/zplug
+    source $ZPLUG_HOME/init.zsh
 
 # just plain useful and not very intrusive
-# zplug "djui/alias-tips"
-zplug "popstas/zsh-command-time"
+    zplug "popstas/zsh-command-time"
 
-zplug "sorin-ionescu/prezto", use:"modules/helper/init.zsh"
-zplug "sorin-ionescu/prezto", use:"modules/editor/init.zsh"
-zplug "sorin-ionescu/prezto", use:"modules/history/init.zsh"
-zplug "zsh-users/zsh-history-substring-search"
-
-export NVM_LAZY_LOAD=true
-zplug "lukechilds/zsh-nvm"
+# some basics
+    zplug "sorin-ionescu/prezto", use:"modules/helper/init.zsh"
+    zplug "sorin-ionescu/prezto", use:"modules/editor/init.zsh"
+    zplug "sorin-ionescu/prezto", use:"modules/history/init.zsh"
+    zplug "zsh-users/zsh-history-substring-search", defer:3
 
 # completion and highlighting stuff
-zplug "kyounger/prezto", use:"modules/completion/init.zsh"
-zplug "docker/cli", use:contrib/completion/zsh
-zplug "docker/compose", use:contrib/completion/zsh
-zplug "zsh-users/zsh-syntax-highlighting", defer:2
+    zplug "kyounger/prezto", use:"modules/completion/init.zsh"
+    zplug "docker/cli", use:contrib/completion/zsh
+    zplug "docker/compose", use:contrib/completion/zsh
+    zplug "zsh-users/zsh-syntax-highlighting", defer:2
+
+# z and fzf
+    export FZF_DEFAULT_COMMAND='fd --type file --follow --hidden --exclude .git'
+    export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+    zplug "junegunn/fzf-bin", as:command, from:gh-r, rename-to:fzf, use:"*${(L)$(uname -s)}*amd64*"
+    zplug "junegunn/fzf", use:"shell/*.zsh", as:plugin
+
+    export _Z_CMD=j
+    export _Z_DATA=$XDG_CACHE
+    zplug "rupa/z", use:z.sh
+    #maybe switch to this one day: https://github.com/knu/z
+    zplug "andrewferrier/fzf-z"
 
 # the theme I use
-zplug "geometry-zsh/geometry"
+    zplug "geometry-zsh/geometry"
+
+# nvm
+    export NVM_LAZY_LOAD=true
+    zplug "lukechilds/zsh-nvm"
+
+# my aliases
+    zplug "~/.dotfiles/", from:local, use:"aliases.zsh"
 
 # Install plugins if there are plugins that have not been installed
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    else
-        echo
+    if ! zplug check --verbose; then
+        printf "Install? [y/N]: "
+        if read -q; then
+            echo; zplug install
+        else
+            echo
+        fi
     fi
-fi
 
 zplug load
 
@@ -135,7 +151,6 @@ bindkey -M viins "^n" add-kubectl-all-namespaces-but-kube-system
 # source aliases
 #####################################################################
 
-source ~/.dotfiles/aliases.zsh
 
 #####################################################################
 # history options
@@ -176,6 +191,8 @@ unsetopt CLOBBER            # Do not overwrite existing files with > and >>.
 
 #override prezto completion module on this setting
 zstyle ':completion:*:*:cd:*' tag-order local-directories directory-stack
+zstyle ':completion:*:*:git:*' user-commands checkoutpullrequest:'checkout a github pull request by its ID'
+zstyle ':completion:*:*:git:*' user-commands ${${(M)${(k)commands}:#git-*}/git-/}
 
 #####################################################################
 # brew file wrapper
@@ -217,8 +234,5 @@ fi
 # TODO:
 #####################################################################
 #
-# https://github.com/bhilburn/powerlevel9k
+# Look into: https://github.com/bhilburn/powerlevel9k
 #
-export FZF_DEFAULT_COMMAND='fd --type file --follow --hidden --exclude .git'
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-

@@ -23,7 +23,6 @@ brew fdk-aac
 brew fdupes
 brew ffmpeg
 brew freetype
-brew fzf
 brew gdbm
 brew gettext
 brew gifify
