@@ -92,6 +92,7 @@ brew opus
 brew p11-kit
 brew pcre
 brew pdftohtml
+brew peco
 brew pinentry
 brew pinentry-mac
 brew pkg-config

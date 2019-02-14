@@ -1,5 +1,7 @@
 # zmodload zsh/zprof
 
+
+
 #####################################################################
 # zplug
 #####################################################################
@@ -7,6 +9,7 @@
 # because homebrew
     export ZPLUG_HOME=/usr/local/opt/zplug
     source $ZPLUG_HOME/init.zsh
+    zstyle ':completion:*' cache-path ~/$XDG_CACHE_HOME
 
 # just plain useful and not very intrusive
     zplug "popstas/zsh-command-time"
@@ -30,7 +33,7 @@
     zplug "junegunn/fzf", use:"shell/*.zsh", as:plugin
 
     export _Z_CMD=j
-    export _Z_DATA=$XDG_CACHE
+    export _Z_DATA=$XDG_CACHE_HOME/.z
     zplug "rupa/z", use:z.sh
     #maybe switch to this one day: https://github.com/knu/z
     zplug "andrewferrier/fzf-z"

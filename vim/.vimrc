@@ -574,7 +574,7 @@ let g:disable_all_plugins = 0
 
         " Don't move on *
         " nnoremap * *<c-o>
-        nnoremap <silent> * :let stay_star_view = winsaveview()<cr>*:call winrestview(stay_star_view)<cr>
+    nnoremap <silent> * :let stay_star_view = winsaveview()<cr>*:call winrestview(stay_star_view)<cr>
 
         " Use c-\ to do c-] but open it in a new split.
         " nnoremap <c-\> <c-w>v<c-]>zvzz
@@ -583,6 +583,39 @@ let g:disable_all_plugins = 0
         nnoremap n nzzzv
         nnoremap N Nzzzv
     end
+
+    function! HiInterestingWord(n) " {{{2
+        " Save our location.
+        normal! mz
+        " Yank the current word into the z register.
+        "normal! "zyiw
+
+        " Patched to highlight visual selection, if copied to register "z
+        :if @z == ""
+            normal! "zyiW
+        :endif
+
+        " Calculate an arbitrary match ID.  Hopefully nothing else is using it.
+        let mid = 77750 + a:n
+        " Clear existing matches, but don't worry if they don't exist.
+        "silent! call matchdelete(mid)
+        try
+            call matchdelete(mid)
+        catch 'E803'
+            " Construct a literal pattern that has to match at boundaries.
+            "let pat = '\V\<' . escape(@z, '\') . '\>'
+
+            " Patched to match substrings
+            let pat = escape(@z, '\')
+
+            " Actually match the strings.
+            call matchadd("InterestingWord" . a:n, pat, 1, mid)
+        endtry
+        " Move back to our original location.
+        :let @z = ""
+        normal! `z
+    endfunction
+    nnoremap <silent> • :call HiInterestingWord(1)<cr>
 
 "}}}
 
