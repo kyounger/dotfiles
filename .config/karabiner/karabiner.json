@@ -15,14 +15,14 @@
                 },
                 "rules": [
                     {
-                        "description": "Change caps_lock key to command+control+option+shift. (Post escape key when pressed alone & Use shift+caps_lock as caps_lock)",
+                        "description": "Change caps_lock key to command+control+option. (Post escape key when pressed alone & Use right_cmd+caps_lock as caps_lock)",
                         "manipulators": [
                             {
                                 "from": {
                                     "key_code": "caps_lock",
                                     "modifiers": {
                                         "mandatory": [
-                                            "shift"
+                                            "right_command"
                                         ],
                                         "optional": [
                                             "caps_lock"
@@ -47,9 +47,8 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "left_shift",
+                                        "key_code": "left_command",
                                         "modifiers": [
-                                            "left_command",
                                             "left_control",
                                             "left_option"
                                         ]
