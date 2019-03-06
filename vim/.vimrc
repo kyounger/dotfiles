@@ -83,6 +83,7 @@ let g:disable_all_plugins = 0
             NeoBundle 'PProvost/vim-ps1'
             NeoBundle 'godlygeek/tabular'
             NeoBundle 'plasticboy/vim-markdown'
+            NeoBundle 'martinda/Jenkinsfile-vim-syntax'
 
             " NeoBundle 'vim-scripts/phpfolding.vim', { 'directory': 'phpfolding.vim' }
             " NeoBundle 'scrooloose/syntastic', { 'directory': 'syntastic' }

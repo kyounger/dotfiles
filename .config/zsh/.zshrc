@@ -19,6 +19,8 @@
     zplug "sorin-ionescu/prezto", use:"modules/editor/init.zsh"
     zplug "sorin-ionescu/prezto", use:"modules/history/init.zsh"
     zplug "zsh-users/zsh-history-substring-search", defer:3
+    zplug "zsh-users/zsh-autosuggestions", defer:2
+
 
 # completion and highlighting stuff
     zplug "kyounger/prezto", use:"modules/completion/init.zsh"

@@ -10,6 +10,7 @@ brew autoconf
 brew automake
 brew aws-shell
 brew awscli
+brew clamav
 brew cmake
 brew coreutils
 brew csvkit
@@ -23,6 +24,7 @@ brew fdk-aac
 brew fdupes
 brew ffmpeg
 brew freetype
+brew fx
 brew gdbm
 brew gettext
 brew gifify
@@ -38,12 +40,15 @@ brew icu4c
 brew imagemagick
 brew iperf
 brew ipmitool
+brew jansson
 brew jasper
 brew jemalloc
 brew jenv
 brew jpeg
 brew jq
+brew json-c
 brew kompose
+brew kubectx
 brew kubernetes-cli
 brew kubernetes-helm
 brew lame
@@ -55,6 +60,7 @@ brew libgcrypt
 brew libgpg-error
 brew libidn2
 brew libksba
+brew libmagic
 brew libogg
 brew libpng
 brew libsass
@@ -83,6 +89,7 @@ brew netperf
 brew nettle
 brew nginx
 brew nmap
+brew node
 brew npth
 brew oniguruma
 brew openjpeg
@@ -123,6 +130,7 @@ brew x264
 brew x265
 brew xvid
 brew xz
+brew yara
 brew yasm
 brew yq
 brew zplug
@@ -134,6 +142,9 @@ tap caskroom/cask
 tap caskroom/drivers
 
 tap caskroom/versions
+
+tap derailed/k9s
+brew k9s
 
 tap jenkins-x/jx
 brew jx
@@ -170,6 +181,7 @@ cask firefox
 cask flux
 cask google-chrome
 cask google-cloud-sdk
+cask hammerspoon
 cask intellij-idea
 cask iterm2
 cask java

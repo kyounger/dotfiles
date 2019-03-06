@@ -53,3 +53,5 @@
 	helper = gcloud.sh
 [commit]
 	gpgsign = true
+[diff "sopsdiffer"]
+	textconv = sops -d
