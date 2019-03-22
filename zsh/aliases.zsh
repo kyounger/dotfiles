@@ -18,7 +18,10 @@ alias kcl='kubectl logs'
 
 alias gc='gcloud'
 alias gccc='gcloud container clusters'
-alias capture-sound='ffmpeg -f avfoundation -i ":0" audiocapture`date +%s`.mp3'
+
+
+alias capture-sound='mkdir -p ~/capture-sound/;ffmpeg -f avfoundation -i ":TestRecorder" -f s16le -acodec pcm_s16le -vn -ac 1 -ar 16k ~/capture-sound/raw-audio-capture`date +%s`.raw'
+alias capture-sound-flac='mkdir -p ~/capture-sound/;ffmpeg -f avfoundation -i ":TestRecorder" -ac 1 -ar 48k ~/capture-sound/audio-capture`date +%s`.flac'
 alias record-sound='capture-sound'
 alias sound-record='capture-sound'
 

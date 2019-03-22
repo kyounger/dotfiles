@@ -28,6 +28,7 @@ brew fx
 brew gdbm
 brew gettext
 brew gifify
+brew gifsicle
 brew git
 brew gmp
 brew gnu-sed
@@ -124,6 +125,7 @@ brew unibilium
 brew utf8proc
 brew vim
 brew wakeonlan
+brew watch
 brew webp
 brew wget
 brew x264
@@ -164,7 +166,6 @@ brew python3
 
 # Other Cask applications
 cask adium
-cask alfred
 cask android-file-transfer
 cask android-platform-tools
 cask appcleaner
