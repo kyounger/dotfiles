@@ -10,7 +10,7 @@
     "disableScrollingIf2" : true,
     "batteryWarning" : false,
     "BSTDontShowSnapAreasWhileModMoving" : 0,
-    "BTTSavedMousePosition" : "{662.5234375, 292.41015625}",
+    "BTTSavedMousePosition" : "{2850.96875, 783.4140625}",
     "BSTWindowGrabPosY" : 10,
     "singleFingerTapRight" : 0.05000000074505806,
     "BTTDrawingStrokeWidth" : 4,
@@ -140,7 +140,7 @@
     "showOtherTriggersTab" : true,
     "BSTSnapAreaDefaultPictoDistanceFromLeft" : 0.10000000149011612
   },
-  "BTTPresetUUID" : "32E19FDD-62E7-4179-AA71-8AA794F292BB",
+  "BTTPresetUUID" : "C834EDFC-5265-4D58-9CD7-AF38A39171E8",
   "BTTPresetContent" : [
     {
       "BTTAppBundleIdentifier" : "com.adobe.LightroomClassicCC7",
@@ -494,6 +494,424 @@
       },
       "BTTTriggers" : [
         {
+          "BTTTriggerType" : 624,
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 218,
+          "BTTPredefinedActionName" : "Move Window To Desktop 3",
+          "BTTEnabled2" : 1,
+          "BTTKeyboardShortcutKeyboardType" : 0,
+          "BTTUUID" : "D9E21807-7A23-4C7F-9EC0-F490DA55A928",
+          "BTTTriggerOnDown" : 1,
+          "BTTEnabled" : 1,
+          "BTTModifierMode" : 0,
+          "BTTShortcutKeyCode" : -1,
+          "BTTShortcutModifierKeys" : -1,
+          "BTTOrder" : 30,
+          "BTTDisplayOrder" : 0,
+          "BTTMergeIntoTouchBarGroups" : 0,
+          "BTTKeySequence" : {
+            "BTTPauseBetween" : 0.29999999999999999,
+            "BTTCharactersToDeleteAfterwards" : 1,
+            "BTTKeyCount" : 10,
+            "BTTKeySequenceDownKeys" : [
+              {
+                "BTTKEYCode" : 59,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241152
+              },
+              {
+                "BTTKEYCode" : 58,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241152
+              },
+              {
+                "BTTKEYCode" : 55,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241152
+              },
+              {
+                "BTTKEYCharacter" : " D",
+                "BTTKEYCode" : 2,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241152
+              },
+              {
+                "BTTKEYCharacter" : " 3",
+                "BTTKEYCode" : 20,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241152
+              }
+            ],
+            "BTTKeySequenceMixedKeys" : [
+              {
+                "BTTKEYCode" : 59,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241152
+              },
+              {
+                "BTTKEYCode" : 58,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241152
+              },
+              {
+                "BTTKEYCode" : 55,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241152
+              },
+              {
+                "BTTKEYCharacter" : " D",
+                "BTTKEYCode" : 2,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241152
+              },
+              {
+                "BTTKEYCode" : 55,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241152
+              },
+              {
+                "BTTKEYCharacter" : " D",
+                "BTTKEYCode" : 2,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241152
+              },
+              {
+                "BTTKEYCode" : 59,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241152
+              },
+              {
+                "BTTKEYCode" : 58,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241152
+              },
+              {
+                "BTTKEYCharacter" : " 3",
+                "BTTKEYCode" : 20,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241152
+              },
+              {
+                "BTTKEYCharacter" : " 3",
+                "BTTKEYCode" : 20,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241152
+              }
+            ],
+            "BTTKeySequenceUpKeys" : [
+              {
+                "BTTKEYCode" : 55,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241152
+              },
+              {
+                "BTTKEYCharacter" : " D",
+                "BTTKEYCode" : 2,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241152
+              },
+              {
+                "BTTKEYCode" : 59,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241152
+              },
+              {
+                "BTTKEYCode" : 58,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241152
+              },
+              {
+                "BTTKEYCharacter" : " 3",
+                "BTTKEYCode" : 20,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241152
+              }
+            ]
+          }
+        },
+        {
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 13,
+          "BTTPredefinedActionName" : "Sleep Display",
+          "BTTAdditionalConfiguration" : "1835008",
+          "BTTEnabled2" : 1,
+          "BTTKeyboardShortcutKeyboardType" : 0,
+          "BTTUUID" : "4A6B8A46-06D6-49BB-B180-7D362C9762D3",
+          "BTTTriggerOnDown" : 0,
+          "BTTEnabled" : 1,
+          "BTTModifierMode" : 0,
+          "BTTShortcutKeyCode" : 53,
+          "BTTShortcutModifierKeys" : 1835008,
+          "BTTOrder" : 10,
+          "BTTDisplayOrder" : 0,
+          "BTTMergeIntoTouchBarGroups" : 0
+        },
+        {
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 212,
+          "BTTPredefinedActionName" : "Switch To Desktop 6",
+          "BTTAdditionalConfiguration" : "1835049",
+          "BTTEnabled2" : 1,
+          "BTTKeyboardShortcutKeyboardType" : 40,
+          "BTTUUID" : "58483450-16CE-425F-A783-167F3CE0D259",
+          "BTTTriggerOnDown" : 1,
+          "BTTEnabled" : 1,
+          "BTTModifierMode" : 0,
+          "BTTShortcutKeyCode" : 22,
+          "BTTShortcutModifierKeys" : 1835008,
+          "BTTOrder" : 23,
+          "BTTDisplayOrder" : 0,
+          "BTTMergeIntoTouchBarGroups" : 0
+        },
+        {
+          "BTTTriggerType" : 141,
+          "BTTTriggerTypeDescription" : "5 Finger Click",
+          "BTTTriggerClass" : "BTTTriggerTypeTouchpadAll",
+          "BTTPredefinedActionType" : 21,
+          "BTTPredefinedActionName" : "Maximize Window",
+          "BTTEnabled2" : 1,
+          "BTTAlternateModifierKeys" : 0,
+          "BTTUUID" : "A8424FF6-E61B-4890-AB7E-E1CF11B37F87",
+          "BTTEnabled" : 1,
+          "BTTModifierMode" : 0,
+          "BTTOrder" : 0,
+          "BTTDisplayOrder" : 0,
+          "BTTMergeIntoTouchBarGroups" : 0,
+          "BTTAlternateIconData" : ""
+        },
+        {
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 49,
+          "BTTPredefinedActionName" : "Launch Application \/ Open File \/ Start Apple Script …",
+          "BTTLaunchPath" : "file:\/\/\/Applications\/Evernote.app",
+          "BTTAdditionalConfiguration" : "1835049",
+          "BTTEnabled2" : 1,
+          "BTTKeyboardShortcutKeyboardType" : 0,
+          "BTTUUID" : "F54EB3AC-C952-4DC0-B8C2-5737F93E238D",
+          "BTTTriggerOnDown" : 0,
+          "BTTEnabled" : 1,
+          "BTTModifierMode" : 0,
+          "BTTShortcutKeyCode" : 14,
+          "BTTShortcutModifierKeys" : 1835008,
+          "BTTOrder" : 11,
+          "BTTDisplayOrder" : 0,
+          "BTTMergeIntoTouchBarGroups" : 0
+        },
+        {
+          "BTTTriggerType" : 624,
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 217,
+          "BTTPredefinedActionName" : "Move Window To Desktop 2",
+          "BTTEnabled2" : 1,
+          "BTTKeyboardShortcutKeyboardType" : 0,
+          "BTTUUID" : "A5A5F70E-D39A-491D-8494-807AF977191D",
+          "BTTTriggerOnDown" : 1,
+          "BTTEnabled" : 1,
+          "BTTModifierMode" : 0,
+          "BTTShortcutKeyCode" : -1,
+          "BTTShortcutModifierKeys" : -1,
+          "BTTOrder" : 29,
+          "BTTDisplayOrder" : 0,
+          "BTTMergeIntoTouchBarGroups" : 0,
+          "BTTKeySequence" : {
+            "BTTPauseBetween" : 0.29999999999999999,
+            "BTTCharactersToDeleteAfterwards" : 1,
+            "BTTKeyCount" : 10,
+            "BTTKeySequenceDownKeys" : [
+              {
+                "BTTKEYCode" : 59,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241024
+              },
+              {
+                "BTTKEYCode" : 58,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241024
+              },
+              {
+                "BTTKEYCode" : 55,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241024
+              },
+              {
+                "BTTKEYCharacter" : " D",
+                "BTTKEYCode" : 2,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241024
+              },
+              {
+                "BTTKEYCharacter" : " 2",
+                "BTTKEYCode" : 19,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241024
+              }
+            ],
+            "BTTKeySequenceMixedKeys" : [
+              {
+                "BTTKEYCode" : 59,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241024
+              },
+              {
+                "BTTKEYCode" : 58,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241024
+              },
+              {
+                "BTTKEYCode" : 55,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241024
+              },
+              {
+                "BTTKEYCharacter" : " D",
+                "BTTKEYCode" : 2,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241024
+              },
+              {
+                "BTTKEYCode" : 55,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241024
+              },
+              {
+                "BTTKEYCharacter" : " D",
+                "BTTKEYCode" : 2,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241024
+              },
+              {
+                "BTTKEYCode" : 59,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241024
+              },
+              {
+                "BTTKEYCode" : 58,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241024
+              },
+              {
+                "BTTKEYCharacter" : " 2",
+                "BTTKEYCode" : 19,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241024
+              },
+              {
+                "BTTKEYCharacter" : " 2",
+                "BTTKEYCode" : 19,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241024
+              }
+            ],
+            "BTTKeySequenceUpKeys" : [
+              {
+                "BTTKEYCode" : 55,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241024
+              },
+              {
+                "BTTKEYCharacter" : " D",
+                "BTTKEYCode" : 2,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241024
+              },
+              {
+                "BTTKEYCode" : 59,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241024
+              },
+              {
+                "BTTKEYCode" : 58,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241024
+              },
+              {
+                "BTTKEYCharacter" : " 2",
+                "BTTKEYCode" : 19,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241024
+              }
+            ]
+          }
+        },
+        {
+          "BTTTriggerType" : -1,
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 198,
+          "BTTPredefinedActionName" : "Volume Up (Small Step)",
+          "BTTAdditionalConfiguration" : "8519680",
+          "BTTEnabled2" : 1,
+          "BTTKeyboardShortcutKeyboardType" : 0,
+          "BTTRepeatRate" : 0.10000000000000001,
+          "BTTRepeatDelay" : 0,
+          "BTTUUID" : "9FDC6301-AF40-4026-A6E6-CFCD7CCC893D",
+          "BTTTriggerOnDown" : 1,
+          "BTTEnabled" : 1,
+          "BTTModifierMode" : 0,
+          "BTTShortcutKeyCode" : 7,
+          "BTTShortcutModifierKeys" : 8519680,
+          "BTTOrder" : 8,
+          "BTTDisplayOrder" : 0,
+          "BTTMergeIntoTouchBarGroups" : 0
+        },
+        {
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : -1,
+          "BTTPredefinedActionName" : "No Action",
+          "BTTShortcutToSend" : "123",
+          "BTTAdditionalConfiguration" : "1835049",
+          "BTTEnabled2" : 1,
+          "BTTKeyboardShortcutKeyboardType" : 40,
+          "BTTUUID" : "6E0C9CA6-B3E8-4BCB-903C-60BECB85BF45",
+          "BTTTriggerOnDown" : 1,
+          "BTTEnabled" : 1,
+          "BTTModifierMode" : 0,
+          "BTTShortcutKeyCode" : 4,
+          "BTTShortcutModifierKeys" : 1835008,
+          "BTTOrder" : 19,
+          "BTTDisplayOrder" : 0,
+          "BTTMergeIntoTouchBarGroups" : 0
+        },
+        {
           "BTTTriggerType" : 106,
           "BTTTriggerTypeDescription" : "4 Finger Swipe Right",
           "BTTTriggerClass" : "BTTTriggerTypeTouchpadAll",
@@ -510,21 +928,21 @@
           "BTTAlternateIconData" : ""
         },
         {
-          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
-          "BTTPredefinedActionType" : -1,
-          "BTTPredefinedActionName" : "No Action",
-          "BTTAdditionalConfiguration" : "1835008",
+          "BTTTriggerType" : 128,
+          "BTTTriggerTypeDescription" : "5 Finger Swipe Left",
+          "BTTTriggerClass" : "BTTTriggerTypeTouchpadAll",
+          "BTTPredefinedActionType" : 19,
+          "BTTPredefinedActionName" : "Maximize Window Left",
           "BTTEnabled2" : 1,
-          "BTTKeyboardShortcutKeyboardType" : 40,
-          "BTTUUID" : "EC07E413-18B8-4A94-891E-B2FEE4F27798",
-          "BTTTriggerOnDown" : 1,
+          "BTTAlternateModifierKeys" : 0,
+          "BTTUUID" : "40FC02EE-A7A5-4A1B-B383-06B5CB1DDCEB",
           "BTTEnabled" : 1,
           "BTTModifierMode" : 0,
-          "BTTShortcutKeyCode" : 12,
-          "BTTShortcutModifierKeys" : 1835008,
-          "BTTOrder" : 24,
+          "BTTRequiredModifierKeys" : 8388608,
+          "BTTOrder" : 1,
           "BTTDisplayOrder" : 0,
-          "BTTMergeIntoTouchBarGroups" : 0
+          "BTTMergeIntoTouchBarGroups" : 0,
+          "BTTAlternateIconData" : ""
         },
         {
           "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
@@ -562,155 +980,22 @@
           "BTTMergeIntoTouchBarGroups" : 0
         },
         {
-          "BTTTriggerType" : 141,
-          "BTTTriggerTypeDescription" : "5 Finger Click",
-          "BTTTriggerClass" : "BTTTriggerTypeTouchpadAll",
-          "BTTPredefinedActionType" : 21,
-          "BTTPredefinedActionName" : "Maximize Window",
-          "BTTEnabled2" : 1,
-          "BTTAlternateModifierKeys" : 0,
-          "BTTUUID" : "A8424FF6-E61B-4890-AB7E-E1CF11B37F87",
-          "BTTEnabled" : 1,
-          "BTTModifierMode" : 0,
-          "BTTOrder" : 0,
-          "BTTDisplayOrder" : 0,
-          "BTTMergeIntoTouchBarGroups" : 0,
-          "BTTAlternateIconData" : ""
-        },
-        {
-          "BTTTriggerType" : 161,
-          "BTTTriggerTypeDescription" : "2 Finger Swipe Up",
-          "BTTTriggerClass" : "BTTTriggerTypeTouchpadAll",
-          "BTTPredefinedActionType" : 0,
-          "BTTPredefinedActionName" : "Use Apple Default Or Do Nothing",
-          "BTTEnabled2" : 1,
-          "BTTAlternateModifierKeys" : 0,
-          "BTTUUID" : "7D222CEC-843C-475D-B611-DF1A3C728218",
-          "BTTEnabled" : 1,
-          "BTTModifierMode" : 0,
-          "BTTOrder" : 9,
-          "BTTDisplayOrder" : 0,
-          "BTTMergeIntoTouchBarGroups" : 0,
-          "BTTAlternateIconData" : ""
-        },
-        {
-          "BTTTriggerType" : 1000,
-          "BTTTriggerTypeDescription" : "Leftclick (needs modifier key)",
-          "BTTTriggerClass" : "BTTTriggerTypeNormalMouse",
-          "BTTPredefinedActionType" : 21,
-          "BTTPredefinedActionName" : "Maximize Window",
-          "BTTEnabled2" : 1,
-          "BTTAlternateModifierKeys" : 0,
-          "BTTUUID" : "C223C0C2-ED10-428E-A2F9-35FC7F9BF99E",
-          "BTTEnabled" : 1,
-          "BTTModifierMode" : 0,
-          "BTTRequiredModifierKeys" : 1835008,
-          "BTTOrder" : 0,
-          "BTTDisplayOrder" : 0,
-          "BTTMergeIntoTouchBarGroups" : 0,
-          "BTTAlternateIconData" : ""
-        },
-        {
           "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
-          "BTTPredefinedActionType" : -1,
-          "BTTPredefinedActionName" : "No Action",
-          "BTTShortcutToSend" : "125",
-          "BTTAdditionalConfiguration" : "1835049",
-          "BTTEnabled2" : 1,
-          "BTTKeyboardShortcutKeyboardType" : 40,
-          "BTTUUID" : "7E23587B-6055-4BAE-A06A-6B1F91EBF6ED",
-          "BTTTriggerOnDown" : 1,
-          "BTTEnabled" : 1,
-          "BTTModifierMode" : 0,
-          "BTTShortcutKeyCode" : 38,
-          "BTTShortcutModifierKeys" : 1835008,
-          "BTTOrder" : 17,
-          "BTTDisplayOrder" : 0,
-          "BTTMergeIntoTouchBarGroups" : 0
-        },
-        {
-          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
-          "BTTPredefinedActionType" : 49,
-          "BTTPredefinedActionName" : "Launch Application \/ Open File \/ Start Apple Script …",
-          "BTTLaunchPath" : "file:\/\/\/Applications\/Adobe%20Lightroom%20Classic%20CC\/Adobe%20Lightroom%20Classic%20CC.app",
-          "BTTAdditionalConfiguration" : "1835049",
-          "BTTEnabled2" : 1,
-          "BTTKeyboardShortcutKeyboardType" : 40,
-          "BTTUUID" : "197D976B-4036-4B34-AD1E-B7693D289EAA",
-          "BTTTriggerOnDown" : 1,
-          "BTTEnabled" : 1,
-          "BTTModifierMode" : 0,
-          "BTTShortcutKeyCode" : 35,
-          "BTTShortcutModifierKeys" : 1835008,
-          "BTTOrder" : 26,
-          "BTTDisplayOrder" : 0,
-          "BTTMergeIntoTouchBarGroups" : 0
-        },
-        {
-          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
-          "BTTPredefinedActionType" : 165,
-          "BTTPredefinedActionName" : "Mission Control & Immediately Show Desktop Preview",
+          "BTTPredefinedActionType" : 24,
+          "BTTPredefinedActionName" : "Volume Up",
           "BTTAdditionalConfiguration" : "8388608",
           "BTTEnabled2" : 1,
-          "BTTKeyboardShortcutKeyboardType" : 40,
-          "BTTUUID" : "75CC9E4A-D234-4FC8-AC38-4DFEE52475CD",
+          "BTTKeyboardShortcutScope" : 0,
+          "BTTKeyboardShortcutKeyboardType" : 0,
+          "BTTRepeatRate" : 0.10000000000000001,
+          "BTTRepeatDelay" : 0.20000000000000001,
+          "BTTUUID" : "E1CB1C95-4413-4362-A6A4-B9EAA21A7532",
           "BTTTriggerOnDown" : 1,
           "BTTEnabled" : 1,
           "BTTModifierMode" : 0,
-          "BTTShortcutKeyCode" : 106,
+          "BTTShortcutKeyCode" : 7,
           "BTTShortcutModifierKeys" : 8388608,
-          "BTTOrder" : 16,
-          "BTTDisplayOrder" : 0,
-          "BTTMergeIntoTouchBarGroups" : 0
-        },
-        {
-          "BTTTriggerType" : 107,
-          "BTTTriggerTypeDescription" : "4 Finger Swipe Down",
-          "BTTTriggerClass" : "BTTTriggerTypeTouchpadAll",
-          "BTTPredefinedActionType" : 5,
-          "BTTPredefinedActionName" : "Mission Control",
-          "BTTEnabled2" : 1,
-          "BTTAlternateModifierKeys" : 0,
-          "BTTUUID" : "7164C311-2C6A-4485-8557-EFCA684D9CBB",
-          "BTTEnabled" : 1,
-          "BTTModifierMode" : 0,
-          "BTTOrder" : 3,
-          "BTTDisplayOrder" : 0,
-          "BTTMergeIntoTouchBarGroups" : 0,
-          "BTTAlternateIconData" : ""
-        },
-        {
-          "BTTTriggerType" : 129,
-          "BTTTriggerTypeDescription" : "5 Finger Swipe Right",
-          "BTTTriggerClass" : "BTTTriggerTypeTouchpadAll",
-          "BTTPredefinedActionType" : 20,
-          "BTTPredefinedActionName" : "Maximize Window Right",
-          "BTTEnabled2" : 1,
-          "BTTAlternateModifierKeys" : 0,
-          "BTTUUID" : "3005E655-5E85-4496-BF47-D19D067361E3",
-          "BTTEnabled" : 1,
-          "BTTModifierMode" : 0,
-          "BTTRequiredModifierKeys" : 8388608,
-          "BTTOrder" : 2,
-          "BTTDisplayOrder" : 0,
-          "BTTMergeIntoTouchBarGroups" : 0,
-          "BTTAlternateIconData" : ""
-        },
-        {
-          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
-          "BTTPredefinedActionType" : 49,
-          "BTTPredefinedActionName" : "Launch Application \/ Open File \/ Start Apple Script …",
-          "BTTLaunchPath" : "file:\/\/\/Applications\/GoToMeeting.app",
-          "BTTAdditionalConfiguration" : "1835008",
-          "BTTEnabled2" : 1,
-          "BTTKeyboardShortcutKeyboardType" : 40,
-          "BTTUUID" : "0FF17E18-9585-450D-8FA9-2D8AAB40C8AB",
-          "BTTTriggerOnDown" : 1,
-          "BTTEnabled" : 1,
-          "BTTModifierMode" : 0,
-          "BTTShortcutKeyCode" : 5,
-          "BTTShortcutModifierKeys" : 1835008,
-          "BTTOrder" : 27,
+          "BTTOrder" : 6,
           "BTTDisplayOrder" : 0,
           "BTTMergeIntoTouchBarGroups" : 0
         },
@@ -733,17 +1018,405 @@
           "BTTMergeIntoTouchBarGroups" : 0
         },
         {
-          "BTTTriggerType" : 1006,
-          "BTTTriggerTypeDescription" : "Button 6",
+          "BTTTriggerType" : 624,
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 219,
+          "BTTPredefinedActionName" : "Move Window To Desktop 4",
+          "BTTEnabled2" : 1,
+          "BTTKeyboardShortcutKeyboardType" : 0,
+          "BTTUUID" : "AAB24386-C29F-4CCA-838B-E5C5B313840E",
+          "BTTTriggerOnDown" : 1,
+          "BTTEnabled" : 1,
+          "BTTModifierMode" : 0,
+          "BTTShortcutKeyCode" : -1,
+          "BTTShortcutModifierKeys" : -1,
+          "BTTOrder" : 31,
+          "BTTDisplayOrder" : 0,
+          "BTTMergeIntoTouchBarGroups" : 0,
+          "BTTKeySequence" : {
+            "BTTPauseBetween" : 0.29999999999999999,
+            "BTTCharactersToDeleteAfterwards" : 1,
+            "BTTKeyCount" : 10,
+            "BTTKeySequenceDownKeys" : [
+              {
+                "BTTKEYCode" : 59,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241344
+              },
+              {
+                "BTTKEYCode" : 58,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241344
+              },
+              {
+                "BTTKEYCode" : 55,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241344
+              },
+              {
+                "BTTKEYCharacter" : " D",
+                "BTTKEYCode" : 2,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241344
+              },
+              {
+                "BTTKEYCharacter" : " 4",
+                "BTTKEYCode" : 21,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241344
+              }
+            ],
+            "BTTKeySequenceMixedKeys" : [
+              {
+                "BTTKEYCode" : 59,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241344
+              },
+              {
+                "BTTKEYCode" : 58,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241344
+              },
+              {
+                "BTTKEYCode" : 55,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241344
+              },
+              {
+                "BTTKEYCharacter" : " D",
+                "BTTKEYCode" : 2,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241344
+              },
+              {
+                "BTTKEYCode" : 55,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241344
+              },
+              {
+                "BTTKEYCharacter" : " D",
+                "BTTKEYCode" : 2,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241344
+              },
+              {
+                "BTTKEYCode" : 59,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241344
+              },
+              {
+                "BTTKEYCode" : 58,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241344
+              },
+              {
+                "BTTKEYCharacter" : " 4",
+                "BTTKEYCode" : 21,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241344
+              },
+              {
+                "BTTKEYCharacter" : " 4",
+                "BTTKEYCode" : 21,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241344
+              }
+            ],
+            "BTTKeySequenceUpKeys" : [
+              {
+                "BTTKEYCode" : 55,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241344
+              },
+              {
+                "BTTKEYCharacter" : " D",
+                "BTTKEYCode" : 2,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241344
+              },
+              {
+                "BTTKEYCode" : 59,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241344
+              },
+              {
+                "BTTKEYCode" : 58,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241344
+              },
+              {
+                "BTTKEYCharacter" : " 4",
+                "BTTKEYCode" : 21,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241344
+              }
+            ]
+          }
+        },
+        {
+          "BTTTriggerType" : 1000,
+          "BTTTriggerTypeDescription" : "Leftclick (needs modifier key)",
           "BTTTriggerClass" : "BTTTriggerTypeNormalMouse",
+          "BTTPredefinedActionType" : 21,
+          "BTTPredefinedActionName" : "Maximize Window",
+          "BTTEnabled2" : 1,
+          "BTTAlternateModifierKeys" : 0,
+          "BTTUUID" : "C223C0C2-ED10-428E-A2F9-35FC7F9BF99E",
+          "BTTEnabled" : 1,
+          "BTTModifierMode" : 0,
+          "BTTRequiredModifierKeys" : 1835008,
+          "BTTOrder" : 0,
+          "BTTDisplayOrder" : 0,
+          "BTTMergeIntoTouchBarGroups" : 0,
+          "BTTAlternateIconData" : ""
+        },
+        {
+          "BTTTriggerType" : 105,
+          "BTTTriggerTypeDescription" : "4 Finger Swipe Left",
+          "BTTTriggerClass" : "BTTTriggerTypeTouchpadAll",
+          "BTTPredefinedActionType" : 46,
+          "BTTPredefinedActionName" : "Application Switcher",
+          "BTTEnabled2" : 1,
+          "BTTAlternateModifierKeys" : 0,
+          "BTTUUID" : "0BE19E92-22A4-49D8-AC9A-EA9A89C72685",
+          "BTTEnabled" : 1,
+          "BTTModifierMode" : 0,
+          "BTTOrder" : 5,
+          "BTTDisplayOrder" : 0,
+          "BTTMergeIntoTouchBarGroups" : 0,
+          "BTTAlternateIconData" : ""
+        },
+        {
+          "BTTTriggerType" : -1,
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 20,
+          "BTTPredefinedActionName" : "Maximize Window Right",
+          "BTTAdditionalConfiguration" : "10354688",
+          "BTTEnabled2" : 1,
+          "BTTKeyboardShortcutKeyboardType" : 0,
+          "BTTUUID" : "7607995B-0B54-41D9-ACE3-B95053CA78C1",
+          "BTTEnabled" : 1,
+          "BTTModifierMode" : 0,
+          "BTTShortcutKeyCode" : 124,
+          "BTTShortcutModifierKeys" : 10354688,
+          "BTTOrder" : 3,
+          "BTTDisplayOrder" : 0,
+          "BTTMergeIntoTouchBarGroups" : 0,
+          "BTTAlternateIconData" : ""
+        },
+        {
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 49,
+          "BTTPredefinedActionName" : "Launch Application \/ Open File \/ Start Apple Script …",
+          "BTTLaunchPath" : "file:\/\/\/Applications\/Adobe%20Lightroom%20Classic%20CC\/Adobe%20Lightroom%20Classic%20CC.app",
+          "BTTAdditionalConfiguration" : "1835049",
+          "BTTEnabled2" : 1,
+          "BTTKeyboardShortcutKeyboardType" : 40,
+          "BTTUUID" : "197D976B-4036-4B34-AD1E-B7693D289EAA",
+          "BTTTriggerOnDown" : 1,
+          "BTTEnabled" : 1,
+          "BTTModifierMode" : 0,
+          "BTTShortcutKeyCode" : 35,
+          "BTTShortcutModifierKeys" : 1835008,
+          "BTTOrder" : 26,
+          "BTTDisplayOrder" : 0,
+          "BTTMergeIntoTouchBarGroups" : 0
+        },
+        {
+          "BTTTriggerType" : 636,
+          "BTTTriggerTypeDescription" : "Volume Slider Widget",
+          "BTTTriggerClass" : "BTTTriggerTypeTouchBar",
           "BTTPredefinedActionType" : -1,
           "BTTPredefinedActionName" : "No Action",
           "BTTEnabled2" : 1,
           "BTTAlternateModifierKeys" : 0,
-          "BTTUUID" : "4CB034FB-B1A0-4A49-8C0B-0A656E465C61",
+          "BTTUUID" : "CC3F9AA7-27D4-4C84-B9FA-B57DE9D16EC1",
           "BTTEnabled" : 1,
           "BTTModifierMode" : 0,
           "BTTOrder" : 2,
+          "BTTDisplayOrder" : 0,
+          "BTTMergeIntoTouchBarGroups" : 0,
+          "BTTKnobIconData" : "TU0AKgAAMQj___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBERETERUVFxf___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AERERP9ERET_____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8ARERE_0RERP____8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBERET_RERE_____wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AEBAQBBDQ0NQRUVFgkRERLBERETSRERE5kRERP9ERET_RERE5ERERMxERESwRUVFgkNDQ1BAQEAQ____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8ARkZGC0NDQ2NERES_RERE+0RERP9ERET_RERE_0RERP9ERET_RERE_0RERP9ERET_RERE_0RERP9ERET_RERE_0RERPtERES_Q0NDY0ZGRgv___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8AQEBAFERERIdERETxRERE_0RERP9ERET6REREv0RERIRFRUVVQUFBL0dHRxlERET_RERE_0JCQhtDQ0M1RUVFVURERIRERES_RERE+kRERP9ERET_RERE8kRERIdAQEAU____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8AgICAAkRERGxERETxRERE_0RERP9ERETCRUVFXUlJSQ7___8A____AP___wD___8A____AERERP9ERET_____AP___wD___8A____AP___wBJSUkORUVFXURERMJERET_RERE_0RERPFERERsgICAAv___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AEJCQiNERETGRERE_0RERP9ERES4REREOP___wD___8A____AP___wD___8A____AP___wD___8ARERE_0RERP____8A____AP___wD___8A____AP___wD___8A____AERERDhERES4RERE_0RERP9ERETGQkJCI____wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBERERHRERE7kRERP9EREThRUVFTv___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBFRUXFRERExv___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBFRUVORERE4URERP9ERETuRERER____wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8AQ0NDW0RERPlERET_REREr0tLSxH___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBLS0sRQ0NDrkRERP9ERET5Q0NDXP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AENDQ1tERET+RERE_0RERIQAAAAB____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wAAAAABREREhERERP9ERET+Q0NDW____wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBERERHRERE+URERP9DQ0N2____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8AREREdURERP9ERET5Q0NDSP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8AQkJCI0RERO5ERET_REREhP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8AREREg0RERP9ERETuQkJCI____wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AICAgAJERETGRERE_0RERK8AAAAB____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wAAAAABREREr0RERP9ERETGgICAAv___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8AREREbERERP9EREThS0tLEf___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBLS0sRRERE4URERP9ERERs____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AENDQxNERETvRERE_0VFRU7___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBFRUVORERE_0RERPFAQEAU____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8AREREh0RERP9ERES4____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBERES4RERE_0RERIf___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AEZGRgtERETxRERE_0RERDj___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AERERDhERET_RERE8kZGRgv___8A____AP___wD___8A____AP___wD___8A____AP___wD___8AQ0NDY0RERP9ERETC____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AEVFRcFERET_Q0NDY____wD___8A____AP___wD___8A____AP___wD___8A____AP___wBERES_RERE_0VFRV3___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8ARUVFXURERP9ERES+____AP___wD___8A____AP___wD___8A____AP___wD___8AQEBAEERERPtERET6SUlJDv___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBJSUkORERE+kRERPpAQEAQ____AP___wD___8A____AP___wD___8A____AP___wBDQ0NQRERE_0RERL____8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AFVVVQZERERtRERExkRERPNERETzRERExkRERG1VVVUG____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBERES+RERE_0NDQ1D___8A____AP___wD___8A____AP___wD___8A____AEVFRYJERET_REREhP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBAQEAcRERE0kRERP9ERET_RERE_0RERP9ERET_RERE_0RERNJAQEAc____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AERERIRERET_RUVFgv___wD___8A____AP___wD___8A____AP___wD___8AREREsERERP9FRUVV____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8AVVVVBkRERNJERET_RERE2EVFRVE7OzsNOzs7DUVFRVFERETYRERE_0RERNJJSUkH____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8ARUVFVURERP9ERESx____AP___wD___8A____AP___wD___8A____AP___wBERETSRERE_0FBQS____8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBERERtRERE_0RERNhEREQP____AP___wD___8A____AERERA9ERETYRERE_0NDQ27___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBDQ0M1RERE_0RERMz___8A____AP___wD___8A____AP___wD___8A____AEREROdERET_R0dHGf___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AERERMZERET_RUVFUf___wD___8A____AP___wD___8A____AEVFRVFERET_REREx____wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AEVFRRpERET_RERE5f___wD___8A____AP___wBERETERERE_0RERP9ERET_RERE_0RERP9ERET_RERE_0RERP9FRUXF____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8ARERE80RERP87OzsN____AP___wD___8A____AP___wD___8AOzs7DURERP9ERETz____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8ARERExERERP9ERET_RERE_0RERP9ERET_RERE_0RERP9ERET_RUVFxUVFRcVERET_RERE_0RERP9ERET_RERE_0RERP9ERET_RERE_0RERMb___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBERETzRERE_zs7Ow3___8A____AP___wD___8A____AP___wA7OzsNRERE_0RERPP___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBFRUXFRERE_0RERP9ERET_RERE_0RERP9ERET_RERE_0RERP9ERETG____AP___wD___8A____AEREROVERET_QkJCG____wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AERERMdERET_RUVFUf___wD___8A____AP___wD___8A____AEVFRVFERET_REREx____wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AEVFRRpERET_RERE5f___wD___8A____AP___wD___8A____AP___wD___8AREREzERERP9DQ0M1____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8AREREbURERP9ERETYRERED____wD___8A____AP___wBEREQPRERE2ERERP9DQ0Nv____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8AQ0NDNURERP9ERETM____AP___wD___8A____AP___wD___8A____AP___wBFRUWyRERE_0VFRVX___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBVVVUGRERE0kRERP9ERETYQ0NDUDs7Ow07OzsNRUVFUURERNhERET_RERE00BAQAj___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBFRUVVRERE_0RERLP___8A____AP___wD___8A____AP___wD___8A____AERERIhERET_REREhP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBAQEAcRERE00RERP9ERET_RERE_0RERP9ERET_RERE_0RERNNAQEAc____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AERERIRERET_REREiP___wD___8A____AP___wD___8A____AP___wD___8AREREUkRERP9ERES+____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBAQEAIQ0NDb0RERMdERETzRERE80RERMdERERwQEBACP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8AQ0NDvURERP9ERERS____AP___wD___8A____AP___wD___8A____AP___wBAQEAQRERE+0RERPpJSUkO____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AElJSQ5ERET6RERE+0BAQBD___8A____AP___wD___8A____AP___wD___8A____AP___wBERETARERE_0VFRV3___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8ARUVFXURERP9ERETA____AP___wD___8A____AP___wD___8A____AP___wD___8A____AENDQ2NERET_REREwv___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBFRUXBRERE_0NDQ2P___8A____AP___wD___8A____AP___wD___8A____AP___wD___8AOzs7DURERPJERET_REREOP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8AREREOERERP9ERETyOzs7Df___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8AREREh0RERP9ERES4____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBERES4RERE_0RERIf___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBAQEAURERE8URERP9FRUVO____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8ARUVFTkRERP9ERETyQEBAFP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBDQ0NuRERE_0REROFLS0sR____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AEtLSxFEREThRERE_0NDQ27___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AFVVVQNFRUXJRERE_0NDQ64AAAAB____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wAAAAABQ0NDrkRERP9FRUXJVVVVA____wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AEdHRyRERETvRERE_0RERIP___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AEVFRYJERET_RERE8UdHRyT___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AEJCQklERET6RERE_0RERHX___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBERER0RERE_0RERPtFRUVK____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AENDQ19ERET+RERE_0VFRYIAAAAB____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wAAAAABRUVFgkRERP9ERET+Q0NDX____wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AENDQ19ERET6RERE_0NDQ65LS0sR____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8AS0tLEUNDQ65ERET_RERE+kNDQ1____8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AEJCQklERETvRERE_0REROFFRUVO____AP___wD___8A____AP___wD___8A____AP___wD___8A____AERERMRFRUXF____AP___wD___8A____AP___wD___8A____AP___wD___8A____AEVFRU5EREThRERE_0RERO9FRUVK____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AEdHRyRERETIRERE_0RERP9ERES4REREOP___wD___8A____AP___wD___8A____AP___wD___8ARERE_0RERP____8A____AP___wD___8A____AP___wD___8A____AERERDhERES4RERE_0RERP9ERETIR0dHJP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AFVVVQNDQ0NuRERE8URERP9ERET_REREwEVFRV1JSUkO____AP___wD___8A____AP___wBERET_RERE_____wD___8A____AP___wD___8ASUlJDkVFRV1FRUXBRERE_0RERP9ERETxQ0NDblVVVQP___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBAQEAUREREh0RERPJERET_RERE_0RERPpDQ0O9REREhEVFRVVDQ0M1RUVFGkRERP9ERET_RUVFGkNDQzVFRUVVREREhENDQ71ERET5RERE_0RERP9ERETyREREh0BAQBT___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8AOzs7DUNDQ2NERETARERE+0RERP9ERET_RERE_0RERP9ERET_RERE_0RERP9ERET_RERE_0RERP9ERET_RERE_0RERPtERETAQ0NDYzs7Ow3___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBAQEAQRUVFUURERINERESxREREzUREROVERET_RERE_0REROVERETNREREsURERINFRUVRQEBAEP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AERERP9ERET_____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8ARERE_0RERP____8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBERET_RERE_____wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AEVFRcVERETG____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8AABABAAADAAAAAQA4AAABAQADAAAAAQA4AAABAgADAAAABAAAMc4BAwADAAAAAQABAAABBgADAAAAAQACAAABCgADAAAAAQABAAABEQAEAAAAAQAAAAgBEgADAAAAAQABAAABFQADAAAAAQAEAAABFgADAAAAAQA4AAABFwAEAAAAAQAAMQABHAADAAAAAQABAAABKAADAAAAAQACAAABUgADAAAAAQACAAABUwADAAAABAAAMdaHcwAHAAAMSAAAMd4AAAAAAAgACAAIAAgAAQABAAEAAQAADEhMaW5vAhAAAG1udHJSR0IgWFlaIAfOAAIACQAGADEAAGFjc3BNU0ZUAAAAAElFQyBzUkdCAAAAAAAAAAAAAAAAAAD21gABAAAAANMtSFAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEWNwcnQAAAFQAAAAM2Rlc2MAAAGEAAAAbHd0cHQAAAHwAAAAFGJrcHQAAAIEAAAAFHJYWVoAAAIYAAAAFGdYWVoAAAIsAAAAFGJYWVoAAAJAAAAAFGRtbmQAAAJUAAAAcGRtZGQAAALEAAAAiHZ1ZWQAAANMAAAAhnZpZXcAAAPUAAAAJGx1bWkAAAP4AAAAFG1lYXMAAAQMAAAAJHRlY2gAAAQwAAAADHJUUkMAAAQ8AAAIDGdUUkMAAAQ8AAAIDGJUUkMAAAQ8AAAIDHRleHQAAAAAQ29weXJpZ2h0IChjKSAxOTk4IEhld2xldHQtUGFja2FyZCBDb21wYW55AABkZXNjAAAAAAAAABJzUkdCIElFQzYxOTY2LTIuMQAAAAAAAAAAAAAAEnNSR0IgSUVDNjE5NjYtMi4xAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABYWVogAAAAAAAA81EAAQAAAAEWzFhZWiAAAAAAAAAAAAAAAAAAAAAAWFlaIAAAAAAAAG+iAAA49QAAA5BYWVogAAAAAAAAYpkAALeFAAAY2lhZWiAAAAAAAAAkoAAAD4QAALbPZGVzYwAAAAAAAAAWSUVDIGh0dHA6Ly93d3cuaWVjLmNoAAAAAAAAAAAAAAAWSUVDIGh0dHA6Ly93d3cuaWVjLmNoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGRlc2MAAAAAAAAALklFQyA2MTk2Ni0yLjEgRGVmYXVsdCBSR0IgY29sb3VyIHNwYWNlIC0gc1JHQgAAAAAAAAAAAAAALklFQyA2MTk2Ni0yLjEgRGVmYXVsdCBSR0IgY29sb3VyIHNwYWNlIC0gc1JHQgAAAAAAAAAAAAAAAAAAAAAAAAAAAABkZXNjAAAAAAAAACxSZWZlcmVuY2UgVmlld2luZyBDb25kaXRpb24gaW4gSUVDNjE5NjYtMi4xAAAAAAAAAAAAAAAsUmVmZXJlbmNlIFZpZXdpbmcgQ29uZGl0aW9uIGluIElFQzYxOTY2LTIuMQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAdmlldwAAAAAAE6T+ABRfLgAQzxQAA+3MAAQTCwADXJ4AAAABWFlaIAAAAAAATAlWAFAAAABXH+dtZWFzAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAACjwAAAAJzaWcgAAAAAENSVCBjdXJ2AAAAAAAABAAAAAAFAAoADwAUABkAHgAjACgALQAyADcAOwBAAEUASgBPAFQAWQBeAGMAaABtAHIAdwB8AIEAhgCLAJAAlQCaAJ8ApACpAK4AsgC3ALwAwQDGAMsA0ADVANsA4ADlAOsA8AD2APsBAQEHAQ0BEwEZAR8BJQErATIBOAE+AUUBTAFSAVkBYAFnAW4BdQF8AYMBiwGSAZoBoQGpAbEBuQHBAckB0QHZAeEB6QHyAfoCAwIMAhQCHQImAi8COAJBAksCVAJdAmcCcQJ6AoQCjgKYAqICrAK2AsECywLVAuAC6wL1AwADCwMWAyEDLQM4A0MDTwNaA2YDcgN+A4oDlgOiA64DugPHA9MD4APsA_kEBgQTBCAELQQ7BEgEVQRjBHEEfgSMBJoEqAS2BMQE0wThBPAE_gUNBRwFKwU6BUkFWAVnBXcFhgWWBaYFtQXFBdUF5QX2BgYGFgYnBjcGSAZZBmoGewaMBp0GrwbABtEG4wb1BwcHGQcrBz0HTwdhB3QHhgeZB6wHvwfSB+UH+AgLCB8IMghGCFoIbgiCCJYIqgi+CNII5wj7CRAJJQk6CU8JZAl5CY8JpAm6Cc8J5Qn7ChEKJwo9ClQKagqBCpgKrgrFCtwK8wsLCyILOQtRC2kLgAuYC7ALyAvhC_kMEgwqDEMMXAx1DI4MpwzADNkM8w0NDSYNQA1aDXQNjg2pDcMN3g34DhMOLg5JDmQOfw6bDrYO0g7uDwkPJQ9BD14Peg+WD7MPzw_sEAkQJhBDEGEQfhCbELkQ1xD1ERMRMRFPEW0RjBGqEckR6BIHEiYSRRJkEoQSoxLDEuMTAxMjE0MTYxODE6QTxRPlFAYUJxRJFGoUixStFM4U8BUSFTQVVhV4FZsVvRXgFgMWJhZJFmwWjxayFtYW+hcdF0EXZReJF64X0hf3GBsYQBhlGIoYrxjVGPoZIBlFGWsZkRm3Gd0aBBoqGlEadxqeGsUa7BsUGzsbYxuKG7Ib2hwCHCocUhx7HKMczBz1HR4dRx1wHZkdwx3sHhYeQB5qHpQevh7pHxMfPh9pH5Qfvx_qIBUgQSBsIJggxCDwIRwhSCF1IaEhziH7IiciVSKCIq8i3SMKIzgjZiOUI8Ij8CQfJE0kfCSrJNolCSU4JWgllyXHJfcmJyZXJocmtyboJxgnSSd6J6sn3CgNKD8ocSiiKNQpBik4KWspnSnQKgIqNSpoKpsqzysCKzYraSudK9EsBSw5LG4soizXLQwtQS12Last4S4WLkwugi63Lu4vJC9aL5Evxy_+MDUwbDCkMNsxEjFKMYIxujHyMioyYzKbMtQzDTNGM38zuDPxNCs0ZTSeNNg1EzVNNYc1wjX9Njc2cjauNuk3JDdgN5w31zgUOFA4jDjIOQU5Qjl_Obw5+To2OnQ6sjrvOy07azuqO+g8JzxlPKQ84z0iPWE9oT3gPiA+YD6gPuA_IT9hP6I_4kAjQGRApkDnQSlBakGsQe5CMEJyQrVC90M6Q31DwEQDREdEikTORRJFVUWaRd5GIkZnRqtG8Ec1R3tHwEgFSEtIkUjXSR1JY0mpSfBKN0p9SsRLDEtTS5pL4kwqTHJMuk0CTUpNk03cTiVObk63TwBPSU+TT91QJ1BxULtRBlFQUZtR5lIxUnxSx1MTU19TqlP2VEJUj1TbVShVdVXCVg9WXFapVvdXRFeSV+BYL1h9WMtZGllpWbhaB1pWWqZa9VtFW5Vb5Vw1XIZc1l0nXXhdyV4aXmxevV8PX2Ffs2AFYFdgqmD8YU9homH1YklinGLwY0Njl2PrZEBklGTpZT1lkmXnZj1mkmboZz1nk2fpaD9olmjsaUNpmmnxakhqn2r3a09rp2v_bFdsr20IbWBtuW4SbmtuxG8eb3hv0XArcIZw4HE6cZVx8HJLcqZzAXNdc7h0FHRwdMx1KHWFdeF2Pnabdvh3VnezeBF4bnjMeSp5iXnnekZ6pXsEe2N7wnwhfIF84X1BfaF+AX5ifsJ_I3+Ef+WAR4CogQqBa4HNgjCCkoL0g1eDuoQdhICE44VHhauGDoZyhteHO4efiASIaYjOiTOJmYn+imSKyoswi5aL_IxjjMqNMY2Yjf+OZo7OjzaPnpAGkG6Q1pE_kaiSEZJ6kuOTTZO2lCCUipT0lV+VyZY0lp+XCpd1l+CYTJi4mSSZkJn8mmia1ZtCm6+cHJyJnPedZJ3SnkCerp8dn4uf+qBpoNihR6G2oiailqMGo3aj5qRWpMelOKWpphqmi6b9p26n4KhSqMSpN6mpqhyqj6sCq3Wr6axcrNCtRK24ri2uoa8Wr4uwALB1sOqxYLHWskuywrM4s660JbSctRO1irYBtnm28Ldot+C4WbjRuUq5wro7urW7LrunvCG8m70VvY++Cr6Evv+_er_1wHDA7MFnwePCX8Lbw1jD1MRRxM7FS8XIxkbGw8dBx7_IPci8yTrJuco4yrfLNsu2zDXMtc01zbXONs62zzfPuNA50LrRPNG+0j_SwdNE08bUSdTL1U7V0dZV1tjXXNfg2GTY6Nls2fHadtr724DcBdyK3RDdlt4c3qLfKd+v4DbgveFE4cziU+Lb42Pj6+Rz5PzlhOYN5pbnH+ep6DLovOlG6dDqW+rl63Dr++yG7RHtnO4o7rTvQO_M8Fjw5fFy8f_yjPMZ86f0NPTC9VD13vZt9vv3ivgZ+Kj5OPnH+lf65_t3_Af8mP0p_br+S_7c_23__w==",
+          "BTTTriggerConfig" : {
+            "BTTTouchBarItemIconWidth" : 22,
+            "BTTTouchBarButtonColor" : "221.000000, 0.000000, 0.000000, 255.000000",
+            "BTTTouchBarItemPlacement" : 2,
+            "BTTTouchBarAlternateBackgroundColor" : "0.000000, 0.000000, 0.000000, 0.000000",
+            "BTTTouchBarButtonCornerRadius" : 6,
+            "BTTTBWidgetWidth" : 200,
+            "BTTTBDrawKnobWithoutPadding" : false,
+            "BTTTouchBarSliderDrawKnobIconWhite" : true,
+            "BTTTouchBarSliderTriggerPercentage" : 0,
+            "BTTTouchBarFreeSpaceAfterButton" : 5,
+            "BTTTouchBarSliderDrawKnobBackground" : false,
+            "BTTTouchBarShowRightIconForSlider" : true,
+            "BTTTouchBarShowLeftIconForSlider" : true,
+            "BTTTouchBarItemPadding" : 0,
+            "BTTTouchBarItemIconHeight" : 22
+          }
+        },
+        {
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 21,
+          "BTTPredefinedActionName" : "Maximize Window",
+          "BTTAdditionalConfiguration" : "10354688",
+          "BTTEnabled2" : 1,
+          "BTTKeyboardShortcutKeyboardType" : 40,
+          "BTTUUID" : "A5E2A9C1-52CB-48FA-91A0-4FBE3B12CC83",
+          "BTTEnabled" : 1,
+          "BTTModifierMode" : 0,
+          "BTTShortcutKeyCode" : 126,
+          "BTTShortcutModifierKeys" : 10354688,
+          "BTTOrder" : 0,
+          "BTTDisplayOrder" : 0,
+          "BTTMergeIntoTouchBarGroups" : 0,
+          "BTTAlternateIconData" : ""
+        },
+        {
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 208,
+          "BTTPredefinedActionName" : "Switch To Desktop 2",
+          "BTTAdditionalConfiguration" : "1835049",
+          "BTTEnabled2" : 1,
+          "BTTKeyboardShortcutKeyboardType" : 40,
+          "BTTUUID" : "DB574334-44B2-48C5-BB84-85564AA24D1C",
+          "BTTTriggerOnDown" : 0,
+          "BTTEnabled" : 1,
+          "BTTModifierMode" : 0,
+          "BTTShortcutKeyCode" : 19,
+          "BTTShortcutModifierKeys" : 1835008,
+          "BTTOrder" : 13,
+          "BTTDisplayOrder" : 0,
+          "BTTMergeIntoTouchBarGroups" : 0
+        },
+        {
+          "BTTTriggerType" : 107,
+          "BTTTriggerTypeDescription" : "4 Finger Swipe Down",
+          "BTTTriggerClass" : "BTTTriggerTypeTouchpadAll",
+          "BTTPredefinedActionType" : 5,
+          "BTTPredefinedActionName" : "Mission Control",
+          "BTTEnabled2" : 1,
+          "BTTAlternateModifierKeys" : 0,
+          "BTTUUID" : "7164C311-2C6A-4485-8557-EFCA684D9CBB",
+          "BTTEnabled" : 1,
+          "BTTModifierMode" : 0,
+          "BTTOrder" : 3,
+          "BTTDisplayOrder" : 0,
+          "BTTMergeIntoTouchBarGroups" : 0,
+          "BTTAlternateIconData" : ""
+        },
+        {
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 211,
+          "BTTPredefinedActionName" : "Switch To Desktop 5",
+          "BTTAdditionalConfiguration" : "1835049",
+          "BTTEnabled2" : 1,
+          "BTTKeyboardShortcutKeyboardType" : 40,
+          "BTTUUID" : "59E71F05-4D91-4FF4-84EA-11D7A31EF2B8",
+          "BTTTriggerOnDown" : 1,
+          "BTTEnabled" : 1,
+          "BTTModifierMode" : 0,
+          "BTTShortcutKeyCode" : 23,
+          "BTTShortcutModifierKeys" : 1835008,
+          "BTTOrder" : 22,
+          "BTTDisplayOrder" : 0,
+          "BTTMergeIntoTouchBarGroups" : 0
+        },
+        {
+          "BTTTriggerType" : 112,
+          "BTTTriggerTypeDescription" : "3 Finger Click",
+          "BTTTriggerClass" : "BTTTriggerTypeTouchpadAll",
+          "BTTPredefinedActionType" : 1,
+          "BTTPredefinedActionName" : "Middle Click",
+          "BTTEnabled2" : 1,
+          "BTTAlternateModifierKeys" : 0,
+          "BTTUUID" : "BD0C1FD0-9A59-42EE-9963-BD55F9A12296",
+          "BTTEnabled" : 1,
+          "BTTModifierMode" : 0,
+          "BTTOrder" : 12,
+          "BTTDisplayOrder" : 0,
+          "BTTMergeIntoTouchBarGroups" : 0,
+          "BTTAlternateIconData" : ""
+        },
+        {
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 209,
+          "BTTPredefinedActionName" : "Switch To Desktop 3",
+          "BTTAdditionalConfiguration" : "1835049",
+          "BTTEnabled2" : 1,
+          "BTTKeyboardShortcutKeyboardType" : 40,
+          "BTTUUID" : "6381EDBB-6C19-4957-A51B-81AD100C1FC9",
+          "BTTTriggerOnDown" : 0,
+          "BTTEnabled" : 1,
+          "BTTModifierMode" : 0,
+          "BTTShortcutKeyCode" : 20,
+          "BTTShortcutModifierKeys" : 1835008,
+          "BTTOrder" : 14,
+          "BTTDisplayOrder" : 0,
+          "BTTMergeIntoTouchBarGroups" : 0
+        },
+        {
+          "BTTTriggerType" : 652,
+          "BTTTriggerTypeDescription" : "Now Playing Widget",
+          "BTTTriggerClass" : "BTTTriggerTypeTouchBar",
+          "BTTPredefinedActionType" : 23,
+          "BTTPredefinedActionName" : "Play\/Pause",
+          "BTTEnabled2" : 1,
+          "BTTAlternateModifierKeys" : 0,
+          "BTTUUID" : "EE8BE7AA-5F8C-408D-A5E2-0E5DADCDF74E",
+          "BTTEnabled" : 1,
+          "BTTModifierMode" : 0,
+          "BTTOrder" : 0,
+          "BTTDisplayOrder" : 0,
+          "BTTMergeIntoTouchBarGroups" : 0,
+          "BTTTriggerConfig" : {
+            "BTTTouchBarButtonColor" : "75.323769, 75.323769, 75.323769, 255.000000",
+            "BTTTouchBarItemIconWidth" : 22,
+            "BTTTouchBarButtonFontSize" : 14,
+            "BTTTouchBarItemPlacement" : 2,
+            "BTTTouchBarLine1MaxChars" : 25,
+            "BTTTouchBarButtonCornerRadius" : 6,
+            "BTTTouchBarAlternateBackgroundColor" : "0.000000, 0.000000, 0.000000, 0.000000",
+            "BTTTouchBarLine2MaxChars" : 35,
+            "BTTTouchBarFreeSpaceAfterButton" : 20,
+            "BTTTouchBarLine1Format" : "{title}",
+            "BTTTouchBarItemIconHeight" : 22,
+            "BTTTouchBarItemPadding" : 0,
+            "BTTTouchBarLine2Format" : "{artist} | {album}"
+          }
+        },
+        {
+          "BTTTriggerType" : 108,
+          "BTTTriggerTypeDescription" : "4 Finger Swipe Up",
+          "BTTTriggerClass" : "BTTTriggerTypeTouchpadAll",
+          "BTTPredefinedActionType" : 45,
+          "BTTPredefinedActionName" : "Show Desktop",
+          "BTTEnabled2" : 1,
+          "BTTAlternateModifierKeys" : 0,
+          "BTTUUID" : "98B3C199-3A64-4C69-8A84-A2E0B4488BB9",
+          "BTTEnabled" : 1,
+          "BTTModifierMode" : 0,
+          "BTTOrder" : 7,
           "BTTDisplayOrder" : 0,
           "BTTMergeIntoTouchBarGroups" : 0,
           "BTTAlternateIconData" : ""
@@ -765,6 +1438,178 @@
           "BTTOrder" : 18,
           "BTTDisplayOrder" : 0,
           "BTTMergeIntoTouchBarGroups" : 0
+        },
+        {
+          "BTTTriggerType" : 624,
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 222,
+          "BTTPredefinedActionName" : "Move Window To Desktop 6",
+          "BTTEnabled2" : 1,
+          "BTTKeyboardShortcutKeyboardType" : 0,
+          "BTTUUID" : "9E3C5ED4-A2DB-49AC-AFE5-6890075F70E7",
+          "BTTTriggerOnDown" : 1,
+          "BTTEnabled" : 1,
+          "BTTModifierMode" : 0,
+          "BTTShortcutKeyCode" : -1,
+          "BTTShortcutModifierKeys" : -1,
+          "BTTOrder" : 33,
+          "BTTDisplayOrder" : 0,
+          "BTTMergeIntoTouchBarGroups" : 0,
+          "BTTKeySequence" : {
+            "BTTPauseBetween" : 0.29999999999999999,
+            "BTTCharactersToDeleteAfterwards" : 1,
+            "BTTKeyCount" : 10,
+            "BTTKeySequenceDownKeys" : [
+              {
+                "BTTKEYCode" : 59,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241408
+              },
+              {
+                "BTTKEYCode" : 58,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241408
+              },
+              {
+                "BTTKEYCode" : 55,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241408
+              },
+              {
+                "BTTKEYCharacter" : " D",
+                "BTTKEYCode" : 2,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241408
+              },
+              {
+                "BTTKEYCharacter" : " 6",
+                "BTTKEYCode" : 22,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241408
+              }
+            ],
+            "BTTKeySequenceMixedKeys" : [
+              {
+                "BTTKEYCode" : 59,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241408
+              },
+              {
+                "BTTKEYCode" : 58,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241408
+              },
+              {
+                "BTTKEYCode" : 55,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241408
+              },
+              {
+                "BTTKEYCharacter" : " D",
+                "BTTKEYCode" : 2,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241408
+              },
+              {
+                "BTTKEYCode" : 55,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241408
+              },
+              {
+                "BTTKEYCharacter" : " D",
+                "BTTKEYCode" : 2,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241408
+              },
+              {
+                "BTTKEYCode" : 59,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241408
+              },
+              {
+                "BTTKEYCode" : 58,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241408
+              },
+              {
+                "BTTKEYCharacter" : " 6",
+                "BTTKEYCode" : 22,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241408
+              },
+              {
+                "BTTKEYCharacter" : " 6",
+                "BTTKEYCode" : 22,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241408
+              }
+            ],
+            "BTTKeySequenceUpKeys" : [
+              {
+                "BTTKEYCode" : 55,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241408
+              },
+              {
+                "BTTKEYCharacter" : " D",
+                "BTTKEYCode" : 2,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241408
+              },
+              {
+                "BTTKEYCode" : 59,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241408
+              },
+              {
+                "BTTKEYCode" : 58,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241408
+              },
+              {
+                "BTTKEYCharacter" : " 6",
+                "BTTKEYCode" : 22,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241408
+              }
+            ]
+          }
+        },
+        {
+          "BTTTriggerType" : 1006,
+          "BTTTriggerTypeDescription" : "Button 6",
+          "BTTTriggerClass" : "BTTTriggerTypeNormalMouse",
+          "BTTPredefinedActionType" : -1,
+          "BTTPredefinedActionName" : "No Action",
+          "BTTEnabled2" : 1,
+          "BTTAlternateModifierKeys" : 0,
+          "BTTUUID" : "4CB034FB-B1A0-4A49-8C0B-0A656E465C61",
+          "BTTEnabled" : 1,
+          "BTTModifierMode" : 0,
+          "BTTOrder" : 2,
+          "BTTDisplayOrder" : 0,
+          "BTTMergeIntoTouchBarGroups" : 0,
+          "BTTAlternateIconData" : ""
         },
         {
           "BTTTriggerType" : 624,
@@ -924,42 +1769,21 @@
           }
         },
         {
-          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
-          "BTTPredefinedActionType" : -1,
-          "BTTPredefinedActionName" : "No Action",
-          "BTTShortcutToSend" : "58,48",
-          "BTTAdditionalConfiguration" : "1048576",
+          "BTTTriggerType" : 121,
+          "BTTTriggerTypeDescription" : "4 Finger Click",
+          "BTTTriggerClass" : "BTTTriggerTypeTouchpadAll",
+          "BTTPredefinedActionType" : 13,
+          "BTTPredefinedActionName" : "Sleep Display",
           "BTTEnabled2" : 1,
-          "BTTKeyboardShortcutKeyboardType" : 524288,
-          "BTTUUID" : "7F9ED9C8-1BF8-4BAE-8E85-7E6C262A4B1C",
-          "BTTTriggerOnDown" : 0,
+          "BTTAlternateModifierKeys" : 0,
+          "BTTUUID" : "0B2353CE-A503-48E3-991F-E5E0106970DA",
           "BTTEnabled" : 1,
           "BTTModifierMode" : 0,
-          "BTTShortcutKeyCode" : 48,
-          "BTTShortcutModifierKeys" : 1048576,
-          "BTTOrder" : 25,
+          "BTTRequiredModifierKeys" : 8388608,
+          "BTTOrder" : 4,
           "BTTDisplayOrder" : 0,
-          "BTTMergeIntoTouchBarGroups" : 0
-        },
-        {
-          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
-          "BTTPredefinedActionType" : 24,
-          "BTTPredefinedActionName" : "Volume Up",
-          "BTTAdditionalConfiguration" : "8388608",
-          "BTTEnabled2" : 1,
-          "BTTKeyboardShortcutScope" : 0,
-          "BTTKeyboardShortcutKeyboardType" : 0,
-          "BTTRepeatRate" : 0.10000000000000001,
-          "BTTRepeatDelay" : 0.20000000000000001,
-          "BTTUUID" : "E1CB1C95-4413-4362-A6A4-B9EAA21A7532",
-          "BTTTriggerOnDown" : 1,
-          "BTTEnabled" : 1,
-          "BTTModifierMode" : 0,
-          "BTTShortcutKeyCode" : 7,
-          "BTTShortcutModifierKeys" : 8388608,
-          "BTTOrder" : 6,
-          "BTTDisplayOrder" : 0,
-          "BTTMergeIntoTouchBarGroups" : 0
+          "BTTMergeIntoTouchBarGroups" : 0,
+          "BTTAlternateIconData" : ""
         },
         {
           "BTTWidgetName" : "Mute Test",
@@ -998,20 +1822,40 @@
           }
         },
         {
-          "BTTTriggerType" : 1005,
-          "BTTTriggerTypeDescription" : "Button 5",
-          "BTTTriggerClass" : "BTTTriggerTypeNormalMouse",
-          "BTTPredefinedActionType" : -1,
-          "BTTPredefinedActionName" : "No Action",
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 49,
+          "BTTPredefinedActionName" : "Launch Application \/ Open File \/ Start Apple Script …",
+          "BTTLaunchPath" : "file:\/\/\/Applications\/Google%20Chrome.app",
+          "BTTAdditionalConfiguration" : "1835049",
           "BTTEnabled2" : 1,
-          "BTTAlternateModifierKeys" : 0,
-          "BTTUUID" : "78AD1467-7C85-40BE-A6CC-34DAD3D7177F",
+          "BTTKeyboardShortcutKeyboardType" : 40,
+          "BTTUUID" : "CE82CE54-B51B-4196-B662-079597A0CFAF",
+          "BTTTriggerOnDown" : 0,
           "BTTEnabled" : 1,
           "BTTModifierMode" : 0,
-          "BTTOrder" : 1,
+          "BTTShortcutKeyCode" : 8,
+          "BTTShortcutModifierKeys" : 1835008,
+          "BTTOrder" : 9,
           "BTTDisplayOrder" : 0,
-          "BTTMergeIntoTouchBarGroups" : 0,
-          "BTTAlternateIconData" : ""
+          "BTTMergeIntoTouchBarGroups" : 0
+        },
+        {
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : -1,
+          "BTTPredefinedActionName" : "No Action",
+          "BTTShortcutToSend" : "125",
+          "BTTAdditionalConfiguration" : "1835049",
+          "BTTEnabled2" : 1,
+          "BTTKeyboardShortcutKeyboardType" : 40,
+          "BTTUUID" : "7E23587B-6055-4BAE-A06A-6B1F91EBF6ED",
+          "BTTTriggerOnDown" : 1,
+          "BTTEnabled" : 1,
+          "BTTModifierMode" : 0,
+          "BTTShortcutKeyCode" : 38,
+          "BTTShortcutModifierKeys" : 1835008,
+          "BTTOrder" : 17,
+          "BTTDisplayOrder" : 0,
+          "BTTMergeIntoTouchBarGroups" : 0
         },
         {
           "BTTTriggerType" : 118,
@@ -1030,55 +1874,19 @@
           "BTTAlternateIconData" : ""
         },
         {
-          "BTTTriggerType" : 117,
-          "BTTTriggerTypeDescription" : "Rotate Left",
-          "BTTTriggerClass" : "BTTTriggerTypeTouchpadAll",
-          "BTTPredefinedActionType" : 0,
-          "BTTPredefinedActionName" : "Use Apple Default Or Do Nothing",
-          "BTTEnabled2" : 1,
-          "BTTAlternateModifierKeys" : 0,
-          "BTTUUID" : "D2C8D0EA-C19E-45F8-BD9F-9F699F3AE75B",
-          "BTTEnabled" : 1,
-          "BTTModifierMode" : 0,
-          "BTTOrder" : 10,
-          "BTTDisplayOrder" : 0,
-          "BTTMergeIntoTouchBarGroups" : 0,
-          "BTTAlternateIconData" : ""
-        },
-        {
-          "BTTTriggerType" : -1,
           "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
-          "BTTPredefinedActionType" : 198,
-          "BTTPredefinedActionName" : "Volume Up (Small Step)",
-          "BTTAdditionalConfiguration" : "8519680",
-          "BTTEnabled2" : 1,
-          "BTTKeyboardShortcutKeyboardType" : 0,
-          "BTTRepeatRate" : 0.10000000000000001,
-          "BTTRepeatDelay" : 0,
-          "BTTUUID" : "9FDC6301-AF40-4026-A6E6-CFCD7CCC893D",
-          "BTTTriggerOnDown" : 1,
-          "BTTEnabled" : 1,
-          "BTTModifierMode" : 0,
-          "BTTShortcutKeyCode" : 7,
-          "BTTShortcutModifierKeys" : 8519680,
-          "BTTOrder" : 8,
-          "BTTDisplayOrder" : 0,
-          "BTTMergeIntoTouchBarGroups" : 0
-        },
-        {
-          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
-          "BTTPredefinedActionType" : 209,
-          "BTTPredefinedActionName" : "Switch To Desktop 3",
+          "BTTPredefinedActionType" : 210,
+          "BTTPredefinedActionName" : "Switch To Desktop 4",
           "BTTAdditionalConfiguration" : "1835049",
           "BTTEnabled2" : 1,
           "BTTKeyboardShortcutKeyboardType" : 40,
-          "BTTUUID" : "6381EDBB-6C19-4957-A51B-81AD100C1FC9",
+          "BTTUUID" : "31005776-EEB7-47CC-B419-D3AB3F9584D3",
           "BTTTriggerOnDown" : 0,
           "BTTEnabled" : 1,
           "BTTModifierMode" : 0,
-          "BTTShortcutKeyCode" : 20,
+          "BTTShortcutKeyCode" : 21,
           "BTTShortcutModifierKeys" : 1835008,
-          "BTTOrder" : 14,
+          "BTTOrder" : 15,
           "BTTDisplayOrder" : 0,
           "BTTMergeIntoTouchBarGroups" : 0
         },
@@ -1086,17 +1894,16 @@
           "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
           "BTTPredefinedActionType" : -1,
           "BTTPredefinedActionName" : "No Action",
-          "BTTShortcutToSend" : "123",
-          "BTTAdditionalConfiguration" : "1835049",
+          "BTTAdditionalConfiguration" : "1835008",
           "BTTEnabled2" : 1,
           "BTTKeyboardShortcutKeyboardType" : 40,
-          "BTTUUID" : "6E0C9CA6-B3E8-4BCB-903C-60BECB85BF45",
+          "BTTUUID" : "EC07E413-18B8-4A94-891E-B2FEE4F27798",
           "BTTTriggerOnDown" : 1,
           "BTTEnabled" : 1,
           "BTTModifierMode" : 0,
-          "BTTShortcutKeyCode" : 4,
+          "BTTShortcutKeyCode" : 12,
           "BTTShortcutModifierKeys" : 1835008,
-          "BTTOrder" : 19,
+          "BTTOrder" : 24,
           "BTTDisplayOrder" : 0,
           "BTTMergeIntoTouchBarGroups" : 0
         },
@@ -1119,55 +1926,37 @@
           "BTTAlternateIconData" : ""
         },
         {
-          "BTTTriggerType" : 105,
-          "BTTTriggerTypeDescription" : "4 Finger Swipe Left",
+          "BTTTriggerType" : 129,
+          "BTTTriggerTypeDescription" : "5 Finger Swipe Right",
           "BTTTriggerClass" : "BTTTriggerTypeTouchpadAll",
-          "BTTPredefinedActionType" : 46,
-          "BTTPredefinedActionName" : "Application Switcher",
+          "BTTPredefinedActionType" : 20,
+          "BTTPredefinedActionName" : "Maximize Window Right",
           "BTTEnabled2" : 1,
           "BTTAlternateModifierKeys" : 0,
-          "BTTUUID" : "0BE19E92-22A4-49D8-AC9A-EA9A89C72685",
-          "BTTEnabled" : 1,
-          "BTTModifierMode" : 0,
-          "BTTOrder" : 5,
-          "BTTDisplayOrder" : 0,
-          "BTTMergeIntoTouchBarGroups" : 0,
-          "BTTAlternateIconData" : ""
-        },
-        {
-          "BTTTriggerType" : 121,
-          "BTTTriggerTypeDescription" : "4 Finger Click",
-          "BTTTriggerClass" : "BTTTriggerTypeTouchpadAll",
-          "BTTPredefinedActionType" : 13,
-          "BTTPredefinedActionName" : "Sleep Display",
-          "BTTEnabled2" : 1,
-          "BTTAlternateModifierKeys" : 0,
-          "BTTUUID" : "0B2353CE-A503-48E3-991F-E5E0106970DA",
+          "BTTUUID" : "3005E655-5E85-4496-BF47-D19D067361E3",
           "BTTEnabled" : 1,
           "BTTModifierMode" : 0,
           "BTTRequiredModifierKeys" : 8388608,
-          "BTTOrder" : 4,
+          "BTTOrder" : 2,
           "BTTDisplayOrder" : 0,
           "BTTMergeIntoTouchBarGroups" : 0,
           "BTTAlternateIconData" : ""
         },
         {
-          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
-          "BTTPredefinedActionType" : 49,
-          "BTTPredefinedActionName" : "Launch Application \/ Open File \/ Start Apple Script …",
-          "BTTLaunchPath" : "file:\/\/\/Applications\/Evernote.app",
-          "BTTAdditionalConfiguration" : "1835049",
+          "BTTTriggerType" : 161,
+          "BTTTriggerTypeDescription" : "2 Finger Swipe Up",
+          "BTTTriggerClass" : "BTTTriggerTypeTouchpadAll",
+          "BTTPredefinedActionType" : 0,
+          "BTTPredefinedActionName" : "Use Apple Default Or Do Nothing",
           "BTTEnabled2" : 1,
-          "BTTKeyboardShortcutKeyboardType" : 0,
-          "BTTUUID" : "F54EB3AC-C952-4DC0-B8C2-5737F93E238D",
-          "BTTTriggerOnDown" : 0,
+          "BTTAlternateModifierKeys" : 0,
+          "BTTUUID" : "7D222CEC-843C-475D-B611-DF1A3C728218",
           "BTTEnabled" : 1,
           "BTTModifierMode" : 0,
-          "BTTShortcutKeyCode" : 14,
-          "BTTShortcutModifierKeys" : 1835008,
-          "BTTOrder" : 11,
+          "BTTOrder" : 9,
           "BTTDisplayOrder" : 0,
-          "BTTMergeIntoTouchBarGroups" : 0
+          "BTTMergeIntoTouchBarGroups" : 0,
+          "BTTAlternateIconData" : ""
         },
         {
           "BTTWidgetName" : "Microphone Toggle",
@@ -1206,6 +1995,43 @@
           }
         },
         {
+          "BTTTriggerType" : -1,
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 199,
+          "BTTPredefinedActionName" : "Volume Down (Small Step)",
+          "BTTAdditionalConfiguration" : "8519680",
+          "BTTEnabled2" : 1,
+          "BTTKeyboardShortcutKeyboardType" : 0,
+          "BTTRepeatRate" : 0.10000000000000001,
+          "BTTRepeatDelay" : 0,
+          "BTTUUID" : "AAB4A38C-1898-421C-8BBA-6B64BAAD84A0",
+          "BTTTriggerOnDown" : 1,
+          "BTTEnabled" : 1,
+          "BTTModifierMode" : 0,
+          "BTTShortcutKeyCode" : 6,
+          "BTTShortcutModifierKeys" : 8519680,
+          "BTTOrder" : 7,
+          "BTTDisplayOrder" : 0,
+          "BTTMergeIntoTouchBarGroups" : 0
+        },
+        {
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 165,
+          "BTTPredefinedActionName" : "Mission Control & Immediately Show Desktop Preview",
+          "BTTAdditionalConfiguration" : "8388608",
+          "BTTEnabled2" : 1,
+          "BTTKeyboardShortcutKeyboardType" : 40,
+          "BTTUUID" : "75CC9E4A-D234-4FC8-AC38-4DFEE52475CD",
+          "BTTTriggerOnDown" : 1,
+          "BTTEnabled" : 1,
+          "BTTModifierMode" : 0,
+          "BTTShortcutKeyCode" : 106,
+          "BTTShortcutModifierKeys" : 8388608,
+          "BTTOrder" : 16,
+          "BTTDisplayOrder" : 0,
+          "BTTMergeIntoTouchBarGroups" : 0
+        },
+        {
           "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
           "BTTPredefinedActionType" : -1,
           "BTTPredefinedActionName" : "No Action",
@@ -1222,6 +2048,350 @@
           "BTTOrder" : 20,
           "BTTDisplayOrder" : 0,
           "BTTMergeIntoTouchBarGroups" : 0
+        },
+        {
+          "BTTTriggerType" : 624,
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 224,
+          "BTTPredefinedActionName" : "Move Window To Desktop 8",
+          "BTTEnabled2" : 1,
+          "BTTKeyboardShortcutKeyboardType" : 0,
+          "BTTUUID" : "457B58B3-25D4-4042-A6F3-D08B18F94D1D",
+          "BTTTriggerOnDown" : 1,
+          "BTTEnabled" : 1,
+          "BTTModifierMode" : 0,
+          "BTTShortcutKeyCode" : -1,
+          "BTTShortcutModifierKeys" : -1,
+          "BTTOrder" : 35,
+          "BTTDisplayOrder" : 0,
+          "BTTMergeIntoTouchBarGroups" : 0,
+          "BTTKeySequence" : {
+            "BTTPauseBetween" : 0.29999999999999999,
+            "BTTCharactersToDeleteAfterwards" : 1,
+            "BTTKeyCount" : 10,
+            "BTTKeySequenceDownKeys" : [
+              {
+                "BTTKEYCode" : 59,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241408
+              },
+              {
+                "BTTKEYCode" : 58,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241408
+              },
+              {
+                "BTTKEYCode" : 55,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241408
+              },
+              {
+                "BTTKEYCharacter" : " D",
+                "BTTKEYCode" : 2,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241408
+              },
+              {
+                "BTTKEYCharacter" : " 8",
+                "BTTKEYCode" : 28,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241408
+              }
+            ],
+            "BTTKeySequenceMixedKeys" : [
+              {
+                "BTTKEYCode" : 59,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241408
+              },
+              {
+                "BTTKEYCode" : 58,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241408
+              },
+              {
+                "BTTKEYCode" : 55,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241408
+              },
+              {
+                "BTTKEYCharacter" : " D",
+                "BTTKEYCode" : 2,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241408
+              },
+              {
+                "BTTKEYCode" : 55,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241408
+              },
+              {
+                "BTTKEYCharacter" : " D",
+                "BTTKEYCode" : 2,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241408
+              },
+              {
+                "BTTKEYCode" : 59,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241408
+              },
+              {
+                "BTTKEYCode" : 58,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241408
+              },
+              {
+                "BTTKEYCharacter" : " 8",
+                "BTTKEYCode" : 28,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241408
+              },
+              {
+                "BTTKEYCharacter" : " 8",
+                "BTTKEYCode" : 28,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241408
+              }
+            ],
+            "BTTKeySequenceUpKeys" : [
+              {
+                "BTTKEYCode" : 55,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241408
+              },
+              {
+                "BTTKEYCharacter" : " D",
+                "BTTKEYCode" : 2,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241408
+              },
+              {
+                "BTTKEYCode" : 59,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241408
+              },
+              {
+                "BTTKEYCode" : 58,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241408
+              },
+              {
+                "BTTKEYCharacter" : " 8",
+                "BTTKEYCode" : 28,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241408
+              }
+            ]
+          }
+        },
+        {
+          "BTTTriggerType" : 162,
+          "BTTTriggerTypeDescription" : "2 Finger Swipe Down",
+          "BTTTriggerClass" : "BTTTriggerTypeTouchpadAll",
+          "BTTPredefinedActionType" : 0,
+          "BTTPredefinedActionName" : "Use Apple Default Or Do Nothing",
+          "BTTEnabled2" : 1,
+          "BTTAlternateModifierKeys" : 0,
+          "BTTUUID" : "D28256EA-0B2D-490E-9F14-3AC40547CB5A",
+          "BTTEnabled" : 1,
+          "BTTModifierMode" : 0,
+          "BTTOrder" : 8,
+          "BTTDisplayOrder" : 0,
+          "BTTMergeIntoTouchBarGroups" : 0,
+          "BTTAlternateIconData" : ""
+        },
+        {
+          "BTTTriggerType" : 624,
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 220,
+          "BTTPredefinedActionName" : "Move Window To Desktop 5",
+          "BTTEnabled2" : 1,
+          "BTTKeyboardShortcutKeyboardType" : 0,
+          "BTTUUID" : "DF92A93B-DE64-4692-B8A3-FC91CA54A5BD",
+          "BTTTriggerOnDown" : 1,
+          "BTTEnabled" : 1,
+          "BTTModifierMode" : 0,
+          "BTTShortcutKeyCode" : -1,
+          "BTTShortcutModifierKeys" : -1,
+          "BTTOrder" : 32,
+          "BTTDisplayOrder" : 0,
+          "BTTMergeIntoTouchBarGroups" : 0,
+          "BTTKeySequence" : {
+            "BTTPauseBetween" : 0.29999999999999999,
+            "BTTCharactersToDeleteAfterwards" : 1,
+            "BTTKeyCount" : 10,
+            "BTTKeySequenceDownKeys" : [
+              {
+                "BTTKEYCode" : 59,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241344
+              },
+              {
+                "BTTKEYCode" : 58,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241344
+              },
+              {
+                "BTTKEYCode" : 55,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241344
+              },
+              {
+                "BTTKEYCharacter" : " D",
+                "BTTKEYCode" : 2,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241344
+              },
+              {
+                "BTTKEYCharacter" : " 5",
+                "BTTKEYCode" : 23,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241344
+              }
+            ],
+            "BTTKeySequenceMixedKeys" : [
+              {
+                "BTTKEYCode" : 59,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241344
+              },
+              {
+                "BTTKEYCode" : 58,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241344
+              },
+              {
+                "BTTKEYCode" : 55,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241344
+              },
+              {
+                "BTTKEYCharacter" : " D",
+                "BTTKEYCode" : 2,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241344
+              },
+              {
+                "BTTKEYCode" : 55,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241344
+              },
+              {
+                "BTTKEYCharacter" : " D",
+                "BTTKEYCode" : 2,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241344
+              },
+              {
+                "BTTKEYCode" : 59,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241344
+              },
+              {
+                "BTTKEYCode" : 58,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241344
+              },
+              {
+                "BTTKEYCharacter" : " 5",
+                "BTTKEYCode" : 23,
+                "BTTKEYDown" : 1,
+                "BTTKEYOrderRelevant" : 1,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241344
+              },
+              {
+                "BTTKEYCharacter" : " 5",
+                "BTTKEYCode" : 23,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241344
+              }
+            ],
+            "BTTKeySequenceUpKeys" : [
+              {
+                "BTTKEYCode" : 55,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241344
+              },
+              {
+                "BTTKEYCharacter" : " D",
+                "BTTKEYCode" : 2,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241344
+              },
+              {
+                "BTTKEYCode" : 59,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241344
+              },
+              {
+                "BTTKEYCode" : 58,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241344
+              },
+              {
+                "BTTKEYCharacter" : " 5",
+                "BTTKEYCode" : 23,
+                "BTTKEYRequired" : 1,
+                "BTTKEYTime" : 575241344
+              }
+            ]
+          }
+        },
+        {
+          "BTTTriggerType" : 1005,
+          "BTTTriggerTypeDescription" : "Button 5",
+          "BTTTriggerClass" : "BTTTriggerTypeNormalMouse",
+          "BTTPredefinedActionType" : -1,
+          "BTTPredefinedActionName" : "No Action",
+          "BTTEnabled2" : 1,
+          "BTTAlternateModifierKeys" : 0,
+          "BTTUUID" : "78AD1467-7C85-40BE-A6CC-34DAD3D7177F",
+          "BTTEnabled" : 1,
+          "BTTModifierMode" : 0,
+          "BTTOrder" : 1,
+          "BTTDisplayOrder" : 0,
+          "BTTMergeIntoTouchBarGroups" : 0,
+          "BTTAlternateIconData" : ""
         },
         {
           "BTTTriggerType" : 637,
@@ -1257,37 +2427,37 @@
           }
         },
         {
-          "BTTTriggerType" : -1,
           "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
-          "BTTPredefinedActionType" : 20,
-          "BTTPredefinedActionName" : "Maximize Window Right",
-          "BTTAdditionalConfiguration" : "10354688",
+          "BTTPredefinedActionType" : -1,
+          "BTTPredefinedActionName" : "No Action",
+          "BTTShortcutToSend" : "58,48",
+          "BTTAdditionalConfiguration" : "1048576",
           "BTTEnabled2" : 1,
-          "BTTKeyboardShortcutKeyboardType" : 0,
-          "BTTUUID" : "7607995B-0B54-41D9-ACE3-B95053CA78C1",
+          "BTTKeyboardShortcutKeyboardType" : 524288,
+          "BTTUUID" : "7F9ED9C8-1BF8-4BAE-8E85-7E6C262A4B1C",
+          "BTTTriggerOnDown" : 0,
           "BTTEnabled" : 1,
           "BTTModifierMode" : 0,
-          "BTTShortcutKeyCode" : 124,
-          "BTTShortcutModifierKeys" : 10354688,
-          "BTTOrder" : 3,
+          "BTTShortcutKeyCode" : 48,
+          "BTTShortcutModifierKeys" : 1048576,
+          "BTTOrder" : 25,
           "BTTDisplayOrder" : 0,
-          "BTTMergeIntoTouchBarGroups" : 0,
-          "BTTAlternateIconData" : ""
+          "BTTMergeIntoTouchBarGroups" : 0
         },
         {
           "BTTTriggerType" : 624,
           "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
-          "BTTPredefinedActionType" : 217,
-          "BTTPredefinedActionName" : "Move Window To Desktop 2",
+          "BTTPredefinedActionType" : 223,
+          "BTTPredefinedActionName" : "Move Window To Desktop 7",
           "BTTEnabled2" : 1,
           "BTTKeyboardShortcutKeyboardType" : 0,
-          "BTTUUID" : "A5A5F70E-D39A-491D-8494-807AF977191D",
+          "BTTUUID" : "DF7556AC-9989-47D0-BDD0-41B251C5243D",
           "BTTTriggerOnDown" : 1,
           "BTTEnabled" : 1,
           "BTTModifierMode" : 0,
           "BTTShortcutKeyCode" : -1,
           "BTTShortcutModifierKeys" : -1,
-          "BTTOrder" : 29,
+          "BTTOrder" : 34,
           "BTTDisplayOrder" : 0,
           "BTTMergeIntoTouchBarGroups" : 0,
           "BTTKeySequence" : {
@@ -1300,21 +2470,21 @@
                 "BTTKEYDown" : 1,
                 "BTTKEYOrderRelevant" : 1,
                 "BTTKEYRequired" : 1,
-                "BTTKEYTime" : 575241024
+                "BTTKEYTime" : 575241408
               },
               {
                 "BTTKEYCode" : 58,
                 "BTTKEYDown" : 1,
                 "BTTKEYOrderRelevant" : 1,
                 "BTTKEYRequired" : 1,
-                "BTTKEYTime" : 575241024
+                "BTTKEYTime" : 575241408
               },
               {
                 "BTTKEYCode" : 55,
                 "BTTKEYDown" : 1,
                 "BTTKEYOrderRelevant" : 1,
                 "BTTKEYRequired" : 1,
-                "BTTKEYTime" : 575241024
+                "BTTKEYTime" : 575241408
               },
               {
                 "BTTKEYCharacter" : " D",
@@ -1322,15 +2492,15 @@
                 "BTTKEYDown" : 1,
                 "BTTKEYOrderRelevant" : 1,
                 "BTTKEYRequired" : 1,
-                "BTTKEYTime" : 575241024
+                "BTTKEYTime" : 575241408
               },
               {
-                "BTTKEYCharacter" : " 2",
-                "BTTKEYCode" : 19,
+                "BTTKEYCharacter" : " 7",
+                "BTTKEYCode" : 26,
                 "BTTKEYDown" : 1,
                 "BTTKEYOrderRelevant" : 1,
                 "BTTKEYRequired" : 1,
-                "BTTKEYTime" : 575241024
+                "BTTKEYTime" : 575241408
               }
             ],
             "BTTKeySequenceMixedKeys" : [
@@ -1339,21 +2509,21 @@
                 "BTTKEYDown" : 1,
                 "BTTKEYOrderRelevant" : 1,
                 "BTTKEYRequired" : 1,
-                "BTTKEYTime" : 575241024
+                "BTTKEYTime" : 575241408
               },
               {
                 "BTTKEYCode" : 58,
                 "BTTKEYDown" : 1,
                 "BTTKEYOrderRelevant" : 1,
                 "BTTKEYRequired" : 1,
-                "BTTKEYTime" : 575241024
+                "BTTKEYTime" : 575241408
               },
               {
                 "BTTKEYCode" : 55,
                 "BTTKEYDown" : 1,
                 "BTTKEYOrderRelevant" : 1,
                 "BTTKEYRequired" : 1,
-                "BTTKEYTime" : 575241024
+                "BTTKEYTime" : 575241408
               },
               {
                 "BTTKEYCharacter" : " D",
@@ -1361,208 +2531,108 @@
                 "BTTKEYDown" : 1,
                 "BTTKEYOrderRelevant" : 1,
                 "BTTKEYRequired" : 1,
-                "BTTKEYTime" : 575241024
+                "BTTKEYTime" : 575241408
               },
               {
                 "BTTKEYCode" : 55,
                 "BTTKEYRequired" : 1,
-                "BTTKEYTime" : 575241024
+                "BTTKEYTime" : 575241408
               },
               {
                 "BTTKEYCharacter" : " D",
                 "BTTKEYCode" : 2,
                 "BTTKEYRequired" : 1,
-                "BTTKEYTime" : 575241024
+                "BTTKEYTime" : 575241408
               },
               {
                 "BTTKEYCode" : 59,
                 "BTTKEYRequired" : 1,
-                "BTTKEYTime" : 575241024
+                "BTTKEYTime" : 575241408
               },
               {
                 "BTTKEYCode" : 58,
                 "BTTKEYRequired" : 1,
-                "BTTKEYTime" : 575241024
+                "BTTKEYTime" : 575241408
               },
               {
-                "BTTKEYCharacter" : " 2",
-                "BTTKEYCode" : 19,
+                "BTTKEYCharacter" : " 7",
+                "BTTKEYCode" : 26,
                 "BTTKEYDown" : 1,
                 "BTTKEYOrderRelevant" : 1,
                 "BTTKEYRequired" : 1,
-                "BTTKEYTime" : 575241024
+                "BTTKEYTime" : 575241408
               },
               {
-                "BTTKEYCharacter" : " 2",
-                "BTTKEYCode" : 19,
+                "BTTKEYCharacter" : " 7",
+                "BTTKEYCode" : 26,
                 "BTTKEYRequired" : 1,
-                "BTTKEYTime" : 575241024
+                "BTTKEYTime" : 575241408
               }
             ],
             "BTTKeySequenceUpKeys" : [
               {
                 "BTTKEYCode" : 55,
                 "BTTKEYRequired" : 1,
-                "BTTKEYTime" : 575241024
+                "BTTKEYTime" : 575241408
               },
               {
                 "BTTKEYCharacter" : " D",
                 "BTTKEYCode" : 2,
                 "BTTKEYRequired" : 1,
-                "BTTKEYTime" : 575241024
+                "BTTKEYTime" : 575241408
               },
               {
                 "BTTKEYCode" : 59,
                 "BTTKEYRequired" : 1,
-                "BTTKEYTime" : 575241024
+                "BTTKEYTime" : 575241408
               },
               {
                 "BTTKEYCode" : 58,
                 "BTTKEYRequired" : 1,
-                "BTTKEYTime" : 575241024
+                "BTTKEYTime" : 575241408
               },
               {
-                "BTTKEYCharacter" : " 2",
-                "BTTKEYCode" : 19,
+                "BTTKEYCharacter" : " 7",
+                "BTTKEYCode" : 26,
                 "BTTKEYRequired" : 1,
-                "BTTKEYTime" : 575241024
+                "BTTKEYTime" : 575241408
               }
             ]
           }
         },
         {
           "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
-          "BTTPredefinedActionType" : 21,
-          "BTTPredefinedActionName" : "Maximize Window",
-          "BTTAdditionalConfiguration" : "10354688",
+          "BTTPredefinedActionType" : 49,
+          "BTTPredefinedActionName" : "Launch Application \/ Open File \/ Start Apple Script …",
+          "BTTLaunchPath" : "file:\/\/\/Applications\/GoToMeeting.app",
+          "BTTAdditionalConfiguration" : "1835008",
           "BTTEnabled2" : 1,
           "BTTKeyboardShortcutKeyboardType" : 40,
-          "BTTUUID" : "A5E2A9C1-52CB-48FA-91A0-4FBE3B12CC83",
-          "BTTEnabled" : 1,
-          "BTTModifierMode" : 0,
-          "BTTShortcutKeyCode" : 126,
-          "BTTShortcutModifierKeys" : 10354688,
-          "BTTOrder" : 0,
-          "BTTDisplayOrder" : 0,
-          "BTTMergeIntoTouchBarGroups" : 0,
-          "BTTAlternateIconData" : ""
-        },
-        {
-          "BTTTriggerType" : 128,
-          "BTTTriggerTypeDescription" : "5 Finger Swipe Left",
-          "BTTTriggerClass" : "BTTTriggerTypeTouchpadAll",
-          "BTTPredefinedActionType" : 19,
-          "BTTPredefinedActionName" : "Maximize Window Left",
-          "BTTEnabled2" : 1,
-          "BTTAlternateModifierKeys" : 0,
-          "BTTUUID" : "40FC02EE-A7A5-4A1B-B383-06B5CB1DDCEB",
-          "BTTEnabled" : 1,
-          "BTTModifierMode" : 0,
-          "BTTRequiredModifierKeys" : 8388608,
-          "BTTOrder" : 1,
-          "BTTDisplayOrder" : 0,
-          "BTTMergeIntoTouchBarGroups" : 0,
-          "BTTAlternateIconData" : ""
-        },
-        {
-          "BTTTriggerType" : 636,
-          "BTTTriggerTypeDescription" : "Volume Slider Widget",
-          "BTTTriggerClass" : "BTTTriggerTypeTouchBar",
-          "BTTPredefinedActionType" : -1,
-          "BTTPredefinedActionName" : "No Action",
-          "BTTEnabled2" : 1,
-          "BTTAlternateModifierKeys" : 0,
-          "BTTUUID" : "CC3F9AA7-27D4-4C84-B9FA-B57DE9D16EC1",
-          "BTTEnabled" : 1,
-          "BTTModifierMode" : 0,
-          "BTTOrder" : 2,
-          "BTTDisplayOrder" : 0,
-          "BTTMergeIntoTouchBarGroups" : 0,
-          "BTTKnobIconData" : "TU0AKgAAMQj___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBERETERUVFxf___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AERERP9ERET_____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8ARERE_0RERP____8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBERET_RERE_____wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AEBAQBBDQ0NQRUVFgkRERLBERETSRERE5kRERP9ERET_RERE5ERERMxERESwRUVFgkNDQ1BAQEAQ____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8ARkZGC0NDQ2NERES_RERE+0RERP9ERET_RERE_0RERP9ERET_RERE_0RERP9ERET_RERE_0RERP9ERET_RERE_0RERPtERES_Q0NDY0ZGRgv___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8AQEBAFERERIdERETxRERE_0RERP9ERET6REREv0RERIRFRUVVQUFBL0dHRxlERET_RERE_0JCQhtDQ0M1RUVFVURERIRERES_RERE+kRERP9ERET_RERE8kRERIdAQEAU____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8AgICAAkRERGxERETxRERE_0RERP9ERETCRUVFXUlJSQ7___8A____AP___wD___8A____AERERP9ERET_____AP___wD___8A____AP___wBJSUkORUVFXURERMJERET_RERE_0RERPFERERsgICAAv___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AEJCQiNERETGRERE_0RERP9ERES4REREOP___wD___8A____AP___wD___8A____AP___wD___8ARERE_0RERP____8A____AP___wD___8A____AP___wD___8A____AERERDhERES4RERE_0RERP9ERETGQkJCI____wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBERERHRERE7kRERP9EREThRUVFTv___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBFRUXFRERExv___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBFRUVORERE4URERP9ERETuRERER____wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8AQ0NDW0RERPlERET_REREr0tLSxH___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBLS0sRQ0NDrkRERP9ERET5Q0NDXP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AENDQ1tERET+RERE_0RERIQAAAAB____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wAAAAABREREhERERP9ERET+Q0NDW____wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBERERHRERE+URERP9DQ0N2____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8AREREdURERP9ERET5Q0NDSP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8AQkJCI0RERO5ERET_REREhP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8AREREg0RERP9ERETuQkJCI____wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AICAgAJERETGRERE_0RERK8AAAAB____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wAAAAABREREr0RERP9ERETGgICAAv___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8AREREbERERP9EREThS0tLEf___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBLS0sRRERE4URERP9ERERs____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AENDQxNERETvRERE_0VFRU7___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBFRUVORERE_0RERPFAQEAU____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8AREREh0RERP9ERES4____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBERES4RERE_0RERIf___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AEZGRgtERETxRERE_0RERDj___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AERERDhERET_RERE8kZGRgv___8A____AP___wD___8A____AP___wD___8A____AP___wD___8AQ0NDY0RERP9ERETC____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AEVFRcFERET_Q0NDY____wD___8A____AP___wD___8A____AP___wD___8A____AP___wBERES_RERE_0VFRV3___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8ARUVFXURERP9ERES+____AP___wD___8A____AP___wD___8A____AP___wD___8AQEBAEERERPtERET6SUlJDv___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBJSUkORERE+kRERPpAQEAQ____AP___wD___8A____AP___wD___8A____AP___wBDQ0NQRERE_0RERL____8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AFVVVQZERERtRERExkRERPNERETzRERExkRERG1VVVUG____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBERES+RERE_0NDQ1D___8A____AP___wD___8A____AP___wD___8A____AEVFRYJERET_REREhP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBAQEAcRERE0kRERP9ERET_RERE_0RERP9ERET_RERE_0RERNJAQEAc____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AERERIRERET_RUVFgv___wD___8A____AP___wD___8A____AP___wD___8AREREsERERP9FRUVV____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8AVVVVBkRERNJERET_RERE2EVFRVE7OzsNOzs7DUVFRVFERETYRERE_0RERNJJSUkH____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8ARUVFVURERP9ERESx____AP___wD___8A____AP___wD___8A____AP___wBERETSRERE_0FBQS____8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBERERtRERE_0RERNhEREQP____AP___wD___8A____AERERA9ERETYRERE_0NDQ27___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBDQ0M1RERE_0RERMz___8A____AP___wD___8A____AP___wD___8A____AEREROdERET_R0dHGf___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AERERMZERET_RUVFUf___wD___8A____AP___wD___8A____AEVFRVFERET_REREx____wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AEVFRRpERET_RERE5f___wD___8A____AP___wBERETERERE_0RERP9ERET_RERE_0RERP9ERET_RERE_0RERP9FRUXF____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8ARERE80RERP87OzsN____AP___wD___8A____AP___wD___8AOzs7DURERP9ERETz____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8ARERExERERP9ERET_RERE_0RERP9ERET_RERE_0RERP9ERET_RUVFxUVFRcVERET_RERE_0RERP9ERET_RERE_0RERP9ERET_RERE_0RERMb___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBERETzRERE_zs7Ow3___8A____AP___wD___8A____AP___wA7OzsNRERE_0RERPP___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBFRUXFRERE_0RERP9ERET_RERE_0RERP9ERET_RERE_0RERP9ERETG____AP___wD___8A____AEREROVERET_QkJCG____wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AERERMdERET_RUVFUf___wD___8A____AP___wD___8A____AEVFRVFERET_REREx____wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AEVFRRpERET_RERE5f___wD___8A____AP___wD___8A____AP___wD___8AREREzERERP9DQ0M1____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8AREREbURERP9ERETYRERED____wD___8A____AP___wBEREQPRERE2ERERP9DQ0Nv____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8AQ0NDNURERP9ERETM____AP___wD___8A____AP___wD___8A____AP___wBFRUWyRERE_0VFRVX___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBVVVUGRERE0kRERP9ERETYQ0NDUDs7Ow07OzsNRUVFUURERNhERET_RERE00BAQAj___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBFRUVVRERE_0RERLP___8A____AP___wD___8A____AP___wD___8A____AERERIhERET_REREhP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBAQEAcRERE00RERP9ERET_RERE_0RERP9ERET_RERE_0RERNNAQEAc____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AERERIRERET_REREiP___wD___8A____AP___wD___8A____AP___wD___8AREREUkRERP9ERES+____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBAQEAIQ0NDb0RERMdERETzRERE80RERMdERERwQEBACP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8AQ0NDvURERP9ERERS____AP___wD___8A____AP___wD___8A____AP___wBAQEAQRERE+0RERPpJSUkO____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AElJSQ5ERET6RERE+0BAQBD___8A____AP___wD___8A____AP___wD___8A____AP___wBERETARERE_0VFRV3___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8ARUVFXURERP9ERETA____AP___wD___8A____AP___wD___8A____AP___wD___8A____AENDQ2NERET_REREwv___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBFRUXBRERE_0NDQ2P___8A____AP___wD___8A____AP___wD___8A____AP___wD___8AOzs7DURERPJERET_REREOP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8AREREOERERP9ERETyOzs7Df___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8AREREh0RERP9ERES4____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBERES4RERE_0RERIf___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBAQEAURERE8URERP9FRUVO____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8ARUVFTkRERP9ERETyQEBAFP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBDQ0NuRERE_0REROFLS0sR____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AEtLSxFEREThRERE_0NDQ27___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AFVVVQNFRUXJRERE_0NDQ64AAAAB____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wAAAAABQ0NDrkRERP9FRUXJVVVVA____wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AEdHRyRERETvRERE_0RERIP___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AEVFRYJERET_RERE8UdHRyT___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AEJCQklERET6RERE_0RERHX___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBERER0RERE_0RERPtFRUVK____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AENDQ19ERET+RERE_0VFRYIAAAAB____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wAAAAABRUVFgkRERP9ERET+Q0NDX____wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AENDQ19ERET6RERE_0NDQ65LS0sR____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8AS0tLEUNDQ65ERET_RERE+kNDQ1____8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AEJCQklERETvRERE_0REROFFRUVO____AP___wD___8A____AP___wD___8A____AP___wD___8A____AERERMRFRUXF____AP___wD___8A____AP___wD___8A____AP___wD___8A____AEVFRU5EREThRERE_0RERO9FRUVK____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AEdHRyRERETIRERE_0RERP9ERES4REREOP___wD___8A____AP___wD___8A____AP___wD___8ARERE_0RERP____8A____AP___wD___8A____AP___wD___8A____AERERDhERES4RERE_0RERP9ERETIR0dHJP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AFVVVQNDQ0NuRERE8URERP9ERET_REREwEVFRV1JSUkO____AP___wD___8A____AP___wBERET_RERE_____wD___8A____AP___wD___8ASUlJDkVFRV1FRUXBRERE_0RERP9ERETxQ0NDblVVVQP___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBAQEAUREREh0RERPJERET_RERE_0RERPpDQ0O9REREhEVFRVVDQ0M1RUVFGkRERP9ERET_RUVFGkNDQzVFRUVVREREhENDQ71ERET5RERE_0RERP9ERETyREREh0BAQBT___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8AOzs7DUNDQ2NERETARERE+0RERP9ERET_RERE_0RERP9ERET_RERE_0RERP9ERET_RERE_0RERP9ERET_RERE_0RERPtERETAQ0NDYzs7Ow3___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBAQEAQRUVFUURERINERESxREREzUREROVERET_RERE_0REROVERETNREREsURERINFRUVRQEBAEP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AERERP9ERET_____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8ARERE_0RERP____8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wBERET_RERE_____wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AEVFRcVERETG____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8A____AP___wD___8AABABAAADAAAAAQA4AAABAQADAAAAAQA4AAABAgADAAAABAAAMc4BAwADAAAAAQABAAABBgADAAAAAQACAAABCgADAAAAAQABAAABEQAEAAAAAQAAAAgBEgADAAAAAQABAAABFQADAAAAAQAEAAABFgADAAAAAQA4AAABFwAEAAAAAQAAMQABHAADAAAAAQABAAABKAADAAAAAQACAAABUgADAAAAAQACAAABUwADAAAABAAAMdaHcwAHAAAMSAAAMd4AAAAAAAgACAAIAAgAAQABAAEAAQAADEhMaW5vAhAAAG1udHJSR0IgWFlaIAfOAAIACQAGADEAAGFjc3BNU0ZUAAAAAElFQyBzUkdCAAAAAAAAAAAAAAAAAAD21gABAAAAANMtSFAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEWNwcnQAAAFQAAAAM2Rlc2MAAAGEAAAAbHd0cHQAAAHwAAAAFGJrcHQAAAIEAAAAFHJYWVoAAAIYAAAAFGdYWVoAAAIsAAAAFGJYWVoAAAJAAAAAFGRtbmQAAAJUAAAAcGRtZGQAAALEAAAAiHZ1ZWQAAANMAAAAhnZpZXcAAAPUAAAAJGx1bWkAAAP4AAAAFG1lYXMAAAQMAAAAJHRlY2gAAAQwAAAADHJUUkMAAAQ8AAAIDGdUUkMAAAQ8AAAIDGJUUkMAAAQ8AAAIDHRleHQAAAAAQ29weXJpZ2h0IChjKSAxOTk4IEhld2xldHQtUGFja2FyZCBDb21wYW55AABkZXNjAAAAAAAAABJzUkdCIElFQzYxOTY2LTIuMQAAAAAAAAAAAAAAEnNSR0IgSUVDNjE5NjYtMi4xAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABYWVogAAAAAAAA81EAAQAAAAEWzFhZWiAAAAAAAAAAAAAAAAAAAAAAWFlaIAAAAAAAAG+iAAA49QAAA5BYWVogAAAAAAAAYpkAALeFAAAY2lhZWiAAAAAAAAAkoAAAD4QAALbPZGVzYwAAAAAAAAAWSUVDIGh0dHA6Ly93d3cuaWVjLmNoAAAAAAAAAAAAAAAWSUVDIGh0dHA6Ly93d3cuaWVjLmNoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGRlc2MAAAAAAAAALklFQyA2MTk2Ni0yLjEgRGVmYXVsdCBSR0IgY29sb3VyIHNwYWNlIC0gc1JHQgAAAAAAAAAAAAAALklFQyA2MTk2Ni0yLjEgRGVmYXVsdCBSR0IgY29sb3VyIHNwYWNlIC0gc1JHQgAAAAAAAAAAAAAAAAAAAAAAAAAAAABkZXNjAAAAAAAAACxSZWZlcmVuY2UgVmlld2luZyBDb25kaXRpb24gaW4gSUVDNjE5NjYtMi4xAAAAAAAAAAAAAAAsUmVmZXJlbmNlIFZpZXdpbmcgQ29uZGl0aW9uIGluIElFQzYxOTY2LTIuMQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAdmlldwAAAAAAE6T+ABRfLgAQzxQAA+3MAAQTCwADXJ4AAAABWFlaIAAAAAAATAlWAFAAAABXH+dtZWFzAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAACjwAAAAJzaWcgAAAAAENSVCBjdXJ2AAAAAAAABAAAAAAFAAoADwAUABkAHgAjACgALQAyADcAOwBAAEUASgBPAFQAWQBeAGMAaABtAHIAdwB8AIEAhgCLAJAAlQCaAJ8ApACpAK4AsgC3ALwAwQDGAMsA0ADVANsA4ADlAOsA8AD2APsBAQEHAQ0BEwEZAR8BJQErATIBOAE+AUUBTAFSAVkBYAFnAW4BdQF8AYMBiwGSAZoBoQGpAbEBuQHBAckB0QHZAeEB6QHyAfoCAwIMAhQCHQImAi8COAJBAksCVAJdAmcCcQJ6AoQCjgKYAqICrAK2AsECywLVAuAC6wL1AwADCwMWAyEDLQM4A0MDTwNaA2YDcgN+A4oDlgOiA64DugPHA9MD4APsA_kEBgQTBCAELQQ7BEgEVQRjBHEEfgSMBJoEqAS2BMQE0wThBPAE_gUNBRwFKwU6BUkFWAVnBXcFhgWWBaYFtQXFBdUF5QX2BgYGFgYnBjcGSAZZBmoGewaMBp0GrwbABtEG4wb1BwcHGQcrBz0HTwdhB3QHhgeZB6wHvwfSB+UH+AgLCB8IMghGCFoIbgiCCJYIqgi+CNII5wj7CRAJJQk6CU8JZAl5CY8JpAm6Cc8J5Qn7ChEKJwo9ClQKagqBCpgKrgrFCtwK8wsLCyILOQtRC2kLgAuYC7ALyAvhC_kMEgwqDEMMXAx1DI4MpwzADNkM8w0NDSYNQA1aDXQNjg2pDcMN3g34DhMOLg5JDmQOfw6bDrYO0g7uDwkPJQ9BD14Peg+WD7MPzw_sEAkQJhBDEGEQfhCbELkQ1xD1ERMRMRFPEW0RjBGqEckR6BIHEiYSRRJkEoQSoxLDEuMTAxMjE0MTYxODE6QTxRPlFAYUJxRJFGoUixStFM4U8BUSFTQVVhV4FZsVvRXgFgMWJhZJFmwWjxayFtYW+hcdF0EXZReJF64X0hf3GBsYQBhlGIoYrxjVGPoZIBlFGWsZkRm3Gd0aBBoqGlEadxqeGsUa7BsUGzsbYxuKG7Ib2hwCHCocUhx7HKMczBz1HR4dRx1wHZkdwx3sHhYeQB5qHpQevh7pHxMfPh9pH5Qfvx_qIBUgQSBsIJggxCDwIRwhSCF1IaEhziH7IiciVSKCIq8i3SMKIzgjZiOUI8Ij8CQfJE0kfCSrJNolCSU4JWgllyXHJfcmJyZXJocmtyboJxgnSSd6J6sn3CgNKD8ocSiiKNQpBik4KWspnSnQKgIqNSpoKpsqzysCKzYraSudK9EsBSw5LG4soizXLQwtQS12Last4S4WLkwugi63Lu4vJC9aL5Evxy_+MDUwbDCkMNsxEjFKMYIxujHyMioyYzKbMtQzDTNGM38zuDPxNCs0ZTSeNNg1EzVNNYc1wjX9Njc2cjauNuk3JDdgN5w31zgUOFA4jDjIOQU5Qjl_Obw5+To2OnQ6sjrvOy07azuqO+g8JzxlPKQ84z0iPWE9oT3gPiA+YD6gPuA_IT9hP6I_4kAjQGRApkDnQSlBakGsQe5CMEJyQrVC90M6Q31DwEQDREdEikTORRJFVUWaRd5GIkZnRqtG8Ec1R3tHwEgFSEtIkUjXSR1JY0mpSfBKN0p9SsRLDEtTS5pL4kwqTHJMuk0CTUpNk03cTiVObk63TwBPSU+TT91QJ1BxULtRBlFQUZtR5lIxUnxSx1MTU19TqlP2VEJUj1TbVShVdVXCVg9WXFapVvdXRFeSV+BYL1h9WMtZGllpWbhaB1pWWqZa9VtFW5Vb5Vw1XIZc1l0nXXhdyV4aXmxevV8PX2Ffs2AFYFdgqmD8YU9homH1YklinGLwY0Njl2PrZEBklGTpZT1lkmXnZj1mkmboZz1nk2fpaD9olmjsaUNpmmnxakhqn2r3a09rp2v_bFdsr20IbWBtuW4SbmtuxG8eb3hv0XArcIZw4HE6cZVx8HJLcqZzAXNdc7h0FHRwdMx1KHWFdeF2Pnabdvh3VnezeBF4bnjMeSp5iXnnekZ6pXsEe2N7wnwhfIF84X1BfaF+AX5ifsJ_I3+Ef+WAR4CogQqBa4HNgjCCkoL0g1eDuoQdhICE44VHhauGDoZyhteHO4efiASIaYjOiTOJmYn+imSKyoswi5aL_IxjjMqNMY2Yjf+OZo7OjzaPnpAGkG6Q1pE_kaiSEZJ6kuOTTZO2lCCUipT0lV+VyZY0lp+XCpd1l+CYTJi4mSSZkJn8mmia1ZtCm6+cHJyJnPedZJ3SnkCerp8dn4uf+qBpoNihR6G2oiailqMGo3aj5qRWpMelOKWpphqmi6b9p26n4KhSqMSpN6mpqhyqj6sCq3Wr6axcrNCtRK24ri2uoa8Wr4uwALB1sOqxYLHWskuywrM4s660JbSctRO1irYBtnm28Ldot+C4WbjRuUq5wro7urW7LrunvCG8m70VvY++Cr6Evv+_er_1wHDA7MFnwePCX8Lbw1jD1MRRxM7FS8XIxkbGw8dBx7_IPci8yTrJuco4yrfLNsu2zDXMtc01zbXONs62zzfPuNA50LrRPNG+0j_SwdNE08bUSdTL1U7V0dZV1tjXXNfg2GTY6Nls2fHadtr724DcBdyK3RDdlt4c3qLfKd+v4DbgveFE4cziU+Lb42Pj6+Rz5PzlhOYN5pbnH+ep6DLovOlG6dDqW+rl63Dr++yG7RHtnO4o7rTvQO_M8Fjw5fFy8f_yjPMZ86f0NPTC9VD13vZt9vv3ivgZ+Kj5OPnH+lf65_t3_Af8mP0p_br+S_7c_23__w==",
-          "BTTTriggerConfig" : {
-            "BTTTouchBarItemIconWidth" : 22,
-            "BTTTouchBarButtonColor" : "221.000000, 0.000000, 0.000000, 255.000000",
-            "BTTTouchBarItemPlacement" : 2,
-            "BTTTouchBarAlternateBackgroundColor" : "0.000000, 0.000000, 0.000000, 0.000000",
-            "BTTTouchBarButtonCornerRadius" : 6,
-            "BTTTBWidgetWidth" : 200,
-            "BTTTBDrawKnobWithoutPadding" : false,
-            "BTTTouchBarSliderDrawKnobIconWhite" : true,
-            "BTTTouchBarSliderTriggerPercentage" : 0,
-            "BTTTouchBarFreeSpaceAfterButton" : 5,
-            "BTTTouchBarSliderDrawKnobBackground" : false,
-            "BTTTouchBarShowRightIconForSlider" : true,
-            "BTTTouchBarShowLeftIconForSlider" : true,
-            "BTTTouchBarItemPadding" : 0,
-            "BTTTouchBarItemIconHeight" : 22
-          }
-        },
-        {
-          "BTTTriggerType" : -1,
-          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
-          "BTTPredefinedActionType" : 199,
-          "BTTPredefinedActionName" : "Volume Down (Small Step)",
-          "BTTAdditionalConfiguration" : "8519680",
-          "BTTEnabled2" : 1,
-          "BTTKeyboardShortcutKeyboardType" : 0,
-          "BTTRepeatRate" : 0.10000000000000001,
-          "BTTRepeatDelay" : 0,
-          "BTTUUID" : "AAB4A38C-1898-421C-8BBA-6B64BAAD84A0",
+          "BTTUUID" : "0FF17E18-9585-450D-8FA9-2D8AAB40C8AB",
           "BTTTriggerOnDown" : 1,
           "BTTEnabled" : 1,
           "BTTModifierMode" : 0,
-          "BTTShortcutKeyCode" : 6,
-          "BTTShortcutModifierKeys" : 8519680,
-          "BTTOrder" : 7,
-          "BTTDisplayOrder" : 0,
-          "BTTMergeIntoTouchBarGroups" : 0
-        },
-        {
-          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
-          "BTTPredefinedActionType" : 211,
-          "BTTPredefinedActionName" : "Switch To Desktop 5",
-          "BTTAdditionalConfiguration" : "1835049",
-          "BTTEnabled2" : 1,
-          "BTTKeyboardShortcutKeyboardType" : 40,
-          "BTTUUID" : "59E71F05-4D91-4FF4-84EA-11D7A31EF2B8",
-          "BTTTriggerOnDown" : 1,
-          "BTTEnabled" : 1,
-          "BTTModifierMode" : 0,
-          "BTTShortcutKeyCode" : 23,
+          "BTTShortcutKeyCode" : 5,
           "BTTShortcutModifierKeys" : 1835008,
-          "BTTOrder" : 22,
+          "BTTOrder" : 27,
           "BTTDisplayOrder" : 0,
           "BTTMergeIntoTouchBarGroups" : 0
         },
         {
-          "BTTTriggerType" : 652,
-          "BTTTriggerTypeDescription" : "Now Playing Widget",
-          "BTTTriggerClass" : "BTTTriggerTypeTouchBar",
-          "BTTPredefinedActionType" : 23,
-          "BTTPredefinedActionName" : "Play\/Pause",
+          "BTTTriggerType" : 117,
+          "BTTTriggerTypeDescription" : "Rotate Left",
+          "BTTTriggerClass" : "BTTTriggerTypeTouchpadAll",
+          "BTTPredefinedActionType" : 0,
+          "BTTPredefinedActionName" : "Use Apple Default Or Do Nothing",
           "BTTEnabled2" : 1,
           "BTTAlternateModifierKeys" : 0,
-          "BTTUUID" : "EE8BE7AA-5F8C-408D-A5E2-0E5DADCDF74E",
+          "BTTUUID" : "D2C8D0EA-C19E-45F8-BD9F-9F699F3AE75B",
           "BTTEnabled" : 1,
           "BTTModifierMode" : 0,
-          "BTTOrder" : 0,
+          "BTTOrder" : 10,
           "BTTDisplayOrder" : 0,
           "BTTMergeIntoTouchBarGroups" : 0,
-          "BTTTriggerConfig" : {
-            "BTTTouchBarButtonColor" : "75.323769, 75.323769, 75.323769, 255.000000",
-            "BTTTouchBarItemIconWidth" : 22,
-            "BTTTouchBarButtonFontSize" : 14,
-            "BTTTouchBarItemPlacement" : 2,
-            "BTTTouchBarLine1MaxChars" : 25,
-            "BTTTouchBarButtonCornerRadius" : 6,
-            "BTTTouchBarAlternateBackgroundColor" : "0.000000, 0.000000, 0.000000, 0.000000",
-            "BTTTouchBarLine2MaxChars" : 35,
-            "BTTTouchBarFreeSpaceAfterButton" : 20,
-            "BTTTouchBarLine1Format" : "{title}",
-            "BTTTouchBarItemIconHeight" : 22,
-            "BTTTouchBarItemPadding" : 0,
-            "BTTTouchBarLine2Format" : "{artist} | {album}"
-          }
+          "BTTAlternateIconData" : ""
         },
         {
           "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
@@ -1578,140 +2648,6 @@
           "BTTShortcutKeyCode" : 18,
           "BTTShortcutModifierKeys" : 1835008,
           "BTTOrder" : 12,
-          "BTTDisplayOrder" : 0,
-          "BTTMergeIntoTouchBarGroups" : 0
-        },
-        {
-          "BTTTriggerType" : 108,
-          "BTTTriggerTypeDescription" : "4 Finger Swipe Up",
-          "BTTTriggerClass" : "BTTTriggerTypeTouchpadAll",
-          "BTTPredefinedActionType" : 45,
-          "BTTPredefinedActionName" : "Show Desktop",
-          "BTTEnabled2" : 1,
-          "BTTAlternateModifierKeys" : 0,
-          "BTTUUID" : "98B3C199-3A64-4C69-8A84-A2E0B4488BB9",
-          "BTTEnabled" : 1,
-          "BTTModifierMode" : 0,
-          "BTTOrder" : 7,
-          "BTTDisplayOrder" : 0,
-          "BTTMergeIntoTouchBarGroups" : 0,
-          "BTTAlternateIconData" : ""
-        },
-        {
-          "BTTTriggerType" : 162,
-          "BTTTriggerTypeDescription" : "2 Finger Swipe Down",
-          "BTTTriggerClass" : "BTTTriggerTypeTouchpadAll",
-          "BTTPredefinedActionType" : 0,
-          "BTTPredefinedActionName" : "Use Apple Default Or Do Nothing",
-          "BTTEnabled2" : 1,
-          "BTTAlternateModifierKeys" : 0,
-          "BTTUUID" : "D28256EA-0B2D-490E-9F14-3AC40547CB5A",
-          "BTTEnabled" : 1,
-          "BTTModifierMode" : 0,
-          "BTTOrder" : 8,
-          "BTTDisplayOrder" : 0,
-          "BTTMergeIntoTouchBarGroups" : 0,
-          "BTTAlternateIconData" : ""
-        },
-        {
-          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
-          "BTTPredefinedActionType" : 208,
-          "BTTPredefinedActionName" : "Switch To Desktop 2",
-          "BTTAdditionalConfiguration" : "1835049",
-          "BTTEnabled2" : 1,
-          "BTTKeyboardShortcutKeyboardType" : 40,
-          "BTTUUID" : "DB574334-44B2-48C5-BB84-85564AA24D1C",
-          "BTTTriggerOnDown" : 0,
-          "BTTEnabled" : 1,
-          "BTTModifierMode" : 0,
-          "BTTShortcutKeyCode" : 19,
-          "BTTShortcutModifierKeys" : 1835008,
-          "BTTOrder" : 13,
-          "BTTDisplayOrder" : 0,
-          "BTTMergeIntoTouchBarGroups" : 0
-        },
-        {
-          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
-          "BTTPredefinedActionType" : 13,
-          "BTTPredefinedActionName" : "Sleep Display",
-          "BTTAdditionalConfiguration" : "1835008",
-          "BTTEnabled2" : 1,
-          "BTTKeyboardShortcutKeyboardType" : 0,
-          "BTTUUID" : "4A6B8A46-06D6-49BB-B180-7D362C9762D3",
-          "BTTTriggerOnDown" : 0,
-          "BTTEnabled" : 1,
-          "BTTModifierMode" : 0,
-          "BTTShortcutKeyCode" : 53,
-          "BTTShortcutModifierKeys" : 1835008,
-          "BTTOrder" : 10,
-          "BTTDisplayOrder" : 0,
-          "BTTMergeIntoTouchBarGroups" : 0
-        },
-        {
-          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
-          "BTTPredefinedActionType" : 212,
-          "BTTPredefinedActionName" : "Switch To Desktop 6",
-          "BTTAdditionalConfiguration" : "1835049",
-          "BTTEnabled2" : 1,
-          "BTTKeyboardShortcutKeyboardType" : 40,
-          "BTTUUID" : "58483450-16CE-425F-A783-167F3CE0D259",
-          "BTTTriggerOnDown" : 1,
-          "BTTEnabled" : 1,
-          "BTTModifierMode" : 0,
-          "BTTShortcutKeyCode" : 22,
-          "BTTShortcutModifierKeys" : 1835008,
-          "BTTOrder" : 23,
-          "BTTDisplayOrder" : 0,
-          "BTTMergeIntoTouchBarGroups" : 0
-        },
-        {
-          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
-          "BTTPredefinedActionType" : 49,
-          "BTTPredefinedActionName" : "Launch Application \/ Open File \/ Start Apple Script …",
-          "BTTLaunchPath" : "file:\/\/\/Applications\/Google%20Chrome.app",
-          "BTTAdditionalConfiguration" : "1835049",
-          "BTTEnabled2" : 1,
-          "BTTKeyboardShortcutKeyboardType" : 40,
-          "BTTUUID" : "CE82CE54-B51B-4196-B662-079597A0CFAF",
-          "BTTTriggerOnDown" : 0,
-          "BTTEnabled" : 1,
-          "BTTModifierMode" : 0,
-          "BTTShortcutKeyCode" : 8,
-          "BTTShortcutModifierKeys" : 1835008,
-          "BTTOrder" : 9,
-          "BTTDisplayOrder" : 0,
-          "BTTMergeIntoTouchBarGroups" : 0
-        },
-        {
-          "BTTTriggerType" : 112,
-          "BTTTriggerTypeDescription" : "3 Finger Click",
-          "BTTTriggerClass" : "BTTTriggerTypeTouchpadAll",
-          "BTTPredefinedActionType" : 1,
-          "BTTPredefinedActionName" : "Middle Click",
-          "BTTEnabled2" : 1,
-          "BTTAlternateModifierKeys" : 0,
-          "BTTUUID" : "BD0C1FD0-9A59-42EE-9963-BD55F9A12296",
-          "BTTEnabled" : 1,
-          "BTTModifierMode" : 0,
-          "BTTOrder" : 12,
-          "BTTDisplayOrder" : 0,
-          "BTTMergeIntoTouchBarGroups" : 0,
-          "BTTAlternateIconData" : ""
-        },
-        {
-          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
-          "BTTPredefinedActionType" : 210,
-          "BTTPredefinedActionName" : "Switch To Desktop 4",
-          "BTTAdditionalConfiguration" : "1835049",
-          "BTTEnabled2" : 1,
-          "BTTKeyboardShortcutKeyboardType" : 40,
-          "BTTUUID" : "31005776-EEB7-47CC-B419-D3AB3F9584D3",
-          "BTTTriggerOnDown" : 0,
-          "BTTEnabled" : 1,
-          "BTTModifierMode" : 0,
-          "BTTShortcutKeyCode" : 21,
-          "BTTShortcutModifierKeys" : 1835008,
-          "BTTOrder" : 15,
           "BTTDisplayOrder" : 0,
           "BTTMergeIntoTouchBarGroups" : 0
         },
