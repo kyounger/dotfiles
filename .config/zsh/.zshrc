@@ -78,6 +78,7 @@ WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 # Set the list of directories that Zsh searches for programs.
 path=(
   ~/bin
+  ~/.fastlane/bin
   $path
 )
 

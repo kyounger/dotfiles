@@ -1,1 +1,10 @@
 Review https://github.com/jedahan/dotfiles/blob/osx/home/.zshrc
+
+things I need to update:
+brew
+zplug
+vim plugins
+gcloud components
+gems
+pips
+

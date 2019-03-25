@@ -178,6 +178,7 @@ cask charles
 cask cyberduck
 cask docker
 cask dropbox
+cask fastlane
 cask firefox
 cask flux
 cask google-chrome
