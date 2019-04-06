@@ -27,8 +27,7 @@ alias sound-record='capture-sound'
 
 
 # never can remember if it's hf or hl, so use both
-alias hf='sudo vim /etc/hosts'
-alias hl='sudo vim /etc/hosts'
+alias hostsfile-edit='sudo vim /etc/hosts'
 
 alias git-grep-all='git branch -a | grep -v "remotes/origin/HEAD" | tr -d \* | xargs git grep'
 
@@ -258,9 +257,6 @@ function webm-to-mp3() {
     ffmpeg -i "$1" -vn -ab 160k -ar 44100 -y "$1.mp3"
 }
 
-
-# Remove the hosts that I don't want to keep around - in this case, only keep the first host.
-alias hosts="head -2 ~/.ssh/known_hosts | tail -1 > ~/.ssh/known_hosts"
 
 # Pipe my public key to my clipboard.
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
