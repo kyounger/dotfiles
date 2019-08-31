@@ -6,6 +6,7 @@ alias macmounter-reload='macmounter.py --reload'
 
 alias vp='vim pom.xml'
 alias hp='head -20 pom.xml'
+alias cc='cd ~/code'
 
 #clear ~/temp dir and cd to it
 alias temp='rm -rf ~/temp; mkdir ~/temp; cd ~/temp'
@@ -16,12 +17,15 @@ alias kcga='kubectl get all'
 alias kcd='kubectl describe'
 alias kcl='kubectl logs'
 
+alias kx='kubectx'
+alias kn='kubens'
+
 alias gc='gcloud'
 alias gccc='gcloud container clusters'
 
 
-alias capture-sound='mkdir -p ~/capture-sound/;ffmpeg -f avfoundation -i ":TestRecorder" -f s16le -acodec pcm_s16le -vn -ac 1 -ar 16k ~/capture-sound/raw-audio-capture`date +%s`.raw'
-alias capture-sound-flac='mkdir -p ~/capture-sound/;ffmpeg -f avfoundation -i ":TestRecorder" -ac 1 -ar 48k ~/capture-sound/audio-capture`date +%s`.flac'
+alias capture-sound='mkdir -p ~/capture-sound/;ffmpeg -f avfoundation -i ":RecordAllDevice" -f s16le -acodec pcm_s16le -vn -ac 1 -ar 16k ~/capture-sound/raw-audio-capture`date +%s`.raw'
+alias capture-sound-flac='mkdir -p ~/capture-sound/;ffmpeg -f avfoundation -i ":RecordAllDevice" -ac 1 -ar 48k ~/capture-sound/audio-capture`date +%s`.flac'
 alias record-sound='capture-sound'
 alias sound-record='capture-sound'
 
@@ -50,7 +54,16 @@ alias gcam='git commit --all --message'
 alias gco='git checkout'
 alias gcam='git commit -am'
 
+function gccd() {
+    BASE="$(basename "$1")"
+    if [[ $BASE =~ ".git" ]]; then
+        BASE="$(basename "$1" .git)"
+    fi
 
+    git clone "$1"
+    # sleep 1
+    cd $BASE
+}
 
 alias grho='read -q "REPLY?Are you sure you want to hard reset to the origin? "; if [ "y" = "$REPLY" ]; then echo; git reset --hard `git for-each-ref --format="%(upstream:short)" $(git symbolic-ref -q HEAD)`; fi'
 alias grmh='git reset --mixed HEAD\^'
@@ -108,6 +121,7 @@ function jhome () {
 
 alias tidal-client='~/Applications/TES\ Java\ Client/tesclient.sh &'
 
+alias kaniko-build-here='docker run -it -v $(pwd):/workspace gcr.io/kaniko-project/executor:latest --no-push --cleanup'
 
 alias mci='mvn clean install'
 alias mcp='mvn clean package'
@@ -116,9 +130,12 @@ alias mcp='mvn clean package'
 
 # list files
 # alias l='ls -al'
-alias l='/usr/local/bin/gls -al --group-directories-first --color=always'
-alias lh='ls -ald .*'
-alias lsd3='du -sk * | sort -nr | head -3'
+alias l='CLICOLOR_FORCE=1 /usr/local/bin/gls -al --group-directories-first --color=always'
+alias lh='CLICOLOR_FORCE=1 ls -ald .*'
+alias lsd3='CLICOLOR_FORCE=1 du -sk * | sort -nr | head -3'
+alias lt='CLICOLOR_FORCE=1 ls -alt'
+alias lta='CLICOLOR_FORCE=1 ls -altr'
+
 
 
 # Define ls colors
@@ -170,12 +187,8 @@ function ta() {
     fi
 }
 
-# flush osx dns (including dnsmasq)
 function flushdns() {
-    dscacheutil -flushcache
-    sudo kill -HUP `cat /opt/local/var/run/dnsmasq/dnsmasq.pid`
-    # sudo port unload dnsmasq
-    # sudo port load dnsmasq
+    sudo killall -HUP mDNSResponder; sleep 2;
 }
 
 # get image height/width and copy to clipboard
@@ -249,9 +262,6 @@ function mygrants() {
 # snag an mp3 from youtube and title it properly
 function ytmp3() {
     youtube-dl --keep-video --output '%(title)s.%(ext)s' --verbose --format bestaudio --extract-audio --audio-quality 160K --audio-format mp3 --metadata-from-title "%(artist)s - %(title)s" $1
-}
-function ytmp3-old() {
-    youtube-dl -kvt --extract-audio --audio-quality 160k --audio-format mp3 $1
 }
 function webm-to-mp3() {
     ffmpeg -i "$1" -vn -ab 160k -ar 44100 -y "$1.mp3"

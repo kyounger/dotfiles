@@ -34,9 +34,13 @@ brew gmp
 brew gnu-sed
 brew gnutls
 brew go
+brew gradle
+brew gron
 brew groovysdk
 brew hashcat
+brew https://raw.githubusercontent.com/Homebrew/homebrew-core/1446e1f05b4d4eb76dca1efe4eff5910c133a5cf/Formula/openshift-cli.rb
 brew hub
+brew hugo
 brew icu4c
 brew imagemagick
 brew iperf
@@ -104,6 +108,7 @@ brew peco
 brew pinentry
 brew pinentry-mac
 brew pkg-config
+brew pngpaste
 brew python
 brew readline
 brew reattach-to-user-namespace
@@ -111,10 +116,13 @@ brew redis
 brew rsync
 brew sdl2
 brew snappy
+brew socat
 brew sox
 brew sqlite
 brew ssh-copy-id
+brew stern
 brew tcping
+brew terraform
 brew testssl
 brew texi2html
 brew theora
@@ -135,6 +143,7 @@ brew xvid
 brew xz
 brew yara
 brew yasm
+brew youtube-dl
 brew yq
 brew zplug
 
@@ -157,9 +166,9 @@ brew brew-file
 
 tap weaveworks/tap
 brew eksctl
-brew eksctl-aws-iam-authenticator
 
 # Other Homebrew packages
+brew eksctl-aws-iam-authenticator
 brew gpg
 brew kubectl
 brew phantomjs

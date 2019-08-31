@@ -15,7 +15,7 @@
 	hooksPath = /Users/kyounger/.dotfiles/git/git-global-hooks
 	pager = diff-so-fancy | less --tabs=4 -RFX
 [color]
-	ui = 1
+	ui = true
 
 [branch]
         autosetuprebase = always
@@ -38,6 +38,7 @@
         rebase = true
 [credential]
 	helper = osxkeychain
+	usehttppath = false
 [url "https://"]
 	insteadOf = git://
 [fetch]
@@ -55,3 +56,10 @@
 	gpgsign = true
 [diff "sopsdiffer"]
 	textconv = sops -d
+[color "diff"]
+	meta = 11
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse

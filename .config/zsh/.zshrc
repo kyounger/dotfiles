@@ -79,6 +79,7 @@ WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 path=(
   ~/bin
   ~/.fastlane/bin
+  /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin
   $path
 )
 
