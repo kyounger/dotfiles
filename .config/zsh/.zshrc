@@ -35,7 +35,6 @@
     zplug "junegunn/fzf", use:"shell/*.zsh", as:plugin
 
     export _Z_CMD=j
-    export _Z_DATA=$XDG_CACHE_HOME/.z
     zplug "rupa/z", use:z.sh
     #maybe switch to this one day: https://github.com/knu/z
     zplug "andrewferrier/fzf-z"
