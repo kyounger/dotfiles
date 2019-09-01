@@ -14,7 +14,6 @@
     zplug "popstas/zsh-command-time"
 
 # some basics
-    zplug "sorin-ionescu/prezto", use:"modules/helper/init.zsh"
     zplug "sorin-ionescu/prezto", use:"modules/editor/init.zsh"
 
 

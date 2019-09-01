@@ -81,8 +81,6 @@ zcommand pick"v"; zload rupa/v
 #     zplug "popstas/zsh-command-time"
 
 # some basics
-    turbo0; zplugin snippet PZT::modules/helper/init.zsh
-    # zplug "sorin-ionescu/prezto", use:"modules/helper/init.zsh"
     turbo0; zplugin snippet PZT::modules/editor/init.zsh
     # zplug "sorin-ionescu/prezto", use:"modules/editor/init.zsh"
     # zplug "zsh-users/zsh-history-substring-search", defer:3
