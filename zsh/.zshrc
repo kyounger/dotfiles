@@ -16,7 +16,28 @@
 # some basics
     zplug "sorin-ionescu/prezto", use:"modules/helper/init.zsh"
     zplug "sorin-ionescu/prezto", use:"modules/editor/init.zsh"
-    zplug "sorin-ionescu/prezto", use:"modules/history/init.zsh"
+
+
+
+    # zplug "sorin-ionescu/prezto", use:"modules/history/init.zsh"
+    # the following section replaces the line above
+    setopt bang_hist                 # Treat the '!' character specially during expansion.
+    setopt extended_history          # Write the history file in the ':start:elapsed;command' format.
+    setopt share_history             # Share history between all sessions.
+    setopt hist_expire_dups_first    # Expire a duplicate event first when trimming history.
+    setopt hist_ignore_dups          # Do not record an event that was just recorded again.
+    setopt hist_ignore_all_dups      # Delete an old recorded event if a new event is a duplicate.
+    setopt hist_find_no_dups         # Do not display a previously found event.
+    setopt hist_ignore_space         # Do not record an event starting with a space.
+    setopt hist_save_no_dups         # Do not write a duplicate event to the history file.
+    setopt hist_verify               # Do not execute immediately upon history expansion.
+    setopt hist_beep                 # Beep when accessing non-existent history.
+    HISTFILE="$HOME/.zhistory"       # The path to the history file.
+    HISTSIZE=10000                   # The maximum number of events to save in the internal history.
+    SAVEHIST=10000                   # The maximum number of events to save in the history file.
+
+
+
     zplug "zsh-users/zsh-history-substring-search", defer:3
     zplug "zsh-users/zsh-autosuggestions", defer:2
 
@@ -157,18 +178,21 @@ bindkey -M viins "^n" add-kubectl-all-namespaces-but-kube-system
 #####################################################################
 
 HISTFILE="${ZDOTDIR:-$HOME}/.zhistory"       # The path to the history file.
-HISTSIZE=10000                   # The maximum number of events to save in the internal history.
-SAVEHIST=50000                   # The maximum number of events to save in the history file.
+HISTSIZE=290000                   # The maximum number of events to save in the internal history.
+SAVEHIST=290000                   # The maximum number of events to save in the history file.
 
-setopt BANG_HIST                 # Treat the '!' character specially during expansion.
-setopt EXTENDED_HISTORY          # Write the history file in the ':start:elapsed;command' format.
-setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
-setopt SHARE_HISTORY             # Share history between all sessions.
-setopt HIST_EXPIRE_DUPS_FIRST    # Expire a duplicate event first when trimming history.
-setopt HIST_FIND_NO_DUPS         # Do not display a previously found event.
-setopt HIST_IGNORE_SPACE         # Do not record an event starting with a space.
-setopt HIST_VERIFY               # Do not execute immediately upon history expansion.
-setopt HIST_BEEP                 # Beep when accessing non-existent history.
+setopt bang_hist                 # Treat the '!' character specially during expansion.
+setopt extended_history          # Write the history file in the ':start:elapsed;command' format.
+setopt inc_append_history        # Write to the history file immediately, not when the shell exits.
+setopt share_history             # Share history between all sessions.
+setopt hist_expire_dups_first    # Expire a duplicate event first when trimming history.
+setopt hist_ignore_dups          # Do not record an event that was just recorded again.
+setopt hist_ignore_all_dups      # Delete an old recorded event if a new event is a duplicate.
+setopt hist_find_no_dups         # Do not display a previously found event.
+setopt hist_ignore_space         # Do not record an event starting with a space.
+setopt hist_save_no_dups         # Do not write a duplicate event to the history file.
+setopt hist_verify               # Do not execute immediately upon history expansion.
+setopt hist_beep                 # Beep when accessing non-existent history.
 
 bindkey '^[OA' history-substring-search-up
 bindkey '^[OB' history-substring-search-down
