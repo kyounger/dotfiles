@@ -9,7 +9,6 @@
 # because homebrew
     export ZPLUG_HOME=/usr/local/opt/zplug
     source $ZPLUG_HOME/init.zsh
-    zstyle ':completion:*' cache-path ~/$XDG_CACHE_HOME
 
 # just plain useful and not very intrusive
     zplug "popstas/zsh-command-time"
