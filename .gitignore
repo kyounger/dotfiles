@@ -1,4 +1,4 @@
-.config/brewfile/Brewfile.local
+brewfile/Brewfile.local
 .config/gcloud
 vim/.vim/.netrwhist
 vim/.vim/bundle
@@ -9,6 +9,4 @@ BetterTouchTool/BetterTouchToolApplicationSupport/*.oldVersionBackup*
 BetterTouchTool/BetterTouchToolApplicationSupport/Logs/
 BetterTouchTool/BetterTouchToolApplicationSupport/bettertouchtool.bttlicense
 .config/configstore/update-notifier-npm.json
-.config/zsh/.zhistory
 .config/karabiner/automatic_backups
-.config/zsh/.zcompcache

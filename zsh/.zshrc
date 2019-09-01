@@ -199,6 +199,7 @@ zstyle ':completion:*:*:git:*' user-commands ${${(M)${(k)commands}:#git-*}/git-/
 #####################################################################
 
 export HOMEBREW_BREWFILE_APPSTORE=0
+export HOMEBREW_BREWFILE=~/.dotfiles/brewfile/Brewfile
 
 if [[ "$(uname)" == "Darwin" ]]; then
     if [ -f $(brew --prefix)/etc/brew-wrap ]; then
