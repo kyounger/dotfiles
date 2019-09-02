@@ -45,10 +45,8 @@ for key in "${(k)key_info[@]}"; do
 done
 
 #
-# External Editor
-#
-
 # Allow command line editing in an external editor.
+#
 autoload -Uz edit-command-line
 zle -N edit-command-line
 
@@ -66,17 +64,6 @@ function zle-line-init {
   fi
 }
 zle -N zle-line-init
-
-
-# Expands .... to ../..
-function expand-dot-to-parent-directory-path {
-  if [[ $LBUFFER = *.. ]]; then
-    LBUFFER+='/..'
-  else
-    LBUFFER+='.'
-  fi
-}
-zle -N expand-dot-to-parent-directory-path
 
 # Displays an indicator when completing.
 function expand-or-complete-with-indicator {
@@ -116,29 +103,7 @@ zle -N glob-alias
 bindkey -d
 
 #
-# Vi Key Bindings
-#
-
-# Edit command in an external editor emacs style (v is used for visual mode)
-bindkey -M vicmd "$key_info[Control]X$key_info[Control]E" edit-command-line
-
-# Undo/Redo
-bindkey -M vicmd "u" undo
-bindkey -M vicmd "$key_info[Control]R" redo
-
-if (( $+widgets[history-incremental-pattern-search-backward] )); then
-  bindkey -M vicmd "?" history-incremental-pattern-search-backward
-  bindkey -M vicmd "/" history-incremental-pattern-search-forward
-else
-  bindkey -M vicmd "?" history-incremental-search-backward
-  bindkey -M vicmd "/" history-incremental-search-forward
-fi
-
-# Toggle comment at the start of the line.
-bindkey -M vicmd "#" vi-pound-insert
-
-#
-# Emacs and Vi Key Bindings
+# Vim Key Bindings
 #
 
 # Unbound keys in vicmd and viins mode will cause really odd things to happen
@@ -172,67 +137,53 @@ for keymap in $unbound_keys; do
   bindkey -M vicmd "${keymap}" _prezto-zle-noop
 done
 
-# Keybinds for all keymaps
-for keymap in 'emacs' 'viins' 'vicmd'; do
-  bindkey -M "$keymap" "$key_info[Home]" beginning-of-line
-  bindkey -M "$keymap" "$key_info[End]" end-of-line
-done
 
-# Keybinds for all vi keymaps
-for keymap in viins vicmd; do
-  # Ctrl + Left and Ctrl + Right bindings to forward/backward word
-  for key in "${(s: :)key_info[ControlLeft]}"
-    bindkey -M "$keymap" "$key" vi-backward-word
-  for key in "${(s: :)key_info[ControlRight]}"
-    bindkey -M "$keymap" "$key" vi-forward-word
-done
+# Edit command in an external editor emacs style (v is used for visual mode)
+bindkey -M vicmd "$key_info[Control]X$key_info[Control]E" edit-command-line
 
-# Keybinds for emacs and vi insert mode
-for keymap in 'emacs' 'viins'; do
-  bindkey -M "$keymap" "$key_info[Delete]" delete-char
-  bindkey -M "$keymap" "$key_info[Backspace]" backward-delete-char
 
-  bindkey -M "$keymap" "$key_info[Left]" backward-char
-  bindkey -M "$keymap" "$key_info[Right]" forward-char
+if (( $+widgets[history-incremental-pattern-search-backward] )); then
+  bindkey -M vicmd "?" history-incremental-pattern-search-backward
+  bindkey -M vicmd "/" history-incremental-pattern-search-forward
+else
+  bindkey -M vicmd "?" history-incremental-search-backward
+  bindkey -M vicmd "/" history-incremental-search-forward
+fi
 
-  # Expand history on space.
-  bindkey -M "$keymap" ' ' magic-space
 
-  # Clear screen.
-  bindkey -M "$keymap" "$key_info[Control]L" clear-screen
+bindkey -M vicmd "u" undo
+bindkey -M vicmd "$key_info[Control]R" redo
+bindkey -M viins "$key_info[Home]" beginning-of-line
+bindkey -M viins "$key_info[End]" end-of-line
+bindkey -M viins "$key_info[ControlRight]" vi-forward-word
+bindkey -M viins "$key_info[ControlLeft]" vi-backward-word
+bindkey -M viins "$key_info[Delete]" delete-char
+bindkey -M viins "$key_info[Backspace]" backward-delete-char
+bindkey -M viins "$key_info[Left]" backward-char
+bindkey -M viins "$key_info[Right]" forward-char
 
-  # Expand command name to full path.
-  for key in "$key_info[Escape]"{E,e}
-    bindkey -M "$keymap" "$key" expand-cmd-path
+# Expand history on space.
+bindkey -M viins ' ' magic-space
 
-  # Duplicate the previous word.
-  for key in "$key_info[Escape]"{M,m}
-    bindkey -M "$keymap" "$key" copy-prev-shell-word
+# Bind Shift + Tab to go to the previous menu item.
+bindkey -M viins "$key_info[BackTab]" reverse-menu-complete
 
-  # Use a more flexible push-line.
-  for key in "$key_info[Control]Q" "$key_info[Escape]"{q,Q}
-    bindkey -M "$keymap" "$key" push-line-or-edit
+# Clear screen.
+bindkey -M viins "$key_info[Control]L" clear-screen
 
-  # Bind Shift + Tab to go to the previous menu item.
-  bindkey -M "$keymap" "$key_info[BackTab]" reverse-menu-complete
+# control-space expands all aliases, including global
+bindkey -M "$keymap" "$key_info[Control] " glob-alias
 
-  # Complete in the middle of word.
-  bindkey -M "$keymap" "$key_info[Control]I" expand-or-complete
+# Complete in the middle of word.
+bindkey -M "$keymap" "$key_info[Control]I" expand-or-complete
 
-  # Display an indicator when completing.
-  bindkey -M "$keymap" "$key_info[Control]I" \
-    expand-or-complete-with-indicator
-
-  # Insert 'sudo ' at the beginning of the line.
-  bindkey -M "$keymap" "$key_info[Control]X$key_info[Control]S" prepend-sudo
-
-  # control-space expands all aliases, including global
-  bindkey -M "$keymap" "$key_info[Control] " glob-alias
-done
+# Display an indicator when completing.
+bindkey -M "$keymap" "$key_info[Control]I" expand-or-complete-with-indicator
 
 # Delete key deletes character in vimcmd cmd mode instead of weird default functionality
 bindkey -M vicmd "$key_info[Delete]" delete-char
 
 
 
-unset key{,map,_bindings}
+unset keymap
+unset key_bindings
