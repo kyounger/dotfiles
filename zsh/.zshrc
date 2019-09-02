@@ -116,41 +116,6 @@ autoload -Uz bracketed-paste-url-magic && zle -N bracketed-paste bracketed-paste
 # improved less option
 export LESS='--tabs=4 --no-init --LONG-PROMPT --ignore-case --quit-if-one-screen --RAW-CONTROL-CHARS'
 
-
-#####################################################################
-# vim-mode stuff
-#####################################################################
-bindkey -v #duh
-bindkey -M vicmd "^v" edit-command-line
-export KEYTIMEOUT=1
-
-# Change cursor shape for different vi modes.
-function zle-keymap-select {
-    if [[ ${KEYMAP} == vicmd ]] || [[ $1 = 'block' ]]; then
-        echo -ne '\e[1 q'
-    elif [[ ${KEYMAP} == main ]] ||
-        [[ ${KEYMAP} == viins ]] ||
-        [[ ${KEYMAP} = '' ]] ||
-        [[ $1 = 'beam' ]]; then
-        echo -ne '\e[5 q'
-    fi
-}
-zle -N zle-keymap-select
-
-# Use beam shape cursor for each new prompt.
-_fix_cursor() {
-   echo -ne '\e[5 q'
-}
-precmd_functions+=(_fix_cursor)
-
-# use Ctrl+n to save me some keystrokes for typing this monstrosity
-add-kubectl-all-namespaces-but-kube-system() {
-    BUFFER+="--all-namespaces --field-selector=metadata.namespace!=kube-system"
-}
-zle -N add-kubectl-all-namespaces-but-kube-system
-bindkey -M viins "^n" add-kubectl-all-namespaces-but-kube-system
-
-
 #####################################################################
 # history options
 #####################################################################
@@ -215,26 +180,3 @@ if [[ "$(uname)" == "Darwin" ]]; then
 
 fi
 
-#####################################################################
-# nvm auto version
-#####################################################################
-
-# place this after nvm initialization!
- # autoload -U add-zsh-hook
-# load-nvmrc() {
-#   if [[ -f .nvmrc && -r .nvmrc ]]; then
-#     nvm use
-#   elif [[ $(nvm version) != $(nvm version default)  ]]; then
-#     echo "Reverting to nvm default version"
-#     nvm use default
-#   fi
-# }
-# add-zsh-hook chpwd load-nvmrc
-# load-nvmrc
-
-#####################################################################
-# TODO:
-#####################################################################
-#
-# Look into: https://github.com/bhilburn/powerlevel9k
-#

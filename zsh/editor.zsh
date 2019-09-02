@@ -1,4 +1,5 @@
-setopt BEEP                     # Beep on error in line editor.
+# Beep on error in line editor.
+setopt BEEP
 
 # Use human-friendly identifiers.
 zmodload zsh/terminfo
@@ -99,12 +100,38 @@ function glob-alias {
 }
 zle -N glob-alias
 
-# Reset to default key bindings.
-bindkey -d
+
+#
+# This next section seems to be what works to enable proper cursors for viins and vicmd
+#
+export KEYTIMEOUT=1
+
+function zle-keymap-select {
+    if [[ ${KEYMAP} == vicmd ]] || [[ $1 = 'block' ]]; then
+        echo -ne '\e[1 q'
+    elif [[ ${KEYMAP} == main ]] ||
+        [[ ${KEYMAP} == viins ]] ||
+        [[ ${KEYMAP} = '' ]] ||
+        [[ $1 = 'beam' ]]; then
+        echo -ne '\e[5 q'
+    fi
+}
+zle -N zle-keymap-select
+
+# Use beam shape cursor for each new prompt.
+_fix_cursor() {
+   echo -ne '\e[5 q'
+}
+precmd_functions+=(_fix_cursor)
+
+
 
 #
 # Vim Key Bindings
 #
+
+# First, reset to default key bindings.
+bindkey -d
 
 # Unbound keys in vicmd and viins mode will cause really odd things to happen
 # such as the casing of all the characters you have typed changing or other
@@ -132,27 +159,24 @@ unbound_keys=(
   "${key_info[ControlPageUp]}"
   "${key_info[ControlPageDown]}"
 )
-for keymap in $unbound_keys; do
-  bindkey -M viins "${keymap}" _prezto-zle-noop
-  bindkey -M vicmd "${keymap}" _prezto-zle-noop
+for unbound_key in $unbound_keys; do
+  bindkey -M viins "${unbound_key}" _prezto-zle-noop
+  bindkey -M vicmd "${unbound_key}" _prezto-zle-noop
 done
 
-
-# Edit command in an external editor emacs style (v is used for visual mode)
-bindkey -M vicmd "$key_info[Control]X$key_info[Control]E" edit-command-line
-
-
-if (( $+widgets[history-incremental-pattern-search-backward] )); then
-  bindkey -M vicmd "?" history-incremental-pattern-search-backward
-  bindkey -M vicmd "/" history-incremental-pattern-search-forward
-else
-  bindkey -M vicmd "?" history-incremental-search-backward
-  bindkey -M vicmd "/" history-incremental-search-forward
-fi
+#also noop delete key in vicmd
+bindkey -M vicmd "${key_info[Delete]}" _prezto-zle-noop
 
 
+#
+# The meat of it.
+#
+bindkey -M vicmd "?" history-incremental-pattern-search-backward
+bindkey -M vicmd "/" history-incremental-pattern-search-forward
 bindkey -M vicmd "u" undo
 bindkey -M vicmd "$key_info[Control]R" redo
+bindkey -M vicmd "$key_info[Control]V" edit-command-line
+
 bindkey -M viins "$key_info[Home]" beginning-of-line
 bindkey -M viins "$key_info[End]" end-of-line
 bindkey -M viins "$key_info[ControlRight]" vi-forward-word
@@ -161,29 +185,21 @@ bindkey -M viins "$key_info[Delete]" delete-char
 bindkey -M viins "$key_info[Backspace]" backward-delete-char
 bindkey -M viins "$key_info[Left]" backward-char
 bindkey -M viins "$key_info[Right]" forward-char
+bindkey -M viins ' ' magic-space # Expand history on space.
+bindkey -M viins "$key_info[BackTab]" reverse-menu-complete # Bind Shift + Tab to go to the previous menu item.
+bindkey -M viins "$key_info[Control]L" clear-screen # Clear screen.
+bindkey -M viins "$key_info[Control] " glob-alias # control-space expands all aliases, including global
+bindkey -M viins "$key_info[Control]I" expand-or-complete-with-indicator # Display an indicator when completing.
 
-# Expand history on space.
-bindkey -M viins ' ' magic-space
+# use Ctrl+n to save me some keystrokes for typing this monstrosity. Hacky, but hey it works.
+function add-kubectl-all-namespaces-but-kube-system() {
+    BUFFER+="--all-namespaces --field-selector=metadata.namespace!=kube-system"
+}
+zle -N add-kubectl-all-namespaces-but-kube-system
+bindkey -M viins "$key_info[Control]N" add-kubectl-all-namespaces-but-kube-system
 
-# Bind Shift + Tab to go to the previous menu item.
-bindkey -M viins "$key_info[BackTab]" reverse-menu-complete
+#
+# As you wish.
+#
+bindkey -v
 
-# Clear screen.
-bindkey -M viins "$key_info[Control]L" clear-screen
-
-# control-space expands all aliases, including global
-bindkey -M "$keymap" "$key_info[Control] " glob-alias
-
-# Complete in the middle of word.
-bindkey -M "$keymap" "$key_info[Control]I" expand-or-complete
-
-# Display an indicator when completing.
-bindkey -M "$keymap" "$key_info[Control]I" expand-or-complete-with-indicator
-
-# Delete key deletes character in vimcmd cmd mode instead of weird default functionality
-bindkey -M vicmd "$key_info[Delete]" delete-char
-
-
-
-unset keymap
-unset key_bindings
