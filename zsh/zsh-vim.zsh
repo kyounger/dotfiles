@@ -171,6 +171,10 @@ bindkey -M vicmd "${key_info[Delete]}" _prezto-zle-noop
 #
 # The meat of it.
 #
+
+bindkey '^[OA' history-substring-search-up
+bindkey '^[OB' history-substring-search-down
+
 bindkey -M vicmd "?" history-incremental-pattern-search-backward
 bindkey -M vicmd "/" history-incremental-pattern-search-forward
 bindkey -M vicmd "u" undo
