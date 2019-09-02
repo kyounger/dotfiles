@@ -1,27 +1,4 @@
-#
-# Sets key bindings.
-#
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
-
-# Return if requirements are not found.
-if [[ "$TERM" == 'dumb' ]]; then
-  return 1
-fi
-
-#
-# Options
-#
-
 setopt BEEP                     # Beep on error in line editor.
-
-#
-# Variables
-#
-
-# Treat these characters as part of a word.
-WORDCHARS='*?_-.[]~&;!#$%^(){}<>'
 
 # Use human-friendly identifiers.
 zmodload zsh/terminfo
@@ -60,8 +37,7 @@ key_info=(
   'BackTab'      "$terminfo[kcbt]"
 )
 
-# Set empty $key_info values to an invalid UTF-8 sequence to induce silent
-# bindkey failure.
+# Set empty $key_info values to an invalid UTF-8 sequence to induce silent bindkey failure.
 for key in "${(k)key_info[@]}"; do
   if [[ -z "$key_info[$key]" ]]; then
     key_info[$key]='�'
@@ -79,35 +55,6 @@ zle -N edit-command-line
 #
 # Functions
 #
-# Runs bindkey but for all of the keymaps. Running it with no arguments will
-# print out the mappings for all of the keymaps.
-function bindkey-all {
-  local keymap=''
-  for keymap in $(bindkey -l); do
-    [[ "$#" -eq 0 ]] && printf "#### %s\n" "${keymap}" 1>&2
-    bindkey -M "${keymap}" "$@"
-  done
-}
-# Exposes information about the Zsh Line Editor via the $editor_info associative
-# array.
-
-# Reset the prompt based on the current context and
-# the ps-context option.
-function zle-reset-prompt {
-  if zstyle -t ':prezto:module:editor' ps-context; then
-    # If we aren't within one of the specified contexts, then we want to reset
-    # the prompt with the appropriate editor_info[keymap] if there is one.
-    if [[ $CONTEXT != (select|cont) ]]; then
-      zle reset-prompt
-      zle -R
-    fi
-  else
-    zle reset-prompt
-    zle -R
-  fi
-}
-zle -N zle-reset-prompt
-
 
 # Enables terminal application mode and updates editor information.
 function zle-line-init {
@@ -134,7 +81,6 @@ zle -N expand-dot-to-parent-directory-path
 # Displays an indicator when completing.
 function expand-or-complete-with-indicator {
   local indicator
-  zstyle -s ':prezto:module:editor:info:completing' format 'indicator'
 
   # This is included to work around a bug in zsh which shows up when interacting
   # with multi-line prompts.
@@ -166,69 +112,8 @@ function glob-alias {
 }
 zle -N glob-alias
 
-# Toggle the comment character at the start of the line. This is meant to work
-# around a buggy implementation of pound-insert in zsh.
-#
-# This is currently only used for the emacs keys because vi-pound-insert has
-# been reported to work properly.
-function pound-toggle {
-  if [[ "$BUFFER" = '#'* ]]; then
-    # Because of an oddity in how zsh handles the cursor when the buffer size
-    # changes, we need to make this check before we modify the buffer and let
-    # zsh handle moving the cursor back if it's past the end of the line.
-    if [[ $CURSOR != $#BUFFER ]]; then
-      (( CURSOR -= 1 ))
-    fi
-    BUFFER="${BUFFER:1}"
-  else
-    BUFFER="#$BUFFER"
-    (( CURSOR += 1 ))
-  fi
-}
-zle -N pound-toggle
-
 # Reset to default key bindings.
 bindkey -d
-
-#
-# Emacs Key Bindings
-#
-
-for key in "$key_info[Escape]"{B,b} "${(s: :)key_info[ControlLeft]}" \
-  "${key_info[Escape]}${key_info[Left]}"
-  bindkey -M emacs "$key" emacs-backward-word
-for key in "$key_info[Escape]"{F,f} "${(s: :)key_info[ControlRight]}" \
-  "${key_info[Escape]}${key_info[Right]}"
-  bindkey -M emacs "$key" emacs-forward-word
-
-# Kill to the beginning of the line.
-for key in "$key_info[Escape]"{K,k}
-  bindkey -M emacs "$key" backward-kill-line
-
-# Redo.
-bindkey -M emacs "$key_info[Escape]_" redo
-
-# Search previous character.
-bindkey -M emacs "$key_info[Control]X$key_info[Control]B" vi-find-prev-char
-
-# Match bracket.
-bindkey -M emacs "$key_info[Control]X$key_info[Control]]" vi-match-bracket
-
-# Edit command in an external editor.
-bindkey -M emacs "$key_info[Control]X$key_info[Control]E" edit-command-line
-
-if (( $+widgets[history-incremental-pattern-search-backward] )); then
-  bindkey -M emacs "$key_info[Control]R" \
-    history-incremental-pattern-search-backward
-  bindkey -M emacs "$key_info[Control]S" \
-    history-incremental-pattern-search-forward
-fi
-
-# Toggle comment at the start of the line. Note that we use pound-toggle which
-# is similar to pount insert, but meant to work around some issues that were
-# being seen in iTerm.
-bindkey -M emacs "$key_info[Escape];" pound-toggle
-
 
 #
 # Vi Key Bindings
@@ -334,11 +219,6 @@ for keymap in 'emacs' 'viins'; do
   # Complete in the middle of word.
   bindkey -M "$keymap" "$key_info[Control]I" expand-or-complete
 
-  # Expand .... to ../..
-  if zstyle -t ':prezto:module:editor' dot-expansion; then
-    bindkey -M "$keymap" "." expand-dot-to-parent-directory-path
-  fi
-
   # Display an indicator when completing.
   bindkey -M "$keymap" "$key_info[Control]I" \
     expand-or-complete-with-indicator
@@ -353,23 +233,6 @@ done
 # Delete key deletes character in vimcmd cmd mode instead of weird default functionality
 bindkey -M vicmd "$key_info[Delete]" delete-char
 
-# Do not expand .... to ../.. during incremental search.
-if zstyle -t ':prezto:module:editor' dot-expansion; then
-  bindkey -M isearch . self-insert 2> /dev/null
-fi
 
-#
-# Layout
-#
-
-# Set the key layout.
-zstyle -s ':prezto:module:editor' key-bindings 'key_bindings'
-if [[ "$key_bindings" == (emacs|) ]]; then
-  bindkey -e
-elif [[ "$key_bindings" == vi ]]; then
-  bindkey -v
-else
-  print "prezto: editor: invalid key bindings: $key_bindings" >&2
-fi
 
 unset key{,map,_bindings}
