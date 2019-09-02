@@ -8,10 +8,15 @@
 export EDITOR=vim
 export LANG=en_US.UTF-8
 export LESS='--tabs=4 --no-init --LONG-PROMPT --ignore-case --quit-if-one-screen --RAW-CONTROL-CHARS'
+export KEYTIMEOUT=30
 
 umask 022
 
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
+
+HISTFILE="${ZDOTDIR:-$HOME}/.zhistory"       # The path to the history file.
+HISTSIZE=290000                   # The maximum number of events to save in the internal history.
+SAVEHIST=290000                   # The maximum number of events to save in the history file.
 
 # Define ls colors
 export LSCOLORS='exfxcxdxbxGxDxabagacad'
@@ -36,12 +41,9 @@ autoload -Uz bracketed-paste-url-magic && zle -N bracketed-paste bracketed-paste
 
 setopt IGNORE_EOF
 setopt CORRECT
+setopt MULTIOS              # Write to multiple descriptors.
 
 # history options
-HISTFILE="${ZDOTDIR:-$HOME}/.zhistory"       # The path to the history file.
-HISTSIZE=290000                   # The maximum number of events to save in the internal history.
-SAVEHIST=290000                   # The maximum number of events to save in the history file.
-
 setopt bang_hist                 # Treat the '!' character specially during expansion.
 setopt extended_history          # Write the history file in the ':start:elapsed;command' format.
 setopt inc_append_history        # Write to the history file immediately, not when the shell exits.
@@ -63,7 +65,6 @@ setopt PUSHD_SILENT         # Do not print the directory stack after pushd or po
 setopt PUSHD_TO_HOME        # Push to home directory when no argument is given.
 setopt CDABLE_VARS          # Change directory to a path stored in a variable.
 setopt AUTO_NAME_DIRS       # Auto add variable-stored paths to ~ list.
-setopt MULTIOS              # Write to multiple descriptors.
 unsetopt CLOBBER            # Do not overwrite existing files with > and >>.
 
 #globbing and completion

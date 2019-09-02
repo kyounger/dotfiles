@@ -104,8 +104,6 @@ zle -N glob-alias
 #
 # This next section seems to be what works to enable proper cursors for viins and vicmd
 #
-export KEYTIMEOUT=1
-
 function zle-keymap-select {
     if [[ ${KEYMAP} == vicmd ]] || [[ $1 = 'block' ]]; then
         echo -ne '\e[1 q'
