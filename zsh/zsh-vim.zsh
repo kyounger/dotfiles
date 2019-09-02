@@ -3,8 +3,8 @@ setopt BEEP
 
 # Use human-friendly identifiers.
 zmodload zsh/terminfo
-typeset -gA key_info
-key_info=(
+typeset -gA keys
+keys=(
   'Control'         '\C-'
   'ControlLeft'     '\e[1;5D \e[5D \e\e[D \eOd'
   'ControlRight'    '\e[1;5C \e[5C \e\e[C \eOc'
@@ -38,10 +38,10 @@ key_info=(
   'BackTab'      "$terminfo[kcbt]"
 )
 
-# Set empty $key_info values to an invalid UTF-8 sequence to induce silent bindkey failure.
-for key in "${(k)key_info[@]}"; do
-  if [[ -z "$key_info[$key]" ]]; then
-    key_info[$key]='�'
+# Set empty $keys values to an invalid UTF-8 sequence to induce silent bindkey failure.
+for key in "${(k)keys[@]}"; do
+  if [[ -z "$keys[$key]" ]]; then
+    keys[$key]='�'
   fi
 done
 
@@ -142,22 +142,22 @@ function _prezto-zle-noop {  ; }
 zle -N _prezto-zle-noop
 local -a unbound_keys
 unbound_keys=(
-  "${key_info[F1]}"
-  "${key_info[F2]}"
-  "${key_info[F3]}"
-  "${key_info[F4]}"
-  "${key_info[F5]}"
-  "${key_info[F6]}"
-  "${key_info[F7]}"
-  "${key_info[F8]}"
-  "${key_info[F9]}"
-  "${key_info[F10]}"
-  "${key_info[F11]}"
-  "${key_info[F12]}"
-  "${key_info[PageUp]}"
-  "${key_info[PageDown]}"
-  "${key_info[ControlPageUp]}"
-  "${key_info[ControlPageDown]}"
+  "${keys[F1]}"
+  "${keys[F2]}"
+  "${keys[F3]}"
+  "${keys[F4]}"
+  "${keys[F5]}"
+  "${keys[F6]}"
+  "${keys[F7]}"
+  "${keys[F8]}"
+  "${keys[F9]}"
+  "${keys[F10]}"
+  "${keys[F11]}"
+  "${keys[F12]}"
+  "${keys[PageUp]}"
+  "${keys[PageDown]}"
+  "${keys[ControlPageUp]}"
+  "${keys[ControlPageDown]}"
 )
 for unbound_key in $unbound_keys; do
   bindkey -M viins "${unbound_key}" _prezto-zle-noop
@@ -165,7 +165,7 @@ for unbound_key in $unbound_keys; do
 done
 
 #also noop delete key in vicmd
-bindkey -M vicmd "${key_info[Delete]}" _prezto-zle-noop
+bindkey -M vicmd "${keys[Delete]}" _prezto-zle-noop
 
 
 #
@@ -178,29 +178,29 @@ bindkey '^[OB' history-substring-search-down
 bindkey -M vicmd "?" history-incremental-pattern-search-backward
 bindkey -M vicmd "/" history-incremental-pattern-search-forward
 bindkey -M vicmd "u" undo
-bindkey -M vicmd "$key_info[Control]R" redo
-bindkey -M vicmd "$key_info[Control]V" edit-command-line
+bindkey -M vicmd "$keys[Control]R" redo
+bindkey -M vicmd "$keys[Control]V" edit-command-line
 
-bindkey -M viins "$key_info[Home]" beginning-of-line
-bindkey -M viins "$key_info[End]" end-of-line
-bindkey -M viins "$key_info[ControlRight]" vi-forward-word
-bindkey -M viins "$key_info[ControlLeft]" vi-backward-word
-bindkey -M viins "$key_info[Delete]" delete-char
-bindkey -M viins "$key_info[Backspace]" backward-delete-char
-bindkey -M viins "$key_info[Left]" backward-char
-bindkey -M viins "$key_info[Right]" forward-char
+bindkey -M viins "$keys[Home]" beginning-of-line
+bindkey -M viins "$keys[End]" end-of-line
+bindkey -M viins "$keys[ControlRight]" vi-forward-word
+bindkey -M viins "$keys[ControlLeft]" vi-backward-word
+bindkey -M viins "$keys[Delete]" delete-char
+bindkey -M viins "$keys[Backspace]" backward-delete-char
+bindkey -M viins "$keys[Left]" backward-char
+bindkey -M viins "$keys[Right]" forward-char
 bindkey -M viins ' ' magic-space # Expand history on space.
-bindkey -M viins "$key_info[BackTab]" reverse-menu-complete # Bind Shift + Tab to go to the previous menu item.
-bindkey -M viins "$key_info[Control]L" clear-screen # Clear screen.
-bindkey -M viins "$key_info[Control] " glob-alias # control-space expands all aliases, including global
-bindkey -M viins "$key_info[Control]I" expand-or-complete-with-indicator # Display an indicator when completing.
+bindkey -M viins "$keys[BackTab]" reverse-menu-complete # Bind Shift + Tab to go to the previous menu item.
+bindkey -M viins "$keys[Control]L" clear-screen # Clear screen.
+bindkey -M viins "$keys[Control] " glob-alias # control-space expands all aliases, including global
+bindkey -M viins "$keys[Control]I" expand-or-complete-with-indicator # Display an indicator when completing.
 
 # use Ctrl+n to save me some keystrokes for typing this monstrosity. Hacky, but hey it works.
 function add-kubectl-all-namespaces-but-kube-system() {
     BUFFER+="--all-namespaces --field-selector=metadata.namespace!=kube-system"
 }
 zle -N add-kubectl-all-namespaces-but-kube-system
-bindkey -M viins "$key_info[Control]N" add-kubectl-all-namespaces-but-kube-system
+bindkey -M viins "$keys[Control]N" add-kubectl-all-namespaces-but-kube-system
 
 #
 # As you wish.
