@@ -115,7 +115,6 @@ unsetopt CASE_GLOB
 
     export _Z_CMD=j
     zplug "rupa/z", use:z.sh
-    #maybe switch to this one day: https://github.com/knu/z
     zplug "andrewferrier/fzf-z"
 
 # the theme I use

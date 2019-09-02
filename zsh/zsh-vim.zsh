@@ -55,6 +55,12 @@ zle -N edit-command-line
 # Functions
 #
 
+# a simple ZLE function to save me some keystrokes for typing this monstrosity. Hacky, but hey it works. key-bound in bindkeys section
+function add-kubectl-all-namespaces-but-kube-system() {
+    BUFFER+="--all-namespaces --field-selector=metadata.namespace!=kube-system"
+}
+zle -N add-kubectl-all-namespaces-but-kube-system
+
 # Enables terminal application mode and updates editor information.
 function zle-line-init {
   # The terminal must be in application mode when ZLE is active for $terminfo
@@ -82,15 +88,6 @@ function expand-or-complete-with-indicator {
   zle redisplay
 }
 zle -N expand-or-complete-with-indicator
-
-# Inserts 'sudo ' at the beginning of the line.
-function prepend-sudo {
-  if [[ "$BUFFER" != su(do|)\ * ]]; then
-    BUFFER="sudo $BUFFER"
-    (( CURSOR += 5 ))
-  fi
-}
-zle -N prepend-sudo
 
 # Expand aliases
 function glob-alias {
@@ -170,15 +167,14 @@ bindkey -M vicmd "${keys[Delete]}" _prezto-zle-noop
 # The meat of it.
 #
 
-bindkey '^[OA' history-substring-search-up
-bindkey '^[OB' history-substring-search-down
-
 bindkey -M vicmd "?" history-incremental-pattern-search-backward
 bindkey -M vicmd "/" history-incremental-pattern-search-forward
 bindkey -M vicmd "u" undo
 bindkey -M vicmd "$keys[Control]R" redo
 bindkey -M vicmd "$keys[Control]V" edit-command-line
 
+bindkey -M viins "$keys[Up]" history-substring-search-up
+bindkey -M viins "$keys[Down]" history-substring-search-down
 bindkey -M viins "$keys[Home]" beginning-of-line
 bindkey -M viins "$keys[End]" end-of-line
 bindkey -M viins "$keys[ControlRight]" vi-forward-word
@@ -192,12 +188,6 @@ bindkey -M viins "$keys[BackTab]" reverse-menu-complete # Bind Shift + Tab to go
 bindkey -M viins "$keys[Control]L" clear-screen # Clear screen.
 bindkey -M viins "$keys[Control] " glob-alias # control-space expands all aliases, including global
 bindkey -M viins "$keys[Control]I" expand-or-complete-with-indicator # Display an indicator when completing.
-
-# use Ctrl+n to save me some keystrokes for typing this monstrosity. Hacky, but hey it works.
-function add-kubectl-all-namespaces-but-kube-system() {
-    BUFFER+="--all-namespaces --field-selector=metadata.namespace!=kube-system"
-}
-zle -N add-kubectl-all-namespaces-but-kube-system
 bindkey -M viins "$keys[Control]N" add-kubectl-all-namespaces-but-kube-system
 
 #
