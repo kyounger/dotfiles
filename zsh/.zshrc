@@ -14,8 +14,7 @@
     zplug "popstas/zsh-command-time"
 
 # some basics
-    zplug "sorin-ionescu/prezto", use:"modules/editor/init.zsh"
-
+    zplug "~/.dotfiles/zsh/", from:local, use:"editor.zsh"
 
     zplug "zsh-users/zsh-history-substring-search", defer:3
     zplug "zsh-users/zsh-autosuggestions", defer:2
@@ -175,7 +174,6 @@ setopt hist_beep                 # Beep when accessing non-existent history.
 
 bindkey '^[OA' history-substring-search-up
 bindkey '^[OB' history-substring-search-down
-autoload edit-command-line; zle -N edit-command-line
 
 #####################################################################
 # directory options
