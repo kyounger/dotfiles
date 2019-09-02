@@ -13,6 +13,13 @@ umask 022
 
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 
+# Define ls colors
+export LSCOLORS='exfxcxdxbxGxDxabagacad'
+export LSCOLORS='DxfxcxdxbxGxDxabagacad'
+# Define ls colors for the completion system
+export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=36;01:cd=33;01:su=31;40;07:sg=36;40;07:tw=32;40;07:ow=33;40;07:'
+export LS_COLORS='di=93:ln=35:so=32:pi=33:ex=31:bd=36;01:cd=33;01:su=31;40;07:sg=36;40;07:tw=32;40;07:ow=33;40;07:'
+
 # Set the list of directories that Zsh searches for programs.
 path=(
   ~/bin
