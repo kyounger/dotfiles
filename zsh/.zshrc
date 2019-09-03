@@ -81,64 +81,102 @@ unsetopt CASE_GLOB
 
 
 #####################################################################
-# zplug
+# zplugin
 #####################################################################
 
-# because homebrew
-    export ZPLUG_HOME=/usr/local/opt/zplug
-    source $ZPLUG_HOME/init.zsh
+source ~/.zplugin/bin/zplugin.zsh
 
-# just plain useful and not very intrusive
-    zplug "popstas/zsh-command-time"
+turbo0()   { zplugin ice wait"0a" lucid             "${@}"; }
+turbo1()   { zplugin ice wait"0b" lucid             "${@}"; }
+turbo2()   { zplugin ice wait"0c" lucid             "${@}"; }
+zcommand() { zplugin ice wait"0b" lucid as"command" "${@}"; }
+zload()    { zplugin load                           "${@}"; }
+zsnippet() { zplugin snippet                        "${@}"; }
 
-# some basics
-    zplug "~/.dotfiles/zsh/", from:local, use:"zsh-vim-mode.zsh"
-    zplug "zsh-users/zsh-history-substring-search", defer:3
-    zplug "zsh-users/zsh-autosuggestions", defer:2
 
-# completion and highlighting stuff
-    zplug "~/.dotfiles/zsh/", from:local, use:"completion-zstyles.zsh"
-    zplug "docker/cli", use:contrib/completion/zsh
-    zplug "docker/compose", use:contrib/completion/zsh
-    zplug "zsh-users/zsh-syntax-highlighting", defer:2
+# show time after long commands
+zplugin ice lucid
+zload "popstas/zsh-command-time"
 
-    if [[ "$(uname)" == "Darwin" ]]; then
-        source $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
-        source $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
-    fi
+# my custom vim-mode
+zplugin ice lucid
+zsnippet "${HOME}/.dotfiles/zsh/zsh-vim-mode.zsh"
+
+# history searching
+zplugin ice lucid
+zload "zsh-users/zsh-history-substring-search"
+
+# autosuggest
+export ZSH_AUTOSUGGEST_USE_ASYNC=1
+export ZSH_AUTOSUGGEST_MANUAL_REBIND=1
+zplugin ice lucid atload"_zsh_autosuggest_start"
+zload zsh-users/zsh-autosuggestions
+
+# completion stuff
+zplugin ice lucid blockf
+zload zsh-users/zsh-completions
+
+zplugin ice lucid
+zsnippet "${HOME}/.dotfiles/zsh/completion-zstyles.zsh"
+
+zplugin ice as"completion"
+zplugin snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
+
+zplugin ice as"completion"
+zplugin snippet https://github.com/docker/compose/blob/master/contrib/completion/zsh/_docker-compose
+
+# if [[ "$(uname)" == "Darwin" ]]; then
+#     source $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
+#     source $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+# fi
+
+# Syntax highlighting
+# (compinit without `-i` spawns warning on `sudo -s`)
+zplugin ice wait"0a" lucid atinit"ZPLGM[COMPINIT_OPTS]='-i' zpcompinit; zpcdreplay"
+zload zdharma/fast-syntax-highlighting
 
 # z and fzf
-    export FZF_DEFAULT_COMMAND='fd --type file --follow --hidden --exclude .git'
-    export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-    zplug "junegunn/fzf-bin", as:command, from:gh-r, rename-to:fzf, use:"*${(L)$(uname -s)}*amd64*"
-    zplug "junegunn/fzf", use:"shell/*.zsh", as:plugin
+zcommand from"gh-r"
+zload junegunn/fzf-bin
 
-    export _Z_CMD=j
-    zplug "rupa/z", use:z.sh
-    zplug "andrewferrier/fzf-z"
+zcommand pick"bin/fzf-tmux"
+zload junegunn/fzf
+
+# Create and bind multiple widgets using fzf
+zplugin ice lucid multisrc"shell/{completion,key-bindings}.zsh" id-as"junegunn/fzf_completions" pick"/dev/null"
+zload junegunn/fzf
+
+# autojump command
+zplugin ice lucid atclone"touch '${HOME}/.z'"
+zload rupa/z
+
+# Pick from most frecent folders with `Ctrl+g`
+zplugin ice lucid
+zload andrewferrier/fzf-z
+
+# lets z+[Tab] and zz+[Tab]
+zplugin ice lucid
+zload changyuheng/fz
 
 # the theme I use
-    export GEOMETRY_PROMPT_PREFIX=
-    zplug "geometry-zsh/geometry"
+export GEOMETRY_PROMPT_PREFIX=
+zplugin ice lucid
+zload geometry-zsh/geometry
 
 # nvm
-    export NVM_LAZY_LOAD=true
-    zplug "lukechilds/zsh-nvm"
+export NVM_LAZY_LOAD=true
+zplugin ice lucid
+zload "lukechilds/zsh-nvm"
 
 # my aliases
-    zplug "~/.dotfiles/zsh/", from:local, use:"aliases.zsh", defer:1
+zplugin ice lucid
+zsnippet "${HOME}/.dotfiles/zsh/aliases.zsh"
 
-# Install plugins if there are plugins that have not been installed
-    if ! zplug check --verbose; then
-        printf "Install? [y/N]: "
-        if read -q; then
-            echo; zplug install
-        else
-            echo
-        fi
-    fi
 
-zplug load
+autoload -Uz compinit
+compinit
+
+zplugin cdreplay -q
 
 #####################################################################
 # misc
