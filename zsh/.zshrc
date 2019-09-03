@@ -92,7 +92,7 @@ unsetopt CASE_GLOB
     zplug "popstas/zsh-command-time"
 
 # some basics
-    zplug "~/.dotfiles/zsh/", from:local, use:"zsh-vim.zsh"
+    zplug "~/.dotfiles/zsh/", from:local, use:"zsh-vim-mode.zsh"
     zplug "zsh-users/zsh-history-substring-search", defer:3
     zplug "zsh-users/zsh-autosuggestions", defer:2
 
