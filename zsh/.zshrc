@@ -28,6 +28,7 @@ export LS_COLORS='di=93:ln=35:so=32:pi=33:ex=31:bd=36;01:cd=33;01:su=31;40;07:sg
 # Set the list of directories that Zsh searches for programs.
 path=(
   ~/bin
+  ${KREW_ROOT:-$HOME/.krew}/bin
   ~/.fastlane/bin
   /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin
   $path
