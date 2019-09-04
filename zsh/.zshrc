@@ -79,6 +79,24 @@ unsetopt MENU_COMPLETE     # Do not autoselect the first completion entry.
 unsetopt FLOW_CONTROL      # Disable start/stop characters in shell editor.
 unsetopt CASE_GLOB
 
+#####################################################################
+# misc
+#####################################################################
+
+# brew file options and wrapper sourcing
+export HOMEBREW_BREWFILE_APPSTORE=0
+export HOMEBREW_BREWFILE=~/.dotfiles/brewfile/Brewfile
+if [[ "$(uname)" == "Darwin" ]]; then
+    if [ -f $(brew --prefix)/etc/brew-wrap ]; then
+        source $(brew --prefix)/etc/brew-wrap
+    fi
+fi
+
+# jenv
+if [[ "$(uname)" == "Darwin" ]]; then
+    export JENV_ROOT=/usr/local/opt/jenv
+    if which jenv > /dev/null; then eval "$(jenv init -)"; fi
+fi
 
 #####################################################################
 # zplugin
@@ -130,10 +148,10 @@ zplugin snippet https://github.com/docker/compose/blob/master/contrib/completion
 #     source $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
 # fi
 
-# Syntax highlighting
-# (compinit without `-i` spawns warning on `sudo -s`)
-zplugin ice wait"0a" lucid atinit"ZPLGM[COMPINIT_OPTS]='-i' zpcompinit; zpcdreplay"
-zload zdharma/fast-syntax-highlighting
+# # Syntax highlighting
+# # (compinit without `-i` spawns warning on `sudo -s`)
+# zplugin ice wait"0a" lucid atinit"ZPLGM[COMPINIT_OPTS]='-i' zpcompinit; zpcdreplay"
+# zload zdharma/fast-syntax-highlighting
 
 # z and fzf
 zcommand from"gh-r"
@@ -172,28 +190,11 @@ zload "lukechilds/zsh-nvm"
 zplugin ice lucid
 zsnippet "${HOME}/.dotfiles/zsh/aliases.zsh"
 
+zplugin ice lucid
+zload zsh-users/zsh-syntax-highlighting
 
 autoload -Uz compinit
 compinit
 
 zplugin cdreplay -q
-
-#####################################################################
-# misc
-#####################################################################
-
-# brew file options and wrapper sourcing
-export HOMEBREW_BREWFILE_APPSTORE=0
-export HOMEBREW_BREWFILE=~/.dotfiles/brewfile/Brewfile
-if [[ "$(uname)" == "Darwin" ]]; then
-    if [ -f $(brew --prefix)/etc/brew-wrap ]; then
-        source $(brew --prefix)/etc/brew-wrap
-    fi
-fi
-
-# jenv
-if [[ "$(uname)" == "Darwin" ]]; then
-    export JENV_ROOT=/usr/local/opt/jenv
-    if which jenv > /dev/null; then eval "$(jenv init -)"; fi
-fi
 
