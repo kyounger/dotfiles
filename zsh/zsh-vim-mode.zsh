@@ -189,6 +189,8 @@ bindkey -M viins "$keys[Control]L" clear-screen # Clear screen.
 bindkey -M viins "$keys[Control] " glob-alias # control-space expands all aliases, including global
 bindkey -M viins "$keys[Control]I" expand-or-complete-with-indicator # Display an indicator when completing.
 bindkey -M viins "$keys[Control]N" add-kubectl-all-namespaces-but-kube-system
+# bindkey -M viins "$keys[Meta]$keys[Backspace]" backward-kill-word
+# bindkey -M viins '^[^?' backward-kill-word
 
 #
 # As you wish.
