@@ -624,99 +624,6 @@ let g:disable_all_plugins = 0
 " }}}
 " }}}
 " Filetype-specific ------------------------------------------------------- {{{
-
-" C {{{
-
-    augroup ft_c
-        au!
-        au FileType c setlocal foldmethod=marker foldmarker={,}
-    augroup END
-
-" }}}
-" Clojure {{{
-
-    " function! SlimvToggleRepl()
-    "     if bufname('%') ==# 'SLIMV.REPL'
-    "         let origin = b:pop_back_to
-    "         q
-    "         execute "" . origin . "wincmd w"
-    "     else
-    "         let origin = winnr()
-    "         vertical botright split
-    "         e SLIMV.REPL
-    "         let b:pop_back_to = origin
-    "     endif
-    " endfunction
-
-    let g:slimv_leader = '\'
-    let g:slimv_keybindings = 2
-
-    augroup ft_clojure
-        au!
-
-        au BufNewFile,BufRead riemann.config set filetype=clojure
-        au FileType clojure silent! call TurnOnClojureFolding()
-        au FileType clojure compiler clojure
-        au FileType clojure setlocal report=100000
-
-        au BufWinEnter            SLIMV.REPL setlocal nolist
-        au BufNewFile,BufReadPost SLIMV.REPL setlocal nowrap foldlevel=99
-        au BufNewFile,BufReadPost SLIMV.REPL nnoremap <buffer> A GA
-        au BufNewFile,BufReadPost SLIMV.REPL nnoremap <buffer> <localleader>R :emenu REPL.<Tab>
-
-        " Fix the eval mappings.
-        au FileType clojure nnoremap <buffer> <localleader>ef :<c-u>call SlimvEvalExp()<cr>
-        au FileType clojure nnoremap <buffer> <localleader>ee :<c-u>call SlimvEvalDefun()<cr>
-
-        " And the inspect mapping.
-        au FileType clojure nmap <buffer> \i \di
-
-        " And REPL-toggling mapping.
-        " au FileType clojure nnoremap <buffer> \rr :call SlimvToggleRepl()<cr>
-
-        " Indent top-level form.
-        au FileType clojure nmap <buffer> <localleader>= mz99[(v%='z
-    augroup END
-
-" }}}
-" Clojurescript {{{
-
-    augroup ft_clojurescript
-        au!
-
-        au BufNewFile,BufRead *.cljs set filetype=clojurescript
-        au FileType clojurescript call TurnOnClojureFolding()
-
-        " Indent top-level form.
-        au FileType clojurescript nmap <buffer> <localleader>= v((((((((((((=%
-    augroup END
-
-" }}}
-" Confluence {{{
-
-    augroup ft_c
-        au!
-
-        au BufRead,BufNewFile *.confluencewiki setlocal filetype=confluencewiki
-
-        " Wiki pages should be soft-wrapped.
-        au FileType confluencewiki setlocal wrap linebreak nolist
-    augroup END
-
-" }}}
-" Cram {{{
-
-    let cram_fold=1
-
-    augroup ft_cram
-        au!
-
-        au BufNewFile,BufRead *.t set filetype=cram
-        au Syntax cram setlocal foldlevel=1
-        au FileType cram nnoremap <buffer> <localleader>ee :e<cr>
-    augroup END
-
-" }}}
 " CSS and LessCSS {{{
 
     augroup ft_css
@@ -756,82 +663,6 @@ let g:disable_all_plugins = 0
     augroup END
 
 " }}}
-" Django {{{
-
-    augroup ft_django
-        au!
-
-        au BufNewFile,BufRead urls.py           setlocal nowrap
-        au BufNewFile,BufRead urls.py           normal! zR
-        au BufNewFile,BufRead dashboard.py      normal! zR
-        au BufNewFile,BufRead local_settings.py normal! zR
-
-        au BufNewFile,BufRead admin.py     setlocal filetype=python.django
-        au BufNewFile,BufRead urls.py      setlocal filetype=python.django
-        au BufNewFile,BufRead models.py    setlocal filetype=python.django
-        au BufNewFile,BufRead views.py     setlocal filetype=python.django
-        au BufNewFile,BufRead settings.py  setlocal filetype=python.django
-        au BufNewFile,BufRead settings.py  setlocal foldmethod=marker
-        au BufNewFile,BufRead forms.py     setlocal filetype=python.django
-        au BufNewFile,BufRead common_settings.py  setlocal filetype=python.django
-        au BufNewFile,BufRead common_settings.py  setlocal foldmethod=marker
-    augroup END
-
-" }}}
-" Firefox {{{
-
-    augroup ft_firefox
-        au!
-        au BufRead,BufNewFile ~/Library/Caches/*.html setlocal buftype=nofile
-    augroup END
-
-" }}}
-" Fish {{{
-
-    augroup ft_fish
-        au!
-
-        au BufNewFile,BufRead *.fish setlocal filetype=fish
-
-        au FileType fish setlocal foldmethod=marker foldmarker={{{,}}}
-    augroup END
-
-" }}}
-" Haskell {{{
-
-    augroup ft_haskell
-        au!
-        au BufEnter *.hs compiler ghc
-    augroup END
-
-" }}}
-" HTML and HTMLDjango {{{
-
-    let g:html_indent_tags = ['p', 'li']
-
-    augroup ft_html
-        au!
-
-        au BufNewFile,BufRead *.html setlocal filetype=htmldjango
-        au FileType html,jinja,htmldjango setlocal foldmethod=manual
-
-        " Use <localleader>f to fold the current tag.
-        au FileType html,jinja,htmldjango nnoremap <buffer> <localleader>f Vatzf
-
-        " Use <localleader>t to fold the current templatetag.
-        au FileType html,jinja,htmldjango noremap <buffer> <localleader>t viikojozf
-
-        " Indent tag
-        au FileType html,jinja,htmldjango nnoremap <buffer> <localleader>= Vat=
-
-        " Django tags
-        au FileType jinja,htmldjango inoremap <buffer> <c-t> {%<space><space>%}<left><left><left>
-
-        " Django variables
-        au FileType jinja,htmldjango inoremap <buffer> <c-f> {{<space><space>}}<left><left><left>
-    augroup END
-
-" }}}
 " Java {{{
 
     augroup ft_java
@@ -857,81 +688,6 @@ let g:disable_all_plugins = 0
     augroup END
 
 " }}}
-" Lisp {{{
-
-    augroup ft_lisp
-        au!
-        au FileType lisp call TurnOnLispFolding()
-        " au FileType lisp nnoremap <buffer> <localleader>ee mz99[(va("ry:call Send_to_Tmux(@r)<cr>
-        au FileType lisp nnoremap <buffer> <localleader>ee mz99[(:call SlimvEvalExp()<cr>`z
-
-        au FileType lisp nnoremap <buffer> <localleader>tt mz99[(vab"ry:call Send_to_Tmux(@r)<cr>`z
-        au FileType lisp nnoremap <buffer> <localleader>tb mzggVG"ry:call Send_to_Tmux(@r)<cr>`z
-    augroup END
-
-" }}}
-" Mail {{{
-
-    augroup ft_mail
-        au!
-
-        au Filetype mail setlocal spell
-    augroup END
-
-" }}}
-" Mercurial {{{
-
-    augroup ft_mercurial
-        au!
-
-        au BufNewFile,BufRead *hg-editor-*.txt setlocal filetype=hgcommit
-    augroup END
-
-" }}}
-" Mutt {{{
-
-    augroup ft_muttrc
-        au!
-
-        au BufRead,BufNewFile *.muttrc set ft=muttrc
-
-        au FileType muttrc setlocal foldmethod=marker foldmarker={{{,}}}
-    augroup END
-
-" }}}
-" Nginx {{{
-
-    augroup ft_nginx
-        au!
-
-        au BufRead,BufNewFile /etc/nginx/conf/*                      set ft=nginx
-        au BufRead,BufNewFile /etc/nginx/sites-available/*           set ft=nginx
-        au BufRead,BufNewFile /usr/local/etc/nginx/sites-available/* set ft=nginx
-        au BufRead,BufNewFile vhost.nginx                            set ft=nginx
-
-        au FileType nginx setlocal foldmethod=marker foldmarker={,}
-    augroup END
-
-" }}}
-" Pentadactyl {{{
-
-    augroup ft_pentadactyl
-        au!
-        au BufNewFile,BufRead .pentadactylrc set filetype=pentadactyl
-        au BufNewFile,BufRead ~/Library/Caches/TemporaryItems/pentadactyl-*.tmp set nolist wrap linebreak columns=100 colorcolumn=0
-    augroup END
-
-" }}}
-" Puppet {{{
-
-    augroup ft_puppet
-        au!
-
-        au Filetype puppet setlocal foldmethod=marker
-        au Filetype puppet setlocal foldmarker={,}
-    augroup END
-
-" }}}
 " Python {{{
 
     augroup ft_python
@@ -951,49 +707,11 @@ let g:disable_all_plugins = 0
     augroup END
 
 " }}}
-" QuickFix {{{
-
-    augroup ft_quickfix
-        au!
-        au Filetype qf setlocal colorcolumn=0 nolist nocursorline nowrap tw=0
-    augroup END
-
-" }}}
-" ReStructuredText {{{
-
-    augroup ft_rest
-        au!
-
-        au Filetype rst nnoremap <buffer> <localleader>1 yypVr=:redraw<cr>
-        au Filetype rst nnoremap <buffer> <localleader>2 yypVr-:redraw<cr>
-        au Filetype rst nnoremap <buffer> <localleader>3 yypVr~:redraw<cr>
-        au Filetype rst nnoremap <buffer> <localleader>4 yypVr`:redraw<cr>
-    augroup END
-
-" }}}
-" Riemann Config Files {{{
-
-    augroup ft_riemann
-        au!
-
-        au BufNewFile,BufRead riemann.config set filetype=clojure
-        au BufNewFile,BufRead riemann.config nnoremap <buffer> <localleader>= mzgg=G`z
-    augroup END
-
-" }}}
 " Ruby {{{
 
     augroup ft_ruby
         au!
         au Filetype ruby setlocal foldmethod=syntax
-    augroup END
-
-" }}}
-" Vagrant {{{
-
-    augroup ft_vagrant
-        au!
-        au BufRead,BufNewFile Vagrantfile set ft=ruby
     augroup END
 
 " }}}
@@ -1058,130 +776,12 @@ let g:disable_all_plugins = 0
     end
 
 " }}}
-" Linediff {{{
-
-    if neobundle#is_installed("linediff.vim")
-        vnoremap <leader>l :Linediff<cr>
-        nnoremap <leader>L :LinediffReset<cr>
-    end
-
-" }}}
 " Markdown {{{
 
     if neobundle#is_installed("vim-markdown")
         let g:vim_markdown_emphasis_multiline = 0
         let g:vim_markdown_no_default_key_mappings = 1
         let g:vim_markdown_folding_style_pythonic = 1
-    end
-
-" }}}
-" Powerline {{{
-
-    if neobundle#is_installed("vim-powerline")
-        " let g:Powerline_symbols = 'fancy'
-        let g:Powerline_cache_enabled = 1
-        " let g:Powerline_colorscheme = 'badwolf'
-    end
-
-" }}}
-" Python-Mode {{{
-
-    let g:pymode_doc = 1
-    let g:pymode_doc_key = '<localleader>ds'
-    let g:pydoc = 'pydoc'
-    let g:pymode_syntax = 1
-    let g:pymode_syntax_all = 0
-    let g:pymode_syntax_builtin_objs = 1
-    let g:pymode_syntax_print_as_function = 0
-    let g:pymode_syntax_space_errors = 0
-    let g:pymode_run = 0
-    let g:pymode_lint = 0
-    let g:pymode_breakpoint = 0
-    let g:pymode_utils_whitespaces = 0
-    let g:pymode_virtualenv = 0
-    let g:pymode_folding = 0
-
-    let g:pymode_options_indent = 0
-    let g:pymode_options_fold = 0
-    let g:pymode_options_other = 0
-
-    let g:pymode_rope = 1
-    let g:pymode_rope_global_prefix = "<localleader>R"
-    let g:pymode_rope_local_prefix = "<localleader>r"
-    let g:pymode_rope_auto_project = 1
-    let g:pymode_rope_enable_autoimport = 0
-    let g:pymode_rope_autoimport_generate = 1
-    let g:pymode_rope_autoimport_underlineds = 0
-    let g:pymode_rope_codeassist_maxfixes = 10
-    let g:pymode_rope_sorted_completions = 1
-    let g:pymode_rope_extended_complete = 1
-    let g:pymode_rope_autoimport_modules = ["os", "shutil", "datetime"]
-    let g:pymode_rope_confirm_saving = 1
-    let g:pymode_rope_vim_completion = 1
-    let g:pymode_rope_guess_project = 1
-    let g:pymode_rope_goto_def_newwin = 0
-    let g:pymode_rope_always_show_complete_menu = 0
-
-" }}}
-" Sparkup {{{
-
-    if neobundle#is_installed("vim-sparkup")
-        let g:sparkupNextMapping = '<c-s>'
-    end
-
-"}}}
-" Syntastic {{{
-
-    if neobundle#is_installed("syntastic")
-        let g:syntastic_enable_signs = 1
-        let g:syntastic_check_on_open = 1
-        let g:syntastic_disabled_filetypes = ['html', 'rst']
-        let g:syntastic_stl_format = '[%E{%e Errors}%B{, }%W{%w Warnings}]'
-        let g:syntastic_javascript_checkers=['jshint']
-        "let g:syntastic_jsl_conf = '$HOME/.vim/jsl.conf'
-    end
-
-" }}}
-" Splice {{{
-
-    if neobundle#is_installed("splice.vim")
-        " let g:splice_leader = "-"
-
-        let g:splice_initial_mode = "grid"
-
-        let g:splice_initial_layout_grid = 0
-        let g:splice_initial_layout_loupe = 0
-        let g:splice_initial_layout_compare = 0
-        let g:splice_initial_layout_path = 0
-
-        let g:splice_initial_diff_grid = 1
-        let g:splice_initial_diff_loupe = 0
-        let g:splice_initial_diff_compare = 1
-        let g:splice_initial_diff_path = 0
-
-        let g:splice_initial_scrollbind_grid = 0
-        let g:splice_initial_scrollbind_loupe = 0
-        let g:splice_initial_scrollbind_compare = 0
-        let g:splice_initial_scrollbind_path = 0
-
-        let g:splice_wrap = "nowrap"
-    end
-
-" }}}
-" WindowSwap {{{
-
-    if neobundle#is_installed("vim-windowswap")
-        let g:windowswap_map_keys = 0 "prevent default bindings
-        " nnoremap <silent> <leader>yw :call WindowSwap#MarkWindowSwap()<CR>
-        " nnoremap <silent> <leader>pw :call WindowSwap#DoWindowSwap()<CR>
-        nnoremap <silent> <leader><leader>w :call WindowSwap#EasyWindowSwap()<CR>"
-    end
-
-"}}}
-" RainbowParentheses {{{
-
-    if neobundle#is_installed("rainbow_parentheses.vim")
-        nnoremap <leader><leader>rp :RainbowParentheses!!<cr>
     end
 
 " }}}
@@ -1298,16 +898,18 @@ let g:disable_all_plugins = 0
         " Mouse support
         set mouse=a
 
-        "deal with oddities with tmux cursor
-        function! HandleCursor()
-            if mode() == 'i'
-                silent exec "! echo -ne '\e[5 q'"
-            else
-                silent exec "! echo -ne '\e[2 q'"
-            endif
-        endfunction
+        "deal with oddities with cursor in vim
+        if !has('nvim')
+            function! HandleCursor()
+                if mode() == 'i'
+                    silent exec "! echo -ne '\e[5 q'"
+                else
+                    silent exec "! echo -ne '\e[2 q'"
+                endif
+            endfunction
 
-        autocmd  FocusGained  * silent! call HandleCursor()
+            autocmd  FocusGained  * silent! call HandleCursor()
+        endif
 
     endif
 
