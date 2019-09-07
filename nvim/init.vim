@@ -25,7 +25,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'icymind/NeoSolarized'
 Plug 'kshenoy/vim-signature'
-Plug 'junegunn/vim-slash'
+Plug 'haya14busa/vim-asterisk'
 Plug 'junegunn/vim-pseudocl'
 Plug 'junegunn/vim-peekaboo'
 Plug 'tmux-plugins/vim-tmux-focus-events'
