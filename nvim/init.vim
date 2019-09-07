@@ -42,7 +42,7 @@ call plug#end()
 
 " my helper function
 function! IfPlugin(plugin_name)
-  return has_key(g:plugs, a:plugin_name)
+  return plug#is_loaded(a:plugin_name)
 endfunction
 
 " }}}
