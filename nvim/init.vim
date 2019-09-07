@@ -8,7 +8,7 @@ endif
 
 " Plugin Manager --------------------------------------------------------- {{{
 
-call plug#begin()
+call plug#begin('~/.cache/nvim/plugged')
 
 Plug 'fatih/vim-go', { 'tag': '*' }
 Plug 'vim-airline/vim-airline'
