@@ -1,5 +1,6 @@
 # zmodload zsh/zprof
 
+# TODO: add a global update function: https://github.com/jedahan/dotfiles/blob/master/.zshrc
 
 #####################################################################
 # environment
@@ -66,7 +67,7 @@ setopt PUSHD_SILENT         # Do not print the directory stack after pushd or po
 setopt PUSHD_TO_HOME        # Push to home directory when no argument is given.
 setopt CDABLE_VARS          # Change directory to a path stored in a variable.
 setopt AUTO_NAME_DIRS       # Auto add variable-stored paths to ~ list.
-unsetopt CLOBBER            # Do not overwrite existing files with > and >>.
+# unsetopt CLOBBER            # Do not overwrite existing files with > and >>.
 
 #globbing and completion
 setopt COMPLETE_IN_WORD    # Complete from both ends of a word.
@@ -112,6 +113,9 @@ zcommand() { zplugin ice wait"0b" lucid as"command" "${@}"; }
 zload()    { zplugin load                           "${@}"; }
 zsnippet() { zplugin snippet                        "${@}"; }
 
+# Assign each zsh session an unique ID, available in
+# ZUID_ID and also a codename (ZUID_CODENAME)
+zplugin load zdharma/zsh-unique-id
 
 # show time after long commands
 zplugin ice lucid
@@ -127,9 +131,15 @@ zload "zsh-users/zsh-history-substring-search"
 
 # autosuggest
 export ZSH_AUTOSUGGEST_USE_ASYNC=1
-export ZSH_AUTOSUGGEST_MANUAL_REBIND=1
-zplugin ice lucid atload"_zsh_autosuggest_start"
+# uncommenting next line should help with performance, but currently not experiencing any slowdown, so leave it commented
+# export ZSH_AUTOSUGGEST_MANUAL_REBIND=1
+# commenting out the next line seems to fix my problem.
+# zplugin ice lucid atload"_zsh_autosuggest_start" 
 zload zsh-users/zsh-autosuggestions
+
+
+# try adding this eventually:
+# https://github.com/unixorn/git-extra-commands
 
 # completion stuff
 zplugin ice lucid blockf
@@ -181,6 +191,10 @@ zload changyuheng/fz
 export GEOMETRY_PROMPT_PREFIX=
 zplugin ice lucid
 zload geometry-zsh/geometry
+
+# pure works, but needs customization
+# zplugin ice pick"async.zsh" src"pure.zsh"
+# zplugin light sindresorhus/pure
 
 # nvm
 export NVM_LAZY_LOAD=true
