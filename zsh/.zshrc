@@ -100,6 +100,12 @@ if [[ "$(uname)" == "Darwin" ]]; then
     if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 fi
 
+VIMPLUG=~/.local/share/nvim/site/autoload/plug.vim
+if ! [[ -a $VIMPLUG ]]; then
+    echo "vim-plug not installed for neovim; downloading..."
+    curl -sfLo $VIMPLUG --create-dirs https://raw.githubusercontent.com/kyounger/vim-plug/master/plug.vim
+fi
+
 #####################################################################
 # zplugin
 #####################################################################

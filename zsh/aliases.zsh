@@ -1,7 +1,8 @@
 # Disable correction.
 
 #it's happening
-alias vim='nvim'
+alias vim=nvim
+alias vi=nvim
 
 alias ack='nocorrect ack'
 alias cd='nocorrect cd'
