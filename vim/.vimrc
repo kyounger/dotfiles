@@ -1,6 +1,6 @@
 " .vimrc_
 " Author: Kenny Younger <kyounger@gmail.com>
-" Credits And Huge Props: Tim Pope, Steve Losh, Shougo Matsu, Steve Morrow
+" Credits And Huge Props: Tim Pope, Steve Losh, Shougo Matsu, Junegunn Choi, Steve Morrow
 
 let g:disable_all_plugins = 0
 
@@ -10,7 +10,9 @@ let g:disable_all_plugins = 0
     if !1 | finish | endif
 
         if has('vim_starting')
-            set nocompatible
+            if &compatible
+                set nocompatible
+            endif
             set runtimepath+=~/.vim/neobundle/
         endif
 
@@ -41,7 +43,7 @@ let g:disable_all_plugins = 0
                 NeoBundle 'airblade/vim-gitgutter', {'directory': 'gitgutter'}
                 NeoBundle 'terryma/vim-expand-region', { 'directory': 'expand-region' } "mapped to +
                 NeoBundle 'junegunn/vim-pseudocl' "Replaces command-line, required by vim-oblique
-                NeoBundle 'junegunn/vim-oblique' "Make searching usable, requires vim-pseudocl
+                NeoBundle 'junegunn/vim-slash'
                 NeoBundle 'junegunn/vim-peekaboo'
                 NeoBundle 'Lokaltog/vim-powerline', { 'directory': 'vim-powerline' }
                 NeoBundle 'maxbrunsfeld/vim-yankstack'
@@ -54,7 +56,7 @@ let g:disable_all_plugins = 0
             "Utilities
             NeoBundle 'sjl/AnsiEsc.vim', { 'directory': 'AnsiEsc.vim' } "esc sequences look pretty
             NeoBundle 'sjl/vitality.vim', { 'directory': 'vitality.vim' } "iterm2 and tmux helper
-            NeoBundle 'tpope/vim-scriptease'
+
             NeoBundle 'mrk21/yaml-vim'
 
 
@@ -95,7 +97,7 @@ let g:disable_all_plugins = 0
             " NeoBundle 'wesQ3/vim-windowswap', { 'directory': 'windowswap' }
 
 	    "Hex editing
-	    NeoBundle 'fidian/hexmode'
+	        NeoBundle 'fidian/hexmode'
 
             "Insert mode plugin. Helps with pairs of () [] {}
             " NeoBundle 'kana/vim-smartinput', { 'directory': 'smartinput' }
@@ -132,7 +134,6 @@ let g:disable_all_plugins = 0
 
 " }}}
 " Settings and Mappings --------------------------------------------------- {{{
-
 " Sensible Defaults: {{{
 
     set encoding=utf-8
@@ -585,7 +586,7 @@ let g:disable_all_plugins = 0
         nnoremap N Nzzzv
     end
 
-    function! HiInterestingWord(n) " {{{2
+    function! HiInterestingWord(n) " {{{
         " Save our location.
         normal! mz
         " Yank the current word into the z register.
@@ -620,6 +621,7 @@ let g:disable_all_plugins = 0
 
 "}}}
 
+" }}}
 " }}}
 " Filetype-specific ------------------------------------------------------- {{{
 
