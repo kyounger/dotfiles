@@ -145,7 +145,6 @@ brew yara
 brew yasm
 brew youtube-dl
 brew yq
-brew zplug
 
 tap argon/mas
 

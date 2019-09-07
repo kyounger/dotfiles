@@ -17,14 +17,11 @@ echo env HOME is: $HOME
 
 cd $HOME
 
-brew install zplug
 brew install kyounger/file/brew-file
 
 ln -fs $HOME/.dotfiles/bin
 
-ln -fs $HOME/.dotfiles/.config
-
-cd $HOME/.config/brewfile/
+cd $HOME/.dotfiles/brewfile/
 ln -fs Brewfile.$MACHINE_CONFIG_TYPE Brewfile.local
 cd $HOME
 
