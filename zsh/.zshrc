@@ -29,6 +29,7 @@ export LS_COLORS='di=93:ln=35:so=32:pi=33:ex=31:bd=36;01:cd=33;01:su=31;40;07:sg
 # Set the list of directories that Zsh searches for programs.
 path=(
   ~/bin
+  $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin
   ${KREW_ROOT:-$HOME/.krew}/bin
   ~/.fastlane/bin
   /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin
@@ -127,9 +128,9 @@ zplugin load zdharma/zsh-unique-id
 zplugin ice lucid
 zload "popstas/zsh-command-time"
 
-# my custom vim-mode
-zplugin ice lucid
-zsnippet "${HOME}/.dotfiles/zsh/zsh-vim-mode.zsh"
+# # my custom vim-mode
+# zplugin ice lucid
+# zsnippet "${HOME}/.dotfiles/zsh/zsh-vim-mode.zsh"
 
 # history searching
 zplugin ice lucid
@@ -214,8 +215,19 @@ zsnippet "${HOME}/.dotfiles/zsh/aliases.zsh"
 zplugin ice lucid
 zload zsh-users/zsh-syntax-highlighting
 
+MODE_CURSOR_VICMD="green block"
+MODE_CURSOR_VIINS="#20d08a blinking bar"
+MODE_CURSOR_SEARCH="#ff00ff steady underline"
+# my fork of another vim-mode plugin
+zplugin ice lucid
+zload "kyounger/zsh-vim-mode"
+
+
 autoload -Uz compinit
 compinit
 
 zplugin cdreplay -q
 
+# if [[ "$(uname)" == "Darwin" ]]; then
+#     source $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+# fi

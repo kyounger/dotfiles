@@ -22,6 +22,11 @@ Plug 'tmux-plugins/vim-tmux-focus-events'
 let g:deoplete#enable_at_startup = 1
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
+let g:indexed_search_mappings = 0
+Plug 'henrik/vim-indexed-search'
+noremap <silent> <Plug>(slash-after) :<C-u>ShowSearchIndex<CR>
+xunmap <Plug>(slash-after)
+
 Plug 'jiangmiao/auto-pairs'
 Plug 'icymind/NeoSolarized'
 Plug 'kshenoy/vim-signature'
@@ -571,10 +576,10 @@ endfunction
     " GitGutter {{{
         if IfPlugin('vim-gitgutter')
             nnoremap <F4> :GitGutterToggle<cr>
-            nmap <Leader>hn <Plug>GitGutterNextHunk
-            nmap <Leader>hp <Plug>GitGutterPrevHunk
-            nmap <Leader>hs <Plug>GitGutterStageHunk
-            nmap <Leader>hu <Plug>GitGutterUndoHunk
+            nmap <Leader>hn <Plug>(GitGutterNextHunk)
+            nmap <Leader>hp <Plug>(GitGutterPrevHunk)
+            nmap <Leader>hs <Plug>(GitGutterStageHunk)
+            nmap <Leader>hu <Plug>(GitGutterUndoHunk)
         endif
     " }}}
     " Fugitive {{{
