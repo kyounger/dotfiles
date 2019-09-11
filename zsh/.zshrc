@@ -78,6 +78,7 @@ setopt AUTO_MENU           # Show completion menu on a successive tab press.
 setopt AUTO_LIST           # Automatically list choices on ambiguous completion.
 setopt AUTO_PARAM_SLASH    # If completed parameter is a directory, add a trailing slash.
 setopt EXTENDED_GLOB       # Needed for file modification glob modifiers with compinit
+setopt GLOBDOTS            # I like to see my dots
 unsetopt MENU_COMPLETE     # Do not autoselect the first completion entry.
 unsetopt FLOW_CONTROL      # Disable start/stop characters in shell editor.
 unsetopt CASE_GLOB
@@ -128,21 +129,20 @@ zplugin load zdharma/zsh-unique-id
 zplugin ice lucid
 zload "popstas/zsh-command-time"
 
-# # my custom vim-mode
+# my custom vim-mode
 # zplugin ice lucid
 # zsnippet "${HOME}/.dotfiles/zsh/zsh-vim-mode.zsh"
+
+MODE_CURSOR_VICMD="#ffffff steady block"
+MODE_CURSOR_VIINS="#ffffff steady bar"
+MODE_CURSOR_SEARCH="#ffffff steady underline"
+# my fork of another vim-mode plugin
+zplugin ice lucid
+zload "kyounger/zsh-vim-mode"
 
 # history searching
 zplugin ice lucid
 zload "zsh-users/zsh-history-substring-search"
-
-# autosuggest
-export ZSH_AUTOSUGGEST_USE_ASYNC=1
-# uncommenting next line should help with performance, but currently not experiencing any slowdown, so leave it commented
-# export ZSH_AUTOSUGGEST_MANUAL_REBIND=1
-# commenting out the next line seems to fix my problem.
-# zplugin ice lucid atload"_zsh_autosuggest_start" 
-zload zsh-users/zsh-autosuggestions
 
 
 # try adding this eventually:
@@ -212,16 +212,16 @@ zload "lukechilds/zsh-nvm"
 zplugin ice lucid
 zsnippet "${HOME}/.dotfiles/zsh/aliases.zsh"
 
+# autosuggest
+export ZSH_AUTOSUGGEST_USE_ASYNC=1
+# uncommenting next line should help with performance, but currently not experiencing any slowdown, so leave it commented
+# export ZSH_AUTOSUGGEST_MANUAL_REBIND=1
+# commenting out the next line seems to fix my problem.
+zplugin ice lucid atload"_zsh_autosuggest_start"
+zload zsh-users/zsh-autosuggestions
+
 zplugin ice lucid
 zload zsh-users/zsh-syntax-highlighting
-
-MODE_CURSOR_VICMD="green block"
-MODE_CURSOR_VIINS="#20d08a blinking bar"
-MODE_CURSOR_SEARCH="#ff00ff steady underline"
-# my fork of another vim-mode plugin
-zplugin ice lucid
-zload "kyounger/zsh-vim-mode"
-
 
 autoload -Uz compinit
 compinit
