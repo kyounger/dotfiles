@@ -39,6 +39,15 @@ path=(
 autoload -Uz bracketed-paste-url-magic && zle -N bracketed-paste bracketed-paste-url-magic
 
 #####################################################################
+# my vim-mode
+#####################################################################
+
+# MODE_CURSOR_VICMD="#ffffff steady block"
+# MODE_CURSOR_VIINS="#ffffff steady bar"
+# MODE_CURSOR_SEARCH="#ffffff steady underline"
+# source "${HOME}/code/zsh-vim-mode/zsh-vim-mode.plugin.zsh"
+
+#####################################################################
 # setopts
 #####################################################################
 
@@ -108,6 +117,13 @@ if ! [[ -a $VIMPLUG ]]; then
     curl -sfLo $VIMPLUG --create-dirs https://raw.githubusercontent.com/kyounger/vim-plug/master/plug.vim
 fi
 
+
+#####################################################################
+# aliases
+#####################################################################
+
+source "${HOME}/.dotfiles/zsh/aliases.zsh"
+
 #####################################################################
 # zplugin
 #####################################################################
@@ -133,16 +149,12 @@ zload "popstas/zsh-command-time"
 # zplugin ice lucid
 # zsnippet "${HOME}/.dotfiles/zsh/zsh-vim-mode.zsh"
 
-MODE_CURSOR_VICMD="#ffffff steady block"
-MODE_CURSOR_VIINS="#ffffff steady bar"
-MODE_CURSOR_SEARCH="#ffffff steady underline"
-# my fork of another vim-mode plugin
-zplugin ice lucid
-zload "kyounger/zsh-vim-mode"
-
-# history searching
-zplugin ice lucid
-zload "zsh-users/zsh-history-substring-search"
+# MODE_CURSOR_VICMD="#ffffff steady block"
+# MODE_CURSOR_VIINS="#ffffff steady bar"
+# MODE_CURSOR_SEARCH="#ffffff steady underline"
+# # my fork of another vim-mode plugin
+# zplugin ice lucid
+# zload "kyounger/zsh-vim-mode"
 
 
 # try adding this eventually:
@@ -151,9 +163,6 @@ zload "zsh-users/zsh-history-substring-search"
 # completion stuff
 zplugin ice lucid blockf
 zload zsh-users/zsh-completions
-
-zplugin ice lucid
-zsnippet "${HOME}/.dotfiles/zsh/completion-zstyles.zsh"
 
 zplugin ice as"completion"
 zplugin snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
@@ -171,28 +180,28 @@ zplugin snippet https://github.com/docker/compose/blob/master/contrib/completion
 # zplugin ice wait"0a" lucid atinit"ZPLGM[COMPINIT_OPTS]='-i' zpcompinit; zpcdreplay"
 # zload zdharma/fast-syntax-highlighting
 
-# z and fzf
-zcommand from"gh-r"
-zload junegunn/fzf-bin
+# # z and fzf
+# zcommand from"gh-r"
+# zload junegunn/fzf-bin
 
-zcommand pick"bin/fzf-tmux"
-zload junegunn/fzf
+# zcommand pick"bin/fzf-tmux"
+# zload junegunn/fzf
 
-# Create and bind multiple widgets using fzf
-zplugin ice lucid multisrc"shell/{completion,key-bindings}.zsh" id-as"junegunn/fzf_completions" pick"/dev/null"
-zload junegunn/fzf
+# # Create and bind multiple widgets using fzf
+# zplugin ice lucid multisrc"shell/{completion,key-bindings}.zsh" id-as"junegunn/fzf_completions" pick"/dev/null"
+# zload junegunn/fzf
 
-# autojump command
-zplugin ice lucid atclone"touch '${HOME}/.z'"
-zload rupa/z
+# # autojump command
+# zplugin ice lucid atclone"touch '${HOME}/.z'"
+# zload rupa/z
 
-# Pick from most frecent folders with `Ctrl+g`
-zplugin ice lucid
-zload andrewferrier/fzf-z
+# # Pick from most frecent folders with `Ctrl+g`
+# zplugin ice lucid
+# zload andrewferrier/fzf-z
 
-# lets z+[Tab] and zz+[Tab]
-zplugin ice lucid
-zload changyuheng/fz
+# # lets z+[Tab] and zz+[Tab]
+# zplugin ice lucid
+# zload changyuheng/fz
 
 # the theme I use
 export GEOMETRY_PROMPT_PREFIX=
@@ -208,10 +217,6 @@ export NVM_LAZY_LOAD=true
 zplugin ice lucid
 zload "lukechilds/zsh-nvm"
 
-# my aliases
-zplugin ice lucid
-zsnippet "${HOME}/.dotfiles/zsh/aliases.zsh"
-
 # autosuggest
 export ZSH_AUTOSUGGEST_USE_ASYNC=1
 # uncommenting next line should help with performance, but currently not experiencing any slowdown, so leave it commented
@@ -223,10 +228,16 @@ zload zsh-users/zsh-autosuggestions
 zplugin ice lucid
 zload zsh-users/zsh-syntax-highlighting
 
+# history searching
+zplugin ice lucid
+zload "zsh-users/zsh-history-substring-search"
+
 autoload -Uz compinit
 compinit
 
 zplugin cdreplay -q
+
+source "${HOME}/.dotfiles/zsh/completion-zstyles.zsh"
 
 # if [[ "$(uname)" == "Darwin" ]]; then
 #     source $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
