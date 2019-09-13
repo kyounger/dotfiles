@@ -96,6 +96,7 @@ brew nginx
 brew nmap
 brew node
 brew npth
+brew octant
 brew oniguruma
 brew openjpeg
 brew openssl
@@ -103,6 +104,7 @@ brew openssl@1.1
 brew opus
 brew p11-kit
 brew pcre
+brew pcre2
 brew pdftohtml
 brew peco
 brew pinentry
@@ -172,6 +174,7 @@ brew gpg
 brew kubectl
 brew phantomjs
 brew python3
+brew rg
 
 # Other Cask applications
 cask adium

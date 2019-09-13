@@ -38,14 +38,37 @@ path=(
 
 autoload -Uz bracketed-paste-url-magic && zle -N bracketed-paste bracketed-paste-url-magic
 
+PS1="READY > "
+
 #####################################################################
 # my vim-mode
 #####################################################################
 
-# MODE_CURSOR_VICMD="#ffffff steady block"
-# MODE_CURSOR_VIINS="#ffffff steady bar"
-# MODE_CURSOR_SEARCH="#ffffff steady underline"
-# source "${HOME}/code/zsh-vim-mode/zsh-vim-mode.plugin.zsh"
+# source "${HOME}/.dotfiles/zsh/zsh-vim-mode.plugin.zsh"
+
+# vim-mode-bindkey viins       -- beginning-of-line                  Home
+# vim-mode-bindkey viins       -- end-of-line                        End
+# vim-mode-bindkey viins       -- backward-word                      Ctrl-Left
+# vim-mode-bindkey viins       -- backward-word                      Alt-Left
+# vim-mode-bindkey viins       -- forward-word                       Ctrl-Right
+# vim-mode-bindkey viins       -- forward-word                       Alt-Right
+# vim-mode-bindkey viins       -- delete-char                        Delete
+# vim-mode-bindkey viins       -- reverse-menu-complete              Shift-Tab
+
+# vim-mode-bindkey       vicmd -- redo                               '^R'
+# vim-mode-bindkey       vicmd -- vi-yank-eol                        'Y'
+
+# # edit-command-line {{{1
+# vim-mode-bindkey       vicmd -- edit-command-line                  '^V'
+
+# # history-substring-search {{{1
+# if [[ -n $HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND ]]; then
+#     vim-mode-bindkey viins vicmd -- history-substring-search-up         Up
+#     vim-mode-bindkey viins vicmd -- history-substring-search-down       Down
+# else
+#     vim-mode-bindkey viins vicmd -- history-beginning-search-backward   Up
+#     vim-mode-bindkey viins vicmd -- history-beginning-search-forward    Down
+# fi
 
 #####################################################################
 # setopts
@@ -129,40 +152,40 @@ source "${HOME}/.dotfiles/zsh/aliases.zsh"
 #####################################################################
 
 source ~/.zplugin/bin/zplugin.zsh
-
-turbo0()   { zplugin ice wait"0a" lucid             "${@}"; }
-turbo1()   { zplugin ice wait"0b" lucid             "${@}"; }
-turbo2()   { zplugin ice wait"0c" lucid             "${@}"; }
-zcommand() { zplugin ice wait"0b" lucid as"command" "${@}"; }
-zload()    { zplugin load                           "${@}"; }
-zsnippet() { zplugin snippet                        "${@}"; }
+autoload -Uz _zplugin
+(( ${+_comps} )) && _comps[zplugin]=_zplugin
 
 # Assign each zsh session an unique ID, available in
 # ZUID_ID and also a codename (ZUID_CODENAME)
 zplugin load zdharma/zsh-unique-id
 
-# show time after long commands
-zplugin ice lucid
-zload "popstas/zsh-command-time"
+# zdharma/history-search-multi-word
+zstyle ":history-search-multi-word" page-size "11"
+zplugin ice wait"1" lucid
+zplugin load zdharma/history-search-multi-word
 
-# my custom vim-mode
-# zplugin ice lucid
-# zsnippet "${HOME}/.dotfiles/zsh/zsh-vim-mode.zsh"
+# Theme no. 4 – geometry
+GEOMETRY_PROMPT=(geometry_echo geometry_status geometry_jobs geometry_path)
+GEOMETRY_RPROMPT=(geometry_git geometry_exec_time geometry_kube)
+GEOMETRY_EXEC_TIME_PATIENCE=3
 
-# MODE_CURSOR_VICMD="#ffffff steady block"
-# MODE_CURSOR_VIINS="#ffffff steady bar"
-# MODE_CURSOR_SEARCH="#ffffff steady underline"
-# # my fork of another vim-mode plugin
-# zplugin ice lucid
-# zload "kyounger/zsh-vim-mode"
+zplugin ice lucid load'![[ $MYPROMPT = 1 ]]' unload'![[ $MYPROMPT != 1 ]]' \
+    atload"geometry::prompt"
+zplugin load geometry-zsh/geometry
 
+# Autosuggestions & fast-syntax-highlighting
+zplugin ice wait"1b" lucid atload"_zsh_autosuggest_start" \
+    wrap-track"_zsh_autosuggest_start"
+zplugin load zsh-users/zsh-autosuggestions
+zplugin ice wait"1" lucid atinit"ZPLGM[COMPINIT_OPTS]=-C; zpcompinit; zpcdreplay"
+zplugin light zdharma/fast-syntax-highlighting
 
 # try adding this eventually:
 # https://github.com/unixorn/git-extra-commands
 
 # completion stuff
 zplugin ice lucid blockf
-zload zsh-users/zsh-completions
+zplugin load zsh-users/zsh-completions
 
 zplugin ice as"completion"
 zplugin snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
@@ -170,72 +193,34 @@ zplugin snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh
 zplugin ice as"completion"
 zplugin snippet https://github.com/docker/compose/blob/master/contrib/completion/zsh/_docker-compose
 
-# if [[ "$(uname)" == "Darwin" ]]; then
-#     source $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
-#     source $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
-# fi
+# zplugin ice wait"0b" lucid as"command" from"gh-r"
+# zplugin load junegunn/fzf-bin
 
-# # Syntax highlighting
-# # (compinit without `-i` spawns warning on `sudo -s`)
-# zplugin ice wait"0a" lucid atinit"ZPLGM[COMPINIT_OPTS]='-i' zpcompinit; zpcdreplay"
-# zload zdharma/fast-syntax-highlighting
-
-# # z and fzf
-# zcommand from"gh-r"
-# zload junegunn/fzf-bin
-
-# zcommand pick"bin/fzf-tmux"
-# zload junegunn/fzf
+# zplugin ice wait"0b" lucid as"command" pick"bin/fzf-tmux"
+# zplugin load junegunn/fzf
 
 # # Create and bind multiple widgets using fzf
 # zplugin ice lucid multisrc"shell/{completion,key-bindings}.zsh" id-as"junegunn/fzf_completions" pick"/dev/null"
-# zload junegunn/fzf
+# zplugin load junegunn/fzf
 
 # # autojump command
 # zplugin ice lucid atclone"touch '${HOME}/.z'"
-# zload rupa/z
+# zplugin load rupa/z
 
 # # Pick from most frecent folders with `Ctrl+g`
 # zplugin ice lucid
-# zload andrewferrier/fzf-z
+# zplugin load andrewferrier/fzf-z
 
 # # lets z+[Tab] and zz+[Tab]
 # zplugin ice lucid
-# zload changyuheng/fz
+# zplugin load changyuheng/fz
 
-# the theme I use
-export GEOMETRY_PROMPT_PREFIX=
-zplugin ice lucid
-zload geometry-zsh/geometry
+# # nvm
+# export NVM_LAZY_LOAD=true
+# zplugin ice lucid
+# zplugin load "lukechilds/zsh-nvm"
 
-# pure works, but needs customization
-# zplugin ice pick"async.zsh" src"pure.zsh"
-# zplugin light sindresorhus/pure
-
-# nvm
-export NVM_LAZY_LOAD=true
-zplugin ice lucid
-zload "lukechilds/zsh-nvm"
-
-# autosuggest
-export ZSH_AUTOSUGGEST_USE_ASYNC=1
-# uncommenting next line should help with performance, but currently not experiencing any slowdown, so leave it commented
-# export ZSH_AUTOSUGGEST_MANUAL_REBIND=1
-# commenting out the next line seems to fix my problem.
-zplugin ice lucid atload"_zsh_autosuggest_start"
-zload zsh-users/zsh-autosuggestions
-
-zplugin ice lucid
-zload zsh-users/zsh-syntax-highlighting
-
-# history searching
-zplugin ice lucid
-zload "zsh-users/zsh-history-substring-search"
-
-autoload -Uz compinit
-compinit
-
-zplugin cdreplay -q
+MYPROMPT=1
 
 source "${HOME}/.dotfiles/zsh/completion-zstyles.zsh"
 
