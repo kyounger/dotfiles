@@ -27,7 +27,6 @@ Plug 'henrik/vim-indexed-search'
 noremap <silent> <Plug>(slash-after) :<C-u>ShowSearchIndex<CR>
 xunmap <Plug>(slash-after)
 
-Plug 'jiangmiao/auto-pairs'
 Plug 'icymind/NeoSolarized'
 Plug 'kshenoy/vim-signature'
 Plug 'kyounger/vim-slash'

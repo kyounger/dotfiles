@@ -88,9 +88,9 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>837 835 796 486 0 0 3840 1577 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 2300 1577 0 0 3840 1577 </string>
+	<string>0 0 1969 1577 0 0 3840 1577 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>591 453 1383 1064 0 0 3840 1577 </string>
+	<string>591 958 745 552 0 0 3840 1577 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>0 1125 585 452 0 0 3840 1577 </string>
 	<key>New Bookmarks</key>
@@ -628,7 +628,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Monaco 12</string>
+			<string>Monaco 14</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -713,7 +713,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>D4CE1237-868A-4892-93E8-622759EF1358</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>15</integer>
+	<integer>21</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -1470,7 +1470,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-09-05T15:17:18Z</date>
+	<date>2019-09-12T17:06:21Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>

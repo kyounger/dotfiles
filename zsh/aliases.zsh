@@ -48,6 +48,7 @@ alias kcg='kubectl get'
 alias kcga='kubectl get all'
 alias kcd='kubectl describe'
 alias kcl='kubectl logs'
+alias kce='kubectl get events -A --sort-by="{.lastTimestamp}"'
 
 alias kx='kubectx'
 alias kn='kubens'
