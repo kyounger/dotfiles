@@ -40,12 +40,6 @@ autoload -Uz bracketed-paste-url-magic && zle -N bracketed-paste bracketed-paste
 
 PS1="READY > "
 
-#####################################################################
-# my vim-mode
-#####################################################################
-
-# source "${HOME}/.dotfiles/zsh/zsh-vim-mode.plugin.zsh"
-
 vim-mode-plugin-bindkey-callback() {
     vim-mode-bindkey viins       -- beginning-of-line                  Home
     vim-mode-bindkey viins       -- end-of-line                        End
@@ -59,14 +53,15 @@ vim-mode-plugin-bindkey-callback() {
     vim-mode-bindkey       vicmd -- edit-command-line                  '^V'
     vim-mode-bindkey viins vicmd -- history-beginning-search-backward   Up
     vim-mode-bindkey viins vicmd -- history-beginning-search-forward    Down
+
+    if [[ -n $HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND ]]; then
+        vim-mode-bindkey viins vicmd -- history-substring-search-up         Up
+        vim-mode-bindkey viins vicmd -- history-substring-search-down       Down
+    else
+        vim-mode-bindkey viins vicmd -- history-beginning-search-backward   Up
+        vim-mode-bindkey viins vicmd -- history-beginning-search-forward    Down
+    fi
 }
-
-history-substring-plugin-bindkey-callback() {
-    vim-mode-bindkey viins vicmd -- history-substring-search-up         Up
-    vim-mode-bindkey viins vicmd -- history-substring-search-down       Down
-}
-
-
 #####################################################################
 # zplugin
 #####################################################################
@@ -137,10 +132,10 @@ zplugin load zsh-users/zsh-autosuggestions
 zplugin ice lucid #atinit"ZPLGM[COMPINIT_OPTS]=-C; zpcompinit; zpcdreplay"
 zplugin load zsh-users/zsh-syntax-highlighting
 
-zplugin ice lucid atload"history-substring-plugin-bindkey-callback" atinit"zpcompinit; zpcdreplay"
+zplugin ice lucid #atload"history-substring-plugin-bindkey-callback"
 zplugin load zsh-users/zsh-history-substring-search
 
-zplugin ice lucid atload"vim-mode-plugin-bindkey-callback"
+zplugin ice lucid atinit"zpcompinit; zpcdreplay" atload"vim-mode-plugin-bindkey-callback"
 # zplugin load _local/zsh-vim-mode
 zplugin load kyounger/zsh-vim-mode
 
@@ -223,3 +218,8 @@ fi
 #####################################################################
 
 source "${HOME}/.dotfiles/zsh/aliases.zsh"
+
+#####################################################################
+# my vim-mode
+#####################################################################
+
