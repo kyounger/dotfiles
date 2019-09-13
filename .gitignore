@@ -12,3 +12,5 @@ BetterTouchTool/BetterTouchToolApplicationSupport/bettertouchtool.bttlicense
 .config/karabiner/automatic_backups
 bin/jx
 nvim/.netrwhist
+*.zwc
+._zplugin
