@@ -46,29 +46,106 @@ PS1="READY > "
 
 # source "${HOME}/.dotfiles/zsh/zsh-vim-mode.plugin.zsh"
 
-# vim-mode-bindkey viins       -- beginning-of-line                  Home
-# vim-mode-bindkey viins       -- end-of-line                        End
-# vim-mode-bindkey viins       -- backward-word                      Ctrl-Left
-# vim-mode-bindkey viins       -- backward-word                      Alt-Left
-# vim-mode-bindkey viins       -- forward-word                       Ctrl-Right
-# vim-mode-bindkey viins       -- forward-word                       Alt-Right
-# vim-mode-bindkey viins       -- delete-char                        Delete
-# vim-mode-bindkey viins       -- reverse-menu-complete              Shift-Tab
+vim-mode-plugin-bindkey-callback() {
+    vim-mode-bindkey viins       -- beginning-of-line                  Home
+    vim-mode-bindkey viins       -- end-of-line                        End
+    vim-mode-bindkey viins       -- backward-word                      Ctrl-Left
+    vim-mode-bindkey viins       -- backward-word                      Alt-Left
+    vim-mode-bindkey viins       -- forward-word                       Ctrl-Right
+    vim-mode-bindkey viins       -- forward-word                       Alt-Right
+    vim-mode-bindkey viins       -- delete-char                        Delete
+    vim-mode-bindkey viins       -- reverse-menu-complete              Shift-Tab
+    vim-mode-bindkey       vicmd -- redo                               '^R'
+    vim-mode-bindkey       vicmd -- edit-command-line                  '^V'
+    vim-mode-bindkey viins vicmd -- history-beginning-search-backward   Up
+    vim-mode-bindkey viins vicmd -- history-beginning-search-forward    Down
+}
 
-# vim-mode-bindkey       vicmd -- redo                               '^R'
-# vim-mode-bindkey       vicmd -- vi-yank-eol                        'Y'
+history-substring-plugin-bindkey-callback() {
+    vim-mode-bindkey viins vicmd -- history-substring-search-up         Up
+    vim-mode-bindkey viins vicmd -- history-substring-search-down       Down
+}
 
-# # edit-command-line {{{1
-# vim-mode-bindkey       vicmd -- edit-command-line                  '^V'
 
-# # history-substring-search {{{1
-# if [[ -n $HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND ]]; then
-#     vim-mode-bindkey viins vicmd -- history-substring-search-up         Up
-#     vim-mode-bindkey viins vicmd -- history-substring-search-down       Down
-# else
-#     vim-mode-bindkey viins vicmd -- history-beginning-search-backward   Up
-#     vim-mode-bindkey viins vicmd -- history-beginning-search-forward    Down
+#####################################################################
+# zplugin
+#####################################################################
+
+source ~/.zplugin/bin/zplugin.zsh
+autoload -Uz _zplugin
+(( ${+_comps} )) && _comps[zplugin]=_zplugin
+
+# Assign each zsh session an unique ID, available in
+# ZUID_ID and also a codename (ZUID_CODENAME)
+zplugin load zdharma/zsh-unique-id
+
+GEOMETRY_PROMPT=(geometry_echo geometry_status geometry_jobs geometry_path)
+GEOMETRY_RPROMPT=(geometry_git geometry_exec_time geometry_kube)
+GEOMETRY_EXEC_TIME_PATIENCE=3
+zplugin ice lucid atload"geometry::prompt"
+zplugin load geometry-zsh/geometry
+
+# try adding this eventually:
+# https://github.com/unixorn/git-extra-commands
+
+# completion stuff
+zplugin ice lucid blockf
+zplugin load zsh-users/zsh-completions
+
+# zplugin ice as"completion"
+# zplugin snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
+
+# zplugin ice as"completion"
+# zplugin snippet https://github.com/docker/compose/blob/master/contrib/completion/zsh/_docker-compose
+
+# zplugin ice wait"0b" lucid as"command" from"gh-r"
+# zplugin load junegunn/fzf-bin
+
+# zplugin ice wait"0b" lucid as"command" pick"bin/fzf-tmux"
+# zplugin load junegunn/fzf
+
+# # Create and bind multiple widgets using fzf
+# zplugin ice lucid multisrc"shell/{completion,key-bindings}.zsh" id-as"junegunn/fzf_completions" pick"/dev/null"
+# zplugin load junegunn/fzf
+
+# # autojump command
+# zplugin ice lucid atclone"touch '${HOME}/.z'"
+# zplugin load rupa/z
+
+# # Pick from most frecent folders with `Ctrl+g`
+# zplugin ice lucid
+# zplugin load andrewferrier/fzf-z
+
+# # lets z+[Tab] and zz+[Tab]
+# zplugin ice lucid
+# zplugin load changyuheng/fz
+
+# # nvm
+# export NVM_LAZY_LOAD=true
+# zplugin ice lucid
+# zplugin load "lukechilds/zsh-nvm"
+
+source "${HOME}/.dotfiles/zsh/completion-zstyles.zsh"
+
+# if [[ "$(uname)" == "Darwin" ]]; then
+#     source $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
 # fi
+
+zplugin ice lucid atload"_zsh_autosuggest_start" wrap-track"_zsh_autosuggest_start"
+zplugin load zsh-users/zsh-autosuggestions
+
+zplugin ice lucid #atinit"ZPLGM[COMPINIT_OPTS]=-C; zpcompinit; zpcdreplay"
+zplugin load zsh-users/zsh-syntax-highlighting
+
+zplugin ice lucid atload"history-substring-plugin-bindkey-callback" atinit"zpcompinit; zpcdreplay"
+zplugin load zsh-users/zsh-history-substring-search
+
+zplugin ice lucid atload"vim-mode-plugin-bindkey-callback"
+# zplugin load _local/zsh-vim-mode
+zplugin load kyounger/zsh-vim-mode
+
+zpcompinit
+zpcdreplay
 
 #####################################################################
 # setopts
@@ -146,84 +223,3 @@ fi
 #####################################################################
 
 source "${HOME}/.dotfiles/zsh/aliases.zsh"
-
-#####################################################################
-# zplugin
-#####################################################################
-
-source ~/.zplugin/bin/zplugin.zsh
-autoload -Uz _zplugin
-(( ${+_comps} )) && _comps[zplugin]=_zplugin
-
-# Assign each zsh session an unique ID, available in
-# ZUID_ID and also a codename (ZUID_CODENAME)
-zplugin load zdharma/zsh-unique-id
-
-# zdharma/history-search-multi-word
-zstyle ":history-search-multi-word" page-size "11"
-zplugin ice wait"1" lucid
-zplugin load zdharma/history-search-multi-word
-
-# Theme no. 4 – geometry
-GEOMETRY_PROMPT=(geometry_echo geometry_status geometry_jobs geometry_path)
-GEOMETRY_RPROMPT=(geometry_git geometry_exec_time geometry_kube)
-GEOMETRY_EXEC_TIME_PATIENCE=3
-
-zplugin ice lucid load'![[ $MYPROMPT = 1 ]]' unload'![[ $MYPROMPT != 1 ]]' \
-    atload"geometry::prompt"
-zplugin load geometry-zsh/geometry
-
-# Autosuggestions & fast-syntax-highlighting
-zplugin ice wait"1b" lucid atload"_zsh_autosuggest_start" \
-    wrap-track"_zsh_autosuggest_start"
-zplugin load zsh-users/zsh-autosuggestions
-zplugin ice wait"1" lucid atinit"ZPLGM[COMPINIT_OPTS]=-C; zpcompinit; zpcdreplay"
-zplugin light zdharma/fast-syntax-highlighting
-
-# try adding this eventually:
-# https://github.com/unixorn/git-extra-commands
-
-# completion stuff
-zplugin ice lucid blockf
-zplugin load zsh-users/zsh-completions
-
-zplugin ice as"completion"
-zplugin snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
-
-zplugin ice as"completion"
-zplugin snippet https://github.com/docker/compose/blob/master/contrib/completion/zsh/_docker-compose
-
-# zplugin ice wait"0b" lucid as"command" from"gh-r"
-# zplugin load junegunn/fzf-bin
-
-# zplugin ice wait"0b" lucid as"command" pick"bin/fzf-tmux"
-# zplugin load junegunn/fzf
-
-# # Create and bind multiple widgets using fzf
-# zplugin ice lucid multisrc"shell/{completion,key-bindings}.zsh" id-as"junegunn/fzf_completions" pick"/dev/null"
-# zplugin load junegunn/fzf
-
-# # autojump command
-# zplugin ice lucid atclone"touch '${HOME}/.z'"
-# zplugin load rupa/z
-
-# # Pick from most frecent folders with `Ctrl+g`
-# zplugin ice lucid
-# zplugin load andrewferrier/fzf-z
-
-# # lets z+[Tab] and zz+[Tab]
-# zplugin ice lucid
-# zplugin load changyuheng/fz
-
-# # nvm
-# export NVM_LAZY_LOAD=true
-# zplugin ice lucid
-# zplugin load "lukechilds/zsh-nvm"
-
-MYPROMPT=1
-
-source "${HOME}/.dotfiles/zsh/completion-zstyles.zsh"
-
-# if [[ "$(uname)" == "Darwin" ]]; then
-#     source $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
-# fi
