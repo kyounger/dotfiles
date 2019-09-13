@@ -94,7 +94,7 @@ zplugin snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh
 zplugin ice as"completion"
 zplugin snippet https://github.com/docker/compose/blob/master/contrib/completion/zsh/_docker-compose
 
-zplugin ice as"completion" if'[[ "$(uname)" == "Darwin" ]]'
+zplugin ice blockf if'[[ "$(uname)" == "Darwin" ]]' #as"completion" 
 zplugin snippet $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
 
 zplugin ice lucid as"command" from"gh-r"
@@ -103,8 +103,8 @@ zplugin load junegunn/fzf-bin
 zplugin ice lucid from"gh-r" as"program" bpick"*darwin*" mv"kind-darwin-amd64 -> kind"
 zplugin load kubernetes-sigs/kind
 
-zplugin ice lucid from"gh-r" as"program" bpick"k3s"
-zplugin load rancher/k3s
+# zplugin ice lucid from"gh-r" as"program" bpick"k3s"
+# zplugin load rancher/k3s
 
 # zplugin ice lucid as"command" pick"bin/fzf-tmux"
 # zplugin load junegunn/fzf
@@ -147,7 +147,7 @@ zplugin load _local/zsh-vim-mode
 
 autoload -Uz compinit
 compinit
-zplugin cdreplay
+zplugin cdreplay -q
 
 #####################################################################
 # setopts
