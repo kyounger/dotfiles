@@ -10,6 +10,7 @@ export EDITOR=vim
 export LANG=en_US.UTF-8
 export LESS='--tabs=4 --no-init --LONG-PROMPT --ignore-case --quit-if-one-screen --RAW-CONTROL-CHARS'
 export KEYTIMEOUT=30
+export GOPATH="${HOME}/go"
 
 umask 022
 
@@ -29,12 +30,14 @@ export LS_COLORS='di=93:ln=35:so=32:pi=33:ex=31:bd=36;01:cd=33;01:su=31;40;07:sg
 # Set the list of directories that Zsh searches for programs.
 path=(
   ~/bin
+  $GOPATH/bin
   $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin
   ${KREW_ROOT:-$HOME/.krew}/bin
   ~/.fastlane/bin
   /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin
   $path
 )
+
 
 autoload -Uz bracketed-paste-url-magic && zle -N bracketed-paste bracketed-paste-url-magic
 
@@ -66,6 +69,9 @@ vim-mode-plugin-bindkey-callback() {
 # zplugin
 #####################################################################
 
+# to debug zplugin:
+# typeset -g ZPLG_MOD_DEBUG=1
+
 source ~/.zplugin/bin/zplugin.zsh
 autoload -Uz _zplugin
 (( ${+_comps} )) && _comps[zplugin]=_zplugin
@@ -83,16 +89,24 @@ zplugin load geometry-zsh/geometry
 zplugin ice lucid blockf
 zplugin load zsh-users/zsh-completions
 
-# zplugin ice as"completion"
-# zplugin snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
+zplugin ice as"completion"
+zplugin snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
 
-# zplugin ice as"completion"
-# zplugin snippet https://github.com/docker/compose/blob/master/contrib/completion/zsh/_docker-compose
+zplugin ice as"completion"
+zplugin snippet https://github.com/docker/compose/blob/master/contrib/completion/zsh/_docker-compose
 
-# zplugin ice wait"0b" lucid as"command" from"gh-r"
-# zplugin load junegunn/fzf-bin
+# if [[ "$(uname)" == "Darwin" ]]; then
+    zplugin ice as"completion"
+    zplugin snippet $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+# fi
 
-# zplugin ice wait"0b" lucid as"command" pick"bin/fzf-tmux"
+zplugin ice lucid as"command" from"gh-r"
+zplugin load junegunn/fzf-bin
+
+# zplugin ice lucid from"gh-r" as"program" bpick"k3s"
+# zplugin load rancher/k3s
+
+# zplugin ice lucid as"command" pick"bin/fzf-tmux"
 # zplugin load junegunn/fzf
 
 # # Create and bind multiple widgets using fzf
@@ -116,12 +130,7 @@ zplugin load zsh-users/zsh-completions
 # zplugin ice lucid
 # zplugin load "lukechilds/zsh-nvm"
 
-
-# if [[ "$(uname)" == "Darwin" ]]; then
-#     source $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
-# fi
-
-zplugin ice lucid atload"_zsh_autosuggest_start" wrap-track"_zsh_autosuggest_start"
+zplugin ice lucid #atload"_zsh_autosuggest_start" wrap-track"_zsh_autosuggest_start"
 zplugin load zsh-users/zsh-autosuggestions
 
 zplugin ice lucid #atinit"ZPLGM[COMPINIT_OPTS]=-C; zpcompinit; zpcdreplay"
@@ -130,11 +139,15 @@ zplugin load zsh-users/zsh-syntax-highlighting
 zplugin ice lucid #atload"history-substring-plugin-bindkey-callback"
 zplugin load zsh-users/zsh-history-substring-search
 
-zplugin ice lucid atinit"zpcompinit; zpcdreplay" atload"vim-mode-plugin-bindkey-callback"
+MODE_CURSOR_VICMD="green block"
+MODE_CURSOR_VIINS="#20d08a blinking bar"
+MODE_CURSOR_SEARCH="#ff00ff steady underline"
+zplugin ice lucid atload"vim-mode-plugin-bindkey-callback" #atinit"zpcompinit; zpcdreplay"
 zplugin load _local/zsh-vim-mode
 
-zpcompinit
-zpcdreplay
+autoload -Uz compinit
+compinit
+zplugin cdreplay
 
 #####################################################################
 # setopts
