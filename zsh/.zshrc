@@ -38,7 +38,6 @@ path=(
   $path
 )
 
-
 autoload -Uz bracketed-paste-url-magic && zle -N bracketed-paste bracketed-paste-url-magic
 
 PS1="READY > "
@@ -95,16 +94,17 @@ zplugin snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh
 zplugin ice as"completion"
 zplugin snippet https://github.com/docker/compose/blob/master/contrib/completion/zsh/_docker-compose
 
-# if [[ "$(uname)" == "Darwin" ]]; then
-    zplugin ice as"completion"
-    zplugin snippet $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
-# fi
+zplugin ice as"completion" if'[[ "$(uname)" == "Darwin" ]]'
+zplugin snippet $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
 
 zplugin ice lucid as"command" from"gh-r"
 zplugin load junegunn/fzf-bin
 
-# zplugin ice lucid from"gh-r" as"program" bpick"k3s"
-# zplugin load rancher/k3s
+zplugin ice lucid from"gh-r" as"program" bpick"*darwin*" mv"kind-darwin-amd64 -> kind"
+zplugin load kubernetes-sigs/kind
+
+zplugin ice lucid from"gh-r" as"program" bpick"k3s"
+zplugin load rancher/k3s
 
 # zplugin ice lucid as"command" pick"bin/fzf-tmux"
 # zplugin load junegunn/fzf
