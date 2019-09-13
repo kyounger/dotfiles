@@ -136,8 +136,7 @@ zplugin ice lucid #atload"history-substring-plugin-bindkey-callback"
 zplugin load zsh-users/zsh-history-substring-search
 
 zplugin ice lucid atinit"zpcompinit; zpcdreplay" atload"vim-mode-plugin-bindkey-callback"
-# zplugin load _local/zsh-vim-mode
-zplugin load kyounger/zsh-vim-mode
+zplugin load _local/zsh-vim-mode
 
 zpcompinit
 zpcdreplay
