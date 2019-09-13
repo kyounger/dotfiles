@@ -70,10 +70,6 @@ source ~/.zplugin/bin/zplugin.zsh
 autoload -Uz _zplugin
 (( ${+_comps} )) && _comps[zplugin]=_zplugin
 
-# Assign each zsh session an unique ID, available in
-# ZUID_ID and also a codename (ZUID_CODENAME)
-zplugin load zdharma/zsh-unique-id
-
 GEOMETRY_PROMPT=(geometry_echo geometry_status geometry_jobs geometry_path)
 GEOMETRY_RPROMPT=(geometry_git geometry_exec_time geometry_kube)
 GEOMETRY_EXEC_TIME_PATIENCE=3
