@@ -82,7 +82,7 @@ zplugin load zdharma/zsh-unique-id
 GEOMETRY_PROMPT=(geometry_echo geometry_status geometry_jobs geometry_path)
 GEOMETRY_RPROMPT=(geometry_git geometry_exec_time geometry_kube)
 GEOMETRY_EXEC_TIME_PATIENCE=3
-zplugin ice lucid atload"geometry::prompt"
+zplugin ice lucid #atload"geometry::prompt"
 zplugin load geometry-zsh/geometry
 
 # try adding this eventually:
