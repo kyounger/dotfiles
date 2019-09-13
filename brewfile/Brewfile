@@ -89,6 +89,7 @@ brew maven
 brew mercurial
 brew moreutils
 brew msgpack
+brew ncurses
 brew neovim
 brew netperf
 brew nettle
@@ -147,6 +148,7 @@ brew yara
 brew yasm
 brew youtube-dl
 brew yq
+brew zsh
 
 tap argon/mas
 

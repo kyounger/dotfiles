@@ -88,9 +88,9 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>837 835 796 486 0 0 3840 1577 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1969 1577 0 0 3840 1577 </string>
+	<string>0 23 2297 1554 0 0 3840 1577 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>591 958 745 552 0 0 3840 1577 </string>
+	<string>572 977 665 502 0 0 3840 1577 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>0 1125 585 452 0 0 3840 1577 </string>
 	<key>New Bookmarks</key>
@@ -713,7 +713,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>D4CE1237-868A-4892-93E8-622759EF1358</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>21</integer>
+	<integer>22</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -1483,6 +1483,8 @@
 	<true/>
 	<key>VisualIndicatorForEsc</key>
 	<false/>
+	<key>WordCharacters</key>
+	<string>/-+\~_.</string>
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>

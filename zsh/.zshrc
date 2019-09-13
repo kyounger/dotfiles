@@ -116,7 +116,6 @@ zplugin load zsh-users/zsh-completions
 # zplugin ice lucid
 # zplugin load "lukechilds/zsh-nvm"
 
-source "${HOME}/.dotfiles/zsh/completion-zstyles.zsh"
 
 # if [[ "$(uname)" == "Darwin" ]]; then
 #     source $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
@@ -215,6 +214,7 @@ fi
 source "${HOME}/.dotfiles/zsh/aliases.zsh"
 
 #####################################################################
-# my vim-mode
+# My completion styles
 #####################################################################
 
+source "${HOME}/.dotfiles/zsh/completion-zstyles.zsh"
