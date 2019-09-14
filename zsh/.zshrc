@@ -94,8 +94,8 @@ zplugin snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh
 zplugin ice as"completion"
 zplugin snippet https://github.com/docker/compose/blob/master/contrib/completion/zsh/_docker-compose
 
-zplugin ice blockf if'[[ "$(uname)" == "Darwin" ]]' #as"completion" 
-zplugin snippet $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+zplugin ice blockf if'[[ "$OSTYPE" = *darwin* ]]'
+zplugin snippet /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
 
 zplugin ice lucid as"command" from"gh-r"
 zplugin load junegunn/fzf-bin
