@@ -25,3 +25,5 @@ target/
 rebel.xml
 
 .idea
+
+._zplugin/

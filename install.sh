@@ -44,6 +44,7 @@ ln -fs $HOME/.dotfiles/vim/.ideavimrc
 ln -fs $HOME/.dotfiles/zsh/.zshenv
 ln -fs $HOME/.dotfiles/zsh/.zshrc
 ln -fs ~/.dotfiles/zsh/zsh-vim-mode ~/.zplugin/plugins/_local---zsh-vim-mode
+ln -fs ~/.dotfiles/zsh/geometry ~/.zplugin/plugins/_local---geometry
 
 echo "You may want to re-run defaults: $HOME/.dotfiles/mathiasbynens-dotfiles/.macos"
 echo "Also, run brew file install"

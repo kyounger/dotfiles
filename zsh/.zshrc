@@ -40,6 +40,16 @@ path=(
 
 autoload -Uz bracketed-paste-url-magic && zle -N bracketed-paste bracketed-paste-url-magic
 
+# function _my_widget {
+#     if [[ "$BUFFER" = *kc* ]]; then
+#         GEOMETRY_KUBE_PIN=true;
+#     else
+#         GEOMETRY_KUBE_PIN=false
+#     fi
+#     geometry::prompt
+# }
+# zle -N ??? _my_widget
+
 PS1="READY > "
 
 vim-mode-plugin-bindkey-callback() {
@@ -75,11 +85,25 @@ source ~/.zplugin/bin/zplugin.zsh
 autoload -Uz _zplugin
 (( ${+_comps} )) && _comps[zplugin]=_zplugin
 
+function rparen() {
+    echo -n ")"
+}
+function lparen() {
+    echo -n "("
+}
+
 GEOMETRY_PROMPT=(geometry_echo geometry_status geometry_jobs geometry_path)
-GEOMETRY_RPROMPT=(geometry_git geometry_exec_time geometry_kube)
+GEOMETRY_RPROMPT=(geometry_git geometry_exec_time geometry_kube_symbol lparen geometry_kube_context geometry_kube_namespace geometry_kube_version rparen)
 GEOMETRY_EXEC_TIME_PATIENCE=3
-zplugin ice lucid #atload"geometry::prompt"
-zplugin load geometry-zsh/geometry
+GEOMETRY_KUBE_VERSION_COLOR=red
+GEOMETRY_KUBE_NAMESPACE_COLOR=green
+GEOMETRY_KUBE_CONTEXT_COLOR=cyan
+GEOMETRY_KUBE_SYMBOL="⎈ "
+# GEOMETRY_KUBE_PIN=true
+zplugin ice lucid
+zplugin load _local/geometry
+# zplugin ice lucid
+# zplugin load geometry-zsh/geometry
 
 # try adding this eventually:
 # https://github.com/unixorn/git-extra-commands
@@ -100,11 +124,11 @@ zplugin snippet /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/com
 zplugin ice lucid as"command" from"gh-r"
 zplugin load junegunn/fzf-bin
 
-zplugin ice lucid from"gh-r" as"program" bpick"*darwin*" mv"kind-darwin-amd64 -> kind"
+zplugin ice lucid from"gh-r" as"program" bpick"kind-darwin-amd64" mv"kind-darwin-amd64 -> kind"
 zplugin load kubernetes-sigs/kind
 
-# zplugin ice lucid from"gh-r" as"program" bpick"k3s"
-# zplugin load rancher/k3s
+zplugin ice lucid from"gh-r" as"program" bpick"k3s"
+zplugin load rancher/k3s
 
 # zplugin ice lucid as"command" pick"bin/fzf-tmux"
 # zplugin load junegunn/fzf
