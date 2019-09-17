@@ -85,6 +85,9 @@ source ~/.zplugin/bin/zplugin.zsh
 autoload -Uz _zplugin
 (( ${+_comps} )) && _comps[zplugin]=_zplugin
 
+function bar() {
+    echo -n "|"
+}
 function rparen() {
     echo -n ")"
 }
@@ -93,12 +96,12 @@ function lparen() {
 }
 
 GEOMETRY_PROMPT=(geometry_echo geometry_status geometry_jobs geometry_path)
-GEOMETRY_RPROMPT=(geometry_git geometry_exec_time geometry_kube_symbol lparen geometry_kube_context geometry_kube_namespace geometry_kube_version rparen)
+GEOMETRY_RPROMPT=(geometry_git geometry_exec_time bar geometry_kube_symbol geometry_kube_context geometry_kube_namespace)
 GEOMETRY_EXEC_TIME_PATIENCE=3
 GEOMETRY_KUBE_VERSION_COLOR=red
 GEOMETRY_KUBE_NAMESPACE_COLOR=green
 GEOMETRY_KUBE_CONTEXT_COLOR=cyan
-GEOMETRY_KUBE_SYMBOL="⎈ "
+GEOMETRY_KUBE_SYMBOL="⎈"
 # GEOMETRY_KUBE_PIN=true
 zplugin ice lucid
 zplugin load _local/geometry

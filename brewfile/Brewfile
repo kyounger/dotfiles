@@ -135,8 +135,8 @@ brew tree
 brew unibilium
 brew utf8proc
 brew vim
+brew visionmedia-watch
 brew wakeonlan
-brew watch
 brew webp
 brew wget
 brew x264

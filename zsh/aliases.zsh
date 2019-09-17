@@ -45,13 +45,22 @@ alias temp='rm -rf ~/temp; mkdir ~/temp; cd ~/temp'
 
 alias kc='kubectl'
 alias kcg='kubectl get'
-alias kcga='kubectl get all'
 alias kcd='kubectl describe'
 alias kcl='kubectl logs'
 alias kce='kubectl get events -A --sort-by="{.lastTimestamp}"'
-
 alias kx='kubectx'
 alias kn='kubens'
+function kcga() {
+  local current_namespace=$(kubectl config view --minify --output "jsonpath={..namespace}" 2> /dev/null)
+  local namespace=${1:-$current_namespace}
+  for i in $(kubectl api-resources --verbs=list --namespaced -o name | grep -v "events" | sort | uniq); do
+    local content=$(kubectl -n ${namespace} get --ignore-not-found ${i})
+    if [[ -n "$content" ]]; then
+        echo "\nResource:" $i
+        echo $content
+    fi
+  done
+}
 
 alias gc='gcloud'
 alias gccc='gcloud container clusters'
