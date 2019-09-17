@@ -103,10 +103,10 @@ GEOMETRY_KUBE_NAMESPACE_COLOR=green
 GEOMETRY_KUBE_CONTEXT_COLOR=cyan
 GEOMETRY_KUBE_SYMBOL="⎈"
 # GEOMETRY_KUBE_PIN=true
-zplugin ice lucid
-zplugin load _local/geometry
 # zplugin ice lucid
-# zplugin load geometry-zsh/geometry
+# zplugin load _local/geometry
+zplugin ice lucid
+zplugin load geometry-zsh/geometry
 
 # try adding this eventually:
 # https://github.com/unixorn/git-extra-commands
