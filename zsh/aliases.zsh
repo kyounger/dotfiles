@@ -232,6 +232,32 @@ function extract () {
     fi
 }
 
+tenor-dl() {
+    [[ -n "$1" ]] || return
+
+    local UA="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36"
+    #Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
+    local curl=$(curl -sA "$UA" "$1")
+    local gif_link=$(echo $curl | pup 'html head link.dynamic[rel="image_src"] attr{href}')
+
+    local filename=$(echo $curl | pup 'div.Copybox.share' | xmlstarlet unesc | sed -n 'H
+    $ {g
+       s/<\!--/²/g;s/-->/³/g
+    :a
+       s/²[^³]*³//g
+       t a
+       s/.//p
+   }' | pup 'input attr{value}' | cut -d '/' -f5)
+
+    # echo $UA
+    # echo $gif_link
+    # echo $filename
+
+    curl -s "$gif_link" \
+        -H "User-Agent: $UA" -H 'Accept: image/webp,*/*' -H 'Accept-Language: en-US,en;q=0.5' \
+        --compressed -H 'Referer: https://tenor.com/' -H 'Connection: keep-alive' -H 'DNT: 1' -H 'TE: Trailers' > "${filename}.gif"
+}
+
 function mkv2mp4() { ffmpeg -i $1 -vcodec copy -acodec copy -absf aac_adtstoasc $1.mp4 }
 
 # snag an mp3 from youtube and title it properly

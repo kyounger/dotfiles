@@ -30,6 +30,7 @@ brew gettext
 brew gifify
 brew gifsicle
 brew git
+brew glooctl
 brew gmp
 brew gnu-sed
 brew gnutls
@@ -38,6 +39,7 @@ brew gradle
 brew gron
 brew groovysdk
 brew hashcat
+brew html-xml-utils
 brew https://raw.githubusercontent.com/Homebrew/homebrew-core/1446e1f05b4d4eb76dca1efe4eff5910c133a5cf/Formula/openshift-cli.rb
 brew hub
 brew hugo
@@ -141,6 +143,7 @@ brew webp
 brew wget
 brew x264
 brew x265
+brew xmlstarlet
 brew xsv
 brew xvid
 brew xz
