@@ -9,7 +9,7 @@
 export EDITOR=vim
 export LANG=en_US.UTF-8
 export LESS='--tabs=4 --no-init --LONG-PROMPT --ignore-case --quit-if-one-screen --RAW-CONTROL-CHARS'
-export KEYTIMEOUT=30
+export KEYTIMEOUT=10
 export GOPATH="${HOME}/go"
 
 umask 022
@@ -258,3 +258,9 @@ source "${HOME}/.dotfiles/zsh/aliases.zsh"
 #####################################################################
 
 source "${HOME}/.dotfiles/zsh/completion-zstyles.zsh"
+
+#####################################################################
+# Go version manager
+#####################################################################
+
+[[ -s "/Users/kyounger/.gvm/scripts/gvm" ]] && source "/Users/kyounger/.gvm/scripts/gvm"

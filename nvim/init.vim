@@ -36,6 +36,7 @@ Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'sjl/vitality.vim'
 Plug 'sjl/AnsiEsc.vim'
 Plug 'fidian/hexmode'
+Plug 'hashivim/vim-terraform'
 
 Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'mrk21/yaml-vim'
@@ -92,7 +93,7 @@ endfunction
         " Basically this makes terminal Vim work sanely.
         set notimeout
         set ttimeout
-        set ttimeoutlen=10
+        set ttimeoutlen=20
 
         " Better Completion
         set complete=.,w,b,u,t
