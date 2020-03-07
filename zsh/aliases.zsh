@@ -61,6 +61,11 @@ function kcga() {
     fi
   done
 }
+alias helmfile='helmfile --helm-binary /usr/local/bin/helm'
+alias tf='terraform'
+
+alias hy='bat -l yaml'
+alias tf='terraform'
 
 alias gc='gcloud'
 alias gccc='gcloud container clusters'
@@ -160,6 +165,8 @@ alias kaniko-build-here='docker run -it -v $(pwd):/workspace gcr.io/kaniko-proje
 
 alias mci='mvn clean install'
 alias mcp='mvn clean package'
+
+alias marktext="/Applications/Mark\ Text.app/Contents/MacOS/Mark\ Text"
 
 #function gri() { git rebase -i HEAD\~$1 }
 

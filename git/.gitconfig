@@ -24,9 +24,6 @@
 	indentHeuristic = true
 [difftool]
 	prompt = false
-[mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustExitCode = true
 [mergetool]
 	prompt = false
 [hub]
@@ -54,8 +51,6 @@
 	helper = gcloud.sh
 [commit]
 	gpgsign = true
-[diff "sopsdiffer"]
-	textconv = sops -d
 [color "diff"]
 	meta = 11
 	frag = magenta bold

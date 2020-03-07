@@ -11,6 +11,9 @@ export LANG=en_US.UTF-8
 export LESS='--tabs=4 --no-init --LONG-PROMPT --ignore-case --quit-if-one-screen --RAW-CONTROL-CHARS'
 export KEYTIMEOUT=10
 export GOPATH="${HOME}/go"
+export GOROOT="${HOME}/.go"
+
+MY_BREW_PREFIX=/usr/local
 
 umask 022
 
@@ -31,24 +34,13 @@ export LS_COLORS='di=93:ln=35:so=32:pi=33:ex=31:bd=36;01:cd=33;01:su=31;40;07:sg
 path=(
   ~/bin
   $GOPATH/bin
-  $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin
+  $MY_BREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin
   ${KREW_ROOT:-$HOME/.krew}/bin
-  ~/.fastlane/bin
   /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin
   $path
 )
 
 autoload -Uz bracketed-paste-url-magic && zle -N bracketed-paste bracketed-paste-url-magic
-
-# function _my_widget {
-#     if [[ "$BUFFER" = *kc* ]]; then
-#         GEOMETRY_KUBE_PIN=true;
-#     else
-#         GEOMETRY_KUBE_PIN=false
-#     fi
-#     geometry::prompt
-# }
-# zle -N ??? _my_widget
 
 PS1="READY > "
 
@@ -75,7 +67,7 @@ vim-mode-plugin-bindkey-callback() {
     fi
 }
 #####################################################################
-# zplugin
+# zplugin sourcing
 #####################################################################
 
 # to debug zplugin:
@@ -85,16 +77,12 @@ source ~/.zplugin/bin/zplugin.zsh
 autoload -Uz _zplugin
 (( ${+_comps} )) && _comps[zplugin]=_zplugin
 
-function bar() {
-    echo -n "|"
-}
-function rparen() {
-    echo -n ")"
-}
-function lparen() {
-    echo -n "("
-}
+# zsh theme config
+function bar() { echo -n "|" }
+function rparen() { echo -n ")" }
+function lparen() { echo -n "(" }
 
+GEOMETRY_INFO=""
 GEOMETRY_PROMPT=(geometry_echo geometry_status geometry_jobs geometry_path)
 GEOMETRY_RPROMPT=(geometry_git geometry_exec_time bar geometry_kube_symbol geometry_kube_context geometry_kube_namespace)
 GEOMETRY_EXEC_TIME_PATIENCE=3
@@ -103,13 +91,12 @@ GEOMETRY_KUBE_NAMESPACE_COLOR=green
 GEOMETRY_KUBE_CONTEXT_COLOR=cyan
 GEOMETRY_KUBE_SYMBOL="⎈"
 # GEOMETRY_KUBE_PIN=true
-# zplugin ice lucid
-# zplugin load _local/geometry
 zplugin ice lucid
-zplugin load geometry-zsh/geometry
+zplugin load kyounger/geometry
 
-# try adding this eventually:
-# https://github.com/unixorn/git-extra-commands
+
+zplugin ice lucid
+zplugin load kyounger/git-extra-commands
 
 # completion stuff
 zplugin ice lucid blockf
@@ -122,7 +109,7 @@ zplugin ice as"completion"
 zplugin snippet https://github.com/docker/compose/blob/master/contrib/completion/zsh/_docker-compose
 
 zplugin ice blockf if'[[ "$OSTYPE" = *darwin* ]]'
-zplugin snippet /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+zplugin snippet $MY_BREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
 
 zplugin ice lucid as"command" from"gh-r"
 zplugin load junegunn/fzf-bin
@@ -130,8 +117,20 @@ zplugin load junegunn/fzf-bin
 zplugin ice lucid from"gh-r" as"program" bpick"kind-darwin-amd64" mv"kind-darwin-amd64 -> kind"
 zplugin load kubernetes-sigs/kind
 
-zplugin ice lucid from"gh-r" as"program" bpick"k3s"
-zplugin load rancher/k3s
+zplugin ice lucid from"gh-r" as"program" bpick"kapp-darwin-amd64" mv"kapp-darwin-amd64 -> kapp"
+zplugin load k14s/kapp
+
+zplugin ice lucid from"gh-r" as"program" bpick"k3sup-darwin" mv"k3sup-darwin -> k3sup"
+zplugin load alexellis/k3sup
+
+zplugin ice lucid from"gh-r" as"program" bpick"*darwin*" mv"*-darwin-amd64 -> yamldiff"
+zplugin load sahilm/yamldiff
+
+zplugin ice lucid from"gh-r" as"program" bpick"*darwin*" ver"v2.0.881"
+zplugin load jenkins-x/jx
+
+zplugin ice as"program" cp"bin/g -> bin/gvm" pick"bin/gvm"
+zplugin load stefanmaric/g
 
 # zplugin ice lucid as"command" pick"bin/fzf-tmux"
 # zplugin load junegunn/fzf
@@ -152,11 +151,6 @@ zplugin load rancher/k3s
 # zplugin ice lucid
 # zplugin load changyuheng/fz
 
-# # nvm
-# export NVM_LAZY_LOAD=true
-# zplugin ice lucid
-# zplugin load "lukechilds/zsh-nvm"
-
 zplugin ice lucid #atload"_zsh_autosuggest_start" wrap-track"_zsh_autosuggest_start"
 zplugin load zsh-users/zsh-autosuggestions
 
@@ -170,7 +164,7 @@ MODE_CURSOR_VICMD="green block"
 MODE_CURSOR_VIINS="#20d08a blinking bar"
 MODE_CURSOR_SEARCH="#ff00ff steady underline"
 zplugin ice lucid atload"vim-mode-plugin-bindkey-callback" #atinit"zpcompinit; zpcdreplay"
-zplugin load _local/zsh-vim-mode
+zplugin load /Users/kyounger/.dotfiles/zsh/zsh-vim-mode/
 
 autoload -Uz compinit
 compinit
@@ -189,12 +183,9 @@ setopt bang_hist                 # Treat the '!' character specially during expa
 setopt extended_history          # Write the history file in the ':start:elapsed;command' format.
 setopt inc_append_history        # Write to the history file immediately, not when the shell exits.
 setopt share_history             # Share history between all sessions.
-setopt hist_expire_dups_first    # Expire a duplicate event first when trimming history.
-setopt hist_ignore_dups          # Do not record an event that was just recorded again.
-setopt hist_ignore_all_dups      # Delete an old recorded event if a new event is a duplicate.
 setopt hist_find_no_dups         # Do not display a previously found event.
+
 setopt hist_ignore_space         # Do not record an event starting with a space.
-setopt hist_save_no_dups         # Do not write a duplicate event to the history file.
 setopt hist_verify               # Do not execute immediately upon history expansion.
 setopt hist_beep                 # Beep when accessing non-existent history.
 
@@ -228,15 +219,15 @@ unsetopt CASE_GLOB
 # brew file options and wrapper sourcing
 export HOMEBREW_BREWFILE_APPSTORE=0
 export HOMEBREW_BREWFILE=~/.dotfiles/brewfile/Brewfile
-if [[ "$(uname)" == "Darwin" ]]; then
-    if [ -f $(brew --prefix)/etc/brew-wrap ]; then
-        source $(brew --prefix)/etc/brew-wrap
+if [[ "$OSTYPE" = *darwin* ]]; then
+    if [ -f $MY_BREW_PREFIX/etc/brew-wrap ]; then
+        source $MY_BREW_PREFIX/etc/brew-wrap
     fi
 fi
 
 # jenv
-if [[ "$(uname)" == "Darwin" ]]; then
-    export JENV_ROOT=/usr/local/opt/jenv
+if [[ "$OSTYPE" = *Darwin* ]]; then
+    export JENV_ROOT=$MY_BREW_PREFIX/opt/jenv
     if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 fi
 
@@ -260,7 +251,7 @@ source "${HOME}/.dotfiles/zsh/aliases.zsh"
 source "${HOME}/.dotfiles/zsh/completion-zstyles.zsh"
 
 #####################################################################
-# Go version manager
+# local env vars
 #####################################################################
+source "${HOME}/.local/.localrc"
 
-[[ -s "/Users/kyounger/.gvm/scripts/gvm" ]] && source "/Users/kyounger/.gvm/scripts/gvm"

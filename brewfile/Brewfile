@@ -10,12 +10,16 @@ brew autoconf
 brew automake
 brew aws-shell
 brew awscli
+brew bat
 brew clamav
 brew cmake
 brew coreutils
 brew csvkit
 brew dcraw
 brew diff-so-fancy
+brew dive
+brew docker-machine
+brew docker-machine-driver-xhyve
 brew dos2unix
 brew exiftool
 brew faac
@@ -27,20 +31,24 @@ brew freetype
 brew fx
 brew gdbm
 brew gettext
+brew gh
 brew gifify
 brew gifsicle
 brew git
 brew glooctl
 brew gmp
 brew gnu-sed
+brew gnu-tar
 brew gnutls
-brew go
 brew gradle
 brew gron
 brew groovysdk
 brew hashcat
+brew helm
+brew helmfile
 brew html-xml-utils
 brew https://raw.githubusercontent.com/Homebrew/homebrew-core/1446e1f05b4d4eb76dca1efe4eff5910c133a5cf/Formula/openshift-cli.rb
+brew https://raw.githubusercontent.com/Homebrew/homebrew-core/c8cff106b17b90472cc6e251b9e5c2daf4fd8d46/Formula/tmux.rb
 brew hub
 brew hugo
 brew icu4c
@@ -54,10 +62,10 @@ brew jenv
 brew jpeg
 brew jq
 brew json-c
+brew k3d
 brew kompose
 brew kubectx
 brew kubernetes-cli
-brew kubernetes-helm
 brew lame
 brew libassuan
 brew libav
@@ -85,6 +93,7 @@ brew libvterm
 brew little-cms2
 brew lua
 brew luajit
+brew luarocks
 brew mad
 brew mas
 brew maven
@@ -102,7 +111,6 @@ brew npth
 brew octant
 brew oniguruma
 brew openjpeg
-brew openssl
 brew openssl@1.1
 brew opus
 brew p11-kit
@@ -132,7 +140,6 @@ brew testssl
 brew texi2html
 brew theora
 brew tig
-brew tmux
 brew tree
 brew unibilium
 brew utf8proc
@@ -164,8 +171,9 @@ tap caskroom/versions
 tap derailed/k9s
 brew k9s
 
+tap github/gh
+
 tap jenkins-x/jx
-brew jx
 
 tap kyounger/file
 brew brew-file
@@ -174,9 +182,13 @@ tap weaveworks/tap
 brew eksctl
 
 # Other Homebrew packages
+brew ==> Consider using !
+brew This will extract your desired tmux version to a stable tap instead of
 brew eksctl-aws-iam-authenticator
 brew gpg
+brew installing from an unstable URL!
 brew kubectl
+brew openssl
 brew phantomjs
 brew python3
 brew rg
@@ -211,6 +223,8 @@ cask keepingyouawake
 cask kode54-cog
 cask macdown
 cask macvim
+cask mark-text
+cask minishift
 cask multipass
 cask obs
 cask qlmarkdown

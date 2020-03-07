@@ -106,3 +106,8 @@ zstyle ':completion:*:(ssh|scp|rsync):*:hosts-ipaddr' ignored-patterns '^(<->.<-
 # zstyle ':completion:*:*:git:*' user-commands checkoutpullrequest:'checkout a github pull request by its ID'
 # zstyle ':completion:*:*:git:*' user-commands ${${(M)${(k)commands}:#git-*}/git-/}
 
+# zstyle ':completion:*:*:git:*' user-commands churn:'testing completion'
+#
+# zstyle ':completion:*:*:git:* common-commands'
+#
+# zstyle ':completion:*:*:git:*' tag-order common-commands user-commands
