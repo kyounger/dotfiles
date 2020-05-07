@@ -141,7 +141,7 @@ MODE_CURSOR_VICMD="green block"
 MODE_CURSOR_VIINS="#20d08a blinking bar"
 MODE_CURSOR_SEARCH="#ff00ff steady underline"
 zinit ice lucid atload"vim-mode-plugin-bindkey-callback"
-zinit load /Users/kyounger/code/zsh-vim-mode/
+zinit load kyounger/zsh-vim-mode
 
 autoload -Uz compinit
 compinit
