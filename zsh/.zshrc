@@ -68,15 +68,13 @@ vim-mode-plugin-bindkey-callback() {
     fi
 }
 #####################################################################
-# zplugin sourcing
+# zinit sourcing
 #####################################################################
 
-# to debug zplugin:
+# to debug zinit:
 # typeset -g ZPLG_MOD_DEBUG=1
 
-source ~/.zplugin/bin/zplugin.zsh
-autoload -Uz _zplugin
-(( ${+_comps} )) && _comps[zplugin]=_zplugin
+source ~/.zinit/bin/zinit.zsh
 
 # zsh theme config
 function bar() { echo -n "|" }
@@ -91,84 +89,63 @@ GEOMETRY_KUBE_VERSION_COLOR=red
 GEOMETRY_KUBE_NAMESPACE_COLOR=green
 GEOMETRY_KUBE_CONTEXT_COLOR=cyan
 
-zplugin ice lucid ver"main"
-# zplugin load kyounger/geometry
-zplugin load /Users/kyounger/code/geometry
+zinit ice lucid ver"main"
+zinit load /Users/kyounger/code/geometry
 
-zplugin ice lucid
-zplugin load kyounger/git-extra-commands
+zinit ice lucid
+zinit load kyounger/git-extra-commands
 
-# completion stuff
-zplugin ice lucid blockf
-zplugin load zsh-users/zsh-completions
+zinit ice lucid blockf
+zinit load zsh-users/zsh-completions
 
-zplugin ice as"completion"
-zplugin snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
+zinit ice as"completion"
+zinit snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
 
-zplugin ice as"completion"
-zplugin snippet https://github.com/docker/compose/blob/master/contrib/completion/zsh/_docker-compose
+zinit ice as"completion"
+zinit snippet https://github.com/docker/compose/blob/master/contrib/completion/zsh/_docker-compose
 
-zplugin ice blockf if'[[ "$OSTYPE" = *darwin* ]]'
-zplugin snippet $MY_BREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+zinit ice blockf if'[[ "$OSTYPE" = *darwin* ]]'
+zinit snippet $MY_BREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
 
-zplugin ice lucid as"command" from"gh-r"
-zplugin load junegunn/fzf-bin
+zinit ice lucid as"command" from"gh-r"
+zinit load junegunn/fzf-bin
 
-zplugin ice lucid from"gh-r" as"program" bpick"kind-darwin-amd64" mv"kind-darwin-amd64 -> kind"
-zplugin load kubernetes-sigs/kind
+zinit ice lucid from"gh-r" as"program" bpick"kind-darwin-amd64" mv"kind-darwin-amd64 -> kind"
+zinit load kubernetes-sigs/kind
 
-zplugin ice lucid from"gh-r" as"program" bpick"kapp-darwin-amd64" mv"kapp-darwin-amd64 -> kapp"
-zplugin load k14s/kapp
+zinit ice lucid from"gh-r" as"program" bpick"kapp-darwin-amd64" mv"kapp-darwin-amd64 -> kapp"
+zinit load k14s/kapp
 
-zplugin ice lucid from"gh-r" as"program" bpick"k3sup-darwin" mv"k3sup-darwin -> k3sup"
-zplugin load alexellis/k3sup
+zinit ice lucid from"gh-r" as"program" bpick"k3sup-darwin" mv"k3sup-darwin -> k3sup"
+zinit load alexellis/k3sup
 
-zplugin ice lucid from"gh-r" as"program" bpick"*darwin*" mv"*-darwin-amd64 -> yamldiff"
-zplugin load sahilm/yamldiff
+zinit ice lucid from"gh-r" as"program" bpick"*darwin*" mv"*-darwin-amd64 -> yamldiff"
+zinit load sahilm/yamldiff
 
-zplugin ice lucid from"gh-r" as"program" bpick"*darwin*" ver"v2.0.881"
-zplugin load jenkins-x/jx
+zinit ice lucid from"gh-r" as"program" bpick"*darwin*" ver"v2.0.881"
+zinit load jenkins-x/jx
 
-zplugin ice as"program" cp"bin/g -> bin/gvm" pick"bin/gvm"
-zplugin load stefanmaric/g
+zinit ice as"program" cp"bin/g -> bin/gvm" pick"bin/gvm"
+zinit load stefanmaric/g
 
-# zplugin ice lucid as"command" pick"bin/fzf-tmux"
-# zplugin load junegunn/fzf
+zinit ice lucid #atload"_zsh_autosuggest_start" wrap-track"_zsh_autosuggest_start"
+zinit load zsh-users/zsh-autosuggestions
 
-# # Create and bind multiple widgets using fzf
-# zplugin ice lucid multisrc"shell/{completion,key-bindings}.zsh" id-as"junegunn/fzf_completions" pick"/dev/null"
-# zplugin load junegunn/fzf
+zinit ice lucid #atinit"ZPLGM[COMPINIT_OPTS]=-C; zpcompinit; zpcdreplay"
+zinit load zsh-users/zsh-syntax-highlighting
 
-# # autojump command
-# zplugin ice lucid atclone"touch '${HOME}/.z'"
-# zplugin load rupa/z
-
-# # Pick from most frecent folders with `Ctrl+g`
-# zplugin ice lucid
-# zplugin load andrewferrier/fzf-z
-
-# # lets z+[Tab] and zz+[Tab]
-# zplugin ice lucid
-# zplugin load changyuheng/fz
-
-zplugin ice lucid #atload"_zsh_autosuggest_start" wrap-track"_zsh_autosuggest_start"
-zplugin load zsh-users/zsh-autosuggestions
-
-zplugin ice lucid #atinit"ZPLGM[COMPINIT_OPTS]=-C; zpcompinit; zpcdreplay"
-zplugin load zsh-users/zsh-syntax-highlighting
-
-zplugin ice lucid #atload"history-substring-plugin-bindkey-callback"
-zplugin load zsh-users/zsh-history-substring-search
+zinit ice lucid #atload"history-substring-plugin-bindkey-callback"
+zinit load zsh-users/zsh-history-substring-search
 
 MODE_CURSOR_VICMD="green block"
 MODE_CURSOR_VIINS="#20d08a blinking bar"
 MODE_CURSOR_SEARCH="#ff00ff steady underline"
-zplugin ice lucid atload"vim-mode-plugin-bindkey-callback" #atinit"zpcompinit; zpcdreplay"
-zplugin load /Users/kyounger/.dotfiles/zsh/zsh-vim-mode/
+zinit ice lucid atload"vim-mode-plugin-bindkey-callback"
+zinit load /Users/kyounger/code/zsh-vim-mode/
 
 autoload -Uz compinit
 compinit
-zplugin cdreplay -q
+zinit cdreplay -q
 
 #####################################################################
 # setopts
@@ -254,4 +231,5 @@ source "${HOME}/.dotfiles/zsh/completion-zstyles.zsh"
 # local env vars
 #####################################################################
 source "${HOME}/.local/.localrc"
+
 
