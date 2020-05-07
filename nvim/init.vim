@@ -11,6 +11,7 @@ endif
 call plug#begin('~/.cache/nvim/plugged')
 
 Plug 'fatih/vim-go', { 'tag': '*' }
+Plug 'kyounger/vim-helm'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
@@ -18,6 +19,9 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'tmux-plugins/vim-tmux-focus-events'
+
+let g:sneak#label = 1
+Plug 'justinmk/vim-sneak'
 
 let g:deoplete#enable_at_startup = 1
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -38,7 +42,7 @@ Plug 'sjl/AnsiEsc.vim'
 Plug 'fidian/hexmode'
 Plug 'hashivim/vim-terraform'
 
-Plug 'maxbrunsfeld/vim-yankstack'
+" Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'mrk21/yaml-vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'martinda/Jenkinsfile-vim-syntax'

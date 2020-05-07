@@ -12,6 +12,7 @@ export LESS='--tabs=4 --no-init --LONG-PROMPT --ignore-case --quit-if-one-screen
 export KEYTIMEOUT=10
 export GOPATH="${HOME}/go"
 export GOROOT="${HOME}/.go"
+export TMUX_PLUGIN_MANAGER_PATH="${HOME}/.tmux/plugins"
 
 MY_BREW_PREFIX=/usr/local
 
@@ -84,16 +85,15 @@ function lparen() { echo -n "(" }
 
 GEOMETRY_INFO=""
 GEOMETRY_PROMPT=(geometry_echo geometry_status geometry_jobs geometry_path)
-GEOMETRY_RPROMPT=(geometry_git geometry_exec_time bar geometry_kube_symbol geometry_kube_context geometry_kube_namespace)
+GEOMETRY_RPROMPT=(geometry_exec_time geometry_git geometry_kube_symbol geometry_kube_context geometry_kube_namespace)
 GEOMETRY_EXEC_TIME_PATIENCE=3
 GEOMETRY_KUBE_VERSION_COLOR=red
 GEOMETRY_KUBE_NAMESPACE_COLOR=green
 GEOMETRY_KUBE_CONTEXT_COLOR=cyan
-GEOMETRY_KUBE_SYMBOL="⎈"
-# GEOMETRY_KUBE_PIN=true
-zplugin ice lucid
-zplugin load kyounger/geometry
 
+zplugin ice lucid ver"main"
+# zplugin load kyounger/geometry
+zplugin load /Users/kyounger/code/geometry
 
 zplugin ice lucid
 zplugin load kyounger/git-extra-commands

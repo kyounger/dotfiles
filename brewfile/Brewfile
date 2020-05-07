@@ -11,12 +11,14 @@ brew automake
 brew aws-shell
 brew awscli
 brew bat
+brew bazel
 brew clamav
 brew cmake
 brew coreutils
 brew csvkit
 brew dcraw
 brew diff-so-fancy
+brew diffr
 brew dive
 brew docker-machine
 brew docker-machine-driver-xhyve
@@ -27,6 +29,7 @@ brew fd
 brew fdk-aac
 brew fdupes
 brew ffmpeg
+brew fio
 brew freetype
 brew fx
 brew gdbm
@@ -45,6 +48,7 @@ brew gron
 brew groovysdk
 brew hashcat
 brew helm
+brew helm@2
 brew helmfile
 brew html-xml-utils
 brew https://raw.githubusercontent.com/Homebrew/homebrew-core/1446e1f05b4d4eb76dca1efe4eff5910c133a5cf/Formula/openshift-cli.rb
@@ -64,6 +68,7 @@ brew jq
 brew json-c
 brew k3d
 brew kompose
+brew krew
 brew kubectx
 brew kubernetes-cli
 brew lame

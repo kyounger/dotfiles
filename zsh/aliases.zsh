@@ -18,6 +18,7 @@ alias mkdir='nocorrect mkdir'
 alias mv='nocorrect mv'
 alias mysql='nocorrect mysql'
 alias rm='nocorrect rm'
+alias gh-create-public-repo='gh repo create kyounger/$(basename $(pwd)) --public'
 
 # Disable globbing.
 alias bower='noglob bower'
@@ -62,14 +63,16 @@ function kcga() {
   done
 }
 alias helmfile='helmfile --helm-binary /usr/local/bin/helm'
+alias helm2='/usr/local/opt/helm@2/bin/helm'
 alias tf='terraform'
 
 alias hy='bat -l yaml'
+alias ys='kapp tools inspect -f -'
 alias tf='terraform'
+alias diff='diff -u'
 
 alias gc='gcloud'
 alias gccc='gcloud container clusters'
-
 
 alias capture-sound='mkdir -p ~/capture-sound/;ffmpeg -f avfoundation -i ":RecordAllDevice" -f s16le -acodec pcm_s16le -vn -ac 1 -ar 16k ~/capture-sound/raw-audio-capture`date +%s`.raw'
 alias capture-sound-flac='mkdir -p ~/capture-sound/;ffmpeg -f avfoundation -i ":RecordAllDevice" -ac 1 -ar 48k ~/capture-sound/audio-capture`date +%s`.flac'
@@ -93,9 +96,11 @@ alias gd='git diff'
 alias gdw='git diff --word-diff=color --word-diff-regex="[^[:space:],()=]+|[(),=]+"'
 alias gdwi='git diff --ignore-all-space --word-diff=color --word-diff-regex="[^[:space:],()=]+|[(),=]+"'
 alias gdws='git diff --ignore-all-space --staged --word-diff=color --word-diff-regex="[^[:space:],=]+|[,=]+"'
+alias gds='git diff --staged'
 
 alias gcane='git add *; git commit --amend --no-edit'
 alias gaa='git add *'
+alias ga.='git add .'
 alias gcm='git commit --message'
 alias gcam='git commit --all --message'
 alias gco='git checkout'
@@ -162,6 +167,11 @@ function jhome () {
 alias tidal-client='~/Applications/TES\ Java\ Client/tesclient.sh &'
 
 alias kaniko-build-here='docker run -it -v $(pwd):/workspace gcr.io/kaniko-project/executor:latest --no-push --cleanup'
+alias kaniko-build-here-gvisor='docker run --runtime=runsc -it -v $(pwd):/workspace gcr.io/kaniko-project/executor:latest --no-push --cleanup'
+
+alias ekc='export KUBECONFIG=$(pwd)/$(ls *kubeconfig*.yaml)'
+
+
 
 alias mci='mvn clean install'
 alias mcp='mvn clean package'
@@ -173,10 +183,10 @@ alias marktext="/Applications/Mark\ Text.app/Contents/MacOS/Mark\ Text"
 # list files
 # alias l='ls -al'
 alias l='CLICOLOR_FORCE=1 /usr/local/bin/gls -al --group-directories-first --color=always'
-alias lh='CLICOLOR_FORCE=1 ls -ald .*'
-alias lsd3='CLICOLOR_FORCE=1 du -sk * | sort -nr | head -3'
-alias lt='CLICOLOR_FORCE=1 ls -alt'
-alias lta='CLICOLOR_FORCE=1 ls -altr'
+alias lh='CLICOLOR_FORCE=1 gls -ald .* --color=always'
+alias lsd3='CLICOLOR_FORCE=1 du -sk * | sort -nr | head -3 --color=always'
+alias lt='CLICOLOR_FORCE=1 gls -alt --color=always'
+alias lta='CLICOLOR_FORCE=1 gls -altr --color=always'
 
 # change dir (or make and change)
 alias u='cd ..'
