@@ -63,6 +63,7 @@ function kcga() {
   done
 }
 alias helmfile='helmfile --helm-binary /usr/local/bin/helm'
+alias hf='helmfile --helm-binary /usr/local/bin/helm'
 alias helm2='/usr/local/opt/helm@2/bin/helm'
 alias tf='terraform'
 
@@ -93,10 +94,10 @@ alias glbu='git log --graph --abbrev-commit --decorate --format=format:"%C(green
 alias glh='git log --abbrev-commit --decorate --format=format:"%C(green)%h%C(reset) - %C(white)%s%C(reset) %C(reset)%C(red)%d %C(reset)%C(magenta)(%cr) %C(reset)%C(yellow)<%an>"'
 
 alias gd='git diff'
-alias gdw='git diff --word-diff=color --word-diff-regex="[^[:space:],()=]+|[(),=]+"'
-alias gdwi='git diff --ignore-all-space --word-diff=color --word-diff-regex="[^[:space:],()=]+|[(),=]+"'
-alias gdws='git diff --ignore-all-space --staged --word-diff=color --word-diff-regex="[^[:space:],=]+|[,=]+"'
 alias gds='git diff --staged'
+# alias gdw='git diff --word-diff=color --word-diff-regex="[^[:space:],()=]+|[(),=]+"'
+# alias gdwi='git diff --ignore-all-space --word-diff=color --word-diff-regex="[^[:space:],()=]+|[(),=]+"'
+# alias gdws='git diff --ignore-all-space --staged --word-diff=color --word-diff-regex="[^[:space:],=]+|[,=]+"'
 
 alias gcane='git add *; git commit --amend --no-edit'
 alias gaa='git add *'
@@ -170,6 +171,7 @@ alias kaniko-build-here='docker run -it -v $(pwd):/workspace gcr.io/kaniko-proje
 alias kaniko-build-here-gvisor='docker run --runtime=runsc -it -v $(pwd):/workspace gcr.io/kaniko-project/executor:latest --no-push --cleanup'
 
 alias ekc='export KUBECONFIG=$(pwd)/$(ls *kubeconfig*.yaml)'
+alias kapp-inspect-stdin='kapp tools inspect -f -'
 
 
 

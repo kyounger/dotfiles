@@ -23,6 +23,7 @@ brew dive
 brew docker-machine
 brew docker-machine-driver-xhyve
 brew dos2unix
+brew exa
 brew exiftool
 brew faac
 brew fd
@@ -32,6 +33,7 @@ brew ffmpeg
 brew fio
 brew freetype
 brew fx
+brew fzy
 brew gdbm
 brew gettext
 brew gh
@@ -49,7 +51,6 @@ brew groovysdk
 brew hashcat
 brew helm
 brew helm@2
-brew helmfile
 brew html-xml-utils
 brew https://raw.githubusercontent.com/Homebrew/homebrew-core/1446e1f05b4d4eb76dca1efe4eff5910c133a5cf/Formula/openshift-cli.rb
 brew https://raw.githubusercontent.com/Homebrew/homebrew-core/c8cff106b17b90472cc6e251b9e5c2daf4fd8d46/Formula/tmux.rb
@@ -148,6 +149,7 @@ brew tig
 brew tree
 brew unibilium
 brew utf8proc
+brew velero
 brew vim
 brew visionmedia-watch
 brew wakeonlan

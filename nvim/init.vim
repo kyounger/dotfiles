@@ -12,13 +12,17 @@ call plug#begin('~/.cache/nvim/plugged')
 
 Plug 'fatih/vim-go', { 'tag': '*' }
 Plug 'kyounger/vim-helm'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'tmux-plugins/vim-tmux-focus-events'
+Plug 'terryma/vim-expand-region'
+
+nmap <space> <Plug>(expand_region_expand)
+vmap <space> <Plug>(expand_region_expand)
+nmap _ <Plug>(expand_region_shrink)
+vmap _ <Plug>(expand_region_shrink)
 
 let g:sneak#label = 1
 Plug 'justinmk/vim-sneak'
@@ -31,7 +35,11 @@ Plug 'henrik/vim-indexed-search'
 noremap <silent> <Plug>(slash-after) :<C-u>ShowSearchIndex<CR>
 xunmap <Plug>(slash-after)
 
-Plug 'icymind/NeoSolarized'
+let g:airline_theme='ubaryd'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'rafi/awesome-vim-colorschemes'
+
 Plug 'kshenoy/vim-signature'
 Plug 'kyounger/vim-slash'
 Plug 'junegunn/vim-pseudocl'
@@ -46,7 +54,6 @@ Plug 'hashivim/vim-terraform'
 Plug 'mrk21/yaml-vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'martinda/Jenkinsfile-vim-syntax'
-
 call plug#end()
 
 " my helper function
@@ -224,9 +231,9 @@ endfunction
     " }}}
     " Tabs, Spaces, Wrapping: {{{
 
-        set tabstop=4
-        set shiftwidth=4
-        set softtabstop=4
+        set tabstop=2
+        set shiftwidth=2
+        set softtabstop=2
         set expandtab
         set nowrap
         set formatoptions=qrn1
@@ -245,9 +252,9 @@ endfunction
         syntax on
         set background=dark
 
-        if IfPlugin('NeoSolarized')
-            colorscheme NeoSolarized
-        endif
+        " colorscheme afterglow
+        colorscheme focuspoint
+        " colorscheme solarized
 
         " Highlight VCS conflict markers
         match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
@@ -417,8 +424,8 @@ endfunction
         set foldlevelstart=20
 
         " Space to toggle folds.
-        nnoremap <Space> za
-        vnoremap <Space> za
+        " nnoremap <Space> za
+        " vnoremap <Space> za
 
         " Make zO recursively open whatever top level fold we're in, no matter where the cursor happens to be.
         nnoremap zO zCzO

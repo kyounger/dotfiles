@@ -9,10 +9,12 @@
 export EDITOR=vim
 export LANG=en_US.UTF-8
 export LESS='--tabs=4 --no-init --LONG-PROMPT --ignore-case --quit-if-one-screen --RAW-CONTROL-CHARS'
-export KEYTIMEOUT=10
+export KEYTIMEOUT=30
 export GOPATH="${HOME}/go"
 export GOROOT="${HOME}/.go"
+export GROOVY_HOME=/usr/local/opt/groovy/libexec
 export TMUX_PLUGIN_MANAGER_PATH="${HOME}/.tmux/plugins"
+# export TMUX_PASSTHROUGH=1
 
 MY_BREW_PREFIX=/usr/local
 
@@ -25,10 +27,8 @@ HISTSIZE=290000                   # The maximum number of events to save in the 
 SAVEHIST=290000                   # The maximum number of events to save in the history file.
 
 # Define ls colors
-export LSCOLORS='exfxcxdxbxGxDxabagacad'
 export LSCOLORS='DxfxcxdxbxGxDxabagacad'
 # Define ls colors for the completion system
-export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=36;01:cd=33;01:su=31;40;07:sg=36;40;07:tw=32;40;07:ow=33;40;07:'
 export LS_COLORS='di=93:ln=35:so=32:pi=33:ex=31:bd=36;01:cd=33;01:su=31;40;07:sg=36;40;07:tw=32;40;07:ow=33;40;07:'
 
 # Set the list of directories that Zsh searches for programs.
@@ -45,19 +45,37 @@ autoload -Uz bracketed-paste-url-magic && zle -N bracketed-paste bracketed-paste
 
 PS1="READY > "
 
+
+insertPreviousArg() {
+  echo $LBUFFER | read -A args
+  LAST_CHAR="${${:-$LBUFFER}[-1]}"
+  LAST_ARG="${args[$#args]}"
+  BEFORE_LAST_ARG="${args[$#args - 1]}"
+
+  if [[ $LAST_CHAR == " " ]]; then
+    LBUFFER="$LBUFFER$BEFORE_LAST_ARG"
+  else
+    LBUFFER="$LBUFFER $LAST_ARG"
+  fi
+}
+zle -N insertPreviousArg
+
 vim-mode-plugin-bindkey-callback() {
     vim-mode-bindkey viins       -- beginning-of-line                  Home
     vim-mode-bindkey viins       -- end-of-line                        End
-    vim-mode-bindkey viins       -- backward-word                      Ctrl-Left
-    vim-mode-bindkey viins       -- backward-word                      Alt-Left
-    vim-mode-bindkey viins       -- forward-word                       Ctrl-Right
-    vim-mode-bindkey viins       -- forward-word                       Alt-Right
+    vim-mode-bindkey viins       -- backward-word                      ˙
+    vim-mode-bindkey viins       -- forward-word                       ¬
     vim-mode-bindkey viins       -- delete-char                        Delete
+    vim-mode-bindkey viins       -- backward-delete-word               ≠
     vim-mode-bindkey viins       -- reverse-menu-complete              Shift-Tab
     vim-mode-bindkey       vicmd -- redo                               '^R'
     vim-mode-bindkey       vicmd -- edit-command-line                  '^V'
     vim-mode-bindkey viins vicmd -- history-beginning-search-backward   Up
     vim-mode-bindkey viins vicmd -- history-beginning-search-forward    Down
+    vim-mode-bindkey viins vicmd -- fuzzy-search-and-edit               '^P'
+    vim-mode-bindkey viins vicmd -- fzy-file-widget                     '^T'
+    vim-mode-bindkey viins       -- insertPreviousArg                   ®
+    
 
     if [[ -n $HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND ]]; then
         vim-mode-bindkey viins vicmd -- history-substring-search-up         Up
@@ -98,6 +116,8 @@ zinit load kyounger/git-extra-commands
 zinit ice lucid blockf
 zinit load zsh-users/zsh-completions
 
+
+
 zinit ice as"completion"
 zinit snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
 
@@ -109,6 +129,40 @@ zinit snippet $MY_BREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/
 
 zinit ice lucid as"command" from"gh-r"
 zinit load junegunn/fzf-bin
+
+export FZF_TMUX=1
+zinit ice lucid as"command" pick"bin/fzf-tmux"
+zinit load junegunn/fzf
+
+zinit ice lucid multisrc"shell/{completion,key-bindings}.zsh" id-as"junegunn/fzf_completions" pick"/dev/null"
+zinit load junegunn/fzf
+
+# zinit ice lucid
+# zinit load aperezdc/zsh-fzy
+
+# autojump command
+zinit ice lucid
+zinit load rupa/z
+
+zinit ice lucid as"command" pick"v"
+zinit load rupa/v
+
+# # Pick from most frecent folders with `Ctrl+g`
+# zinit ice lucid
+# zinit load andrewferrier/fzf-z  
+
+# # lets z+[Tab] and zz+[Tab]
+# zinit ice lucid
+# zinit load changyuheng/fz
+
+zinit ice lucid
+zinit load mafredri/zsh-async
+
+zinit ice lucid
+zinit load seletskiy/zsh-fuzzy-search-and-edit
+
+zinit ice lucid from"gh-r" as"program" bpick"helmfile_darwin_amd64" mv"helmfile_darwin_amd64 -> helmfile"
+zinit load roboll/helmfile
 
 zinit ice lucid from"gh-r" as"program" bpick"kind-darwin-amd64" mv"kind-darwin-amd64 -> kind"
 zinit load kubernetes-sigs/kind
@@ -122,7 +176,7 @@ zinit load alexellis/k3sup
 zinit ice lucid from"gh-r" as"program" bpick"*darwin*" mv"*-darwin-amd64 -> yamldiff"
 zinit load sahilm/yamldiff
 
-zinit ice lucid from"gh-r" as"program" bpick"*darwin*" ver"v2.0.881"
+zinit ice lucid from"gh-r" as"program" bpick"*darwin*"
 zinit load jenkins-x/jx
 
 zinit ice as"program" cp"bin/g -> bin/gvm" pick"bin/gvm"
@@ -137,11 +191,16 @@ zinit load zsh-users/zsh-syntax-highlighting
 zinit ice lucid #atload"history-substring-plugin-bindkey-callback"
 zinit load zsh-users/zsh-history-substring-search
 
+MODE_CURSOR_VIINS="#00ff00 blinking bar"
+MODE_CURSOR_REPLACE="$MODE_CURSOR_VIINS #ff0000"
 MODE_CURSOR_VICMD="green block"
-MODE_CURSOR_VIINS="#20d08a blinking bar"
 MODE_CURSOR_SEARCH="#ff00ff steady underline"
+MODE_CURSOR_VISUAL="$MODE_CURSOR_VICMD steady bar"
+MODE_CURSOR_VLINE="$MODE_CURSOR_VISUAL #00ffff"
+# VIM_MODE_NO_DEFAULT_BINDINGS=true
 zinit ice lucid atload"vim-mode-plugin-bindkey-callback"
-zinit load kyounger/zsh-vim-mode
+# zinit load kyounger/zsh-vim-mode
+zinit load ${HOME}/code/zsh-vim-mode
 
 autoload -Uz compinit
 compinit
