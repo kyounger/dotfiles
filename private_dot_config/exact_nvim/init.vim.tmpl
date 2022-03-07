@@ -1,0 +1,5 @@
+{{ $x := splitList "_" .chezmoi.sourceFile -}}
+{{ $y := last $x | dir -}}
+{{ $rtp := list "~/." $y | join "" -}}
+{{ $vim_flag := .vim_flag -}}
+{{ template "vim/vimrc" dict "rtp" $rtp "os" .chezmoi.os "vim_flag" $vim_flag -}}

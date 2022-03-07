@@ -1,0 +1,743 @@
+packadd chezmoi.vim
+
+if &compatible
+  set nocompatible
+endif
+
+" Plugins (if any) ------------------------------------------------------- [[[
+{{ if eq .vim_flag "good" }}
+call plug#begin('~/.cache/nvim/plugged')
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'fatih/vim-go', { 'tag': '*' }
+Plug 'kyounger/vim-helm'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-commentary'
+Plug 'tmux-plugins/vim-tmux-focus-events'
+Plug 'terryma/vim-expand-region'
+Plug 'justinmk/vim-sneak'
+Plug 'henrik/vim-indexed-search'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'rafi/awesome-vim-colorschemes'
+Plug 'kshenoy/vim-signature'
+Plug 'kyounger/vim-slash'
+Plug 'junegunn/vim-pseudocl'
+Plug 'junegunn/vim-peekaboo'
+Plug 'tmux-plugins/vim-tmux-focus-events'
+Plug 'sjl/vitality.vim'
+Plug 'sjl/AnsiEsc.vim'
+Plug 'fidian/hexmode'
+Plug 'hashivim/vim-terraform'
+Plug 'maxbrunsfeld/vim-yankstack'
+Plug 'mrk21/yaml-vim'
+Plug 'plasticboy/vim-markdown'
+Plug 'martinda/Jenkinsfile-vim-syntax'
+call plug#end()
+{{ end }}
+
+" my helper function
+function! IfPlugin(plugin_name)
+  let l:plugin_exists = 0
+  silent! l:plugin_exists = has_key(g:plugs, a:plugin_name) && stridx(&rtp, g:plugs[a:plugin_name].dir)
+  return l:plugin_exists
+endfunction
+
+" ]]]
+" Settings and Mappings -------------------------------------------------- [[[
+
+    " Sensible Defaults: [[[
+
+        set noexrc
+        set secure
+
+        set noundofile
+        set nobackup
+        set noswapfile
+
+        set cmdheight=2
+        set updatetime=300 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable delays and poor user experience.
+        set shortmess+=c " Don't pass messages to |ins-completion-menu|.
+
+        " Always show the signcolumn, otherwise it would shift the text each time diagnostics appear/become resolved.
+        if has("patch-8.1.1564")
+          " Recently vim can merge signcolumn and number column into one
+          set signcolumn=number
+        else
+          set signcolumn=yes
+        endif
+
+        set termguicolors
+        set encoding=utf-8
+        set modelines=0 " Prevent arbitrary command execution vulnerability - http://www.securityfocus.com/bid/14374/references
+        set autoindent
+        set showmode
+        set showcmd
+        set hidden
+        set visualbell
+        set ttyfast
+        set ruler
+        set backspace=indent,eol,start
+        set relativenumber
+        set number
+        set laststatus=2
+        set history=1000
+        set undofile
+        set undoreload=10000
+        set list
+        set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
+        set shell=/usr/local/bin/zsh
+        set lazyredraw
+        set matchtime=5
+        set showbreak=↪
+        set splitbelow
+        set splitright
+        " set fillchars=diff:⣿,vert:│
+        " set autowrite
+        set autoread
+        set shiftround
+        set title
+        set linebreak
+
+        " Don't try to highlight lines longer than 300 characters.
+        set synmaxcol=300
+
+        " Time out on key codes but not mappings.
+        " Basically this makes terminal Vim work sanely.
+        set notimeout
+        set ttimeout
+        set ttimeoutlen=20
+
+        " Better Completion
+        set complete=.,w,b,u,t
+        set completeopt=longest,menuone,preview
+
+        set tildeop
+        set shortmess=filtIoOA     " shorten messages
+        set report=0               " tell us about changes
+        set nostartofline          " don't jump to the start of line when scrolling
+        set ffs=unix,dos,mac
+        set autochdir
+
+        set ignorecase
+        set smartcase
+        set incsearch
+        set showmatch
+        set hlsearch
+        set gdefault
+
+        set scrolloff=3
+        set sidescroll=1
+        set sidescrolloff=10
+
+        set virtualedit+=block
+
+    " ]]]
+    " Cursorline: [[[
+
+        " Only show cursorline in the current window and in normal mode.
+        augroup cline
+            au!
+            au WinLeave,InsertEnter * set nocursorline
+            au WinEnter,InsertLeave * set cursorline
+        augroup END
+
+    " ]]]
+    " Trailing whitespace: [[[
+        " Only shown when not in insert mode so I don't go insane.
+        augroup trailing
+            au!
+            au InsertEnter * :set listchars-=trail:⌴
+            au InsertLeave * :set listchars+=trail:⌴
+        augroup END
+
+        function! TrimWhitespace()
+            let l:save_cursor = getpos('.')
+            %s/\s\+$//e
+            call setpos('.', l:save_cursor)
+        endfun
+
+    " ]]]
+    " Wildmenu completion: [[[
+
+        set wildmenu
+        set wildmode=longest:list,full
+
+        set wildignore+=.hg,.git,.svn                    " Version control
+        set wildignore+=*.aux,*.out,*.toc                " LaTeX intermediate files
+        set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg   " binary images
+        set wildignore+=*.o,*.obj,*.exe,*.dll,*.manifest " compiled object files
+        set wildignore+=*.spl                            " compiled spelling word lists
+        set wildignore+=*.sw?                            " Vim swap files
+        set wildignore+=*.DS_Store                       " OSX bullshit
+
+        set wildignore+=*.luac                           " Lua byte code
+
+        set wildignore+=migrations                       " Django migrations
+        set wildignore+=*.pyc                            " Python byte code
+
+        set wildignore+=*.orig                           " Merge resolution files
+
+        " Clojure/Leiningen
+        set wildignore+=classes
+        set wildignore+=lib
+
+    " ]]]
+    " Line Return: [[[
+
+        " Make sure Vim returns to the same line when you reopen a file.
+        augroup line_return
+            au!
+            au BufReadPost *
+                \ if line("'\"") > 0 && line("'\"") <= line("$") |
+                \     execute 'normal! g`"zvzz' |
+                \ endif
+        augroup END
+
+    " ]]]
+    " Leader: [[[
+
+        let mapleader = ","
+        let maplocalleader = ","
+
+    " ]]]
+    " Tabs, Spaces, Wrapping: [[[
+
+        set tabstop=2
+        set shiftwidth=2
+        set softtabstop=2
+        set expandtab
+        set nowrap
+        set formatoptions=qrn1
+        set colorcolumn=0
+        set breakindent
+        inoremap <S-Tab> <C-d>
+
+        " Wrap toggling with <leader>w
+        " command! -nargs=* Wrap set wrap linebreak nolist
+        nnoremap <leader>w :set nowrap! nolinebreak! nolist<cr>
+
+
+    " ]]]
+    " Color scheme [[[
+        let g:airline_theme='ubaryd'
+
+        syntax on
+        set background=dark
+
+        " colorscheme afterglow
+        colorscheme focuspoint
+        " colorscheme solarized
+
+        " Highlight VCS conflict markers
+        match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
+
+    " ]]]
+    " NoOp: [[[
+
+        noremap  <F1> <nop>
+        inoremap <F1> <nop>
+        nnoremap Q <nop>
+
+    " ]]]
+    " Editing: [[[
+        " Clean trailing whitespace
+        nnoremap <leader><leader>w mz:%s/\s\+$//<cr>:let @/=''<cr>`z
+
+        "Format whole document based on filetype
+        nnoremap <leader>= mzggVG=`z
+
+        " Keep the cursor in place while joining lines
+        nnoremap J mzJ`z
+
+        " Split line (sister to [J]oin lines)
+        " The normal use of S is covered by cc, so don't worry about shadowing it.
+        nnoremap S i<cr><esc>^mwgk:silent! s/\v +$//<cr>:noh<cr>`w
+
+        " Made D behave
+        nnoremap D d$
+
+        " toggle the character that shows the end-of-line
+        nnoremap <leader>i :set list!<cr>
+
+        " Drag Lines: broken for now if folding is enabled
+        " Alt-j & Alt-k to drag lines in any mode
+        noremap ˚ :m-2<CR>
+        noremap ∆ :m+<CR>
+        inoremap ∆ <Esc>:m+<CR>
+        inoremap ˚ <Esc>:m-2<CR>
+        vnoremap ∆ :m'>+<CR>gv
+        vnoremap ˚ :m-2<CR>gv
+
+        " Remaps control-backspace to delete entire word in insert mode
+        inoremap <C-BS> <Esc>dbxa
+
+        " Fast saving
+        nnoremap <leader>s :w!<cr>
+
+        "BEAST MODE. Allow . and @@ to execute once for each line of a visual selection
+        vnoremap . :normal .<CR>
+        vnoremap @@ :normal @@
+    " ]]]
+    " Command Mode Mapping: [[[
+        " Insert the directory of the current buffer in command line mode
+        cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+
+        " Emacs bindings in command line mode
+        cnoremap <c-a> <home>
+        cnoremap <c-e> <end>
+
+        " Sudo to write
+        cnoremap w!! w !sudo tee % >/dev/null
+    " ]]]
+    " Selection Mappings: [[[
+        " Select (charwise) the contents of the current line, excluding indentation.
+        " Great for pasting Python lines into REPLs.
+        nnoremap vv ^vg_
+
+        " Fix linewise visual selection of various text objects
+        nnoremap VV V
+
+        " Visually select the text that was last edited/pasted
+        noremap gV `[v`]
+
+        " Reselect visual block after indent/outdent
+        vnoremap < <gv
+        vnoremap > >gv
+    " ]]]
+    " Navigation: [[[
+        " mash keys; exit insert fast.
+        inoremap jj <ESC>
+        inoremap kk <ESC>
+        inoremap jk <ESC>
+        inoremap kj <ESC>
+
+        " It's 2014.
+        noremap j gj
+        noremap k gk
+        noremap gj j
+        noremap gk k
+
+        " Easy split navigation
+        noremap <C-h> <C-w>h
+        noremap <C-j> <C-w>j
+        noremap <C-k> <C-w>k
+        noremap <C-l> <C-w>l
+
+        " left and right arrows navigate buffers
+        nnoremap <right> :bn<cr>
+        nnoremap <left> :bp<cr>
+
+        " use ',,' to swap between two most recent buffers
+        nnoremap <leader><leader><space> <c-^>
+
+        " Same when jumping around
+        nnoremap g; g;zz
+        nnoremap g, g,zz
+        nnoremap <c-o> <c-o>zz
+
+        " Easier to type, and I never use the default behavior.
+        noremap H ^
+        noremap L $
+        vnoremap L g_
+
+        " Heresy
+        inoremap <c-a> <esc>I
+        inoremap <c-e> <esc>A
+
+        " gi already moves to 'last place you exited insert mode', so we'll map gI to
+        " something similar: move to last change
+        nnoremap gI `.
+
+        "Matching
+        runtime macros/matchit.vim
+    " ]]]
+    " Completions [[[
+
+        " Ctrl-Space for completions
+        inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
+                    \ "\<lt>C-n>" :
+                    \ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .
+                    \ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
+                    \ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
+        imap <C-@> <C-Space>
+
+        " Insert Mode Completion
+        inoremap <c-f> <c-x><c-f>
+        inoremap <c-]> <c-x><c-]>
+
+    " ]]]
+    " Copy & Paste [[[
+        " clearly
+        au InsertLeave * set nopaste
+
+        "Copy & Paste
+        if has("win64") || has("win32")
+            set clipboard=unnamedplus
+        elseif has("mac")
+            set clipboard=unnamed
+        endif
+
+        " paste with most recent yank
+        noremap <leader>p "0p
+        noremap <leader>P "0P
+
+    "" ]]]
+    " Misc: [[[
+        nnoremap <F3> :e $MYVIMRC<cr>
+
+        " Toggle "keep current line in the center of the screen" mode
+        nnoremap <leader><leader>c :let &scrolloff=999-&scrolloff<cr>
+
+        "I hate typing SNAPSHOT
+        nnoremap ,,s i-SNAPSHOT<esc>
+
+    " ]]]
+    " Folding: [[[
+        set foldlevelstart=20
+
+        " Space to toggle folds.
+        " nnoremap <Space> za
+        " vnoremap <Space> za
+
+        " Make zO recursively open whatever top level fold we're in, no matter where the cursor happens to be.
+        nnoremap zO zCzO
+
+        " "Focus" the current line.  Basically:
+        "
+        " 1. Close all folds.
+        " 2. Open just the folds containing the current line.
+        " 3. Move the line to a little bit (15 lines) above the center of the screen.
+        " 4. Pulse the cursor line.  My eyes are bad.
+        "
+        " This mapping wipes out the z mark, which I never use.
+        "
+        " I use :sus for the rare times I want to actually background Vim.
+        nnoremap <c-z> mzzMzvzz10<c-e>`z:Pulse<cr>
+
+        function! MyFoldText() " [[[
+            let line = getline(v:foldstart)
+
+            let nucolwidth = &fdc + &number * &numberwidth
+            let windowwidth = winwidth(0) - nucolwidth - 3
+            let foldedlinecount = v:foldend - v:foldstart
+
+            " expand tabs into spaces
+            let onetab = strpart('          ', 0, &tabstop)
+            let line = substitute(line, '\t', onetab, 'g')
+
+            let line = strpart(line, 0, windowwidth - 2 -len(foldedlinecount))
+            let fillcharcount = windowwidth - len(line) - len(foldedlinecount)
+            return line . '…' . repeat(" ",fillcharcount) . foldedlinecount . '…' . ' '
+        endfunction " ]]]
+        set foldtext=MyFoldText()
+
+        function! BetterIndentFolding()
+            setlocal foldmethod=expr
+            setlocal foldexpr=(getline(v:lnum)=~'^$')?-1:((indent(v:lnum)<indent(v:lnum+1))?('>'.indent(v:lnum+1)):indent(v:lnum))
+            set foldtext=getline(v:foldstart)
+            set fillchars=fold:\ "(there's a space after that \)
+            highlight Folded ctermfg=DarkGreen ctermbg=Black
+        endfunction
+
+    " ]]]
+    " Searching [[[
+
+        nnoremap <silent> <leader><space> :noh<cr>:call clearmatches()<cr>
+
+        if !IfPlugin("vim-slash")
+            " Use sane regexes.
+            nnoremap / /\v
+            vnoremap / /\v
+
+            " Don't move on *
+            " nnoremap * *<c-o>
+            nnoremap <silent> * :let stay_star_view = winsaveview()<cr>*:call winrestview(stay_star_view)<cr>
+
+            " Use c-\ to do c-] but open it in a new split.
+            " nnoremap <c-\> <c-w>v<c-]>zvzz
+
+            " Keep search matches in the middle of the window.
+            nnoremap n nzzzv
+            nnoremap N Nzzzv
+        end
+
+        function! HiInterestingWord(n) " [[[
+            " Save our location.
+            normal! mz
+            " Yank the current word into the z register.
+            "normal! "zyiw
+
+            " Patched to highlight visual selection, if copied to register "z
+            :if @z == ""
+                normal! "zyiW
+            :endif
+
+            " Calculate an arbitrary match ID.  Hopefully nothing else is using it.
+            let mid = 77750 + a:n
+            " Clear existing matches, but don't worry if they don't exist.
+            "silent! call matchdelete(mid)
+            try
+                call matchdelete(mid)
+            catch 'E803'
+                " Construct a literal pattern that has to match at boundaries.
+                "let pat = '\V\<' . escape(@z, '\') . '\>'
+
+                " Patched to match substrings
+                let pat = escape(@z, '\')
+
+                " Actually match the strings.
+                call matchadd("InterestingWord" . a:n, pat, 1, mid)
+            endtry
+            " Move back to our original location.
+            :let @z = ""
+            normal! `z
+        endfunction
+        nnoremap <silent> • :call HiInterestingWord(1)<cr>
+
+    "]]]
+
+    " ]]]
+" ]]]
+{{ if eq .vim_flag "good" -}}
+" Plugin settings -------------------------------------------------------- [[[
+    " vim-indexed-search: [[[
+        if IfPlugin("vim-indexed-search")
+          let g:indexed_search_mappings = 0
+          noremap <silent> <Plug>(slash-after) :<C-u>ShowSearchIndex<CR>
+          xunmap <Plug>(slash-after)
+        endif
+    " ]]]
+    " vim-expand-region: [[[
+        if IfPlugin("vim-expand-region")
+          nmap <space> <Plug>(expand_region_expand)
+          vmap <space> <Plug>(expand_region_expand)
+          nmap _ <Plug>(expand_region_shrink)
+          vmap _ <Plug>(expand_region_shrink)
+        endif
+    " ]]]
+    " vim-sneak: [[[
+        if IfPlugin("vim-sneak")
+          let g:sneak#label = 1
+        endif
+    " ]]]
+    " COC: [[[
+        if IfPlugin("coc")
+          "" Remap for do codeAction of selected region
+          function! s:cocActionsOpenFromSelected(type) abort
+            execute 'CocCommand actions.open ' . a:type
+          endfunction
+          xmap <silent> <leader>a :<C-u>execute 'CocCommand actions.open ' . visualmode()<CR>
+          nmap <silent> <leader>a :<C-u>set operatorfunc=<SID>cocActionsOpenFromSelected<CR>g@
+        endif
+    " ]]]
+    " GitGutter [[[
+        if IfPlugin('vim-gitgutter')
+            nnoremap <F4> :GitGutterToggle<cr>
+            nmap <Leader>hn <Plug>(GitGutterNextHunk)
+            nmap <Leader>hp <Plug>(GitGutterPrevHunk)
+            nmap <Leader>hs <Plug>(GitGutterStageHunk)
+            nmap <Leader>hu <Plug>(GitGutterUndoHunk)
+        endif
+    " ]]]
+    " Fugitive [[[
+        if IfPlugin("vim-fugitive")
+            augroup ft_fugitive
+                au!
+
+                au BufNewFile,BufRead .git/index setlocal nolist
+            augroup END
+        end
+    " ]]]
+    " Markdown [[[
+        if IfPlugin("vim-markdown")
+            let g:vim_markdown_emphasis_multiline = 0
+            let g:vim_markdown_no_default_key_mappings = 1
+            let g:vim_markdown_folding_style_pythonic = 1
+        end
+    " ]]]
+    " Yankstack [[[
+        if IfPlugin("vim-yankstack")
+            nmap π <Plug>yankstack_substitute_older_paste
+            nmap ∏ <Plug>yankstack_substitute_newer_paste
+            imap π <Plug>yankstack_substitute_older_paste
+            imap ∏ <Plug>yankstack_substitute_newer_paste
+        endif
+    " ]]]
+" ]]]
+{{ end -}}
+" Environment ------------------------------------------------------------ [[[
+
+    set mouse=a
+
+    "deal with oddities with cursor in vim
+    if !has('nvim')
+        function! HandleCursor()
+            if mode() == 'i'
+                silent exec "! echo -ne '\e[5 q'"
+            else
+                silent exec "! echo -ne '\e[2 q'"
+            endif
+        endfunction
+
+        autocmd  FocusGained  * silent! call HandleCursor()
+    endif
+
+    " Toggle between rnu, nu, and no numbering
+    if version >= 703
+        function! ToggleLineNumbers()
+                if (!&number && !&relativenumber)
+                    set number
+                    set relativenumber
+                elseif &rnu
+                    set norelativenumber
+                    set nu
+                elseif &nu
+                    set nonumber
+                    set norelativenumber
+                endif
+        :nnoremap <silent> <F2> :call ToggleLineNumbers()<cr>
+        endfunction
+    endif
+
+    " Resize splits when the window is resized
+    au VimResized * :wincmd =
+
+" ]]]
+" Filetype-specific ------------------------------------------------------ [[[
+    " helmfile [[[
+
+        augroup ft_helmfile
+            au!
+            au BufNewFile,BufRead helmfile.yaml setlocal filetype=helm
+        augroup END
+
+    " ]]]
+    " CSS and LessCSS [[[
+
+        augroup ft_css
+            au!
+
+            au BufNewFile,BufRead *.less setlocal filetype=less
+
+            au Filetype less,css setlocal foldmethod=marker
+            au Filetype less,css setlocal foldmarker={,}
+            au Filetype less,css setlocal omnifunc=csscomplete#CompleteCSS
+            au Filetype less,css setlocal iskeyword+=-
+            au Filetype less,css setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+
+            " Make {<cr> insert a pair of brackets in such a way that the cursor is correctly
+            " positioned inside of them AND the following code doesn't get unfolded.
+            au BufNewFile,BufRead *.less,*.css inoremap <buffer> {<cr> {}<left><cr><space><space><space><space>.<cr><esc>kA<bs>
+        augroup END
+
+    " ]]]
+    " Java [[[
+
+        augroup ft_java
+            au!
+            au FileType java setlocal foldmethod=marker
+            au FileType java setlocal foldmarker={,}
+            au Filetype java setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+        augroup END
+
+    " ]]]
+    " Python [[[
+
+        augroup ft_python
+            au!
+            au Filetype python setlocal foldmethod=syntax
+            au Filetype python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+        augroup END
+
+    " ]]]
+    " Ruby [[[
+
+        augroup ft_ruby
+            au!
+            au Filetype ruby setlocal foldmethod=syntax
+            au Filetype ruby setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+        augroup END
+
+    " ]]]
+    " Vim [[[
+
+        augroup ft_vim
+            au!
+            au FileType vim setlocal foldmethod=marker
+            au FileType vim setlocal foldmarker=[[[,]]]
+            au FileType vim setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+            au BufWinEnter *.txt if &ft == 'help' | wincmd L | endif
+        augroup END
+
+    " ]]]
+    " YAML [[[
+
+        augroup ft_yaml
+            au!
+            au FileType yaml setlocal foldmethod=indent
+            au FileType yaml setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+        augroup END
+
+    " ]]]
+    " Markdown [[[
+
+        augroup ft_markdown
+            au!
+            au FileType markdown setlocal foldmethod=indent
+            au FileType markdown setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+        augroup END
+
+    " ]]]
+    " JSON [[[
+
+        augroup ft_json
+            au!
+            au FileType json setlocal foldmethod=syntax
+            au FileType json setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+        augroup END
+
+    " ]]]
+    " Zsh [[[
+
+        augroup ft_zsh
+            au!
+            au FileType zsh setlocal foldmethod=indent
+            au FileType zsh setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+        augroup END
+
+    " ]]]
+" ]]]
+" Backups and other meta persistence: ------------------------------------ [[[
+
+    set noundofile
+    set nobackup
+    set noswapfile
+
+    if(has('nvim'))
+        set undodir=~/.cache/nvim/tmp/undo//     " undo files
+        set backupdir=~/.cache/nvim/tmp/backup// " backups
+        set directory=~/.cache/nvim/tmp/swap//   " swap files
+    elseif
+        set undodir=~/.cache/vim/tmp/undo//     " undo files
+        set backupdir=~/.cache/vim/tmp/backup// " backups
+        set directory=~/.cache/vim/tmp/swap//   " swap files
+    endif
+
+    " Make Vim able to edit crontab files again.
+    set backupskip=/tmp/*,/private/tmp/*"
+
+    " Make those directories automatically if they don't already exist.
+    if !isdirectory(expand(&undodir))
+        call mkdir(expand(&undodir), "p")
+    endif
+    if !isdirectory(expand(&backupdir))
+        call mkdir(expand(&backupdir), "p")
+    endif
+    if !isdirectory(expand(&directory))
+        call mkdir(expand(&directory), "p")
+    endif
+
+" ]]]
+

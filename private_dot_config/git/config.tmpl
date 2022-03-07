@@ -1,0 +1,101 @@
+[user]
+  name = {{ .git_username }}
+	email = {{ .git_email }}
+	signingkey = {{ .git_signingkey }}
+
+[core]
+	pager = delta
+
+[delta]
+  plus-color = "#012800"
+  minus-color = "#340001"
+  syntax-theme = Monokai Extended
+  features = unobtrusive-line-numbers decorations
+  whitespace-error-style = 22 reverse
+
+[delta "unobtrusive-line-numbers"]
+  line-numbers = true
+  line-numbers-minus-style = "#444444"
+  line-numbers-zero-style = "#444444"
+  line-numbers-plus-style = "#444444"
+  line-numbers-left-format = "{nm:>4}┊"
+  line-numbers-right-format = "{np:>4}│"
+  line-numbers-left-style = blue
+  line-numbers-right-style = blue
+
+[delta "decorations"]
+  commit-decoration-style = bold "#7002f7" box
+  file-style = bold yellow none
+  file-decoration-style = bold yellow ul ol
+  hunk-header-decoration-style = yellow box
+
+[interactive]
+  diffFilter = delta --color-only
+
+[color]
+	ui = true
+
+[branch]
+  autosetuprebase = always
+  autosetupmerge = always
+
+[diff]
+	indentHeuristic = true
+  colorMoved = default
+
+[difftool]
+	prompt = false
+
+[mergetool]
+	prompt = false
+
+[hub]
+  protocol = https
+
+[push]
+	default = current
+	followTags = true
+
+[pull]
+  rebase = true
+
+[credential]
+	helper = osxkeychain
+	usehttppath = false
+
+[url "https://"]
+	insteadOf = git://
+
+[fetch]
+	prune = true
+
+[alias]
+	add-no-white=!sh -c 'git diff -U0 -w --no-color "$@" | git apply --cached --ignore-whitespace --unidiff-zero -'
+
+; [color "diff-highlight"]
+; 	oldNormal = red bold
+; 	oldHighlight = red bold 52
+; 	newNormal = green bold
+; 	newHighlight = green bold 22
+
+[credential "https://source.developers.google.com"]
+	helper = gcloud.sh
+
+[commit]
+	gpgsign = true
+
+; [color "diff"]
+; 	meta = 11
+; 	frag = magenta bold
+; 	commit = yellow bold
+; 	old = red bold
+; 	new = green bold
+; 	whitespace = red reverse
+
+[diff "yaml"]
+  xfuncname = ""
+
+; [diff "sopsdiffer"]
+; 	textconv = sops -d
+[init]
+	defaultBranch = master

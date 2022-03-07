@@ -1,0 +1,9 @@
+{{ template "bashrc" dict "os" .chezmoi.os -}}
+
+{{ if eq .chezmoi.os "darwin" }}
+bind -f $INPUTRC
+
+{{ end -}}
+
+{{ template "profile.sh" dict "os" .chezmoi.os -}}
+

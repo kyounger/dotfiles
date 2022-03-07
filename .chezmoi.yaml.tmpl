@@ -1,0 +1,11 @@
+{{- $vim_flag         := promptString "System good for N/Vim complete config?" "good" -}}
+{{- $vim_persist_undo := promptString "N/Vim config option: persist undo/backups?" "no" -}}
+{{- $git_username     := promptString "Git username:" "" -}}
+{{- $git_email        := promptString "Git email:" "" -}}
+{{- $git_signingkey   := promptString "Git GPG signing key:" "" -}}
+data:
+    vim_flag: {{ $vim_flag | quote }}
+    vim_flag: {{ $vim_persist_undo | quote }}
+    git_username: {{ $git_username | quote }}
+    git_email: {{ $git_email | quote }}
+    git_signingkey: {{ $git_signingkey | quote }}

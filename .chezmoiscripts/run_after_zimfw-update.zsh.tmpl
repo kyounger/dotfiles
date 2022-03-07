@@ -1,0 +1,9 @@
+#!/usr/bin/env zsh
+
+echo ""
+echo "Finished with chezmoi update. Running zimfw update."
+echo ""
+
+{{ template "zim-module-init" }}
+
+zimfw update -v
