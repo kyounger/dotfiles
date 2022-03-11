@@ -5,7 +5,7 @@ if &compatible
 endif
 
 " Plugins (if any) ------------------------------------------------------- [[[
-{{ if eq .vim_flag "good" }}
+{{ if eq .vim_plugins "yes" }}
 call plug#begin('~/.cache/nvim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'fatih/vim-go', { 'tag': '*' }
@@ -500,7 +500,7 @@ endfunction
 
     " ]]]
 " ]]]
-{{ if eq .vim_flag "good" -}}
+{{ if eq .vim_plugins "yes" -}}
 " Plugin settings -------------------------------------------------------- [[[
     " vim-indexed-search: [[[
         if IfPlugin("vim-indexed-search")
@@ -711,9 +711,15 @@ endfunction
 " ]]]
 " Backups and other meta persistence: ------------------------------------ [[[
 
+    set noswapfile " never use swapfiles
+
+{{ if eq .vim_persist "yes" }}
+    set undofile
+    set backup
+{{ else }}
     set noundofile
     set nobackup
-    set noswapfile
+{{ end }}
 
     if(has('nvim'))
         set undodir=~/.cache/nvim/tmp/undo//     " undo files
