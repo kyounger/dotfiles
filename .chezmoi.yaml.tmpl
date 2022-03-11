@@ -1,11 +1,13 @@
 {{- $vim_plugins      := promptString "N/Vim plugins?" "no" -}}
 {{- $vim_persist      := promptString "N/Vim config option: persist undo/backups?" "no" -}}
+{{- $zim_autoupdate   := promptString "Autoupdate zim modules on chezmoi update?" "yes" -}}
 {{- $git_username     := promptString "Git username:" "" -}}
 {{- $git_email        := promptString "Git email:" "" -}}
 {{- $git_signingkey   := promptString "Git GPG signing key:" "" -}}
 data:
     vim_plugins: {{ $vim_plugins | quote }}
     vim_persist: {{ $vim_persist | quote }}
+    zim_autoupdate: {{ $zim_autoupdate | quote }}
     git_username: {{ $git_username | quote }}
     git_email: {{ $git_email | quote }}
     git_signingkey: {{ $git_signingkey | quote }}
