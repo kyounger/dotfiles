@@ -124,3 +124,6 @@ bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 # }}} End configuration added by Zim install
 
+if [ -f ${HOMEBREW_PREFIX}/etc/brew-wrap ]; then
+  source ${HOMEBREW_PREFIX}/etc/brew-wrap
+fi

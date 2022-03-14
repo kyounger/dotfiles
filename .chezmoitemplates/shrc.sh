@@ -23,6 +23,8 @@ export PATH="${HOMEBREW_PREFIX}/bin:${HOMEBREW_PREFIX}/sbin${PATH+:$PATH}";
 export MANPATH="${HOMEBREW_PREFIX}/share/man${MANPATH+:$MANPATH}:";
 export INFOPATH="${HOMEBREW_PREFIX}/share/info:${INFOPATH:-}";
 export FPATH="${HOMEBREW_PREFIX}/share/zsh/site-functions:${FPATH}"
+
+export HOMEBREW_BREWFILE_APPSTORE=0
 {{ end -}}
 
 
@@ -66,3 +68,4 @@ export MANPAGER='less -s -M +Gg'
 
 alias sudo='sudo '
 alias cm="chezmoi"
+
