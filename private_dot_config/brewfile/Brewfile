@@ -74,6 +74,7 @@ brew guile
 brew harfbuzz
 brew hashcat
 brew helm
+brew helmfile
 brew hidapi
 brew html-xml-utils
 brew hub
