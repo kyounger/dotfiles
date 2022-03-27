@@ -97,6 +97,8 @@ function zvm_config() {
 
 function zvm_after_init() {
   zvm_bindkey viins '^[[Z' autosuggest-accept
+  zvm_bindkey viins '^[[H' beginning-of-line
+  zvm_bindkey viins '^[[F' end-of-line
 }
 
 {{ template "zim-module-init" }}
