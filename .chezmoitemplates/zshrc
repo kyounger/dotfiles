@@ -99,7 +99,14 @@ function zvm_after_init() {
   zvm_bindkey viins '^[[Z' autosuggest-accept
   zvm_bindkey viins '^[[H' beginning-of-line
   zvm_bindkey viins '^[[F' end-of-line
+  zvm_bindkey viins '≠'    backward-delete-word
+  zvm_bindkey viins '˙'    backward-word
+  zvm_bindkey viins '¬'    forward-word
+  zvm_bindkey viins '®'    insertPreviousArg
+  zvm_bindkey vicmd '^V'   edit-command-line
+  zvm_bindkey vicmd '^R'   redo
 }
+
 
 {{ template "zim-module-init" }}
 
