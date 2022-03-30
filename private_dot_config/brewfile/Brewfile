@@ -50,6 +50,7 @@ brew freetype
 brew frei0r
 brew fribidi
 brew fx
+brew fzf
 brew fzy
 brew gdbm
 brew gettext
@@ -209,6 +210,7 @@ brew pngpaste
 brew popt
 brew protobuf
 brew protobuf-c
+brew pup
 brew python@3.10
 brew python@3.8
 brew python@3.9
