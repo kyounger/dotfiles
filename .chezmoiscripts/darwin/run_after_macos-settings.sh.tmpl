@@ -1,6 +1,8 @@
 {{ if (eq .chezmoi.os "darwin") -}}
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
-#~/.macos
+echo "Running ~/.macos to converge."
+
+~/.macos
 
 {{ end -}}
