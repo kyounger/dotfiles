@@ -279,6 +279,7 @@ brew zstd
 tap homebrew/cask
 cask appcleaner
 cask audio-hijack
+cask barrier
 cask bartender
 cask bettertouchtool
 cask carbon-copy-cloner
