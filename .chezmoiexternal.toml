@@ -11,3 +11,23 @@
     type = "file"
     url = "https://raw.githubusercontent.com/kyounger/mathiasbynens-dotfiles/main/.macos"
     executable = true
+
+
+[".vim/pack/plugins/opt/vim-plug/autoload/plug.vim"]
+    type = "file"
+    url = "https://raw.githubusercontent.com/kyounger/vim-plug/master/plug.vim"
+[".config/nvim/pack/plugins/opt/vim-plug/autoload/plug.vim"]
+    type = "file"
+    url = "https://raw.githubusercontent.com/kyounger/vim-plug/master/plug.vim"
+
+[".vim/pack/plugins/opt/chezmoi.vim"]
+    type = "archive"
+    url = "https://github.com/alker0/chezmoi.vim/archive/main.tar.gz"
+    exact = true
+    stripComponents = 1
+[".config/nvim/pack/plugins/opt/chezmoi.vim"]
+    type = "archive"
+    url = "https://github.com/alker0/chezmoi.vim/archive/main.tar.gz"
+    exact = true
+    stripComponents = 1
+

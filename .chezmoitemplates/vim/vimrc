@@ -1,4 +1,5 @@
 packadd chezmoi.vim
+packadd vim-plug
 
 if &compatible
   set nocompatible
