@@ -87,7 +87,7 @@ endfunction
         set undoreload=10000
         set list
         set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
-        set shell=/usr/local/bin/zsh
+        set shell=zsh
         set lazyredraw
         set matchtime=5
         set showbreak=↪
