@@ -1,9 +1,7 @@
 packadd chezmoi.vim
 packadd vim-plug
 
-if &compatible
-  set nocompatible
-endif
+set nocompatible
 
 " Plugins (if any) ------------------------------------------------------- [[[
 {{ if eq .vim_plugins "yes" }}
@@ -26,7 +24,6 @@ Plug 'kshenoy/vim-signature'
 Plug 'kyounger/vim-slash'
 Plug 'junegunn/vim-pseudocl'
 Plug 'junegunn/vim-peekaboo'
-Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'sjl/vitality.vim'
 Plug 'sjl/AnsiEsc.vim'
 Plug 'fidian/hexmode'
@@ -40,9 +37,7 @@ call plug#end()
 
 " my helper function
 function! IfPlugin(plugin_name)
-  let l:plugin_exists = 0
-  silent! l:plugin_exists = has_key(g:plugs, a:plugin_name) && stridx(&rtp, g:plugs[a:plugin_name].dir)
-  return l:plugin_exists
+  return has_key(g:plugs, a:plugin_name) && stridx(&rtp, trim(g:plugs[a:plugin_name].dir,"/"))
 endfunction
 
 " ]]]
@@ -564,6 +559,9 @@ endfunction
             nmap ∏ <Plug>yankstack_substitute_newer_paste
             imap π <Plug>yankstack_substitute_older_paste
             imap ∏ <Plug>yankstack_substitute_newer_paste
+
+            " removed 's' and 'S' (conflicts with vim-sneak)
+            let g:yankstack_yank_keys = ['c', 'C', 'd', 'D', 'x', 'X', 'y', 'Y'] 
         endif
     " ]]]
 " ]]]
