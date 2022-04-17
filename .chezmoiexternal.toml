@@ -20,6 +20,7 @@
     type = "file"
     url = "https://raw.githubusercontent.com/kyounger/vim-plug/master/plug.vim"
 
+
 [".vim/pack/plugins/opt/chezmoi.vim"]
     type = "archive"
     url = "https://github.com/alker0/chezmoi.vim/archive/main.tar.gz"
