@@ -21,6 +21,8 @@ alias mysql='nocorrect mysql'
 alias rm='nocorrect rm'
 alias gh-create-public-repo='gh repo create kyounger/$(basename $(pwd)) --public'
 alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
+alias barriers='/Applications/Barrier.app/Contents/MacOS/barriers'
+alias barrierc='/Applications/Barrier.app/Contents/MacOS/barrierc'
 
 # Disable globbing.
 alias bower='noglob bower'
