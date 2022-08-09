@@ -23,6 +23,7 @@ export HOMEBREW_REPOSITORY="${HOMEBREW_PREFIX}/Homebrew";
 export PATH="${HOMEBREW_PREFIX}/bin:${HOMEBREW_PREFIX}/sbin${PATH+:$PATH}";
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin${PATH+:$PATH}";
 export PATH="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin${PATH+:$PATH}";
+export PATH="${HOME}/bin${PATH+:$PATH}";
 
 export MANPATH="${HOMEBREW_PREFIX}/share/man${MANPATH+:$MANPATH}:";
 export INFOPATH="${HOMEBREW_PREFIX}/share/info:${INFOPATH:-}";
