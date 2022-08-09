@@ -84,7 +84,7 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 # ------
 # Custom
 # ------
-
+HISTORY_IGNORE='(sec set * *)'
 #
 # zsh-vi-mode
 #
