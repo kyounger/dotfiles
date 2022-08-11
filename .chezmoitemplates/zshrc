@@ -97,7 +97,22 @@ function zvm_config() {
   ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT
 }
 
+insertPreviousArg() {
+  echo $LBUFFER | read -A args
+  LAST_CHAR="${${:-$LBUFFER}[-1]}"
+  LAST_ARG="${args[$#args]}"
+  BEFORE_LAST_ARG="${args[$#args - 1]}"
+
+  if [[ $LAST_CHAR == " " ]]; then
+    LBUFFER="$LBUFFER$BEFORE_LAST_ARG"
+  else
+    LBUFFER="$LBUFFER $LAST_ARG"
+  fi
+}
+
 function zvm_after_init() {
+  zvm_define_widget insertPreviousArg
+
   zvm_bindkey viins '^[[Z' autosuggest-accept
   zvm_bindkey viins '^[[H' beginning-of-line
   zvm_bindkey viins '^[[F' end-of-line
@@ -105,6 +120,7 @@ function zvm_after_init() {
   zvm_bindkey viins '˙'    backward-word
   zvm_bindkey viins '¬'    forward-word
   zvm_bindkey viins '®'    insertPreviousArg
+  zvm_bindkey viins 'ˆ'    insertPreviousArg
   zvm_bindkey vicmd '^V'   edit-command-line
   zvm_bindkey vicmd '^R'   redo
 }
