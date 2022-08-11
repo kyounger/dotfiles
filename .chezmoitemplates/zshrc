@@ -88,6 +88,8 @@ HISTORY_IGNORE='(sec set * *)'
 #
 # zsh-vi-mode
 #
+ZVM_VI_EDITOR=nvim
+
 function zvm_config() {
   ZVM_KEYTIMEOUT=0.05
   ZVM_INSERT_MODE_CURSOR=$ZVM_CURSOR_BLINKING_BEAM
