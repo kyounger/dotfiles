@@ -78,6 +78,8 @@ brew helm
 brew helmfile
 brew hidapi
 brew html-xml-utils
+brew htop
+brew httpie
 brew hub
 brew hugo
 brew icu4c
@@ -93,6 +95,7 @@ brew jemalloc
 brew jenv
 brew jid
 brew jpeg
+brew jpeg-turbo
 brew jpeg-xl
 brew jq
 brew json-c
@@ -132,6 +135,7 @@ brew libogg
 brew libomp
 brew libpng
 brew libpthread-stubs
+brew libraw
 brew librist
 brew libsamplerate
 brew libsass
@@ -227,6 +231,7 @@ brew sha3sum
 brew shared-mime-info
 brew six
 brew skaffold
+brew smartmontools
 brew snappy
 brew socat
 brew speex
@@ -284,6 +289,7 @@ cask bartender
 cask bettertouchtool
 cask carbon-copy-cloner
 cask docker
+cask element
 cask firefox
 cask google-chrome
 cask google-cloud-sdk
@@ -297,6 +303,7 @@ cask obs
 cask qlmarkdown
 cask quicklook-csv
 cask rocket
+cask rustdesk
 cask slack
 cask soundsource
 cask visual-studio-code
@@ -305,6 +312,8 @@ cask wireshark
 cask zoom
 
 tap hashicorp/tap
+
+tap kyounger/custom-brews
 
 tap kyounger/file
 brew brew-file
