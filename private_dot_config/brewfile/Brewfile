@@ -284,14 +284,12 @@ brew zstd
 tap homebrew/cask
 cask appcleaner
 cask audio-hijack
-cask barrier
 cask bartender
 cask bettertouchtool
-cask carbon-copy-cloner
+cask brave-browser
 cask docker
 cask element
 cask firefox
-cask google-chrome
 cask google-cloud-sdk
 cask hammerspoon
 cask intellij-idea
@@ -308,7 +306,6 @@ cask slack
 cask soundsource
 cask visual-studio-code
 cask vlc
-cask wireshark
 cask zoom
 
 tap hashicorp/tap
