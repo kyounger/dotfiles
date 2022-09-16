@@ -285,13 +285,12 @@ alias mcp='mvn clean package'
 export EXA_COLORS="di=36"
 alias ls=exa
 alias l='exa --all --long'
+alias ll='exa --all --long --group --header --extended'
 alias lt='exa --all --long --sort=changed --reversed'
 alias lta='exa --all --long --sort=changed'
 alias lr='exa --all --long --tree'
 alias lr2='exa --all --long --tree --level=2'
-# alias lh='exa .* --long'
 
-alias lh='CLICOLOR_FORCE=1 gls -ald .* --color=always'
 
 alias lsd3='du -sk * | sort -nr | head -3'
 
