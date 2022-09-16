@@ -304,6 +304,7 @@ cask rocket
 cask rustdesk
 cask slack
 cask soundsource
+cask utm
 cask visual-studio-code
 cask vlc
 cask zoom
