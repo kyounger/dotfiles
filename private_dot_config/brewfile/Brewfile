@@ -18,6 +18,7 @@ brew brotli
 brew c-ares
 brew ca-certificates
 brew cairo
+brew capstone
 brew chezmoi
 brew cjson
 brew clamav
@@ -25,6 +26,7 @@ brew clang-format
 brew cmake
 brew cmocka
 brew coreutils
+brew cunit
 brew dav1d
 brew dcraw
 brew dfu-programmer
@@ -70,6 +72,7 @@ brew gnupg
 brew gnutls
 brew gobject-introspection
 brew graphite2
+brew grep
 brew gron
 brew guile
 brew harfbuzz
@@ -125,8 +128,10 @@ brew libhid
 brew libiconv
 brew libidn
 brew libidn2
+brew libiscsi
 brew libkeccak
 brew libksba
+brew liblinear
 brew liblqr
 brew libmagic
 brew libmpc
@@ -139,9 +144,12 @@ brew libraw
 brew librist
 brew libsamplerate
 brew libsass
+brew libslirp
 brew libsndfile
 brew libsodium
 brew libsoxr
+brew libssh
+brew libssh2
 brew libtasn1
 brew libtermkey
 brew libtiff
@@ -151,6 +159,7 @@ brew libusb
 brew libusb-compat
 brew libuv
 brew libvidstab
+brew libvirt
 brew libvmaf
 brew libvo-aacenc
 brew libvorbis
@@ -166,6 +175,7 @@ brew libyaml
 brew little-cms2
 brew lua
 brew lua@5.3
+brew luajit
 brew luajit-openresty
 brew luarocks
 brew luv
@@ -177,6 +187,7 @@ brew mas
 brew maven
 brew mbedtls
 brew mercurial
+brew minizip
 brew moreutils
 brew mpdecimal
 brew mpfr
@@ -218,6 +229,7 @@ brew pup
 brew python@3.10
 brew python@3.8
 brew python@3.9
+brew qemu
 brew rav1e
 brew readline
 brew reattach-to-user-namespace
@@ -256,6 +268,7 @@ brew unbound
 brew unibilium
 brew utf8proc
 brew vault
+brew vde
 brew velero
 brew vim
 brew visionmedia-watch
@@ -271,6 +284,7 @@ brew xsv
 brew xvid
 brew xxhash
 brew xz
+brew yajl
 brew yara
 brew yasm
 brew youtube-dl
@@ -298,12 +312,14 @@ cask karabiner-elements
 cask loopback
 cask notion
 cask obs
+cask obsidian
 cask qlmarkdown
 cask quicklook-csv
 cask rocket
 cask rustdesk
 cask slack
 cask soundsource
+cask trilium-notes
 cask utm
 cask visual-studio-code
 cask vlc
