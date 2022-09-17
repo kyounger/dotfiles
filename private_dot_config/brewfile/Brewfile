@@ -301,9 +301,11 @@ cask audio-hijack
 cask bartender
 cask bettertouchtool
 cask brave-browser
+cask carbon-copy-cloner
 cask docker
 cask element
 cask firefox
+cask google-chrome
 cask google-cloud-sdk
 cask hammerspoon
 cask intellij-idea
@@ -323,6 +325,7 @@ cask trilium-notes
 cask utm
 cask visual-studio-code
 cask vlc
+cask wireshark
 cask zoom
 
 tap hashicorp/tap
