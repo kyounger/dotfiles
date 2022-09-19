@@ -4,6 +4,7 @@
 	signingkey = {{ .git_signingkey }}
 
 [core]
+  editor = vim
 	pager = delta
 
 [delta]
@@ -39,12 +40,18 @@
   autosetuprebase = always
   autosetupmerge = always
 
+[push]
+  autoSetupRemote = true
+
 [diff]
 	indentHeuristic = true
   colorMoved = default
 
 [difftool]
 	prompt = false
+
+[merge]
+  ff = only
 
 [mergetool]
 	prompt = false
@@ -58,6 +65,12 @@
 
 [pull]
   rebase = true
+
+[tag]
+  forceSignAnnotated = true
+
+[status]
+  submoduleSummary = false
 
 [credential]
 	helper = osxkeychain
@@ -99,3 +112,7 @@
 ; 	textconv = sops -d
 [init]
 	defaultBranch = master
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	allowedSignersFile = /Users/kyounger/.config/git/allowed_signers
