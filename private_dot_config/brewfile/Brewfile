@@ -246,6 +246,7 @@ brew skaffold
 brew smartmontools
 brew snappy
 brew socat
+brew sops
 brew speex
 brew sqlite
 brew srt
@@ -295,6 +296,8 @@ brew zimg
 brew zsh
 brew zstd
 
+tap homebrew/services
+
 tap homebrew/cask
 cask appcleaner
 cask audio-hijack
@@ -327,6 +330,9 @@ cask visual-studio-code
 cask vlc
 cask wireshark
 cask zoom
+
+tap aquaproj/aqua
+brew aqua
 
 tap hashicorp/tap
 
