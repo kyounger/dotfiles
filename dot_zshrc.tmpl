@@ -4,3 +4,6 @@
 # Load common settings
 {{ template "shrc.sh" dict "os" .chezmoi.os -}}
 
+# dedupe $PATH
+typeset -U path
+
