@@ -116,11 +116,10 @@ function zvm_after_init() {
   zvm_bindkey viins '^[[Z' autosuggest-accept
   zvm_bindkey viins '^[[H' beginning-of-line
   zvm_bindkey viins '^[[F' end-of-line
-  zvm_bindkey viins '≠'    backward-delete-word
-  zvm_bindkey viins '˙'    backward-word
-  zvm_bindkey viins '¬'    forward-word
-  zvm_bindkey viins '®'    insertPreviousArg
-  zvm_bindkey viins 'ˆ'    insertPreviousArg
+  zvm_bindkey viins '≠'    backward-delete-word # alt-backspace mapped to alt-= in terminal app
+  zvm_bindkey viins '˙'    backward-word  # alt-left mapped to alt-h in terminal app
+  zvm_bindkey viins '¬'    forward-word  # alt-right mapped to alt-l in terminal app
+  zvm_bindkey viins '®'    insertPreviousArg # alt-r (native on Mac)
   zvm_bindkey vicmd '^V'   edit-command-line
   zvm_bindkey vicmd '^R'   redo
 }

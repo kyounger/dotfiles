@@ -40,3 +40,7 @@ ZSH startup reference:
 |/etc/zlogout    |    J      |           |      |
 +----------------+-----------+-----------+------+
 ```
+
+=== Making changes in iTerm2 profile ===
+Update the profile manually in iterm2, then export *ALL* profiles as json. The directory should default to the proper chezmoi repo. Replace existing. Deploy with `cm apply`, etc. Update to target file [takes place immediately](https://iterm2.com/documentation-dynamic-profiles.html).
+
