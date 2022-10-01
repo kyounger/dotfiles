@@ -71,6 +71,9 @@ export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 # man
 export MANPAGER='less -s -M +Gg'
 
+#ripgrep global config
+export RIPGREP_CONFIG_PATH=$HOME/.config/ripgrep/.ripgreprc
+
 #My aliases
 {{ template "aliases.sh" }}
 
