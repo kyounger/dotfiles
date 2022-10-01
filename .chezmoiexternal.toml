@@ -12,6 +12,10 @@
     url = "https://raw.githubusercontent.com/kyounger/mathiasbynens-dotfiles/main/.macos"
     executable = true
 
+["code/Set-Mac-Function-Keys"]
+    type = "git-repo"
+    url = "https://github.com/kyounger/Set-Mac-Function-Keys"
+
 
 [".vim/pack/plugins/opt/vim-plug/autoload/plug.vim"]
     type = "file"

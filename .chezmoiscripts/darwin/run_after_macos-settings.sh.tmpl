@@ -2,7 +2,9 @@
 #!/usr/bin/env zsh
 
 echo "Running ~/.macos to converge."
-
 ~/.macos
+
+echo "Ensuring F-Keys are set."
+osascript ~/code/Set-Mac-Function-Keys/SetFunctionKeys.scpt
 
 {{ end -}}
