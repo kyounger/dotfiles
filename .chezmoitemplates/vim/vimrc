@@ -35,6 +35,11 @@ Plug 'martinda/Jenkinsfile-vim-syntax'
 call plug#end()
 {{ end }}
 
+if !exists("g:plugs")
+    echo "no g:plugs"
+    finish
+endif
+
 " my helper function
 function! IfPlugin(plugin_name)
   return has_key(g:plugs, a:plugin_name) && stridx(&rtp, trim(g:plugs[a:plugin_name].dir,"/"))
