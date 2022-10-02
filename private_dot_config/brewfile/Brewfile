@@ -5,6 +5,7 @@ tap homebrew/core
 brew ack
 brew age
 brew aom
+brew asdf
 brew autoconf
 brew automake
 brew aws-iam-authenticator
@@ -80,6 +81,7 @@ brew hashcat
 brew helm
 brew helmfile
 brew hidapi
+brew highway
 brew html-xml-utils
 brew htop
 brew httpie
@@ -267,6 +269,7 @@ brew tree
 brew tree-sitter
 brew unbound
 brew unibilium
+brew unixodbc
 brew utf8proc
 brew vault
 brew vde
@@ -299,7 +302,9 @@ brew zstd
 tap homebrew/services
 
 tap homebrew/cask
+cask alacritty
 cask appcleaner
+cask audacity
 cask audio-hijack
 cask bartender
 cask bettertouchtool
@@ -307,6 +312,7 @@ cask brave-browser
 cask carbon-copy-cloner
 cask docker
 cask element
+cask finicky
 cask firefox
 cask google-chrome
 cask google-cloud-sdk
