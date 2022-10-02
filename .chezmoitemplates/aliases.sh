@@ -385,6 +385,12 @@ function webm-to-mp3() {
 # Pipe my public key to my clipboard.
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
 
+function update() {
+  chezmoi update --refresh-externals -v
+  brew file update
+  brew file clean
+}
+
 # change directory to whatever the most recently focused finder window is
 function cdf () {
   CURRFOLDERPATH=$( /usr/bin/osascript <<"    EOT"
