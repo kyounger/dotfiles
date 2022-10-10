@@ -104,9 +104,7 @@ kubectl wait --for=condition=Ready pod/busybox
 kubectl exec -it busybox -- sh
 }
 
-alias helmfile='helmfile --helm-binary /usr/local/bin/helm'
-alias hf='helmfile --helm-binary /usr/local/bin/helm'
-alias helm2='/usr/local/opt/helm@2/bin/helm'
+alias hf='helmfile'
 
 alias hy='bat -l yaml'
 alias hys='bat --style="plain" -l yaml'
