@@ -74,6 +74,9 @@ export MANPAGER='less -s -M +Gg'
 #ripgrep global config
 export RIPGREP_CONFIG_PATH=$HOME/.config/ripgrep/.ripgreprc
 
+#use newest approach for auth in kubectl for gke
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+
 #My aliases
 {{ template "aliases.sh" }}
 
