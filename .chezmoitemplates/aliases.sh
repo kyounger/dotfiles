@@ -21,8 +21,7 @@ alias mysql='nocorrect mysql'
 alias rm='nocorrect rm'
 alias gh-create-public-repo='gh repo create kyounger/$(basename $(pwd)) --public'
 alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
-alias barriers='/Applications/Barrier.app/Contents/MacOS/barriers'
-alias barrierc='/Applications/Barrier.app/Contents/MacOS/barrierc'
+alias jq-json2csv="jq -r '(map(keys) | add | unique) as \$cols | map(. as \$row | \$cols | map(\$row[.])) as \$rows | \$cols, \$rows[] | @csv'"
 
 # Disable globbing.
 alias bower='noglob bower'
