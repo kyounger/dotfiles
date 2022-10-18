@@ -6,4 +6,18 @@ module.exports = {
     hideIcon: false, 
     checkForUpdate: true,
   },
+  handlers: [
+    {
+      // You can get the path of the process that triggered Finicky (EXPERIMENTAL)
+      match: ({ opener }) =>
+        opener.path && opener.path.startsWith("/Applications/iTerm.app"),
+      browser: "Browserosaurus"
+    },
+    {
+      // You can get the path of the process that triggered Finicky (EXPERIMENTAL)
+      match: ({ opener }) =>
+        opener.path && opener.path.startsWith("/Applications/SketchUp 2022/SketchUp.app"),
+      browser: "Browserosaurus"
+    },
+  ]
 };
