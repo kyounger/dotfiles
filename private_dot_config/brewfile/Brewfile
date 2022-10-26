@@ -14,6 +14,7 @@ brew awscli
 brew bat
 brew bdw-gc
 brew berkeley-db
+brew bitwarden-cli
 brew bootloadhid
 brew brotli
 brew c-ares
@@ -37,6 +38,7 @@ brew dive
 brew docbook
 brew docbook-xsl
 brew dos2unix
+brew dsq
 brew eksctl
 brew exa
 brew exif
