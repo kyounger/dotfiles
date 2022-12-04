@@ -8,15 +8,26 @@ module.exports = {
   },
   handlers: [
     {
-      // You can get the path of the process that triggered Finicky (EXPERIMENTAL)
-      match: ({ opener }) =>
-        opener.path && opener.path.startsWith("/Applications/iTerm.app"),
+      match: ({ url, urlString }) => {
+        finicky.log("Received URL " + urlString);
+        return url.host === "apple.com";
+      },
+      browser: "Safari"
+    },
+    {
+      match: ({ opener }) => !opener.path && !opener.name && !opener.bundleId,
       browser: "Browserosaurus"
     },
     {
       // You can get the path of the process that triggered Finicky (EXPERIMENTAL)
-      match: ({ opener }) =>
-        opener.path && opener.path.startsWith("/Applications/SketchUp 2022/SketchUp.app"),
+      match: ({ opener }) => {
+        return opener.path && opener.path.startsWith("/Applications/iTerm.app")
+      },
+      browser: "Browserosaurus"
+    },
+    {
+      // You can get the path of the process that triggered Finicky (EXPERIMENTAL)
+      match: ({ opener }) => opener.path && opener.path.startsWith("/Applications/SketchUp 2022/SketchUp.app"),
       browser: "Browserosaurus"
     },
   ]
