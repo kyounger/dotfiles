@@ -1,0 +1,8 @@
+#!/usr/bin/env zsh
+
+set -euox
+
+chezmoi update --refresh-externals -v
+brew file update
+brew file clean
+
